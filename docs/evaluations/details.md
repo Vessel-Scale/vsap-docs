@@ -15,7 +15,7 @@ The Assessment Details page shows all data captured for a single assessment inst
 
 ## Assessment Response Data
 
-![Evaluation Details](../assets/screenshots/assessment-details.png)
+![Evaluation Details](../assets/screenshots/assessments/assessment-details.png)
 
 The Assessment Details page displays the complete record of an assessment that was performed on a specific account or organization. This view shows all questions that were answered, the responses provided, and any supporting documentation or notes. The detailed data view allows you to audit the complete assessment history, verify that all questions were properly answered, and understand the basis for any scores or recommendations that were generated from this assessment.
 

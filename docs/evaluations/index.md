@@ -15,7 +15,7 @@ The Assessments section is the primary workspace for managing assessment instanc
 
 ## Assessment Collections
 
-![Assessment Collections](../assets/screenshots/assessment-collections.png)
+![Assessment Collections](../assets/screenshots/assessments/assessment-collections.png)
 
 The Assessments view shows a categorized list of all assessment instances in your system. Assessments are typically grouped by assessment definition type, making it easy to find related assessments. This collection view allows you to see patterns in your assessment activity, compare assessments across similar types, and manage large numbers of assessments efficiently. You can filter, sort, and search within these collections to quickly locate specific assessments.
 

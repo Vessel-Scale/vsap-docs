@@ -14,7 +14,7 @@ The Dashboard provides an at-a-glance overview of your organization's activity a
 
 ## Dashboard Overview
 
-![Dashboard](../assets/screenshots/dashboard.png)
+![Dashboard](../assets/screenshots/dashboard/dashboard.png)
 
 The Dashboard is your command center for monitoring organizational activity. This page displays key performance indicators, recent assessment completions, upcoming evaluations, and important metrics at a glance. The dashboard layout is designed to give you immediate visibility into the most important information without requiring you to navigate through multiple sections. You can use the dashboard to quickly understand current status, identify trends, and navigate to detailed analysis where needed.
 

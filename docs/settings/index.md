@@ -13,7 +13,7 @@ The Settings section allows administrators to configure platform-wide options fo
 
 ## Settings Overview
 
-![Settings](../assets/screenshots/settings.png)
+![Settings](../assets/screenshots/settings/settings.png)
 
 The Settings page provides a centralized location for managing your platform configuration. From here, administrators can access all available settings, configure branding to match your organization's identity, manage custom data collections, and control platform features. The settings interface is designed to be intuitive while providing powerful customization options for enterprise deployments.
 

@@ -15,7 +15,7 @@ The Library contains all assessment definitions — the templates used to create
 
 ## Assessment Definitions List
 
-![Library List](../assets/screenshots/library-list.png)
+![Library List](../assets/screenshots/library/library-list.png)
 
 The Library displays all assessment definition templates available in your system. These are the blueprints used to create new evaluations. From this list view, you can see all available assessments, their descriptions, when they were last updated, and how many times they've been used. This helps you understand your complete assessment inventory and find the right template when creating new evaluations.
 

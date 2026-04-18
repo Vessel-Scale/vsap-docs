@@ -15,7 +15,7 @@ The Ecosystem map provides a geographic and relational view of manufacturers, ME
 
 ## Ecosystem Map View
 
-![Ecosystem](../assets/screenshots/ecosystem.png)
+![Ecosystem](../assets/screenshots/ecosystem/ecosystem.png)
 
 The Ecosystem map displays all organizations, manufacturers, MEP centers, and other entities in your region in an interactive geographic view. This map interface allows you to visualize the spatial distribution of businesses, identify clusters and concentrations, and understand the geographic relationships between entities. Color coding and icons show different types of organizations, and you can click on any location to see detailed information about that organization.
 
