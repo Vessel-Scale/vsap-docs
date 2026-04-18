@@ -57,8 +57,30 @@ nav:
     - getting-started/index.md
     - Creating Your Account: getting-started/creating-your-account.md
     - Navigating the Dashboard: getting-started/navigating-the-dashboard.md
-  - Assessments:
-    - assessments/index.md
+  - Dashboard:
+    - Overview: dashboard/index.md
+    - Pivot Table: dashboard/pivot-table.md
+  - Accounts:
+    - Overview: accounts/index.md
+    - Account Details: accounts/details.md
+    - Create Account: accounts/create.md
+  - Evaluations:
+    - Overview: evaluations/index.md
+    - Evaluation Details: evaluations/details.md
+    - Report Builder: evaluations/report-builder.md
+    - Create Evaluation: evaluations/create.md
+  - Library:
+    - Overview: library/index.md
+    - Create Assessment: library/create.md
+    - Edit Assessment: library/edit.md
+  - Ecosystem:
+    - ecosystem/index.md
+  - Industries:
+    - industries/index.md
+  - Settings:
+    - Overview: settings/index.md
+    - Branding: settings/branding.md
+    - Custom Data: settings/custom-data.md
 
 extra:
   social:

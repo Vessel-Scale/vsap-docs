@@ -5,7 +5,47 @@
          <lastmod>2026-04-18</lastmod>
     </url>
     <url>
+         <loc>https://docs.vesselimpact.com/accounts/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/accounts/create/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/accounts/details/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
          <loc>https://docs.vesselimpact.com/assessments/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/dashboard/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/dashboard/pivot-table/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/ecosystem/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/evaluations/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/evaluations/create/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/evaluations/details/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/evaluations/report-builder/</loc>
          <lastmod>2026-04-18</lastmod>
     </url>
     <url>
@@ -18,6 +58,34 @@
     </url>
     <url>
          <loc>https://docs.vesselimpact.com/getting-started/navigating-the-dashboard/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/industries/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/library/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/library/create/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/library/edit/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/settings/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/settings/branding/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.vesselimpact.com/settings/custom-data/</loc>
          <lastmod>2026-04-18</lastmod>
     </url>
 </urlset>
