@@ -2,6 +2,7 @@ site_name: Vessel Smart Assessment Platform - Help Center
 site_url: https://docs.vesselimpact.com
 site_description: Documentation for the Vessel Smart Assessment Platform
 site_author: Vessel
+copyright: 'Vessel, 2026'
 
 #repo_url: https://github.com/vessel-impact/vsap-docs
 #repo_name: vessel-impact/vsap-docs
@@ -9,18 +10,18 @@ site_author: Vessel
 
 theme:
   name: material
-  logo: assets/logo.svg
-  favicon: assets/favicon.ico
+  logo: assets/vessel-logo.png
+  favicon: assets/vessel-favicon.png
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -32,6 +33,9 @@ theme:
     - search.highlight
     - content.code.copy
     - content.tabs.link
+
+extra_css:
+  - assets/custom.css
 
 plugins:
   - search

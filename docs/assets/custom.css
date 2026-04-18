@@ -1,0 +1,18 @@
+:root {
+  --md-primary-fg-color: #00314B;
+  --md-primary-fg-color--light: #004A6D;
+  --md-primary-fg-color--dark: #001F30;
+  --md-accent-fg-color: #93241B;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #93241B;
+  --md-primary-fg-color--light: #C0341F;
+  --md-primary-fg-color--dark: #6B1915;
+  --md-accent-fg-color: #00314B;
+}
+
+/* Hide "Made with Material for MkDocs" footer */
+.md-footer-meta {
+  display: none;
+}
