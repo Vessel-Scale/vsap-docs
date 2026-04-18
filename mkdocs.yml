@@ -68,11 +68,11 @@ nav:
     - Overview: accounts/index.md
     - Account Details: accounts/details.md
     - Create Account: accounts/create.md
-  - Evaluations:
+  - Assessments:
     - Overview: evaluations/index.md
-    - Evaluation Details: evaluations/details.md
+    - Assessment Details: evaluations/details.md
     - Report Builder: evaluations/report-builder.md
-    - Create Evaluation: evaluations/create.md
+    - Create Assessment: evaluations/create.md
   - Library:
     - Overview: library/index.md
     - Create Assessment: library/create.md

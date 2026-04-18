@@ -2,20 +2,26 @@
 route: /evaluation-assessment-list
 ---
 
-# Evaluations
+# Assessments
 
-The Evaluations section is the primary workspace for managing assessment instances across your accounts.
+The Assessments section is the primary workspace for managing assessment instances across your accounts.
 
 ## What you can do here
 
-- Browse all evaluations across accounts
+- Browse all assessments across accounts
 - Filter by assessment type, status, or date
-- Open an evaluation collection for a specific definition
-- Create new evaluations
+- Open an assessment collection for a specific definition
+- Create new assessments
+
+## Assessment Collections
+
+![Assessment Collections](../assets/screenshots/assessment-collections.png)
+
+The Assessments view shows a categorized list of all assessment instances in your system. Assessments are typically grouped by assessment definition type, making it easy to find related assessments. This collection view allows you to see patterns in your assessment activity, compare assessments across similar types, and manage large numbers of assessments efficiently. You can filter, sort, and search within these collections to quickly locate specific assessments.
 
 ## Related
 
-- [Evaluation Details](details.md)
+- [Assessment Details](details.md)
 - [Report Builder](report-builder.md)
-- [Create Evaluation](create.md)
+- [Create Assessment](create.md)
 - [Library](../library/index.md)

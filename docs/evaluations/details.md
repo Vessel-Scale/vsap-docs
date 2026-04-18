@@ -2,16 +2,22 @@
 route: /evaluation-assessment-detail/:id
 ---
 
-# Evaluation Details
+# Assessment Details
 
-The Evaluation Details page shows all data captured for a single evaluation instance.
+The Assessment Details page shows all data captured for a single assessment instance.
 
 ## What you can do here
 
 - Review all question responses and scores
 - See scoring summaries and breakdowns
-- Edit the evaluation
-- Navigate to the Report Builder for this evaluation
+- Edit the assessment
+- Navigate to the Report Builder for this assessment
+
+## Assessment Response Data
+
+![Evaluation Details](../assets/screenshots/assessment-details.png)
+
+The Assessment Details page displays the complete record of an assessment that was performed on a specific account or organization. This view shows all questions that were answered, the responses provided, and any supporting documentation or notes. The detailed data view allows you to audit the complete assessment history, verify that all questions were properly answered, and understand the basis for any scores or recommendations that were generated from this assessment.
 
 ## Sections
 
@@ -23,11 +29,11 @@ _Coming soon._
 
 _Coming soon._
 
-### Edit Evaluation
+### Edit Assessment
 
 _Coming soon._
 
 ## Related
 
-- [Evaluations](index.md)
+- [Assessments](index.md)
 - [Report Builder](report-builder.md)

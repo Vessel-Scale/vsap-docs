@@ -12,6 +12,12 @@ The Dashboard provides an at-a-glance overview of your organization's activity a
 - Navigate to detailed reports and evaluations
 - Access the Pivot Table for cross-sectional analysis
 
+## Dashboard Overview
+
+![Dashboard](../assets/screenshots/dashboard.png)
+
+The Dashboard is your command center for monitoring organizational activity. This page displays key performance indicators, recent assessment completions, upcoming evaluations, and important metrics at a glance. The dashboard layout is designed to give you immediate visibility into the most important information without requiring you to navigate through multiple sections. You can use the dashboard to quickly understand current status, identify trends, and navigate to detailed analysis where needed.
+
 ## Sections
 
 ### Summary Cards
