@@ -1,11 +1,11 @@
-site_name: VSAP Help Center
+site_name: Vessel Smart Assessment Platform - Help Center
 site_url: https://docs.vesselimpact.com
-site_description: Documentation for the Vessel Impact platform
-site_author: Vessel Impact
+site_description: Documentation for the Vessel Smart Assessment Platform
+site_author: Vessel
 
-repo_url: https://github.com/vessel-impact/vsap-docs
-repo_name: vessel-impact/vsap-docs
-edit_uri: edit/main/docs/
+#repo_url: https://github.com/vessel-impact/vsap-docs
+#repo_name: vessel-impact/vsap-docs
+#edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -85,5 +85,5 @@ nav:
 extra:
   social:
     - icon: fontawesome/solid/arrow-up-right-from-square
-      link: https://app.vesselimpact.com
-      name: Go to App
+      link: https://www.vesselscale.com
+      name: Go to Vessel
