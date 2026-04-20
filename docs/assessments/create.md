@@ -18,5 +18,5 @@ _Coming soon._
 
 ## Related
 
-- [Evaluations](index.md)
+- [Assessments](index.md)
 - [Library](../library/index.md)

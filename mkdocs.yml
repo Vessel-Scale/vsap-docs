@@ -69,10 +69,10 @@ nav:
     - Account Details: accounts/details.md
     - Create Account: accounts/create.md
   - Assessments:
-    - Overview: evaluations/index.md
-    - Assessment Details: evaluations/details.md
-    - Report Builder: evaluations/report-builder.md
-    - Create Assessment: evaluations/create.md
+    - Overview: assessments/index.md
+    - Assessment Details: assessments/details.md
+    - Report Builder: assessments/report-builder.md
+    - Create Assessment: assessments/create.md
   - Library:
     - Overview: library/index.md
     - Create Assessment: library/create.md
