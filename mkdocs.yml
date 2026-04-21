@@ -84,6 +84,7 @@ nav:
   - Settings:
     - Overview: settings/index.md
     - Branding: settings/branding.md
+    - Email Templates: settings/email-templates.md
     - Custom Data: settings/custom-data.md
 
 extra:
