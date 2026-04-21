@@ -111,7 +111,7 @@ Please click the link below to get started:
 |----------|-------------|---------|
 | `{{ assessment_name }}` | Name of the assessment | Q4 2025 Manufacturing Readiness |
 | `{{ company_name }}` | Company/account name | Acme Manufacturing |
-| `{{ recipient_name }}` | Name/username of the email recipient | John Smith |
+| `{{ recipient_name }}` | Name or email of the email recipient. Uses the recipient's name if available, falls back to email address. | John Smith (or john.smith@example.com if name not available) |
 | `{{ link }}` | Generic link (alias for assessment_invitation_link) | https://example.com/assessment/invite/abc123 |
 | `{{ expiry_date }}` | Date when the email link or assessment expires | 2025-05-15 |
 | `{{ assessment_invitation_link }}` | Link to begin the assessment | https://example.com/assessment/invite/abc123 |
