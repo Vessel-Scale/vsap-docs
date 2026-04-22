@@ -13,6 +13,8 @@ The Custom Data section provides centralized management for:
 - **Regional Manufacturer Associations (RMA)** - Geographic and organizational groupings
 - **Media Library** - Images and media for use in reports and content
 
+![Custom Data Hub](../assets/screenshots/custom-data/custom-data-hub.png)
+
 ---
 
 ## NAICS Codes
@@ -33,6 +35,8 @@ When managing NAICS codes, you can use the following controls:
 | **Bulk Actions** | Select multiple codes at once | Activate/deactivate groups of related industries; set MEP flags for multiple codes |
 | **Sort Controls** | Sort by code, description, or status | Organize codes by any column |
 
+![NAICS Codes List](../assets/screenshots/custom-data/naics-list.png)
+
 ### NAICS Code Fields
 
 Each NAICS code record contains:
@@ -40,6 +44,8 @@ Each NAICS code record contains:
 - **Description**: Human-readable industry name (e.g., "Automobile Manufacturing")
 - **Active Status**: Whether this code is available for selection in forms and assessments
 - **MEP List Flag**: Whether this code qualifies for MEP manufacturing programs
+
+![NAICS Code Edit Modal](../assets/screenshots/custom-data/naics-edit-modal.png)
 
 ### Where NAICS Codes Are Used
 
@@ -70,11 +76,15 @@ When managing RMAs, you can use the following controls:
 | **Sort Controls** | Sort by name or status | Organize associations alphabetically or by status |
 | **Bulk Actions** | Select multiple associations | Update active status for groups of RMAs |
 
+![RMA List](../assets/screenshots/custom-data/rma-list.png)
+
 ### RMA Fields
 
 Each RMA record contains:
 - **Name**: Organization name (e.g., "Northeast Manufacturing Association")
 - **Active Status**: Whether this RMA is available for selection in forms and accounts
+
+![RMA Edit Modal](../assets/screenshots/custom-data/rma-edit-modal.png)
 
 ### Where RMAs Are Used
 
@@ -92,6 +102,8 @@ RMAs are referenced throughout the platform:
 **Route:** `/settings/custom-data/media-library`
 
 Store and manage images and other media assets used across your reports, web content, and branding. Media uploaded here can be referenced in web reports, email templates, and custom content blocks.
+
+![Media Library](../assets/screenshots/custom-data/media-library.png)
 
 ### Uploading Media
 
@@ -132,6 +144,7 @@ When you upload or edit a media item, you can customize these fields:
 | **File Size** | Auto-detected | Size in bytes | "245 KB" |
 | **Dimensions** | Auto-detected | Width × Height in pixels | "1920 × 1080" |
 
+
 ### Image Preview & Metadata
 
 #### Preview Dialog
@@ -141,6 +154,8 @@ When you click on any media item, a preview dialog appears showing:
 - Current metadata (title, alt text, description, tags)
 - Edit button to modify the metadata
 - File information (type, size, dimensions, upload date)
+
+![Media Preview Dialog](../assets/screenshots/custom-data/media-preview-dialog.png)
 
 #### Color Picker Functionality
 
@@ -156,6 +171,8 @@ The image preview dialog includes an **interactive color picker** overlay that l
 - **Design Planning** - Use extracted colors for section headers, backgrounds, and accent elements in web reports
 - **Color Documentation** - Create a reference guide of your brand's color palette from existing assets
 - **Quick Design Reference** - No need to use separate color picker tools; extract colors directly from uploaded images
+
+![Color Picker in Action](../assets/screenshots/custom-data/media-color-picker.png)
 
 ### Where Media is Used
 
