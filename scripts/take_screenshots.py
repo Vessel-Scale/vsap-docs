@@ -3,12 +3,13 @@ Playwright screenshot script for VSAP docs.
 Captures authenticated screenshots into organized subfolders.
 
 Usage:
-  uv run python scripts/take_screenshots.py                  # all sections
-  uv run python scripts/take_screenshots.py account          # one section
-  uv run python scripts/take_screenshots.py account library  # multiple sections
+  uv run python scripts/take_screenshots.py                        # all sections
+  uv run python scripts/take_screenshots.py account                # one section
+  uv run python scripts/take_screenshots.py account library        # multiple sections
+  uv run python scripts/take_screenshots.py custom-data            # custom data only
 
 Available sections:
-  dashboard, account, assessments, library, ecosystem, industries, settings, report-builder
+  dashboard, account, assessments, library, ecosystem, industries, settings, report-builder, custom-data
 """
 import argparse
 import asyncio
@@ -17,15 +18,15 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-BASE_URL = "http://testv2.localhost:3000"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2NTg4ODE0LCJpYXQiOjE3NzY1NDU2MTQsImp0aSI6IjUwNTk2MTJhYWIyNTQ0YTc4MTQ0OGE0NTczYzFkMzYxIiwidXNlcl9pZCI6IjZjNjkxYjQzLTQwMGYtNGRiZi1hNWFlLTRmYWZlNmVlMDYyYyIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.lmJOAlgdBPaRdpE285gPXU5_FPpa7oBNtVF63Mm_oTw"
+BASE_URL = "http://demo.localhost:3000"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2OTA5NDAwLCJpYXQiOjE3NzY4NjYyMDAsImp0aSI6IjNmZWY0Njc2Y2ZiZjQ5ODE5NzlhYTJkYjAyN2NhY2M3IiwidXNlcl9pZCI6IjU1OWE1ZmZkLThiODMtNDZhYy1hYzVlLTY3Y2EzNzE3NzU4NCIsImZ1bGxuYW1lIjoiS2V2aW4iLCJlbWFpbCI6ImtldmluQHZlc3NlbHNjYWxlLmNvbSIsInVzZXJfZ3JvdXBzIjpbImFkbWluIl19.oM-XL5DcGuSFGnigvY7IN8Tx211D608fROVXxN4Xi1U"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
 COOKIES = [
-    {"name": "csrftoken",    "value": "aYgogqONppu5mvxHgiwQUB2zX4ub0HiH"},
-    {"name": "sessionid",    "value": "ngsidfkxqpd84m56tuu6vge6e2n73xw8"},
-    {"name": "API_URL",      "value": "http://testv2.localhost:8000/"},
+    {"name": "csrftoken",    "value": "XelKhI6ztL04Xc99oHEm2ENY33AA9tBm"},
+    {"name": "sessionid",    "value": "r7bt9yieyv8v8elr59chzo63mo82oxbf"},
+    {"name": "API_URL",      "value": "http://demo.localhost:8000/"},
     {"name": "ACCESS_TOKEN", "value": ACCESS_TOKEN},
 ]
 
@@ -36,11 +37,11 @@ PERSIST_ROOT = json.dumps({
                 "access": ACCESS_TOKEN.removeprefix("Bearer "),
                 "refresh": "",
                 "account_id": "",
-                "user_type": ["admin", "account_executive"],
+                "user_type": ["admin"],
                 "profile_image": "",
-                "fullname": "Kevin Tetz",
+                "fullname": "Kevin",
                 "first_name": "Kevin",
-                "last_name": "Tetz",
+                "last_name": "",
                 "email": "kevin@vesselscale.com",
                 "is_superuser": False,
             },
@@ -197,6 +198,89 @@ async def section_report_builder(page):
         await save(page, "report-builder", "web-report-editor")
 
 
+async def section_custom_data(page):
+    # ── Hub ──────────────────────────────────────────────────────────────────
+    print("\n[custom-data] hub")
+    await goto(page, "/settings/custom-data")
+    await save(page, "custom-data", "custom-data-hub")
+
+    # ── NAICS list ────────────────────────────────────────────────────────────
+    print("[custom-data] NAICS list")
+    await goto(page, "/settings/custom-data/naics")
+    await save(page, "custom-data", "naics-list")
+
+    print("[custom-data] NAICS list - scrolled")
+    await page.evaluate("window.scrollTo(0, 400)")
+    await page.wait_for_timeout(500)
+    await save(page, "custom-data", "naics-list-scrolled")
+    await page.evaluate("window.scrollTo(0, 0)")
+
+    print("[custom-data] NAICS edit - clicking first row")
+    if await try_click(page,
+        "tbody tr:first-child td:last-child button",
+        "tbody tr:first-child button[aria-label='edit']",
+        "tbody tr:first-child button:has-text('Edit')",
+        "tbody tr:first-child [class*='edit']",
+        "tbody tr:first-child td:first-child",
+    ):
+        await save(page, "custom-data", "naics-edit-modal")
+        await try_click(page, "[aria-label='Close']", "button:has-text('Cancel')", "button:has-text('Close')")
+
+    # ── RMA list ──────────────────────────────────────────────────────────────
+    print("[custom-data] RMA list")
+    await goto(page, "/settings/custom-data/rma")
+    await save(page, "custom-data", "rma-list")
+
+    print("[custom-data] RMA edit - clicking first row")
+    if await try_click(page,
+        "tbody tr:first-child td:last-child button",
+        "tbody tr:first-child button[aria-label='edit']",
+        "tbody tr:first-child button:has-text('Edit')",
+        "tbody tr:first-child [class*='edit']",
+        "tbody tr:first-child td:first-child",
+    ):
+        await save(page, "custom-data", "rma-edit-modal")
+        await try_click(page, "[aria-label='Close']", "button:has-text('Cancel')", "button:has-text('Close')")
+
+    # ── Media Library ─────────────────────────────────────────────────────────
+    print("[custom-data] media library")
+    await goto(page, "/settings/custom-data/media-library", wait_ms=4000)
+    await save(page, "custom-data", "media-library")
+
+    print("[custom-data] media library - upload dialog")
+    if await try_click(page,
+        "button:has-text('Upload')",
+        "button:has-text('Add Media')",
+        "button:has-text('New')",
+        "[class*='upload']:not(input)",
+        "[aria-label='upload']",
+    ):
+        await save(page, "custom-data", "media-upload-dialog")
+        await try_click(page, "[aria-label='Close']", "button:has-text('Cancel')", "button:has-text('Close')")
+
+    print("[custom-data] media preview - clicking first image")
+    if await try_click(page,
+        "[class*='media'] img:first-of-type",
+        "[class*='Media'] img:first-of-type",
+        "[class*='card'] img:first-of-type",
+        "[class*='Card'] img:first-of-type",
+        "img:first-of-type",
+    ):
+        await save(page, "custom-data", "media-preview-dialog")
+
+        print("[custom-data] media color picker - attempting to reveal")
+        if await try_click(page,
+            "[aria-label='Pick color']",
+            "button:has-text('Pick Color')",
+            "[class*='colorPick']",
+            "[class*='color-pick']",
+            "[class*='eyedrop']",
+        ):
+            await save(page, "custom-data", "media-color-picker")
+
+        await try_click(page, "[aria-label='Close']", "button:has-text('Cancel')", "button:has-text('Close')")
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
@@ -208,6 +292,7 @@ SECTIONS = {
     "industries":     section_industries,
     "settings":       section_settings,
     "report-builder": section_report_builder,
+    "custom-data":    section_custom_data,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

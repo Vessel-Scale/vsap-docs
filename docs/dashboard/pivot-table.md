@@ -19,4 +19,4 @@ _Coming soon._
 ## Related
 
 - [Dashboard](index.md)
-- [Evaluations](../evaluations/index.md)
+- [Assessments](../assessments/index.md)

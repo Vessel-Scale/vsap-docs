@@ -22,4 +22,4 @@ The account list displays all organizations currently tracked in your system. Fr
 
 - [Account Details](details.md)
 - [Create Account](create.md)
-- [Assessments](../evaluations/index.md)
+- [Assessments](../assessments/index.md)

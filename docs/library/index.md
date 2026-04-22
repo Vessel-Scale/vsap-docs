@@ -23,4 +23,4 @@ The Library displays all assessment definition templates available in your syste
 
 - [Create Assessment](create.md)
 - [Edit Assessment](edit.md)
-- [Assessments](../evaluations/index.md)
+- [Assessments](../assessments/index.md)
