@@ -21,6 +21,8 @@ The same form can be shared as a URL link and accessed by anyone without logging
 
 Navigate to **Settings → Intake Forms** to view all configurations.
 
+![Intake Forms List](../assets/screenshots/intake-forms/intake-forms-list.png)
+
 ### The List View
 
 Each intake form appears as a card showing:
@@ -43,6 +45,8 @@ Cards are sorted by most recently updated. Click any card to open the editor.
 | **All / Default / Not Default chip** | Filter by whether the form is the active default |
 
 ### Actions Menu
+
+![Intake Form Actions Menu](../assets/screenshots/intake-forms/intake-form-actions-menu.png)
 
 Click the three-dot (**⋮**) menu on any card to access:
 
@@ -74,6 +78,8 @@ Click **New Intake Form** (top right) to open the editor in create mode.
 
 The form editor is divided into several sections. Changes are only saved when you click **Save Changes**.
 
+![Intake Form Editor](../assets/screenshots/intake-forms/intake-form-editor.png)
+
 ### Basic Information
 
 | Field | Description |
@@ -94,6 +100,8 @@ Click a preset button to auto-populate all settings at once. You can then custom
 | **Employer of Choice** | Company Selection, Contact Form, County Selection, Company Size, Industry Type, Regional Associations, Legal Agreement | Yes (requires assessment selection) |
 
 ### Behavior Settings
+
+![Intake Form Behavior Settings](../assets/screenshots/intake-forms/intake-form-editor-behavior.png)
 
 | Setting | Description |
 |---------|-------------|
@@ -123,6 +131,8 @@ Visible only when **Create Assessment** is enabled.
 | `{{current_date}}` | Full date at time of submission | April 21, 2026 |
 
 ### Page Configuration
+
+![Intake Form Pages Configuration](../assets/screenshots/intake-forms/intake-form-editor-pages.png)
 
 Select which pages appear in the intake form. **Company Selection** and **Contact Form** are always required and cannot be removed.
 

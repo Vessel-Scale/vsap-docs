@@ -8,6 +8,8 @@ Create and customize branded web-based assessment reports.
 
 ## Overview
 
+![Web Reports List](../assets/screenshots/web-reports/web-reports-list.png)
+
 Web Reports allow you to design professional, branded reports that are delivered online. These reports can include:
 - Custom branding and styling
 - Dynamic content blocks
@@ -16,6 +18,8 @@ Web Reports allow you to design professional, branded reports that are delivered
 - Custom media and images
 
 ## Key Features
+
+![Web Report Editor](../assets/screenshots/web-reports/web-report-editor.png)
 
 - **Report Builder** - Drag-and-drop interface for creating report templates
 - **Branding** - Apply your organization's colors, fonts, and logos

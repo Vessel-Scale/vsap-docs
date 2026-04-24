@@ -9,7 +9,8 @@ Usage:
   uv run python scripts/take_screenshots.py custom-data            # custom data only
 
 Available sections:
-  dashboard, account, assessments, library, ecosystem, industries, settings, report-builder, custom-data
+  dashboard, account, assessments, library, ecosystem, industries, settings, report-builder, custom-data,
+  email-templates, intake-forms, web-reports, branding
 """
 import argparse
 import asyncio
@@ -18,15 +19,14 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-BASE_URL = "http://demo.localhost:3000"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc2OTA5NDAwLCJpYXQiOjE3NzY4NjYyMDAsImp0aSI6IjNmZWY0Njc2Y2ZiZjQ5ODE5NzlhYTJkYjAyN2NhY2M3IiwidXNlcl9pZCI6IjU1OWE1ZmZkLThiODMtNDZhYy1hYzVlLTY3Y2EzNzE3NzU4NCIsImZ1bGxuYW1lIjoiS2V2aW4iLCJlbWFpbCI6ImtldmluQHZlc3NlbHNjYWxlLmNvbSIsInVzZXJfZ3JvdXBzIjpbImFkbWluIl19.oM-XL5DcGuSFGnigvY7IN8Tx211D608fROVXxN4Xi1U"
+BASE_URL = "http://testv2.localhost:3000"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MDg5MTgxLCJpYXQiOjE3NzcwNDU5ODEsImp0aSI6IjQxM2ExNGQ0ZmYxZDQ2OTA5N2U4YzMyYzZjYzU5MmE4IiwidXNlcl9pZCI6IjZjNjkxYjQzLTQwMGYtNGRiZi1hNWFlLTRmYWZlNmVlMDYyYyIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.pc9uW1gZV6CcYthcXwpO0swbhGuarR_DdGCtv45Abrw"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
 COOKIES = [
-    {"name": "csrftoken",    "value": "XelKhI6ztL04Xc99oHEm2ENY33AA9tBm"},
-    {"name": "sessionid",    "value": "r7bt9yieyv8v8elr59chzo63mo82oxbf"},
-    {"name": "API_URL",      "value": "http://demo.localhost:8000/"},
+    {"name": "csrftoken",    "value": "aYgogqONppu5mvxHgiwQUB2zX4ub0HiH"},
+    {"name": "API_URL",      "value": "http://testv2.localhost:8000/"},
     {"name": "ACCESS_TOKEN", "value": ACCESS_TOKEN},
 ]
 
@@ -37,11 +37,11 @@ PERSIST_ROOT = json.dumps({
                 "access": ACCESS_TOKEN.removeprefix("Bearer "),
                 "refresh": "",
                 "account_id": "",
-                "user_type": ["admin"],
+                "user_type": ["admin", "account_executive"],
                 "profile_image": "",
-                "fullname": "Kevin",
+                "fullname": "Kevin Tetz",
                 "first_name": "Kevin",
-                "last_name": "",
+                "last_name": "Tetz",
                 "email": "kevin@vesselscale.com",
                 "is_superuser": False,
             },
@@ -163,16 +163,128 @@ async def section_library(page):
 
 
 async def section_ecosystem(page):
-    print("\n[ecosystem]")
+    print("\n[ecosystem] overview - map with filters panel open")
     # Map page never reaches networkidle — use domcontentloaded + long wait
     await goto(page, "/ecosystem-map", wait_ms=8000, wait_until="domcontentloaded")
     await save(page, "ecosystem", "ecosystem")
 
+    # ── Filters panel ────────────────────────────────────────────────────────
+    # Filters panel is open by default; capture it in full view
+    print("[ecosystem] filters panel visible")
+    await save(page, "ecosystem", "ecosystem-filters")
+
+    # Apply a NAICS sector filter — click the Sector dropdown, pick first option
+    print("[ecosystem] NAICS sector filter - opening")
+    if await try_click(page,
+        "[aria-label*='sector' i]",
+        "label:has-text('Sector') ~ * [role='combobox']",
+        "[id*='sector']",
+        "div:has(> label:has-text('Sector')) [role='combobox']",
+        "div:has(> label:has-text('Sector')) .MuiSelect-select",
+    ):
+        await page.wait_for_timeout(600)
+        # Pick first real option (not "All")
+        if await try_click(page,
+            "[role='listbox'] [role='option']:nth-child(2)",
+            "[role='option']:nth-child(2)",
+        ):
+            await page.wait_for_timeout(1500)
+            await save(page, "ecosystem", "ecosystem-filtered-sector")
+
+    # ── Assessment filter → Scores view ──────────────────────────────────────
+    print("[ecosystem] selecting an assessment")
+    if await try_click(page,
+        "label:has-text('Assessment') ~ * [role='combobox']",
+        "div:has(> label:has-text('Assessment')) .MuiSelect-select",
+        "[id*='assessment']",
+    ):
+        await page.wait_for_timeout(600)
+        # Pick first real assessment (index 1 skips "Any")
+        if await try_click(page,
+            "[role='listbox'] [role='option']:nth-child(2)",
+            "[role='option']:nth-child(2)",
+        ):
+            await page.wait_for_timeout(2000)
+            await save(page, "ecosystem", "ecosystem-assessment-selected")
+
+            # Click the "Scores" toggle button (only appears after assessment selected)
+            print("[ecosystem] switching to Scores view")
+            if await try_click(page,
+                "button:has-text('Scores')",
+                "[role='button']:has-text('Scores')",
+            ):
+                await page.wait_for_timeout(3000)
+                await save(page, "ecosystem", "ecosystem-scores")
+
+    # ── Click an account from the list panel to open account detail ──────────
+    # Re-load clean so the list is in default state
+    print("[ecosystem] clicking an account from the list to open account detail")
+    await goto(page, "/ecosystem-map", wait_ms=8000, wait_until="domcontentloaded")
+    # The account list in the middle panel renders rows with cursor:pointer.
+    # Wait for account list items to appear (Virtuoso renders items with data-index)
+    try:
+        await page.wait_for_selector('[data-index="0"]', timeout=10000)
+    except Exception:
+        pass
+    # Click the first Virtuoso list item (account card)
+    clicked = await try_click(page, '[data-index="0"]')
+    if clicked:
+        await page.wait_for_timeout(2000)
+        await save(page, "ecosystem", "ecosystem-account-detail")
+
+        # ── View Legislators ────────────────────────────────────────────
+        print("[ecosystem] clicking View Legislators button")
+        if await try_click(page,
+            "button:has-text('View Legislators')",
+            "span:has-text('View Legislators')",
+            "[title='View Legislators']",
+            "button:has(svg[data-testid='GroupsIcon'])",
+        ):
+            await page.wait_for_timeout(2000)
+            await save(page, "ecosystem", "ecosystem-legislators")
+    else:
+        print("    (no account list item found)")
+
 
 async def section_industries(page):
-    print("\n[industries]")
+    print("\n[industries] overview - sector level")
     await goto(page, "/naics-explorer")
     await save(page, "industries", "industries")
+
+    # Sector detail is shown by default — capture it
+    await save(page, "industries", "industries-sector")
+
+    # Helper: click the first [role="tab"] inside the nth [role="tablist"] (0-based)
+    async def click_first_tab_in_column(col_index: int) -> bool:
+        clicked = await page.evaluate(f"""
+            (() => {{
+                const lists = document.querySelectorAll('[role="tablist"]');
+                const list = lists[{col_index}];
+                if (!list) return false;
+                const tab = list.querySelector('[role="tab"]');
+                if (!tab) return false;
+                tab.click();
+                return true;
+            }})()
+        """)
+        if clicked:
+            await page.wait_for_timeout(800)
+        return clicked
+
+    # Subsector column is index 1
+    print("[industries] subsector level - clicking first subsector tab")
+    if await click_first_tab_in_column(1):
+        await save(page, "industries", "industries-subsector")
+
+        # Group column is index 2
+        print("[industries] group level - clicking first group tab")
+        if await click_first_tab_in_column(2):
+            await save(page, "industries", "industries-group")
+
+            # Industry column is index 3
+            print("[industries] industry level - clicking first industry tab")
+            if await click_first_tab_in_column(3):
+                await save(page, "industries", "industries-industry")
 
 
 async def section_settings(page):
@@ -199,7 +311,6 @@ async def section_report_builder(page):
 
 
 async def section_custom_data(page):
-    # ── Hub ──────────────────────────────────────────────────────────────────
     print("\n[custom-data] hub")
     await goto(page, "/settings/custom-data")
     await save(page, "custom-data", "custom-data-hub")
@@ -281,18 +392,185 @@ async def section_custom_data(page):
         await try_click(page, "[aria-label='Close']", "button:has-text('Cancel')", "button:has-text('Close')")
 
 
+async def section_email_templates(page):
+    # ── List ─────────────────────────────────────────────────────────────────
+    print("\n[email-templates] list")
+    await goto(page, "/settings/email-templates")
+    await save(page, "email-templates", "email-templates-list")
+
+    # ── Editor: click Edit on first template card ─────────────────────────────
+    print("[email-templates] editor - clicking first edit button")
+    if await try_click(page,
+        "button[aria-label='Edit']",
+        "button[aria-label='edit']",
+        "[data-testid*='edit']",
+        "svg[data-testid='EditIcon']",
+        "button:has(svg[data-testid='EditIcon'])",
+    ):
+        await save(page, "email-templates", "email-template-editor")
+
+        # Scroll down to see the rich-text body
+        print("[email-templates] editor - scrolled to body")
+        await page.evaluate("window.scrollTo(0, 500)")
+        await page.wait_for_timeout(500)
+        await save(page, "email-templates", "email-template-editor-body")
+        await page.evaluate("window.scrollTo(0, 0)")
+
+        # Open template variables help dialog
+        print("[email-templates] variables help dialog")
+        if await try_click(page,
+            "button[aria-label*='variable' i]",
+            "button[aria-label*='help' i]",
+            "button:has(svg[data-testid='HelpIcon'])",
+            "svg[data-testid='HelpIcon']",
+        ):
+            await save(page, "email-templates", "email-template-variables-help")
+            await try_click(page,
+                "[aria-label='Close']",
+                "button:has-text('Close')",
+                "button:has-text('Cancel')",
+                "[role='dialog'] button:last-child",
+            )
+
+
+async def section_intake_forms(page):
+    # ── List ─────────────────────────────────────────────────────────────────
+    print("\n[intake-forms] list")
+    await goto(page, "/settings/intake-form")
+    await save(page, "intake-forms", "intake-forms-list")
+
+    # ── Actions menu on first card ─────────────────────────────────────────────
+    print("[intake-forms] actions menu - clicking ⋮ on first card")
+    if await try_click(page,
+        "button[aria-label='more']",
+        "button[aria-label='More options']",
+        "svg[data-testid='MoreVertRoundedIcon']",
+        "button:has(svg[data-testid='MoreVertRoundedIcon'])",
+        "[class*='card']:first-child button:last-child",
+    ):
+        await save(page, "intake-forms", "intake-form-actions-menu")
+        # Dismiss
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
+
+    # ── Editor ────────────────────────────────────────────────────────────────
+    print("[intake-forms] editor - navigating to first form")
+    if await try_click(page,
+        "button:has-text('Edit')",
+        "[class*='card']:first-child",
+        "[class*='Card']:first-child",
+        "h2:first-of-type",
+        "h3:first-of-type",
+    ):
+        await save(page, "intake-forms", "intake-form-editor")
+
+        print("[intake-forms] editor - scrolled to behavior settings")
+        await page.evaluate("window.scrollTo(0, 600)")
+        await page.wait_for_timeout(500)
+        await save(page, "intake-forms", "intake-form-editor-behavior")
+
+        print("[intake-forms] editor - scrolled to pages section")
+        await page.evaluate("window.scrollTo(0, 1200)")
+        await page.wait_for_timeout(500)
+        await save(page, "intake-forms", "intake-form-editor-pages")
+        await page.evaluate("window.scrollTo(0, 0)")
+
+
+async def section_web_reports(page):
+    # ── List ─────────────────────────────────────────────────────────────────
+    print("\n[web-reports] list")
+    await goto(page, "/settings/web-reports")
+    await save(page, "web-reports", "web-reports-list")
+
+    # ── Editor: click first card ──────────────────────────────────────────────
+    print("[web-reports] editor - clicking first report")
+    if await try_click(page,
+        "h2:first-of-type",
+        "h3:first-of-type",
+        "[class*='card']:first-child",
+        "[class*='Card']:first-child",
+        "a[href*='/settings/web-reports/']",
+        "button:has-text('Edit')",
+    ):
+        await save(page, "web-reports", "web-report-editor")
+
+        # Scroll to first section accordion
+        print("[web-reports] editor - sections area")
+        await page.evaluate("window.scrollTo(0, 600)")
+        await page.wait_for_timeout(500)
+        await save(page, "web-reports", "web-report-sections")
+
+        # Expand first section accordion
+        print("[web-reports] editor - expanding first section accordion")
+        if await try_click(page,
+            "[class*='MuiAccordionSummary']:first-of-type",
+            "[class*='accordion']:first-child [class*='summary']",
+            ".MuiAccordion-root:first-child .MuiAccordionSummary-root",
+        ):
+            await page.wait_for_timeout(500)
+            await save(page, "web-reports", "web-report-section-editor")
+
+        await page.evaluate("window.scrollTo(0, 0)")
+
+        # YAML / code preview
+        print("[web-reports] editor - YAML preview")
+        if await try_click(page,
+            "button:has(svg[data-testid='CodeIcon'])",
+            "svg[data-testid='CodeIcon']",
+            "button[aria-label*='yaml' i]",
+            "button[aria-label*='code' i]",
+            "button[aria-label*='preview' i]",
+        ):
+            await page.wait_for_timeout(500)
+            await save(page, "web-reports", "web-report-yaml-preview")
+            # Close/dismiss
+            await try_click(page,
+                "button:has(svg[data-testid='CodeIcon'])",
+                "svg[data-testid='CodeIcon']",
+                "[aria-label='Close']",
+                "button:has-text('Close')",
+            )
+
+
+async def section_branding(page):
+    print("\n[branding] overview")
+    await goto(page, "/settings/branding")
+    await save(page, "branding", "branding")
+
+    print("[branding] colors section")
+    await page.evaluate("window.scrollTo(0, 600)")
+    await page.wait_for_timeout(500)
+    await save(page, "branding", "branding-colors")
+
+    print("[branding] login page section")
+    await page.evaluate("window.scrollTo(0, 1200)")
+    await page.wait_for_timeout(500)
+    await save(page, "branding", "branding-login-page")
+
+    print("[branding] terminology section")
+    await page.evaluate("window.scrollTo(0, 1800)")
+    await page.wait_for_timeout(500)
+    await save(page, "branding", "branding-terminology")
+
+    await page.evaluate("window.scrollTo(0, 0)")
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
-    "dashboard":      section_dashboard,
-    "account":        section_account,
-    "assessments":    section_assessments,
-    "library":        section_library,
-    "ecosystem":      section_ecosystem,
-    "industries":     section_industries,
-    "settings":       section_settings,
-    "report-builder": section_report_builder,
-    "custom-data":    section_custom_data,
+    "dashboard":        section_dashboard,
+    "account":          section_account,
+    "assessments":      section_assessments,
+    "library":          section_library,
+    "ecosystem":        section_ecosystem,
+    "industries":       section_industries,
+    "settings":         section_settings,
+    "report-builder":   section_report_builder,
+    "custom-data":      section_custom_data,
+    "email-templates":  section_email_templates,
+    "intake-forms":     section_intake_forms,
+    "web-reports":      section_web_reports,
+    "branding":         section_branding,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

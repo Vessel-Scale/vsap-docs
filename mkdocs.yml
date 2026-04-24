@@ -10,7 +10,7 @@ copyright: 'Vessel, 2026'
 
 theme:
   name: material
-  logo: assets/vessel-logo-white.png
+  logo: assets/vessel-logo-blue.png
   favicon: assets/vessel-favicon.png
   palette:
     - scheme: default

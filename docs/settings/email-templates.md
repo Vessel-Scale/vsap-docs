@@ -14,6 +14,8 @@ The Smart Assessment Platform sends emails for various events:
 
 All email templates support dynamic content through template variables, allowing you to personalize communications with assessment names, company information, and participant details.
 
+![Email Templates List](../assets/screenshots/email-templates/email-templates-list.png)
+
 ## Email Template Types
 
 ### Invitation
@@ -92,6 +94,8 @@ Template variables are placeholders that get replaced with actual assessment dat
 
 ### How to Use Template Variables
 
+![Template Variables Help](../assets/screenshots/email-templates/email-template-variables-help.png)
+
 Simply include a variable in your subject line or email content using double curly braces with spaces:
 
 ```
@@ -141,6 +145,8 @@ Please click the link below to get started:
 4. Click on any template to edit its content
 
 ### Edit a Template
+
+![Email Template Editor](../assets/screenshots/email-templates/email-template-editor.png)
 
 1. Click on the template you want to customize
 2. The template editor will display:

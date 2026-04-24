@@ -19,6 +19,8 @@ Navigate to **Settings → Branding** to configure:
 
 Changes take effect immediately after saving (the page will reload automatically).
 
+![Branding Overview](../assets/screenshots/branding/branding.png)
+
 ---
 
 ## Organization Identity
@@ -60,6 +62,8 @@ The text shown in the browser tab when users view the application. If not set, d
 
 ## Colors
 
+![Branding Colors](../assets/screenshots/branding/branding-colors.png)
+
 ### Primary Color
 
 Your brand's main color, used for:
@@ -82,6 +86,8 @@ An accent color for alternative states and emphasis. Used in:
 
 ## Login Page Customization
 
+![Branding Login Page](../assets/screenshots/branding/branding-login-page.png)
+
 ### Login Headline
 
 Main headline displayed above the login form. Add a welcome message or organization name.
@@ -97,6 +103,8 @@ Description or supporting text displayed below the headline. Provide context abo
 ---
 
 ## Terminology
+
+![Branding Terminology](../assets/screenshots/branding/branding-terminology.png)
 
 Customize business terms used throughout the application to match your organization's language.
 
