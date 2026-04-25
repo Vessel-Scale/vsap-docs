@@ -2,7 +2,8 @@
   --md-primary-fg-color: #00314B;
   --md-primary-fg-color--light: #004A6D;
   --md-primary-fg-color--dark: #001F30;
-  --md-accent-fg-color: #93241B;
+  /* --md-accent-fg-color: #93241B; red */
+  --md-accent-fg-color: #00324D;
   /* Link color: blue for light theme */
   --md-typeset-a-color: #004A6D;
 }
