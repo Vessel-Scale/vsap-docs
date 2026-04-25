@@ -40,3 +40,5 @@ Assessment definitions are organized into categories and sections. This view sho
 
 - [Library](index.md)
 - [Create Assessment](create.md)
+- [Question Types](question-types.md)
+- [Scoring](scoring.md)

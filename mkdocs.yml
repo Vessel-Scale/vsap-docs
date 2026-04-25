@@ -71,13 +71,15 @@ nav:
   - Assessments:
     - Overview: assessments/index.md
     - Assessment Details: assessments/details.md
-    - Web Reports: assessments/report-builder.md
     - Create Assessment: assessments/create.md
+    - Web Reports: assessments/report-builder.md
   - Library:
     - Overview: library/index.md
     - Assessment List: library/list.md
     - Create Assessment: library/create.md
     - Edit Assessment: library/edit.md
+    - Question Types: library/question-types.md
+    - Scoring: library/scoring.md
   - Ecosystem:
     - Overview: ecosystem/index.md
     - Filters: ecosystem/filters.md

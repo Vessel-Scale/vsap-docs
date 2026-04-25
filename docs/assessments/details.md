@@ -37,7 +37,18 @@ _Coming soon._
 
 ### Edit Assessment
 
-_Coming soon._
+![Assessment Editor](../assets/screenshots/assessments/assessment-details.png)
+
+The assessment editor allows you to fill in or modify responses to assessment questions. This interface is used both when creating new assessments and when editing existing responses from the Assessment Details page.
+
+Within the editor, you can:
+
+- **View Questions**: Browse questions organized by category
+- **Provide Responses**: Fill in answers, scores, and supporting information
+- **Navigate Categories**: Move between different sections of the assessment
+- **Track Progress**: See which questions have been answered
+
+The editor provides a consistent experience whether you're completing a new assessment or revisiting responses to an existing assessment.
 
 ## Related
 

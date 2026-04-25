@@ -26,6 +26,8 @@ The Assessments view shows a categorized list of all assessment instances in you
 ## Related
 
 - [Assessment Details](details.md)
-- [Report Builder](report-builder.md)
 - [Create Assessment](create.md)
+- [Question Types](../library/question-types.md)
+- [Scoring](../library/scoring.md)
+- [Report Builder](report-builder.md)
 - [Library](../library/index.md)
