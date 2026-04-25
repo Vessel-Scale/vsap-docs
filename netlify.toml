@@ -1,0 +1,3 @@
+[build]
+  command = "pip install zensical && zensical build"
+  publish = "site"

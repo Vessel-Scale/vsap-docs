@@ -2,14 +2,29 @@
   --md-primary-fg-color: #00314B;
   --md-primary-fg-color--light: #004A6D;
   --md-primary-fg-color--dark: #001F30;
-  --md-accent-fg-color: #93241B;
+  /* --md-accent-fg-color: #93241B; red */
+  --md-accent-fg-color: #00324D;
+  /* Link color: blue for light theme */
+  --md-typeset-a-color: #004A6D;
 }
 
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #93241B;
   --md-primary-fg-color--light: #C0341F;
   --md-primary-fg-color--dark: #6B1915;
-  --md-accent-fg-color: #00314B;
+  --md-accent-fg-color: #C0341F;
+  /* Link color: red for dark theme — NO BLUE IN DARK MODE */
+  --md-typeset-a-color: #C0341F;
+}
+
+/* Dark mode link hover: lighten to a pale red/salmon so there's visible feedback */
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #F08070;
+}
+
+/* Swap logo: blue in light mode (set in mkdocs.yml), white in dark mode */
+[data-md-color-scheme="slate"] .md-logo img {
+  content: url('vessel-logo-white.png');
 }
 
 /* Hide "Made with Material for MkDocs" footer */

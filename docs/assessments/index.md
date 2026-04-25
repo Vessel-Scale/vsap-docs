@@ -1,5 +1,9 @@
 ---
 route: /evaluation-assessment-list
+tags:
+  - assessments
+  - overview
+  - evaluations
 ---
 
 # Assessments

@@ -10,7 +10,7 @@ copyright: 'Vessel, 2026'
 
 theme:
   name: material
-  logo: assets/vessel-logo-white.png
+  logo: assets/vessel-logo-blue.png
   favicon: assets/vessel-favicon.png
   palette:
     - scheme: default
@@ -71,19 +71,29 @@ nav:
   - Assessments:
     - Overview: assessments/index.md
     - Assessment Details: assessments/details.md
-    - Report Builder: assessments/report-builder.md
+    - Web Reports: assessments/report-builder.md
     - Create Assessment: assessments/create.md
   - Library:
     - Overview: library/index.md
+    - Assessment List: library/list.md
     - Create Assessment: library/create.md
     - Edit Assessment: library/edit.md
   - Ecosystem:
-    - ecosystem/index.md
+    - Overview: ecosystem/index.md
+    - Filters: ecosystem/filters.md
+    - Scores View: ecosystem/scores.md
+    - Account List & Details: ecosystem/accounts.md
+    - Legislators: ecosystem/legislators.md
   - Industries:
-    - industries/index.md
+    - Overview: industries/index.md
+    - NAICS Hierarchy: industries/hierarchy.md
+    - Platform Integration: industries/platform-integration.md
   - Settings:
     - Overview: settings/index.md
     - Branding: settings/branding.md
+    - Email Templates: settings/email-templates.md
+    - Intake Forms: settings/intake-forms.md
+    - Web Reports: settings/web-reports.md
     - Custom Data: settings/custom-data.md
 
 extra:

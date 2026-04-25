@@ -1,28 +1,31 @@
 ---
 route: /naics-explorer
+tags:
+  - industries
+  - NAICS
+  - classification
+  - manufacturing
+  - overview
 ---
 
 # Industries
 
-The Industries page (NAICS Explorer) lets you browse and explore the North American Industry Classification System (NAICS) codes associated with your accounts and ecosystem.
+The Industries page (NAICS Explorer) is a full reference for the North American Industry Classification System (NAICS) — the standard used to classify businesses by industry across the United States, Canada, and Mexico.
 
 ## What you can do here
 
-- Search and browse NAICS codes
-- See which accounts belong to each industry classification
-- Understand industry distribution across your ecosystem
+- Browse the full NAICS hierarchy from broad Sectors down to specific 6-digit Industry codes
+- Click any code to see its description, sub-codes, and related accounts in your ecosystem
+- Search for codes by keyword or describe a business in plain language and let the AI suggest the right classification
+- Understand how NAICS codes assigned to Accounts power dashboards, reports, and map filters
 
-## NAICS Explorer
+## Overview
 
-![Industries](../assets/screenshots/industries/industries.png)
+![Industries Overview](../assets/screenshots/industries/industries.png)
 
-The Industries page provides a hierarchical view of all NAICS industry classifications represented in your data. This interface displays how your accounts and ecosystem entities are distributed across different industry sectors and subsectors. You can navigate the classification hierarchy, see how many organizations fall into each category, and use this information to understand your business portfolio and identify industry-specific trends or gaps.
+The Industries explorer is organized as a four-column hierarchy — Sector, Subsector, Group, and Industry. Selecting any item in one column narrows the options in the next, letting you drill down from a broad economic category to a precise 6-digit code.
 
-## About NAICS Codes
+## In this section
 
-NAICS (North American Industry Classification System) codes are six-digit codes used to classify businesses by industry. They are used throughout VSAP to categorize accounts and filter ecosystem data.
-
-## Related
-
-- [Ecosystem](../ecosystem/index.md)
-- [Accounts](../accounts/index.md)
+- [NAICS Hierarchy](hierarchy.md) — browse the four levels (Sector → Subsector → Group → Industry) and use search
+- [Platform Integration](platform-integration.md) — how NAICS codes flow through dashboards, reports, the map, and intake forms

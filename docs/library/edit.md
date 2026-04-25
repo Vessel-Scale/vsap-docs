@@ -1,5 +1,12 @@
 ---
 route: /library/edit/:id
+tags:
+  - library
+  - assessment-definitions
+  - edit
+  - YAML
+  - categories
+  - scoring
 ---
 
 # Edit Assessment Definition

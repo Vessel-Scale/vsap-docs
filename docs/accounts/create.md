@@ -1,5 +1,9 @@
 ---
 route: /create-account
+tags:
+  - accounts
+  - clients
+  - create
 ---
 
 # Create Account

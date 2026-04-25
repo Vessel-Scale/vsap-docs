@@ -1,33 +1,34 @@
 ---
 route: /ecosystem-map
+tags:
+  - ecosystem
+  - map
+  - geography
+  - regions
+  - overview
 ---
 
-# Ecosystem
+# Ecosystem Map
 
-The Ecosystem map provides a geographic and relational view of manufacturers, MEP centers, and other entities in your regional ecosystem.
+The Ecosystem Map is an interactive geographic view of all accounts in your platform.
 
 ## What you can do here
 
-- Explore establishments on an interactive map
-- Filter by industry, size, or location
-- View relationships between entities
-- Identify gaps and opportunities in the ecosystem
+- Spot geographic clusters of accounts across your region
+- Filter by location, company size, industry (NAICS), and data source
+- Visualize assessment scores across the map with color-coded markers
+- Drill into any account to see its details and assessments
+- View the elected officials representing any geocoded account
 
-## Ecosystem Map View
+## Overview
 
-![Ecosystem](../assets/screenshots/ecosystem/ecosystem.png)
+![Ecosystem Map overview](../assets/screenshots/ecosystem/ecosystem.png)
 
-The Ecosystem map displays all organizations, manufacturers, MEP centers, and other entities in your region in an interactive geographic view. This map interface allows you to visualize the spatial distribution of businesses, identify clusters and concentrations, and understand the geographic relationships between entities. Color coding and icons show different types of organizations, and you can click on any location to see detailed information about that organization.
+The map gives you a live, filterable picture of your entire account base on an interactive map. Use the left panel to narrow accounts by location, size, or industry, then switch to Scores view to overlay assessment results as color-coded markers. Click any account for full details and legislator information.
 
-## Map Controls
+## In this section
 
-_Coming soon._
-
-## Filters
-
-_Coming soon._
-
-## Related
-
-- [Industries](../industries/index.md)
-- [Accounts](../accounts/index.md)
+- [Filters](filters.md) — narrow the map by location, company size, NAICS industry, and more
+- [Scores View](scores.md) — visualize assessment scores as color-coded map markers
+- [Account List & Details](accounts.md) — browse the account list and view per-account details
+- [Legislators](legislators.md) — view the elected officials representing any geocoded account

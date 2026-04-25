@@ -1,5 +1,10 @@
 ---
 route: /account/:id
+tags:
+  - accounts
+  - clients
+  - contacts
+  - details
 ---
 
 # Account Details
@@ -33,4 +38,4 @@ The Assessments section displays all assessments associated with this account. H
 ## Related
 
 - [Accounts](index.md)
-- [Assessments](../evaluations/index.md)
+- [Assessments](../assessments/index.md)

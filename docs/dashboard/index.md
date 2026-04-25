@@ -1,5 +1,10 @@
 ---
 route: /dashboard
+tags:
+  - dashboard
+  - analytics
+  - overview
+  - reporting
 ---
 
 # Dashboard
@@ -31,4 +36,4 @@ _Coming soon._
 ## Related
 
 - [Pivot Table](pivot-table.md)
-- [Evaluations](../evaluations/index.md)
+- [Assessments](../assessments/index.md)
