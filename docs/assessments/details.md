@@ -1,5 +1,11 @@
 ---
 route: /evaluation-assessment-detail/:id
+tags:
+  - assessments
+  - scoring
+  - results
+  - details
+  - respondents
 ---
 
 # Assessment Details

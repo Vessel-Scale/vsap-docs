@@ -1,5 +1,9 @@
 ---
 route: /account
+tags:
+  - accounts
+  - clients
+  - overview
 ---
 
 # Accounts

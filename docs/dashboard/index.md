@@ -1,5 +1,10 @@
 ---
 route: /dashboard
+tags:
+  - dashboard
+  - analytics
+  - overview
+  - reporting
 ---
 
 # Dashboard

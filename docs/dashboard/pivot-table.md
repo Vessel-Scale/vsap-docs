@@ -1,5 +1,11 @@
 ---
 route: /dashboard/pivot/:assessmentDefinitionUuid
+tags:
+  - dashboard
+  - pivot-table
+  - analytics
+  - reporting
+  - filter
 ---
 
 # Pivot Table

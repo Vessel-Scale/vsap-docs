@@ -1,26 +1,31 @@
 ---
 route: /library
+tags:
+  - library
+  - assessment-definitions
+  - overview
 ---
 
 # Library
 
-The Library contains all assessment definitions — the templates used to create evaluation instances.
+The Library contains all assessment definitions — the blueprints used to create evaluations across your accounts.
 
 ## What you can do here
 
 - Browse all available assessment definitions
-- View the structure and questions of each assessment
+- View the structure, questions, and status of each assessment
 - Create new assessment definitions
-- Edit existing definitions
+- Edit and publish drafts
+- Manage parent/child assessment groups
 
-## Assessment Definitions List
+## Overview
 
 ![Library List](../assets/screenshots/library/library-list.png)
 
-The Library displays all assessment definition templates available in your system. These are the blueprints used to create new evaluations. From this list view, you can see all available assessments, their descriptions, when they were last updated, and how many times they've been used. This helps you understand your complete assessment inventory and find the right template when creating new evaluations.
+The Library is your central inventory of assessment templates. Definitions here can be in **Draft**, **Published**, or **Deprecated** status and can be organized into parent/child groups for multi-part evaluations. Each card shows the assessment name, icon, status badges, version, and last-updated date.
 
-## Related
+## In this section
 
-- [Create Assessment](create.md)
-- [Edit Assessment](edit.md)
-- [Assessments](../assessments/index.md)
+- [Assessment List](list.md) — Browse the list, understand card actions, and manage definitions
+- [Create Assessment](create.md) — Build a new assessment definition from scratch
+- [Edit Assessment](edit.md) — Modify an existing definition's YAML, categories, and settings

@@ -1,5 +1,10 @@
 ---
 route: /library/create
+tags:
+  - library
+  - assessment-definitions
+  - create
+  - YAML
 ---
 
 # Create Assessment Definition

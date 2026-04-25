@@ -1,5 +1,12 @@
 ---
 route: /settings/branding
+tags:
+  - settings
+  - branding
+  - admin
+  - logo
+  - colors
+  - customization
 ---
 
 # Branding

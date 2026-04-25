@@ -1,5 +1,13 @@
 ---
 route: /settings/web-reports
+tags:
+  - assessments
+  - web-reports
+  - reports
+  - YAML
+  - template-variables
+  - media-library
+  - branding
 ---
 
 # Web Reports

@@ -75,12 +75,19 @@ nav:
     - Create Assessment: assessments/create.md
   - Library:
     - Overview: library/index.md
+    - Assessment List: library/list.md
     - Create Assessment: library/create.md
     - Edit Assessment: library/edit.md
   - Ecosystem:
-    - ecosystem/index.md
+    - Overview: ecosystem/index.md
+    - Filters: ecosystem/filters.md
+    - Scores View: ecosystem/scores.md
+    - Account List & Details: ecosystem/accounts.md
+    - Legislators: ecosystem/legislators.md
   - Industries:
-    - industries/index.md
+    - Overview: industries/index.md
+    - NAICS Hierarchy: industries/hierarchy.md
+    - Platform Integration: industries/platform-integration.md
   - Settings:
     - Overview: settings/index.md
     - Branding: settings/branding.md

@@ -1,3 +1,14 @@
+---
+tags:
+  - settings
+  - intake-forms
+  - admin
+  - public-forms
+  - create
+  - assessments
+  - accounts
+---
+
 # Intake Forms
 
 Intake forms are publicly accessible forms that collect company and contact information from prospective clients. When a visitor submits an intake form, their data is saved to the platform as an Account and Contact — and optionally, an Assessment is automatically created for them.

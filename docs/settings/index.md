@@ -1,17 +1,25 @@
 ---
 route: /settings
+tags:
+  - settings
+  - admin
+  - overview
+  - configuration
 ---
 
 # Settings
 
 The Settings section allows administrators to configure platform-wide options for their organization.
 
-## Available Settings
+## What you can do here
 
-- [Branding](branding.md) — customize logos, colors, and terminology
-- [Custom Data](custom-data.md) — manage NAICS codes and Regional Manufacturer Associations
+- Customize your platform's branding — logos, colors, and terminology
+- Manage active NAICS codes and Regional Manufacturer Associations
+- Configure intake form templates for collecting account information
+- Build and manage web report templates with custom branding and dynamic variables
+- Set up email templates for outgoing platform messages
 
-## Settings Overview
+## Overview
 
 ![Settings](../assets/screenshots/settings/settings.png)
 

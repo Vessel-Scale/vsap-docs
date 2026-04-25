@@ -1,5 +1,12 @@
 ---
 route: /settings/custom-data
+tags:
+  - settings
+  - custom-data
+  - NAICS
+  - media-library
+  - admin
+  - reference-data
 ---
 
 # Custom Data

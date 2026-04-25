@@ -1,5 +1,10 @@
 ---
 route: /account/:id
+tags:
+  - accounts
+  - clients
+  - contacts
+  - details
 ---
 
 # Account Details

@@ -1,3 +1,10 @@
+---
+tags:
+  - getting-started
+  - overview
+  - home
+---
+
 # VSAP Help Center
 
 Welcome to the Vessel Impact Platform documentation. Use the navigation to find guides, references, and tutorials.

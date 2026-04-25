@@ -1,3 +1,13 @@
+---
+tags:
+  - settings
+  - email
+  - templates
+  - admin
+  - notifications
+  - branding
+---
+
 # Email Templates
 
 Email templates control the content and appearance of automated emails sent throughout the Smart Assessment Platform. Customize each template to match your organization's branding and messaging needs.
