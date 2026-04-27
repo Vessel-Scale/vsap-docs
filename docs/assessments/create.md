@@ -35,6 +35,7 @@ The editor interface is the same whether you're filling in responses while creat
 
 ## Related
 
+- [Getting Started: Step 3](../../getting-started/create-assessment.md) — Quick-start guide to creating assessments
 - [Assessments](index.md)
 - [Library](../library/index.md)
 - [Edit Assessment](details.md#edit-assessment)

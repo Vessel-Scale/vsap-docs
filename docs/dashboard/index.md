@@ -9,31 +9,39 @@ tags:
 
 # Dashboard
 
-The Dashboard provides an at-a-glance overview of your organization's activity and key metrics.
+The Dashboard gives you an at-a-glance view of all assessments for a selected assessment definition — scores, completion status, account breakdowns, and more.
 
 ## What you can do here
 
-- View summary cards for recent activity
-- Navigate to detailed reports and evaluations
-- Access the Pivot Table for cross-sectional analysis
+- View aggregate metrics across all assessments for the selected definition
+- Browse and interact with 11 built-in analytics components
+- [Configure which components are visible](configure.md) and their order
+- [Download a CSV export](download.md) of all assessment data
+- Open the [Pivot Table](pivot-table.md) for flexible cross-sectional analysis
 
 ## Dashboard Overview
 
-![Dashboard](../assets/screenshots/dashboard/dashboard.png)
+![Dashboard overview](../assets/screenshots/dashboard/dashboard.png)
 
-The Dashboard is your command center for monitoring organizational activity. This page displays key performance indicators, recent assessment completions, upcoming evaluations, and important metrics at a glance. The dashboard layout is designed to give you immediate visibility into the most important information without requiring you to navigate through multiple sections. You can use the dashboard to quickly understand current status, identify trends, and navigate to detailed analysis where needed.
+The assessment definition selector at the top of the page controls which assessment's data is displayed across all components. The toolbar in the top-right corner provides quick access to configuration, the pivot table, and CSV download.
 
-## Sections
+![Dashboard toolbar](../assets/screenshots/dashboard/dashboard-toolbar.png)
 
-### Summary Cards
+| Button | Action |
+|--------|--------|
+| Configure (sliders icon) | Open [Configure Dashboard](configure.md) to add, remove, or reorder components |
+| Pivot Table (grid icon) | Navigate to the [Pivot Table](pivot-table.md) for tabular analysis |
+| Download CSV (download icon) | [Download](download.md) all assessment data as a CSV file |
 
-_Coming soon._
+## Components
 
-### Recent Activity
-
-_Coming soon._
+The dashboard displays up to 11 analytics components. See [Components](components.md) for a description and screenshot of each one.
 
 ## Related
 
+- [Getting Started: Step 7](../../getting-started/navigating-the-dashboard.md) — Quick-start guide to the dashboard
+- [Components](components.md)
+- [Configure Dashboard](configure.md)
+- [Download CSV](download.md)
 - [Pivot Table](pivot-table.md)
 - [Assessments](../assessments/index.md)

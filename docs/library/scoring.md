@@ -9,138 +9,165 @@ tags:
 
 # Assessment Scoring
 
-Assessment scores are calculated based on respondent answers to questions and are presented using one of two chart types. Understanding how scores are calculated and displayed is critical for designing your assessment definitions.
+Assessment scores are calculated from respondent answers and displayed using one of two scoring methods — **Averaged** (the default) or **Summed**. Understanding how each method works helps you design assessments that communicate results clearly.
 
-## Scoring Overview
+## How Scoring Works
 
 When respondents complete an assessment:
 
-1. **Question responses are scored** based on the selected answers or numeric values
-2. **Category scores are calculated** by combining scores from all questions in that category
+1. **Question responses are scored** based on selected answers or numeric values
+2. **Category scores are calculated** from all questions in that category
 3. **Overall assessment score** is computed from all category scores
-4. **Results are displayed** using either a Gas Gauge or Bar Chart visualization
-
-The key difference between scoring approaches is how the overall score is presented to respondents.
+4. **Results are displayed** using the configured scoring method
 
 ---
 
-## Chart Types & Scoring Approaches
+## Scoring Method
 
-### Gas Gauge – Normalized Scoring
+The **Scoring Method** field is in the Assessment Details section of the library editor.
 
-!!! note "PRESET: Gas Gauge"
-    Gas Gauge is the default chart type and uses a normalized scoring approach.
+![Scoring Method dropdown showing "Averaging" selected](../assets/screenshots/library/library-editor-scoring-method.png)
 
-**Gas Gauge converts your total score to a 1-5 Likert scale.**
+| Method | Description |
+|--------|-------------|
+| **Averaging** *(default)* | Scores are averaged across all questions, keeping results on a consistent scale regardless of assessment length |
+| **Summed** | Scores are totaled across all questions, so longer assessments yield higher maximum scores |
 
-The raw summed scores from all categories are mathematically converted to a 1-5 scale using this formula:
+---
 
-$$\text{Normalized Score} = \text{Sum of Category Scores} \times \frac{5}{\text{Maximum Possible Score}}$$
+### Averaged Scoring *(Default)*
+
+With Averaging, every question's score contributes equally, and the final result stays within the same range regardless of how many questions are in the assessment.
+
+$$\text{Averaged Score} = \frac{\text{Sum of All Question Scores}}{\text{Number of Questions}}$$
 
 #### Key Characteristics
 
-- **Normalized to 1-5 Scale**: All scores are displayed as a value between 1 and 5, regardless of how many questions are in the assessment
-- **Percentage-Based Conversion**: Score reflects performance as a percentage of total possible points
-- **Easier Comparison**: You can compare assessments with different numbers of questions using the same 1-5 scale
-- **Intuitive Interpretation**: Similar to Likert scale ratings (1=Poor, 5=Excellent)
+- **Consistent scale**: Score range stays the same no matter how many questions the assessment has
+- **Easy comparison**: Assessments with different lengths can be compared directly
+- **Intuitive**: A score of 4.2 means the same thing across all assessments
 
-#### Example: Gas Gauge Scoring
+#### Example: Averaged Scoring
 
-**Assessment with 10 scorable questions (each worth 0-5 points)**
+**Assessment with 10 questions, each worth 0–5 points**
 
 | Item | Value |
 |------|-------|
-| Total possible score | 50 points (10 questions × 5 max points each) |
-| Your actual score | 35 points |
-| Conversion factor | 5 ÷ 50 = 0.1 |
-| **Normalized gas gauge score** | **35 × 0.1 = 3.5** |
+| Total score earned | 35 points |
+| Number of questions | 10 |
+| **Averaged score** | **35 ÷ 10 = 3.5** |
 
-Your result displays as **3.5 out of 5.0** on a gas gauge visualization.
+**Comparing two assessments of different lengths:**
 
-#### Example: Gas Gauge vs. Different Assessment Sizes
+| Assessment | Score Earned | Questions | Averaged Score |
+|-----------|-------------|-----------|----------------|
+| Assessment A | 20 pts | 5 questions | 4.0 |
+| Assessment B | 40 pts | 10 questions | 4.0 |
 
-**Assessment A: 5 questions (25 max points), your score: 20**
-- Conversion: 5 ÷ 25 = 0.2
-- Gas Gauge Score: 20 × 0.2 = **4.0**
-
-**Assessment B: 10 questions (50 max points), your score: 40**
-- Conversion: 5 ÷ 50 = 0.1
-- Gas Gauge Score: 40 × 0.1 = **4.0**
-
-Both assessments show **4.0 on the 1-5 scale**, even though the second has twice as many questions. This makes it easy to compare assessments of different lengths.
-
-#### Visualization
-
-The gas gauge visual shows:
-- A circular gauge needle pointing to your position (1-5)
-- Color coding (red=low, yellow=medium, green=high)
-- Your score and maximum possible score
-- Industry/business-size comparison indicator if available
+Both show **4.0** — directly comparable despite different lengths.
 
 ---
 
-### Bar Chart – Cumulative Scoring
+### Summed Scoring
 
-!!! note "Alternative: Bar Chart"
-    Bar Chart is an alternative chart type that uses cumulative scoring.
+With Summed scoring, every question's score is added together. The maximum possible score scales with the number of questions.
 
-**Bar Chart displays your summed score without normalization.**
-
-The scores from all categories are added together and displayed as a raw total, without conversion to a 1-5 scale.
-
-$$\text{Cumulative Score} = \text{Sum of All Category Scores}$$
+$$\text{Summed Score} = \sum \text{All Question Scores}$$
 
 #### Key Characteristics
 
-- **Raw Total Score**: Shows the actual sum of all question scores
-- **Dependent on Assessment Size**: The maximum possible score varies based on the number of questions
-- **Direct Comparison to Max**: You can easily see how far you are from the maximum possible score
-- **Granular Detail**: Better for detailed analysis when you need to know the exact point total
+- **Raw total**: Shows the actual accumulated points across all questions
+- **Length-dependent**: Maximum score varies based on number of questions
+- **Detailed analysis**: Useful when absolute point totals are meaningful
 
-#### Example: Bar Chart Scoring
+#### Example: Summed Scoring
 
-**Assessment with 10 scorable questions (each worth 0-5 points)**
+**Assessment with 10 questions, each worth 0–5 points**
 
 | Item | Value |
 |------|-------|
 | Total possible score | 50 points |
-| Your actual score | 35 points |
-| **Bar chart cumulative score** | **35 out of 50** |
+| Score earned | 35 points |
+| **Summed score** | **35 out of 50** |
 
-Your result displays as a progress bar showing **35/50**, with the bar filled to 70%.
+**Comparing two assessments of different lengths:**
 
-#### Example: Bar Chart with Different Assessment Sizes
+| Assessment | Score Earned | Max Possible | Summed Score |
+|-----------|-------------|-------------|--------------|
+| Assessment A | 20 pts | 25 pts | 20/25 |
+| Assessment B | 40 pts | 50 pts | 40/50 |
 
-**Assessment A: 5 questions (25 max points), your score: 20**
-- Bar Chart Score: **20 out of 25**
-
-**Assessment B: 10 questions (50 max points), your score: 40**
-- Bar Chart Score: **40 out of 50**
-
-Both assessments show 80% progress, but the raw numbers are different (20 vs. 40) because of the different assessment sizes. You must account for the different maximums when comparing.
-
-#### Visualization
-
-The bar chart visual shows:
-- A horizontal progress bar
-- Your cumulative score displayed in the bar
-- The maximum possible score displayed to the right
-- Industry/business-size comparison indicator (if available) shown as an arrow above the bar
+The raw totals differ — you must account for different maximums when comparing.
 
 ---
 
-## Comparison: Gas Gauge vs. Bar Chart
+### Choosing the Right Method
 
-| Feature | Gas Gauge | Bar Chart |
-|---------|-----------|-------------|
-| **Scoring Approach** | Normalized to 1-5 scale | Raw cumulative total |
-| **Formula** | Sum × (5 / Max) | Sum (no conversion) |
-| **Scale** | Always 1-5 | Varies by assessment |
-| **Easy Comparison** | Yes—all assessments use same scale | No—need to account for different maximums |
-| **Best For** | Comparing different assessments | Detailed point-by-point analysis |
-| **Interpretation** | Likert scale equivalent | Percentage of max possible |
-| **Maximum Varies?** | No—always 5 | Yes—depends on question count |
-| **Visualization** | Circular gauge needle | Horizontal progress bar |
+| Use Case | Recommended Method |
+|----------|-------------------|
+| Comparing across assessments of different lengths | **Averaged** |
+| Standard benchmarking or industry comparisons | **Averaged** |
+| Point-accumulation models (longer = more points) | **Summed** |
+| When absolute totals matter to your analysis | **Summed** |
+
+!!! tip "When in doubt, use Averaging"
+    Averaging is the default for good reason — it keeps scores consistent and comparable regardless of how you grow or change your assessment over time.
+
+---
+
+## Scoring Section Feedback
+
+The **Scoring Section Feedback** accordion in Assessment Details lets you define named score ranges (sections) that appear on the respondent's results page with tailored feedback.
+
+![Scoring Section Feedback expanded showing At Risk, Could Improve, and Optimal sections](../assets/screenshots/library/library-editor-scoring-sections.png)
+
+Each section defines:
+
+- **Section name** (e.g., At Risk, Could Improve, Optimal)
+- **Score range** (Min Score – Max Score)
+- **Color theme** for the results display
+- **Suggestions** (strengths, root causes, solutions, recommended actions)
+
+---
+
+### Sync Scoring
+
+**SYNC SCORING** automatically recalculates and evenly distributes the score range thresholds across all of your scoring sections based on the current assessment configuration.
+
+![SYNC SCORING button above the expanded scoring sections list](../assets/screenshots/library/library-editor-sync-scoring-expanded.png)
+
+Use it whenever you:
+
+- Add or remove questions that change the total possible score
+- Add or remove scoring sections
+- Change the Scoring Method between Averaged and Summed
+- Want to reset thresholds to an even distribution after manual edits
+
+!!! tip
+    Always click **SYNC SCORING** after making structural changes to your assessment (adding categories, questions, or sections) to keep thresholds accurate.
+
+---
+
+### Editing a Scoring Section
+
+Click the **pencil icon** (✏) on any scoring section row to open the section editor.
+
+![Edit Scoring Section modal showing Section Title, Min/Max Score, color fields, and a live preview](../assets/screenshots/library/library-editor-scoring-edit-section.png)
+
+The editor includes:
+
+| Field | Description |
+|-------|-------------|
+| **Section Title** | Name displayed on the results page (e.g., "At Risk") |
+| **Min Score** | Lower bound of this score range |
+| **Max Score** | Upper bound of this score range |
+| **Primary Background** | Background color for the section badge |
+| **Secondary Background** | Background color for score detail areas |
+| **Primary Font Color** | Text color on the badge |
+| **Secondary Font Color** | Text color on score detail areas |
+| **Preview** | Live visualization showing how the section will appear to respondents |
+
+Use **Quick Fill Defaults** at the top of the modal to instantly apply the standard At Risk / Could Improve / Optimal color presets.
 
 ---
 
@@ -168,98 +195,21 @@ Each question is scored based on the respondent's answer:
 
 ### Step 2: Category Scoring
 
-All question scores within a category are summed and averaged:
+All question scores within a category are summed:
 
-$$\text{Category Average Score} = \frac{\sum \text{All Question Scores in Category}}{\text{Number of Scorable Questions}}$$
+$$\text{Category Score} = \sum \text{All Question Scores in Category}$$
 
 ### Step 3: Overall Assessment Score
 
-All category scores are summed:
+Depending on the Scoring Method:
 
-$$\text{Total Assessment Score} = \sum \text{All Category Average Scores}$$
+**Averaged:**
 
-### Step 4: Chart Type Conversion
+$$\text{Overall Score} = \frac{\sum \text{All Category Scores}}{\text{Total Number of Scorable Questions}}$$
 
-Depending on the chart type:
+**Summed:**
 
-**Gas Gauge**: Normalize to 1-5 scale
-$$\text{Gas Gauge Score} = \text{Total Score} \times \frac{5}{\text{Maximum Possible Score}}$$
-
-**Bar Chart**: Display raw total
-$$\text{Bar Chart Score} = \text{Total Score (no conversion)}$$
-
----
-
-## Practical Examples
-
-### Example 1: Lean Manufacturing Assessment (Gas Gauge)
-
-**Assessment Definition:**
-- 3 categories with 5 questions each (15 total)
-- Each question uses a 5-point Likert scale
-- Maximum possible score: 75 (15 × 5)
-
-**Results:**
-
-| Category | Questions | Average Score | Category Total |
-|----------|-----------|----------------|-----------------|
-| Lean Principles | 5 | 4.2 | 21 |
-| Process Improvement | 5 | 3.8 | 19 |
-| Continuous Improvement Culture | 5 | 4.0 | 20 |
-| **TOTAL** | | | **60** |
-
-**Gas Gauge Conversion:**
-- Conversion factor: 5 ÷ 75 = 0.0667
-- Normalized score: 60 × 0.0667 = **4.0**
-- **Display: 4.0 out of 5.0** on the gas gauge
-
-**Interpretation:** Strong performance on a 1-5 scale, equivalent to "Agree" on the Likert scale.
-
----
-
-### Example 2: Supply Chain Maturity (Bar Chart)
-
-**Assessment Definition:**
-- 4 categories with 8 questions each (32 total)
-- Mix of 4-point and 5-point scales, plus numeric range questions
-- Maximum possible score: 128 (varies by question)
-
-**Results:**
-
-| Category | Points Earned | Max Points |
-|----------|----------------|------------|
-| Supply Chain Strategy | 28 | 32 |
-| Supplier Management | 26 | 32 |
-| Logistics & Distribution | 24 | 32 |
-| Performance Metrics | 30 | 32 |
-| **TOTAL** | **108** | **128** |
-
-**Bar Chart Display:**
-- **Score: 108 out of 128**
-- Progress bar: 84% filled
-- Industry average for this company size: 92 points (arrow indicator on bar)
-
-**Interpretation:** You're above average for your company size, with particularly strong supply chain strategy and performance metrics.
-
----
-
-## Selecting a Chart Type
-
-When creating an assessment definition, choose a chart type based on your needs:
-
-### Choose Gas Gauge if you:
-- Want to compare assessments with different numbers of questions
-- Prefer a simple 1-5 scale for interpretation
-- Want results to be intuitive and easy to understand
-- Are creating multiple assessment versions with different scopes
-- Want to emphasize relative performance (percentage of maximum)
-
-### Choose Bar Chart if you:
-- Want to see the exact point total earned
-- Are comparing the same assessment across multiple attempts
-- Need to communicate detailed point-by-point progress
-- Want respondents to understand how many points they earned toward the maximum
-- Prefer a more granular view of achievement
+$$\text{Overall Score} = \sum \text{All Category Scores}$$
 
 ---
 

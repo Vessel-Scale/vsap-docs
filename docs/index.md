@@ -21,6 +21,7 @@ The Vessel Smart Assessment Platform enables you to:
 - **Manage Your Ecosystem** — View and organize your network of suppliers, partners, and stakeholders
 - **Review Aggregated Statistics** — See industry trends, performance benchmarks, and comparative analytics
 - **Configure Platform Settings** — Customize branding, email templates, intake forms, and more
+- **Share with Clients** — Give clients access to their own portal to view assessments, track progress, and explore industry benchmarks
 
 ## Quick Links
 
@@ -43,7 +44,7 @@ The Vessel Smart Assessment Platform enables you to:
 - [Create Assessment](assessments/create.md)
 - [Web Reports](assessments/report-builder.md)
 
-### [Library (Assessment Definitions)](library/index.md)
+### [Library](library/index.md)
 - [Library Overview](library/index.md)
 - [Assessment List](library/list.md)
 - [Create Assessment Definition](library/create.md)
@@ -66,7 +67,13 @@ The Vessel Smart Assessment Platform enables you to:
 ### [Settings & Configuration](settings/index.md)
 - [Settings Overview](settings/index.md)
 - [Branding](settings/branding.md)
+- [Custom Data](settings/custom-data.md)
 - [Email Templates](settings/email-templates.md)
 - [Intake Forms](settings/intake-forms.md)
 - [Web Reports](settings/web-reports.md)
-- [Custom Data](settings/custom-data.md)
+
+### [Client Portal](client-portal/index.md)
+- [Overview](client-portal/index.md)
+- [Assessments Table](client-portal/assessments-table.md)
+- [Industry Benchmarking](client-portal/industry-benchmarking.md)
+

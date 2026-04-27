@@ -15,6 +15,10 @@ Assessment questions are defined by their type, which determines how respondents
 
 There are five core question types available in the assessment system:
 
+Each question type is configured in the assessment editor by clicking a question row to expand its inline editor. The **Question Type** dropdown determines which fields appear below it.
+
+![Assessment editor — categories and questions list showing question type labels on the right](../assets/screenshots/library/library-qt-multiple-choice-expanded.png)
+
 | Type | Description | Scorable | Use Case |
 |------|-------------|----------|----------|
 | **Text** | Open-ended text responses | No | Capturing detailed information, comments, explanations |
@@ -28,6 +32,8 @@ There are five core question types available in the assessment system:
 ## Text
 
 **Text Entry** questions capture open-ended responses as plain text. Respondents can write any amount of text in a free-form field.
+
+![Text question editor — Question Type set to "Text" with no scoring options](../assets/screenshots/library/library-qt-editor-text.png)
 
 ### Parameters
 
@@ -53,6 +59,8 @@ There are five core question types available in the assessment system:
 ## Numeric
 
 **Numeric** questions capture a single numeric value. You can specify a unit of measure (percent, dollar amount, time interval, etc.) to provide context for the respondent.
+
+![Numeric question editor — Question Type set to "Numeric" showing Numeric Input Configuration section](../assets/screenshots/library/library-qt-editor-numeric.png)
 
 ### Parameters
 
@@ -101,6 +109,8 @@ Numeric questions are scored based on the value entered. The scoring rules are d
 ## Numeric Range
 
 **Numeric Range** questions accept a numeric value but score it based on which predefined range it falls into. This allows you to group numeric responses into discrete score categories.
+
+![Numeric Range question editor — Question Type set to "Numeric Range" showing Unit of Measure and Score Ranges configuration](../assets/screenshots/library/library-qt-editor-numeric-range.png)
 
 ### Parameters
 
@@ -157,6 +167,8 @@ When a respondent enters a numeric value, it is automatically matched against th
 
 **Multiple Choice** questions present a list of predefined options from which the respondent selects exactly one. Multiple Choice questions have subtypes that determine their presentation and scoring behavior.
 
+The **Question Type** for Multiple Choice questions is set to **Preset** — a second **Preset** dropdown then determines the specific subtype (Agreement Scale, Binary Yes/No, Quality Rating, Frequency Rating).
+
 ### Parameters
 
 | Setting | Options | Required | Default | Notes |
@@ -180,6 +192,8 @@ Standard multiple choice with custom answer options. Used for rating scales, fre
 
 A standardized scale for measuring agreement or disagreement. Typically uses 5 or 7 points.
 
+![Likert question editor — Question Type "Preset" with Preset set to "Agreement Scale (Strongly Disagree → Strongly Agree)"](../assets/screenshots/library/library-qt-editor-likert.png)
+
 !!! note "PRESET: Likert Scale (5-point Agreement)"
     This is a preset question type. When selected, the five standard agreement options are automatically provided:
     - Strongly Disagree (1)
@@ -195,6 +209,8 @@ A standardized scale for measuring agreement or disagreement. Typically uses 5 o
 #### Binary
 
 A yes/no or true/false question with exactly two options.
+
+![Binary question editor — Question Type "Preset" with Preset set to "Binary (Yes/No)"](../assets/screenshots/library/library-qt-editor-binary.png)
 
 !!! note "PRESET: Binary Yes/No"
     This is a preset question type. When selected, two standard options are automatically provided:
@@ -254,6 +270,8 @@ Option: No   | Score: 0
 ## Multiple Select
 
 **Multiple Select** questions present a list of options from which respondents can select multiple answers (checkbox-style). This is useful when multiple valid answers apply to a single question.
+
+![Multiple Select question editor — Question Type set to "Multiple Select" showing Max Selections and Include 'Other' option controls](../assets/screenshots/library/library-qt-editor-multiple-select.png)
 
 ### Parameters
 
