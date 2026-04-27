@@ -9,7 +9,7 @@ Usage:
   uv run python scripts/take_screenshots.py custom-data            # custom data only
 
 Available sections:
-  dashboard, account, assessments, library, ecosystem, industries, settings, report-builder, custom-data,
+  dashboard, account, assessments, library, library-question-types, ecosystem, industries, settings, report-builder, custom-data,
   email-templates, intake-forms, web-reports, branding
 """
 import argparse
@@ -20,7 +20,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE_URL = "http://testv2.localhost:3000"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MDg5MTgxLCJpYXQiOjE3NzcwNDU5ODEsImp0aSI6IjQxM2ExNGQ0ZmYxZDQ2OTA5N2U4YzMyYzZjYzU5MmE4IiwidXNlcl9pZCI6IjZjNjkxYjQzLTQwMGYtNGRiZi1hNWFlLTRmYWZlNmVlMDYyYyIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.pc9uW1gZV6CcYthcXwpO0swbhGuarR_DdGCtv45Abrw"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzU4MTUxLCJpYXQiOjE3NzczMTQ5NTEsImp0aSI6ImRlYjJkMDI2NTc0OTQwNjJiYTFjODRhOGE0ZjAzOTFjIiwidXNlcl9pZCI6IjZjNjkxYjQzLTQwMGYtNGRiZi1hNWFlLTRmYWZlNmVlMDYyYyIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.ng53xtPzfRszEh77xa53TA_QFEqpUnxeTndhyWmYpWE"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -29,6 +29,22 @@ COOKIES = [
     {"name": "API_URL",      "value": "http://testv2.localhost:8000/"},
     {"name": "ACCESS_TOKEN", "value": ACCESS_TOKEN},
 ]
+
+EXTRA_HEADERS = {
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "accept-language": "en-US,en;q=0.9",
+    "connection": "keep-alive",
+    "origin": "http://testv2.localhost:3000",
+    "referer": "http://testv2.localhost:3000/src/router.tsx",
+    "sec-ch-ua": '"Google Chrome";v="147", "Not.A/Brand";v="8", "Chromium";v="147"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"Linux"',
+    "sec-fetch-dest": "script",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+}
 
 PERSIST_ROOT = json.dumps({
     "authReducers": json.dumps({
@@ -54,6 +70,7 @@ PERSIST_ROOT = json.dumps({
 
 
 async def setup_auth(page, context):
+    await context.set_extra_http_headers(EXTRA_HEADERS)
     await context.add_cookies([{**c, "url": BASE_URL + "/"} for c in COOKIES])
     await page.goto(BASE_URL, wait_until="domcontentloaded", timeout=15000)
     await page.evaluate(f"localStorage.setItem('persist:root', {json.dumps(PERSIST_ROOT)})")
@@ -87,9 +104,103 @@ async def try_click(page, *selectors, timeout=5000):
 # ── Section capture functions ──────────────────────────────────────────────────
 
 async def section_dashboard(page):
-    print("\n[dashboard]")
-    await goto(page, "/dashboard")
+    print("\n[dashboard] overview")
+    await goto(page, "/dashboard", wait_ms=3000)
     await save(page, "dashboard", "dashboard")
+
+    # Toolbar buttons (top-right area)
+    print("[dashboard] toolbar buttons")
+    await page.screenshot(
+        path=str(OUTPUT_DIR / "dashboard" / "dashboard-toolbar.png"),
+        clip={"x": 1220, "y": 110, "width": 200, "height": 55},
+    )
+    print("  + dashboard/dashboard-toolbar.png")
+
+    # Screenshot each component card using element.screenshot() so scroll position doesn't matter.
+    # Take the smallest (most specific) matching element to avoid capturing a parent container.
+    async def screenshot_component(search_text, filename):
+        el = await page.evaluate_handle(f"""
+            (() => {{
+                const candidates = Array.from(document.querySelectorAll('*')).filter(e => {{
+                    const t = e.innerText?.trim();
+                    return t?.includes({json.dumps(search_text)}) &&
+                           e.children.length > 1 &&
+                           e.offsetWidth > 200 && e.offsetHeight > 100;
+                }});
+                // Return the element with the smallest bounding area (most specific card)
+                return candidates.reduce((best, e) =>
+                    (!best || e.offsetWidth * e.offsetHeight < best.offsetWidth * best.offsetHeight) ? e : best
+                , null);
+            }})()
+        """)
+        el = el.as_element()
+        if el:
+            out = str(OUTPUT_DIR / "dashboard" / f"{filename}.png")
+            await el.screenshot(path=out)
+            print(f"  + dashboard/{filename}.png")
+            return True
+        print(f"  ✗ could not find card: {search_text!r}")
+        return False
+
+    await screenshot_component("Assessment Summary", "dashboard-assessment-summary")
+    await screenshot_component("Total Resilience Score", "dashboard-resilience-score")
+    await screenshot_component("Most Frequently Offered Solutions", "dashboard-solutions")
+    await screenshot_component("Total Companies", "dashboard-company-size")
+    await screenshot_component("Assessment Scoring by Category", "dashboard-scoring-by-category")
+    await screenshot_component("Average Score by NAICS Industry", "dashboard-naics-score")
+    await screenshot_component("Top Scoring Accounts", "dashboard-top-accounts")
+    await screenshot_component("Assessments in progress with no responses", "dashboard-in-progress")
+    await screenshot_component("Business Size Distribution by NAICS Industry", "dashboard-business-size-naics")
+    await screenshot_component("Highest Scoring Statements", "dashboard-highest-scoring")
+    await screenshot_component("Lowest Scoring Statements", "dashboard-lowest-scoring")
+
+    # Configure Dashboard modal
+    print("[dashboard] configure modal")
+    await page.evaluate(f"document.querySelector('.MuiBox-root.css-1yhoita').scrollTop = 0")
+    await page.wait_for_timeout(300)
+    await page.locator('button[aria-label="Configure dashboard components"]').click()
+    await page.wait_for_timeout(1500)
+    await save(page, "dashboard", "dashboard-configure")
+
+    # Scroll configure list to show all components
+    await page.evaluate("""
+        (() => {
+            const modal = document.querySelector('[role="dialog"]');
+            if (modal) {
+                const scrollable = Array.from(modal.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') &&
+                           e.scrollHeight > e.clientHeight + 20;
+                });
+                if (scrollable) scrollable.scrollTop = 300;
+            }
+        })()
+    """)
+    await page.wait_for_timeout(400)
+    await save(page, "dashboard", "dashboard-configure-scrolled")
+    await page.keyboard.press("Escape")
+    await page.wait_for_timeout(500)
+
+    # Download CSV modal
+    print("[dashboard] download CSV modal")
+    await page.locator('button[aria-label="Download CSV for all assessments"]').click()
+    await page.wait_for_timeout(1500)
+    await save(page, "dashboard", "dashboard-download")
+    await page.keyboard.press("Escape")
+    await page.wait_for_timeout(500)
+
+    # Pivot table — column selector
+    print("[dashboard] pivot table")
+    await page.locator('button[aria-label="Open pivot table analytics"]').click()
+    await page.wait_for_timeout(3000)
+    await save(page, "dashboard", "dashboard-pivot-selector")
+
+    # Load the pivot table
+    load_btn = page.locator('button:has-text("LOAD PIVOT TABLE")')
+    if await load_btn.count() > 0:
+        await load_btn.click()
+        await page.wait_for_timeout(3000)
+        await save(page, "dashboard", "dashboard-pivot-table")
 
 
 async def section_account(page):
@@ -114,6 +225,22 @@ async def section_account(page):
         ):
             await save(page, "account", "account-edit")
 
+    print("[account] create account form")
+    await goto(page, "/create-account", wait_ms=2000)
+    await save(page, "account", "account-create")
+    # Scroll the main content area to show lower sections
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            }) || document.documentElement;
+            el.scrollTop = 600;
+        })()
+    """)
+    await page.wait_for_timeout(400)
+    await save(page, "account", "account-create-scrolled")
+
 
 async def section_assessments(page):
     print("\n[assessments] collections")
@@ -133,33 +260,133 @@ async def section_assessments(page):
         await save(page, "assessments", "assessment-details")
 
 
+LIBRARY_EDITOR_ID = "dcb00786-ae5a-4c6d-b91b-b46f0133c975"
+
+
 async def section_library(page):
     print("\n[library] list")
-    await goto(page, "/library")
+    await goto(page, "/library", wait_ms=4000)
     await save(page, "library", "library-list")
 
-    print("[library] editor - clicking first card title")
-    if await try_click(page,
-        "h2:first-of-type",
-        "h3:first-of-type",
-        "[class*='card']:first-child",
-        "[class*='Card']:first-child",
-        "[class*='item']:first-child h2",
-        "a[href*='/library/edit']",
-    ):
-        await save(page, "library", "library-editor")
+    # ── Navigate directly to the "All Question Types" assessment ─────────────
+    print("[library] navigating directly to All Question Types editor")
+    await goto(page, f"/library/edit/{LIBRARY_EDITOR_ID}", wait_ms=4000)
+    print(f"    url: {page.url}")
 
-        print("[library] editor-category - clicking second tab")
-        if await try_click(page,
-            "[role='tab']:nth-child(2)",
-            "button[role='tab']:nth-of-type(2)",
-            "[role='tablist'] button:nth-child(2)",
-            "button:has-text('Category')",
-            "button:has-text('Categories')",
-            "button:has-text('Questions')",
-            "button:has-text('Sections')",
-        ):
-            await save(page, "library", "library-editor-category")
+    # The editor uses an inner scrollable container, not window scroll.
+    # Find it and use it throughout.
+    async def scroll_main(y):
+        await page.evaluate(f"""
+            (() => {{
+                // try main content scrollable container first, fallback to body
+                const el = document.querySelector('main, [class*="content"], [class*="Content"], [class*="main"], [class*="Main"]');
+                if (el && el.scrollHeight > el.clientHeight) {{ el.scrollTop = {y}; return; }}
+                window.scrollTo(0, {y});
+            }})()
+        """)
+        await page.wait_for_timeout(400)
+
+    # ── Top of editor — toolbar + assessment details ───────────────────────
+    await scroll_main(0)
+    await save(page, "library", "library-editor-overview")
+
+    # ── Expand sidebar panel if collapsed ──────────────────────────────────
+    print("[library] editor - expanding sidebar if needed")
+    sidebar_btn = await page.query_selector("button:has(svg[data-testid='KeyboardDoubleArrowRightIcon'])")
+    if sidebar_btn:
+        await sidebar_btn.click()
+        await page.wait_for_timeout(800)
+    await save(page, "library", "library-editor-toolbar")
+
+    # ── Expand Assessment Details accordion ────────────────────────────────
+    print("[library] editor - expanding Assessment Details")
+    await try_click(page, "button:has-text('Assessment Details')", timeout=3000)
+    await page.wait_for_timeout(600)
+    await save(page, "library", "library-editor-assessment-details")
+
+    # ── Scroll to show scoring sections ────────────────────────────────────
+    print("[library] editor - scoring sections area")
+    await scroll_main(400)
+    await save(page, "library", "library-editor-scoring")
+
+    # ── Expand scoring section feedback accordion ─────────────────────────
+    print("[library] editor - scoring section feedback")
+    await try_click(page, "button:has-text('Scoring Section Feedback')", timeout=3000)
+    await page.wait_for_timeout(600)
+    await save(page, "library", "library-editor-scoring-feedback")
+
+    # ── Scroll to categories list ──────────────────────────────────────────
+    print("[library] editor - categories area")
+    await scroll_main(900)
+    await page.wait_for_timeout(500)
+    await save(page, "library", "library-editor-categories")
+
+    # ── Click first category to expand it and show questions ──────────────
+    print("[library] editor - expanding first category")
+    cat_expanded = False
+    for sel in [
+        "[aria-label='Drag to reorder category'] ~ *",
+        "button[class*='expand']",
+        "button[class*='Expand']",
+        "[class*='categoryName']",
+        "[class*='CategoryName']",
+        "h4:has-text('EXAMPLE:'):first-of-type",
+    ]:
+        try:
+            el = await page.query_selector(sel)
+            if el:
+                await el.click()
+                await page.wait_for_timeout(1000)
+                cat_expanded = True
+                break
+        except Exception:
+            continue
+
+    if cat_expanded:
+        await save(page, "library", "library-editor-category-expanded")
+    else:
+        # Just save the categories as-is
+        await save(page, "library", "library-editor-category-expanded")
+
+    # ── Preview: full assessment ───────────────────────────────────────────
+    print("[library] preview - full assessment")
+    await scroll_main(0)
+    await page.wait_for_timeout(300)
+    if await try_click(page, "button[aria-label='Preview Assessment']", timeout=5000):
+        await page.wait_for_timeout(2500)
+        await save(page, "library", "library-preview-full-assessment")
+
+        print("[library] preview - full assessment scrolled")
+        await page.evaluate("""
+            const d = document.querySelector('[role="dialog"]');
+            if (d) d.scrollTop = 500;
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "library", "library-preview-full-scrolled")
+
+        await try_click(page, "[aria-label='close']", "[aria-label='Close']", "button:has-text('Close')", "button:has-text('Cancel')")
+        await page.wait_for_timeout(600)
+    else:
+        print("    (Preview Assessment button not found)")
+
+    # ── Preview: first category ────────────────────────────────────────────
+    print("[library] preview - category")
+    if await try_click(page, "button[aria-label='Preview category questions']", timeout=5000):
+        await page.wait_for_timeout(2500)
+        await save(page, "library", "library-preview-category")
+
+        print("[library] preview - category scrolled")
+        await page.evaluate("""
+            const d = document.querySelector('[role="dialog"]');
+            if (d) d.scrollTop = 400;
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "library", "library-preview-category-scrolled")
+
+        await try_click(page, "[aria-label='close']", "[aria-label='Close']", "button:has-text('Close')", "button:has-text('Cancel')")
+        await page.wait_for_timeout(600)
+    else:
+        print("    (Preview category questions button not found)")
 
 
 async def section_ecosystem(page):
@@ -532,6 +759,135 @@ async def section_web_reports(page):
             )
 
 
+async def section_library_question_types(page):
+    print("\n[library-question-types]")
+    await goto(page, f"/library/edit/{LIBRARY_EDITOR_ID}", wait_ms=4000)
+
+    # The editor's main scrollable container
+    async def scroll_container(y):
+        await page.evaluate(f"""
+            (() => {{
+                const el = Array.from(document.querySelectorAll('*')).find(e => {{
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') &&
+                           e.scrollHeight > e.clientHeight + 50;
+                }});
+                if (el) el.scrollTop = {y};
+            }})()
+        """)
+        await page.wait_for_timeout(400)
+
+    async def expand_category(cat_name):
+        """Click the MUI accordion summary to expand a category."""
+        await page.evaluate(f"""
+            (() => {{
+                const summaries = Array.from(document.querySelectorAll('[class*="MuiAccordionSummary"]'));
+                const cat = summaries.find(s => s.innerText.includes({json.dumps(cat_name)}));
+                if (cat) cat.click();
+            }})()
+        """)
+        await page.wait_for_timeout(1500)
+
+    async def open_question(snippet):
+        """Click the question row button to expand its inline editor."""
+        await page.evaluate(f"""
+            (() => {{
+                const btns = Array.from(document.querySelectorAll('button'));
+                const q = btns.find(b => b.innerText.includes({json.dumps(snippet)}));
+                if (q) q.click();
+            }})()
+        """)
+        await page.wait_for_timeout(2000)
+        # Scroll the expanded editor's textarea into center of viewport
+        await page.evaluate(f"""
+            (() => {{
+                const ta = Array.from(document.querySelectorAll('textarea'))
+                    .find(t => t.value.includes({json.dumps(snippet)}));
+                if (ta) ta.scrollIntoView({{behavior: 'instant', block: 'center'}});
+            }})()
+        """)
+        await page.wait_for_timeout(600)
+
+    async def close_question(snippet):
+        """Collapse a question editor by clicking its row again."""
+        await page.evaluate(f"""
+            (() => {{
+                const btns = Array.from(document.querySelectorAll('button'));
+                const q = btns.find(b => b.innerText.includes({json.dumps(snippet)}));
+                if (q) q.click();
+            }})()
+        """)
+        await page.wait_for_timeout(600)
+
+    # ── Categories list (collapsed) ──────────────────────────────────────────
+    print("[library-question-types] categories list (collapsed)")
+    await scroll_container(900)
+    await save(page, "library", "library-qt-categories")
+
+    # ── Multiple Choice Types — expand and show question list ────────────────
+    print("[library-question-types] expanding Multiple Choice Types category")
+    await expand_category("EXAMPLE: Multiple Choice Types")
+    await scroll_container(1300)
+    await save(page, "library", "library-qt-multiple-choice-expanded")
+
+    # ── Likert question editor ───────────────────────────────────────────────
+    print("[library-question-types] Likert question editor")
+    await open_question("EXAMPLE LIKERT:")
+    await save(page, "library", "library-qt-editor-likert")
+    await close_question("EXAMPLE LIKERT:")
+
+    # ── Binary question editor ───────────────────────────────────────────────
+    print("[library-question-types] Binary question editor")
+    await open_question("EXAMPLE BINARY:")
+    await save(page, "library", "library-qt-editor-binary")
+    await close_question("EXAMPLE BINARY:")
+
+    # ── Rating Qualitative question editor ───────────────────────────────────
+    print("[library-question-types] Rating question editor")
+    await open_question("EXAMPLE RATING:")
+    await save(page, "library", "library-qt-editor-rating")
+    await close_question("EXAMPLE RATING:")
+
+    # ── Input Types — expand ─────────────────────────────────────────────────
+    print("[library-question-types] expanding Input Types category")
+    await expand_category("EXAMPLE: Input Types")
+    await page.wait_for_timeout(500)
+
+    # ── Text question editor ─────────────────────────────────────────────────
+    print("[library-question-types] Text question editor")
+    await open_question("EXAMPLE TEXT:")
+    await save(page, "library", "library-qt-editor-text")
+    await close_question("EXAMPLE TEXT:")
+
+    # ── Numeric question editor (percent variant) ────────────────────────────
+    print("[library-question-types] Numeric question editor")
+    await open_question("EXAMPLE NUMERIC PERCENT:")
+    await save(page, "library", "library-qt-editor-numeric")
+    await close_question("EXAMPLE NUMERIC PERCENT:")
+
+    # ── Numeric Range Types — expand ─────────────────────────────────────────
+    print("[library-question-types] expanding Numeric Range Types category")
+    await expand_category("EXAMPLE: Numeric Range Types")
+    await page.wait_for_timeout(500)
+
+    # ── Numeric Range question editor ────────────────────────────────────────
+    print("[library-question-types] Numeric Range question editor")
+    await open_question("EXAMPLE RANGE EMP:")
+    await save(page, "library", "library-qt-editor-numeric-range")
+    await close_question("EXAMPLE RANGE EMP:")
+
+    # ── Multiple Select Types — expand ───────────────────────────────────────
+    print("[library-question-types] expanding Multiple Select Types category")
+    await expand_category("EXAMPLE: Multiple Select Types")
+    await page.wait_for_timeout(500)
+
+    # ── Multiple Select question editor ──────────────────────────────────────
+    print("[library-question-types] Multiple Select question editor")
+    await open_question("EXAMPLE MS SCORED:")
+    await save(page, "library", "library-qt-editor-multiple-select")
+    await close_question("EXAMPLE MS SCORED:")
+
+
 async def section_branding(page):
     print("\n[branding] overview")
     await goto(page, "/settings/branding")
@@ -555,14 +911,87 @@ async def section_branding(page):
     await page.evaluate("window.scrollTo(0, 0)")
 
 
+async def section_library_scoring(page):
+    print("\n[library-scoring]")
+    await goto(page, f"/library/edit/{LIBRARY_EDITOR_ID}", wait_ms=4000)
+
+    async def scroll_container(y):
+        await page.evaluate(f"""
+            (() => {{
+                const el = Array.from(document.querySelectorAll('*')).find(e => {{
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') &&
+                           e.scrollHeight > e.clientHeight + 50;
+                }});
+                if (el) el.scrollTop = {y};
+            }})()
+        """)
+        await page.wait_for_timeout(400)
+
+    # Screenshot 1: Scoring Method dropdown
+    print("[library-scoring] scoring method")
+    await scroll_container(200)
+    await save(page, "library", "library-editor-scoring-method")
+
+    # Expand the Scoring Section Feedback accordion
+    await scroll_container(400)
+    await page.evaluate("""
+        (() => {
+            const summaries = Array.from(document.querySelectorAll('[class*="MuiAccordionSummary"]'));
+            const el = summaries.find(s => s.innerText?.includes('Scoring Section Feedback'));
+            if (el) el.click();
+        })()
+    """)
+    await page.wait_for_timeout(1500)
+
+    # Screenshot 2: Scoring sections expanded (also shows SYNC SCORING button)
+    print("[library-scoring] scoring sections + sync scoring button")
+    await scroll_container(430)
+    await save(page, "library", "library-editor-sync-scoring-expanded")
+
+    # Screenshot 3: Edit section modal
+    print("[library-scoring] edit section modal")
+    result = await page.evaluate("""
+        (() => {
+            const allEls = Array.from(document.querySelectorAll('*'));
+            const atRiskRow = allEls.find(el => {
+                const text = el.innerText?.trim();
+                return text?.startsWith('At Risk') && text?.includes('4.750') && el.children.length > 0;
+            });
+            if (!atRiskRow) return {found: false};
+            let container = atRiskRow;
+            let editBtn = null;
+            for (let i = 0; i < 10; i++) {
+                editBtn = container.querySelector('button svg[data-testid="EditIcon"]');
+                if (editBtn) { editBtn = editBtn.parentElement; break; }
+                container = container.parentElement;
+                if (!container) break;
+            }
+            if (editBtn) {
+                const rect = editBtn.getBoundingClientRect();
+                return {found: true, top: rect.top, left: rect.left, width: rect.width, height: rect.height};
+            }
+            return {found: false};
+        })()
+    """)
+    if result.get('found'):
+        x = result['left'] + result['width'] / 2
+        y = result['top'] + result['height'] / 2
+        await page.mouse.click(x, y)
+        await page.wait_for_timeout(2000)
+        await save(page, "library", "library-editor-scoring-edit-section")
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
-    "dashboard":        section_dashboard,
-    "account":          section_account,
-    "assessments":      section_assessments,
-    "library":          section_library,
-    "ecosystem":        section_ecosystem,
+    "dashboard":              section_dashboard,
+    "account":                section_account,
+    "assessments":            section_assessments,
+    "library":                section_library,
+    "library-question-types": section_library_question_types,
+    "library-scoring":        section_library_scoring,
+    "ecosystem":              section_ecosystem,
     "industries":       section_industries,
     "settings":         section_settings,
     "report-builder":   section_report_builder,

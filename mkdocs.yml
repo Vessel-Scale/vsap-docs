@@ -37,6 +37,9 @@ theme:
 extra_css:
   - assets/custom.css
 
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
   - search
   - tags
@@ -59,25 +62,38 @@ nav:
   - Home: index.md
   - Getting Started:
     - getting-started/index.md
-    - Creating Your Account: getting-started/creating-your-account.md
-    - Navigating the Dashboard: getting-started/navigating-the-dashboard.md
+    - Step 1 — Create an Account: getting-started/creating-your-account.md
+    - Step 2 — Design an Assessment: getting-started/design-assessment.md
+    - Step 3 — Create an Assessment: getting-started/create-assessment.md
+    - Step 4 — Send to Respondents: getting-started/send-assessment.md
+    - Step 5 — Analyze Results: getting-started/analyze-results.md
+    - Step 6 — Create a Web Report: getting-started/create-web-report.md
+    - Step 7 — Navigate the Dashboard: getting-started/navigating-the-dashboard.md
   - Dashboard:
     - Overview: dashboard/index.md
+    - Components: dashboard/components.md
+    - Configure Dashboard: dashboard/configure.md
+    - Download CSV: dashboard/download.md
     - Pivot Table: dashboard/pivot-table.md
   - Accounts:
     - Overview: accounts/index.md
     - Account Details: accounts/details.md
     - Create Account: accounts/create.md
+    - Edit Account: accounts/edit.md
   - Assessments:
     - Overview: assessments/index.md
     - Assessment Details: assessments/details.md
-    - Web Reports: assessments/report-builder.md
     - Create Assessment: assessments/create.md
+    - Reports:
+      - Web: assessments/report-builder.md
+      - PDF: assessments/pdf-reports.md
   - Library:
     - Overview: library/index.md
     - Assessment List: library/list.md
     - Create Assessment: library/create.md
     - Edit Assessment: library/edit.md
+    - Question Types: library/question-types.md
+    - Scoring: library/scoring.md
   - Ecosystem:
     - Overview: ecosystem/index.md
     - Filters: ecosystem/filters.md
@@ -93,8 +109,19 @@ nav:
     - Branding: settings/branding.md
     - Email Templates: settings/email-templates.md
     - Intake Forms: settings/intake-forms.md
-    - Web Reports: settings/web-reports.md
-    - Custom Data: settings/custom-data.md
+    - Permissions: settings/permissions.md
+    - Custom Data:
+      - Overview: settings/custom-data/index.md
+      - NAICS Codes: settings/custom-data/naics.md
+      - Regional Associations: settings/custom-data/rma.md
+      - Media Library: settings/custom-data/media-library.md    
+    - Reports: 
+      - Web: settings/web-reports.md
+      - PDF: settings/pdf-reports.md
+  - Client Portal:
+    - Overview: client-portal/index.md
+    - Assessments Table: client-portal/assessments-table.md
+    - Industry Benchmarking: client-portal/industry-benchmarking.md
 
 extra:
   social:

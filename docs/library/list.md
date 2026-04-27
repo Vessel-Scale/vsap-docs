@@ -94,4 +94,6 @@ Two buttons in the toolbar allow you to create a new definition from an existing
 
 - [Create Assessment](create.md)
 - [Edit Assessment](edit.md)
+- [Question Types](question-types.md)
+- [Scoring](scoring.md)
 - [Library Overview](index.md)
