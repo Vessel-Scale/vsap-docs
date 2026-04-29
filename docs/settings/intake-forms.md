@@ -256,6 +256,49 @@ The notification is sent to a single address. For multiple recipients, consider 
 
 ---
 
+## What Happens When Someone Submits
+
+When a visitor submits the intake form, the platform automatically determines the right action based on whether the company and respondent are already in the system and whether an open assessment already exists for them.
+
+### Submission outcomes by scenario
+
+The table below covers every combination of whether the company and respondent are already known to the platform, and what status any existing assessment is in.
+
+| Company in platform? | Respondent email known? | Existing assessment? | Assessment status | What happens |
+|---|---|---|---|---|
+| **No** — new company | New | None | — | New company and contact are created. A new assessment is started. The respondent is taken directly into the assessment. |
+| **Yes** — existing company | New contact | None | — | The new contact is added to the existing company. A new assessment is started. The respondent is taken directly into the assessment. |
+| **Yes** — existing company | New contact | Yes | **Draft** | The new contact is added to the existing company. The respondent is taken into the **existing** open assessment to add their responses. No new assessment is created. |
+| **Yes** — existing company | New contact | Yes | **In Progress** | The new contact is added to the existing company. The respondent is taken into the **existing** open assessment to add their responses. No new assessment is created. |
+| **Yes** — existing company | New contact | Yes | **Results Review** | The new contact is added to the existing company. The prior assessment cycle is complete, so a **new assessment is created** for the new cycle. The respondent is taken into the new assessment. |
+| **Yes** — existing company | New contact | Yes | **Closed** | The new contact is added to the existing company. The prior assessment cycle is complete, so a **new assessment is created** for the new cycle. The respondent is taken into the new assessment. |
+| **Yes** — existing company | Returning (same email) | None | — | The respondent's contact details are updated. A new assessment is started. The respondent is taken directly into the assessment. |
+| **Yes** — existing company | Returning (same email) | Yes | **Draft or In Progress** | The respondent's contact details are updated. The respondent is taken into the **existing** open assessment. No new assessment is created. |
+| **Yes** — existing company | Returning (same email) | Yes | **Results Review or Closed** | The respondent's contact details are updated. A **new assessment is created** for the new cycle. The respondent is taken into the new assessment. |
+
+### How child assessments work
+
+Some assessment types include a **primary assessment and one or more sub-assessments** (for example, a company-level survey and an employee-level survey). The intake form handles these automatically:
+
+- When a visitor is **directed to an existing open assessment**, they go to the primary assessment. The sub-assessments are already in place and do not need to be recreated.
+- When a **new assessment is created**, the platform automatically creates the primary assessment and all associated sub-assessments at the same time.
+
+### Error messages
+
+If something prevents the form from completing, an error message is shown. The visitor can click **Retry** to try again or **Close** to return to the home page.
+
+| Situation | Message Shown |
+|-----------|--------------|
+| A required field contains invalid information (e.g. a malformed email address) | A specific message describing the field and what needs to be corrected |
+| The assessment for this company has already been created | "This assessment has already been created for this account. Please login through the client portal to see your results or contact your client manager for more details." |
+| The submission could not be completed due to a technical problem | "Failed to create assessments." with additional detail if available |
+| An unexpected error occurred | "An unexpected error occurred. Please try again." |
+
+!!! tip "If a submission fails"
+    Clicking **Retry** in the error modal will attempt the submission again from scratch. If the problem persists, contact your client manager or platform support.
+
+---
+
 ## Tips
 
 - **Versioning** — Every save increments the version number. Use descriptions to note what changed between versions.
