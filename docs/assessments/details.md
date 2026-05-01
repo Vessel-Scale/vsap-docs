@@ -10,53 +10,89 @@ tags:
 
 # Assessment Details
 
-The Assessment Details page shows all data captured for a single assessment instance.
+The Assessment Details page shows all data captured for a single assessment instance, including question responses, scores, and scoring summaries.
 
 ## What you can do here
 
-- Review all question responses and scores
-- See scoring summaries and breakdowns
-- Edit the assessment
-- Navigate to the Report Builder for this assessment
+- Review all question responses and scores for an assessment
+- See scoring summaries and category breakdowns
+- Edit the assessment or view the Report Builder for this assessment
 
-## Assessment Response Data
+## Accessing Assessment Details
 
-![Evaluation Details](../assets/screenshots/assessments/assessment-details.png)
+### From Account Details
 
-The Assessment Details page displays the complete record of an assessment that was performed on a specific account or organization. This view shows all questions that were answered, the responses provided, and any supporting documentation or notes. The detailed data view allows you to audit the complete assessment history, verify that all questions were properly answered, and understand the basis for any scores or recommendations that were generated from this assessment.
+![Account Assessments List](../assets/screenshots/assessments/account-assessments-list.png)
 
-## Sections
+The easiest way to view assessment details is through the **[Account Details](../accounts/details.md)** page:
 
-### Responses
+1. Navigate to **Accounts** and open an account
+2. Click the **Assessments** tab
+3. Click any assessment row to open its details
 
-The Responses section shows each question from the assessment alongside the respondent's answer. Questions are grouped by category, and scorable questions display their assigned point value next to the response. You can review all answers in one place to audit the assessment or understand the basis for its scores.
+This shows all assessments for a specific account with their status, dates, and assigned executive contact.
+
+### From Assessment Collections
+
+![Assessment Collections](../assets/screenshots/assessments/assessment-collections.png)
+
+You can also view assessments from the main **Smart Assessments** page:
+
+1. Navigate to **Assessments** from the main menu
+2. This shows all assessment collections with their active assessments
+3. Click **View Assessments** on a collection card to see individual assessment instances
+
+## Assessment Details Overview
+
+Once you open an assessment, the details page displays:
+
+- **Assessment name** — Title of the assessment  
+- **Account/Client name** — The organization being assessed
+- **Dates** — Start and close dates
+- **Status** — Current state (Completed, In Progress, Results Review, etc.)
+- **Executive Contact** — Person assigned to manage this assessment
+
+Below the header, you'll find two main sections:
+
+### Responses Section
+
+The Responses section displays each question from the assessment alongside the respondent's answer. Questions are grouped by category, and scorable questions show their assigned point value.
+
+You can:
+- Review all answers to audit the assessment  
+- Understand the basis for scores and recommendations
+- See supporting documentation or notes for answers
 
 See [Assessment Question Types](question-types.md) for details on how each question type captures and scores responses.
 
-### Scoring
+### Scoring Section
 
-The Scoring section shows how the respondent's answers translated into a final score. Category scores are broken down individually, and the overall result is displayed using the scoring method configured in the assessment definition — either **Averaged** (scores averaged across all questions) or **Summed** (scores totaled across all questions).
+The Scoring section shows how the respondent's answers translated into the final score. This includes:
 
-See [Assessment Scoring](scoring.md) for a full explanation of how scores are calculated and how scoring sections (At Risk, Could Improve, Optimal) are defined.
+- **Category scores** — Score breakdown by assessment section
+- **Overall score** — Final result using the configured scoring method
+- **Scoring method** — Either **Averaged** (scores averaged across all questions) or **Summed** (scores totaled)
+- **Scoring sections** — Categories like "At Risk", "Could Improve", "Optimal"
 
-### Edit Assessment
+See [Assessment Scoring](scoring.md) for detailed explanation of how scores are calculated and how scoring sections are defined.
 
-![Assessment Editor](../assets/screenshots/assessments/assessment-details.png)
+## Editing an Assessment
 
-The assessment editor allows you to fill in or modify responses to assessment questions. This interface is used both when creating new assessments and when editing existing responses from the Assessment Details page.
+From the Assessment Details page, you can edit the assessment to modify responses. The editor shows:
 
-Within the editor, you can:
+- **Questions organized by category**
+- **Current responses and answers**
+- **Navigation** between different sections
+- **Progress tracking** showing which questions have been answered
 
-- **View Questions**: Browse questions organized by category
-- **Provide Responses**: Fill in answers, scores, and supporting information
-- **Navigate Categories**: Move between different sections of the assessment
-- **Track Progress**: See which questions have been answered
-
-The editor provides a consistent experience whether you're completing a new assessment or revisiting responses to an existing assessment.
+The editor provides a consistent interface whether creating a new assessment or revisiting responses to an existing one.
 
 ## Related
 
-- [Getting Started: Step 4](../../getting-started/send-assessment.md) — Quick-start guide to sharing assessments
 - [Getting Started: Step 5](../../getting-started/analyze-results.md) — Quick-start guide to analyzing results
-- [Assessments](index.md)
-- [Report Builder](report-builder.md)
+- [Assessments](index.md) — Overview
+- [Account Details](../accounts/details.md) — View assessments by account
+- [Report Builder](report-builder.md) — Create custom reports
+- [Question Types](question-types.md) — Question type details
+- [Scoring](scoring.md) — Scoring system explanation
+
