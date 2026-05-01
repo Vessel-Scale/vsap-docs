@@ -19,14 +19,13 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-BASE_URL = "http://testv2.localhost:3000"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MzU4MTUxLCJpYXQiOjE3NzczMTQ5NTEsImp0aSI6ImRlYjJkMDI2NTc0OTQwNjJiYTFjODRhOGE0ZjAzOTFjIiwidXNlcl9pZCI6IjZjNjkxYjQzLTQwMGYtNGRiZi1hNWFlLTRmYWZlNmVlMDYyYyIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.ng53xtPzfRszEh77xa53TA_QFEqpUnxeTndhyWmYpWE"
+BASE_URL = "https://demo.schema-qa.vesselscale.com"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3NzE3MjY0LCJpYXQiOjE3Nzc2NzQwNjQsImp0aSI6ImMyZDU5NWZjMzRhMTRmNzY5NmM2YTAzYTAyODI4Y2U4IiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.KKQhVXgGwhs-uA1UDliNozkff0i6JaQhSfincebdh0Y"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
 COOKIES = [
-    {"name": "csrftoken",    "value": "aYgogqONppu5mvxHgiwQUB2zX4ub0HiH"},
-    {"name": "API_URL",      "value": "http://testv2.localhost:8000/"},
+    {"name": "API_URL",      "value": "https://demo.schema-api-qa.vesselscale.com/"},
     {"name": "ACCESS_TOKEN", "value": ACCESS_TOKEN},
 ]
 
@@ -35,8 +34,8 @@ EXTRA_HEADERS = {
     "accept-encoding": "gzip, deflate, br, zstd",
     "accept-language": "en-US,en;q=0.9",
     "connection": "keep-alive",
-    "origin": "http://testv2.localhost:3000",
-    "referer": "http://testv2.localhost:3000/src/router.tsx",
+    "origin": "https://demo.schema-qa.vesselscale.com",
+    "referer": "https://demo.schema-qa.vesselscale.com/",
     "sec-ch-ua": '"Google Chrome";v="147", "Not.A/Brand";v="8", "Chromium";v="147"',
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": '"Linux"',
@@ -104,8 +103,20 @@ async def try_click(page, *selectors, timeout=5000):
 # ── Section capture functions ──────────────────────────────────────────────────
 
 async def section_dashboard(page):
-    print("\n[dashboard] overview")
+    print("\n[dashboard] navigating to dashboard")
     await goto(page, "/dashboard", wait_ms=3000)
+    
+    # Select "Supplier Business Health Assessment" from the dropdown
+    print("[dashboard] selecting Supplier Business Health Assessment")
+    assessment_dropdown = page.locator('button:has-text("Supplier Business Health Assessment"), [role="button"]:has-text("Assessment"), button[aria-label*="select"]')
+    if await assessment_dropdown.count() > 0:
+        await assessment_dropdown.first.click()
+        await page.wait_for_timeout(1000)
+        # Click the Supplier Business Health Assessment option if dropdown opened
+        if await try_click(page, "li:has-text('Supplier Business Health Assessment')", "[role='option']:has-text('Supplier Business Health Assessment')", timeout=2000):
+            await page.wait_for_timeout(2000)
+    
+    print("[dashboard] overview")
     await save(page, "dashboard", "dashboard")
 
     # Toolbar buttons (top-right area)
@@ -156,7 +167,15 @@ async def section_dashboard(page):
 
     # Configure Dashboard modal
     print("[dashboard] configure modal")
-    await page.evaluate(f"document.querySelector('.MuiBox-root.css-1yhoita').scrollTop = 0")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            });
+            if (el) el.scrollTop = 0;
+        })()
+    """)
     await page.wait_for_timeout(300)
     await page.locator('button[aria-label="Configure dashboard components"]').click()
     await page.wait_for_timeout(1500)
@@ -208,22 +227,43 @@ async def section_account(page):
     await goto(page, "/account")
     await save(page, "account", "account-list")
 
-    print("[account] details - clicking first row")
-    if await try_click(page,
-        "tbody tr:first-child td:first-child",
-        "tbody tr:first-child",
-        "a[href*='/account/']",
-    ):
-        await save(page, "account", "account-details")
+    VESSEL_ACCOUNT_ID = "51899e42-31b1-4545-9574-70df220581c5"
+    print("[account] details - navigating to Vessel account")
+    await goto(page, f"/account/{VESSEL_ACCOUNT_ID}", wait_ms=2000)
+    print(f"    url: {page.url}")
 
-        print("[account] edit - clicking edit button")
-        if await try_click(page,
-            "button:has-text('Edit')",
-            "a:has-text('Edit')",
-            "[aria-label='edit']",
-            "[data-testid='edit-btn']",
-        ):
-            await save(page, "account", "account-edit")
+    # Overview tab (default)
+    print("[account] details - overview tab")
+    await try_click(page, "button:has-text('Overview'), [role='tab']:has-text('Overview')", timeout=3000)
+    await page.wait_for_timeout(800)
+    await save(page, "account", "account-details-overview")
+
+    # Assessments tab
+    print("[account] details - assessments tab")
+    if await try_click(page, "button:has-text('Assessments'), [role='tab']:has-text('Assessments')", timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "account", "account-details-assessments")
+
+    # Settings tab
+    print("[account] details - settings tab")
+    if await try_click(page, "button:has-text('Settings'), [role='tab']:has-text('Settings')", timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "account", "account-details-settings")
+
+    # Keep legacy screenshot name for backwards compat (overview tab)
+    await try_click(page, "button:has-text('Overview'), [role='tab']:has-text('Overview')", timeout=3000)
+    await page.wait_for_timeout(500)
+    await save(page, "account", "account-details")
+
+    print("[account] edit - clicking edit button")
+    if await try_click(page,
+        "button:has-text('Edit Details')",
+        "button:has-text('Edit')",
+        "a:has-text('Edit')",
+        "[aria-label='edit']",
+        "[data-testid='edit-btn']",
+    ):
+        await save(page, "account", "account-edit")
 
     print("[account] create account form")
     await goto(page, "/create-account", wait_ms=2000)
@@ -243,21 +283,59 @@ async def section_account(page):
 
 
 async def section_assessments(page):
-    print("\n[assessments] collections")
+    print("\n[assessments] collections list")
     await goto(page, "/evaluation-assessment-list")
     await save(page, "assessments", "assessment-collections")
 
-    print("[assessments] details - clicking first row")
+    # Navigate to Vessel account assessments tab to get real assessment data
+    VESSEL_ACCOUNT_ID = "51899e42-31b1-4545-9574-70df220581c5"
+    print("[assessments] navigating to Vessel account")
+    await goto(page, f"/account/{VESSEL_ACCOUNT_ID}", wait_ms=2000)
+    
+    print("[assessments] clicking assessments tab")
+    if await try_click(page, "button:has-text('Assessments'), [role='tab']:has-text('Assessments')", timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "assessments", "account-assessments-list")
+
+    # Click the first assessment to view its details
+    print("[assessments] details - clicking first assessment")
     if await try_click(page,
         "tbody tr:first-child",
-        "tbody tr:first-child td",
         "tbody tr:first-child td:first-child",
-        "[class*='row']:first-child",
-        "[class*='Row']:first-child",
         "a[href*='/evaluation']",
         "a[href*='/assessment']",
+        "[class*='row']:first-child",
     ):
-        await save(page, "assessments", "assessment-details")
+        await page.wait_for_timeout(2000)
+        await save(page, "assessments", "assessment-details-overview")
+
+        # Scroll to show responses section
+        print("[assessments] scrolling to responses section")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 500;
+            })()
+        """)
+        await page.wait_for_timeout(800)
+        await save(page, "assessments", "assessment-responses-section")
+
+        # Scroll to scoring section
+        print("[assessments] scrolling to scoring section")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 1200;
+            })()
+        """)
+        await page.wait_for_timeout(800)
+        await save(page, "assessments", "assessment-scoring-section")
 
 
 LIBRARY_EDITOR_ID = "dcb00786-ae5a-4c6d-b91b-b46f0133c975"
@@ -400,6 +478,48 @@ async def section_ecosystem(page):
     print("[ecosystem] filters panel visible")
     await save(page, "ecosystem", "ecosystem-filters")
 
+    # ── Assessment filter with Supplier Business Health Assessment ──────────
+    print("[ecosystem] selecting Supplier Business Health Assessment")
+    if await try_click(page,
+        "label:has-text('Assessment') ~ * [role='combobox']",
+        "div:has(> label:has-text('Assessment')) .MuiSelect-select",
+        "[id*='assessment']",
+    ):
+        await page.wait_for_timeout(600)
+        # Click "Supplier Business Health Assessment" option
+        if await try_click(page,
+            "[role='option']:has-text('Supplier Business Health Assessment')",
+            "[role='listbox'] li:has-text('Supplier Business Health')",
+        ):
+            await page.wait_for_timeout(2000)
+
+            # Click the "Scores" button to show scores view
+            print("[ecosystem] switching to Scores view")
+            if await try_click(page,
+                "button:has-text('Scores')",
+                "[role='button']:has-text('Scores')",
+            ):
+                await page.wait_for_timeout(3000)
+                await save(page, "ecosystem", "ecosystem-scores-suppliers")
+
+                # Capture Score Category dropdown
+                print("[ecosystem] capturing Score Category dropdown")
+                if await try_click(page,
+                    "label:has-text('Score Category') ~ * [role='combobox']",
+                    "div:has(> label:has-text('Score Category')) .MuiSelect-select",
+                ):
+                    await page.wait_for_timeout(1000)
+                    await save(page, "ecosystem", "ecosystem-score-category-dropdown")
+
+                    # Select Financial Stability
+                    print("[ecosystem] selecting Financial Stability category")
+                    if await try_click(page,
+                        "[role='option']:has-text('Financial Stability')",
+                        "[role='listbox'] li:has-text('Financial Stability')",
+                    ):
+                        await page.wait_for_timeout(2000)
+                        await save(page, "ecosystem", "ecosystem-scores-financial-stability")
+
     # Apply a NAICS sector filter — click the Sector dropdown, pick first option
     print("[ecosystem] NAICS sector filter - opening")
     if await try_click(page,
@@ -417,31 +537,6 @@ async def section_ecosystem(page):
         ):
             await page.wait_for_timeout(1500)
             await save(page, "ecosystem", "ecosystem-filtered-sector")
-
-    # ── Assessment filter → Scores view ──────────────────────────────────────
-    print("[ecosystem] selecting an assessment")
-    if await try_click(page,
-        "label:has-text('Assessment') ~ * [role='combobox']",
-        "div:has(> label:has-text('Assessment')) .MuiSelect-select",
-        "[id*='assessment']",
-    ):
-        await page.wait_for_timeout(600)
-        # Pick first real assessment (index 1 skips "Any")
-        if await try_click(page,
-            "[role='listbox'] [role='option']:nth-child(2)",
-            "[role='option']:nth-child(2)",
-        ):
-            await page.wait_for_timeout(2000)
-            await save(page, "ecosystem", "ecosystem-assessment-selected")
-
-            # Click the "Scores" toggle button (only appears after assessment selected)
-            print("[ecosystem] switching to Scores view")
-            if await try_click(page,
-                "button:has-text('Scores')",
-                "[role='button']:has-text('Scores')",
-            ):
-                await page.wait_for_timeout(3000)
-                await save(page, "ecosystem", "ecosystem-scores")
 
     # ── Click an account from the list panel to open account detail ──────────
     # Re-load clean so the list is in default state
