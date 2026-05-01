@@ -109,6 +109,78 @@ Use this to quickly verify a specific section without scrolling through the full
 
 ---
 
+## Sync Scoring
+
+The **SYNC SCORING** feature automatically refreshes and updates scoring suggestions for your assessment based on the latest AI recommendations.
+
+### What Sync Scoring Does
+
+When you click the **SYNC SCORING** button in the Scoring Section Feedback accordion, the platform:
+
+- Analyzes your current questions and category structure
+- Generates or updates suggested content for strengths, root causes, solutions, and recommended actions
+- Provides AI-powered recommendations tailored to your assessment
+- Updates the **Scoring Section Feedback** panel with the latest suggestions
+
+### When to Use Sync Scoring
+
+- **Initial assessment creation** — Generate starting suggestions for a new assessment
+- **After making significant changes** — Refresh suggestions when you add, remove, or substantially modify questions
+- **To improve feedback quality** — Get fresh AI recommendations to enhance the respondent experience
+- **When updating existing assessments** — Keep your scoring content current with the latest suggestions
+
+### How to Use Sync Scoring
+
+1. Expand the **Scoring Section Feedback** accordion for a category
+2. Review the current AI-generated suggestions
+3. Click the **SYNC SCORING** button to refresh recommendations
+4. The system will process your questions and generate updated suggestions
+5. Review the new recommendations and manually incorporate them into your scoring sections as desired
+
+!!! note "Manual integration"
+    Sync Scoring provides suggestions — you maintain full control over your final scoring content. Review suggestions and manually update your Strengths, Root Causes, Solutions, and Recommended Actions sections with the content you want to use.
+
+---
+
+## Copy Scoring Sections
+
+The **COPY SCORING SECTIONS** feature allows you to quickly duplicate an entire category with all its questions and scoring configuration, saving time when building similar assessment sections.
+
+### What Copy Scoring Sections Does
+
+When you copy a category, you create an exact duplicate that includes:
+
+- All questions and their response options
+- Category name and description
+- Full scoring section configuration (Strengths, Root Causes, Solutions, Recommended Actions)
+- All scoring tier definitions and feedback
+- Question ordering and grouping
+
+### When to Use Copy Scoring Sections
+
+- **Repeating patterns** — Quickly create similar assessment sections with minimal editing
+- **Scaling assessments** — Expand an assessment to multiple related topics using a proven template
+- **A/B testing** — Duplicate a section to create variations for comparison
+- **Building from templates** — Use a well-structured category as a foundation for new ones
+- **Saving development time** — Avoid rebuilding similar sections from scratch
+
+### How to Use Copy Scoring Sections
+
+1. Navigate to the **Categories** list at the bottom of the editor
+2. Locate the category you want to copy
+3. Click the **Copy category** action button (copy icon) on that category row
+4. A duplicate category will be created directly below the original with the name suffix "Copy"
+5. Edit the copied category name, questions, and scoring content as needed
+6. Save your changes when complete
+
+!!! tip "Organize after copying"
+    After copying a category, you can rename it and use the drag-to-reorder feature to place it in the correct position within your assessment structure.
+
+!!! warning "Update all content"
+    Don't forget to update the copied category's name and all scoring feedback to match its new purpose. Generic "Copy" names and duplicated content can confuse respondents.
+
+---
+
 ## Related
 
 - [Library](index.md)
