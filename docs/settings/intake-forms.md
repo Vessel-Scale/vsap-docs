@@ -158,7 +158,7 @@ Select which pages appear in the intake form. **Company Selection** and **Contac
 | **Additional Information** | Collects extended company details: secondary address, website, annual sales, government contractor/veteran/women-owned flags. |
 | **Legal Agreement** | Displays a legal agreement that the user must accept before submitting. Enables the Legal Agreement editor below. |
 
-### Required Contact Information
+### Required Contact Form Information
 
 Select which contact form fields are required. Fields marked as "always required" (First Name, Last Name, Email Address, Company Name) cannot be changed.
 
