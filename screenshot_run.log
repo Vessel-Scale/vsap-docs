@@ -1,0 +1,32 @@
+Capturing sections: account
+
+[account] list
+    url: https://demo.schema-qa.vesselscale.com/account
+  + account/account-list.png
+[account] details - navigating to Vessel account
+    url: https://demo.schema-qa.vesselscale.com/account/51899e42-31b1-4545-9574-70df220581c5
+    url: https://demo.schema-qa.vesselscale.com/account/51899e42-31b1-4545-9574-70df220581c5
+[account] details - overview tab
+  + account/account-details-overview.png
+[account] details - assessments tab
+  + account/account-details-assessments.png
+[account] details - settings tab
+  + account/account-details-settings.png
+  + account/account-details.png
+[account] edit - clicking edit button
+  + account/account-edit.png
+[account] download/upload buttons - back to account list
+    url: https://demo.schema-qa.vesselscale.com/account
+[account] download button
+  + account/account-list-download-modal.png
+[account] upload button
+  + account/account-list-upload-modal.png
+[account] upload modal - AI Instructions button
+[account] upload modal - paste option
+  + account/account-list-upload-modal-paste.png
+[account] create account form
+    url: https://demo.schema-qa.vesselscale.com/create-account
+  + account/account-create.png
+  + account/account-create-scrolled.png
+
+Done! (1 section(s))

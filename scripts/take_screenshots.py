@@ -20,7 +20,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3NzE3MjY0LCJpYXQiOjE3Nzc2NzQwNjQsImp0aSI6ImMyZDU5NWZjMzRhMTRmNzY5NmM2YTAzYTAyODI4Y2U4IiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.KKQhVXgGwhs-uA1UDliNozkff0i6JaQhSfincebdh0Y"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODAwMjE5LCJpYXQiOjE3Nzc3NTcwMTksImp0aSI6ImQ3ZTUxYTEyNDRiNjQyZjI5N2JjNzY3YWRhOWMxMzhiIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.MgYJjpajBmhgafVXbdkGCqNXgps0JKazRKXgkNEkRP8"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -289,6 +289,35 @@ async def section_account(page):
         "[data-testid='edit-btn']",
     ):
         await save(page, "account", "account-edit")
+
+    print("[account] download/upload buttons - back to account list")
+    await goto(page, "/account", wait_ms=2000)
+    
+    print("[account] download button")
+    if await try_click(page, "button:has-text('Download')", timeout=3000):
+        await page.wait_for_timeout(1500)
+        await save(page, "account", "account-list-download-modal")
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
+
+    print("[account] upload button")
+    if await try_click(page, "button:has-text('Upload')", timeout=3000):
+        await page.wait_for_timeout(1500)
+        await save(page, "account", "account-list-upload-modal")
+        
+        # Show AI Instructions copy
+        print("[account] upload modal - AI Instructions button")
+        if await try_click(page, "button:has-text('AI Instructions')", timeout=3000):
+            await page.wait_for_timeout(1000)
+        
+        # Show paste option
+        print("[account] upload modal - paste option")
+        if await try_click(page, "button:has-text('Paste')", timeout=3000):
+            await page.wait_for_timeout(1000)
+            await save(page, "account", "account-list-upload-modal-paste")
+        
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
 
     print("[account] create account form")
     await goto(page, "/create-account", wait_ms=2000)
