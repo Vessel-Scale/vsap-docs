@@ -80,6 +80,7 @@ nav:
     - Account Details: accounts/details.md
     - Create Account: accounts/create.md
     - Edit Account: accounts/edit.md
+    - Import & Export: accounts/import-export.md
   - Assessments:
     - Overview: assessments/index.md
     - Assessment Details: assessments/details.md
