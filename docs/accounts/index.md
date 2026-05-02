@@ -15,6 +15,8 @@ The Accounts section lets you manage all organizations and companies tracked in 
 - Browse and search the full list of accounts
 - View account details and associated evaluations
 - Create new accounts
+- Bulk import accounts from CSV or YAML files
+- Export all accounts for backup or external use
 
 ## Account List
 
@@ -26,4 +28,5 @@ The account list displays all organizations currently tracked in your system. Fr
 
 - [Account Details](details.md)
 - [Create Account](create.md)
+- [Import & Export Accounts](import-export.md)
 - [Assessments](../assessments/index.md)
