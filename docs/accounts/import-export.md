@@ -144,15 +144,20 @@ The import feature lets you add multiple accounts at once by uploading a CSV or 
 
 3. Choose your method:
    - **For Paste:** Copy your data to clipboard, click **Paste**, and the content will be loaded into the editor
-   - **For Upload:** Click **Upload**, select your file, and the content will be loaded into the editor
+   - **For Upload:** Click **Upload**, select your file, and the content will be loaded
    - **For Edit:** Directly edit the content in the text area
 
 4. Review the content for accuracy (edit as needed)
 5. Click **Import** to process the file
-6. The system will display:
+6. A progress overlay will appear while the import runs in the background
+7. The system will display:
    - ✅ **Created** — Number of new accounts successfully created
    - ⏭️ **Skipped** — Number of duplicate accounts skipped (by name)
    - ❌ **Errors** — Any validation errors with details
+
+!!! info "Import runs in the background"
+    Account import is processed as a background job to avoid timeouts with large files.
+    A spinner will display while the import is running. Do not close or refresh the page until it completes.
 
 ### Required Fields
 
@@ -201,12 +206,26 @@ If you include `account_contacts`, each contact can have:
 
 ---
 
+### File Size Limits
+
+| Limit | Value | Notes |
+|-------|-------|-------|
+| Maximum file size | **10 MB** | Files larger than 10 MB are rejected at upload |
+| Inline preview threshold | **1 MB** | Files ≤ 1 MB are shown in the editable text area |
+| Large file behaviour | File summary shown | Files > 1 MB display a banner instead of the text editor — you cannot edit them inline, but they import normally |
+
+**Why is there a preview limit?**
+Rendering a very large file in the in-browser text editor would freeze the page. Files over 1 MB are loaded into memory and sent directly to the server when you click **Import** — no editing step.
+
+---
+
 ## Import Methods Comparison
 
 | Method | Best For | Steps |
 |--------|----------|-------|
-| **Paste** | Small updates, testing | 1. Copy data → 2. Click Paste → 3. Review → 4. Import |
-| **Upload File** | Large batches, file backups | 1. Select file → 2. System loads content → 3. Review → 4. Import |
+| **Paste** | Small updates, testing | 1. Copy data → 2. Click Paste → 3. Review/edit → 4. Import |
+| **Upload File (small, ≤ 1 MB)** | Moderate batches | 1. Select file → 2. Review/edit content → 3. Import |
+| **Upload File (large, > 1 MB)** | Large batches (100s of accounts) | 1. Select file → 2. Confirm file summary → 3. Import |
 | **Manual Edit** | Quick corrections, template filling | 1. Paste/Upload content → 2. Edit in text area → 3. Import |
 
 ---
@@ -231,7 +250,8 @@ Click the **AI Instructions** button in the import dialog to copy detailed guida
 2. **Validate URLs** — Logo URLs should be real and accessible. Invalid URLs will be accepted but may fail to display.
 3. **Check NAICS Codes** — Use valid NAICS codes from the official classification system.
 4. **Date Format** — Use YYYY-MM-DD format for dates (e.g., `2024-01-15`).
-5. **Test First** — Import a small batch first to verify the format works before importing large files.
+5. **Test First** — Import a small batch (a few accounts) first to verify the format works before uploading large files.
+6. **Keep files under 10 MB** — The maximum supported file size is 10 MB. Split larger datasets into multiple files.
 
 ### Handling Errors
 
@@ -269,6 +289,8 @@ If import errors occur:
 | Issue | Cause | Solution |
 |-------|-------|----------|
 | File won't upload | Format not supported | Use .csv, .yaml, or .yml files only |
+| File rejected immediately | File exceeds 10 MB limit | Split into multiple smaller files and import separately |
+| File loaded but no editor shown | File is larger than 1 MB | This is normal — a summary banner is shown instead. Click **Import** to proceed. |
 | Import shows errors | Invalid field values | Check the error details and fix the data |
 | Accounts not created | Names are duplicates | Ensure each account has a unique name |
 | NAICS codes not recognized | Invalid code format | Verify codes are in the official NAICS system |
