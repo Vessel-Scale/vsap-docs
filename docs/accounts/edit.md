@@ -3,8 +3,7 @@ route: /account/:id/edit
 tags:
   - accounts
   - edit
-  - settings
-  - information
+  - details
 ---
 
 # Edit Account

@@ -4,7 +4,6 @@ tags:
   - library
   - assessment-definitions
   - create
-  - YAML
 ---
 
 # Create Assessment Definition
@@ -26,7 +25,7 @@ The Assessment Editor provides a complete interface for building assessment defi
 ### Top Section
 - **Assessment Name** — The title of your assessment definition
 - **Noun Descriptor** — The term used for respondents (e.g., "Facility", "Establishment", "Plant")
-- **Scoring Method** — Choose between "Averaging" (consistent scale) or "Summing" (total points)
+- **Scoring Method** — Choose between "Averaging" (consistent scale) or "Summing" (total points). See [Scoring](scoring.md) for more details on how to configure score zones.
 - **Description** — Internal documentation about the assessment's purpose
 - **Summary** — Concise overview (appears in the Library list)
 

@@ -2,7 +2,7 @@
 tags:
   - getting-started
   - library
-  - assessment-design
+  - design
 ---
 
 # Step 2 — Design an Assessment

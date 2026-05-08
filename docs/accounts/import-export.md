@@ -2,9 +2,7 @@
 route: /import-export-accounts
 tags:
   - accounts
-  - import
-  - export
-  - bulk-operations
+  - import-export
 ---
 
 # Import & Export Accounts

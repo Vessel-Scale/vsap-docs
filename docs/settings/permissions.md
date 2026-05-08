@@ -3,8 +3,7 @@ route: /settings/permissions
 tags:
   - settings
   - permissions
-  - roles
-  - users
+  - admin
   - access-control
 ---
 

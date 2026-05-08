@@ -1,9 +1,9 @@
 ---
 tags:
-  - client portal
-  - industry benchmarking
-  - resilience score
-  - gauge chart
+  - client-portal
+  - industry-benchmarking
+  - resilience-score
+  - gauge-chart
 ---
 
 # Industry Benchmarking

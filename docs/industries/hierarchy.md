@@ -3,8 +3,6 @@ tags:
   - industries
   - NAICS
   - classification
-  - hierarchy
-  - sectors
 ---
 
 # NAICS Hierarchy

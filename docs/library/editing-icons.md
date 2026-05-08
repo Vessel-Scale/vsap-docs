@@ -1,3 +1,11 @@
+---
+tags:
+  - library
+  - assessment-definitions
+  - icons
+  - customization
+---
+
 # Editing Icons
 
 Icons are used throughout your assessments to enhance visual representation and improve user experience. This guide explains how to select, customize, and manage icons for your assessment content.

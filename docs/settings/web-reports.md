@@ -94,7 +94,7 @@ Select **New Template** to create a template or click an existing card to edit i
 The editor has a sticky header with:
 
 - **Back** button
-- **Media Library** button
+- **[Media Library](#using-the-media-library-in-the-editor)** button — browse and insert images from your [Media Library](custom-data/media-library.md)
 - **Template Variables Reference** button
 - **Preview Config** button, which shows the generated YAML
 - **Cancel** and **Save Changes** actions
@@ -142,7 +142,7 @@ When you create a new Web Report, the editor starts with a scaffolded report con
 11. About Section
 12. Divider
 
-If Branding colors are configured for the tenant, the editor uses those colors to prefill parts of the header styling and cover section appearance.
+If [Branding](branding.md) colors are configured for the tenant, the editor uses those colors to prefill parts of the header styling and cover section appearance.
 
 ## Report Sections
 
@@ -192,7 +192,7 @@ This is the main way to add custom narrative, visuals, or layout structure aroun
 
 ## Using the Media Library in the Editor
 
-The Media Library drawer lets you browse your uploaded images and copy their URLs directly into image fields — without leaving the report editor.
+The [Media Library](custom-data/media-library.md) drawer lets you browse your uploaded images and copy their URLs directly into image fields — without leaving the report editor. This is a quick way to insert logos, diagrams, headers, and other images into your reports without managing file URLs manually.
 
 ### Opening and Closing the Drawer
 
@@ -228,7 +228,7 @@ The **Config Preview** (accessed via the `<>` button in the editor toolbar) show
 
 Use the **Template Variables Reference** button in the editor header to view the available placeholders.
 
-These variables can be used in section titles, HTML content, and other text fields:
+These variables can be used in section titles, HTML content, and other text fields. Similar template variables are also available in [Email Templates](email-templates.md) for personalizing automated communications:
 
 | Variable | Description |
 |----------|-------------|

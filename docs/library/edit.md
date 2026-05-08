@@ -181,6 +181,71 @@ When you copy a category, you create an exact duplicate that includes:
 
 ---
 
+## Draft vs. Published Editors
+
+The platform distinguishes between **Draft** (unpublished) and **Published** assessment editors, each with different capabilities and use cases.
+
+### Draft Assessment Editor
+
+The Draft editor is where you design and refine unpublished assessments. You have full editing capabilities:
+
+![Draft Editor Overview](../assets/screenshots/library/library-editor-draft-overview.png)
+
+The draft editor provides complete control over your assessment structure, allowing you to add, modify, and reorganize all elements freely.
+
+![Draft Editor Toolbar](../assets/screenshots/library/library-editor-draft-toolbar.png)
+
+The toolbar in the draft editor includes all editing actions: **PREVIEW**, **REPLACE**, **CANCEL**, and **SAVE CHANGES**.
+
+![Draft Assessment Details](../assets/screenshots/library/library-editor-draft-details.png)
+
+In the draft editor, you can fully edit the **Assessment Details** accordion, including name, description, summary, and icon.
+
+![Draft Scoring Sections](../assets/screenshots/library/library-editor-draft-scoring.png)
+
+Scoring sections are fully editable in the draft editor, allowing you to refine feedback, strengths, root causes, solutions, and recommended actions.
+
+![Draft Categories](../assets/screenshots/library/library-editor-draft-categories.png)
+
+All categories are fully editable, allowing you to add, delete, reorder, and customize every aspect of your assessment structure.
+
+### Published Assessment Editor
+
+Once you publish an assessment, it can be used by respondents to complete evaluations. The Published editor provides a read-only or limited-edit view depending on your needs:
+
+![Published Editor Overview](../assets/screenshots/library/library-editor-published-overview.png)
+
+The published editor displays the assessment in a read-only or controlled mode to prevent accidental breaking changes to live evaluations.
+
+![Published Editor Toolbar](../assets/screenshots/library/library-editor-published-toolbar.png)
+
+The toolbar in the published editor reflects the limitations of editing a live assessment, with restricted actions to preserve assessment integrity.
+
+![Published Assessment Details](../assets/screenshots/library/library-editor-published-details.png)
+
+The **Assessment Details** section in the published editor may have limited editability to protect the assessment's core identity during active use.
+
+![Published Scoring Sections](../assets/screenshots/library/library-editor-published-scoring.png)
+
+Scoring sections in the published editor are displayed for reference, with limitations on editing to ensure consistency across active evaluations.
+
+![Published Categories](../assets/screenshots/library/library-editor-published-categories.png)
+
+Published assessment categories are visible for reference, with restricted editing capabilities to maintain assessment stability.
+
+### Key Differences
+
+| Feature | Draft Editor | Published Editor |
+|---------|---|---|
+| Full editing | ✓ | Limited |
+| Add/remove questions | ✓ | May be restricted |
+| Edit assessment details | ✓ | Limited |
+| Modify scoring | ✓ | Limited |
+| Preview assessment | ✓ | ✓ |
+| View respondent data | View only | View with restrictions |
+
+---
+
 ## Related
 
 - [Library](index.md)

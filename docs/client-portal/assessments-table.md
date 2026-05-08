@@ -1,8 +1,8 @@
 ---
 tags:
-  - client portal
+  - client-portal
   - assessments
-  - assessment status
+  - assessment-status
 ---
 
 # Assessments Table

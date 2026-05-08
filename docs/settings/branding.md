@@ -4,8 +4,6 @@ tags:
   - settings
   - branding
   - admin
-  - logo
-  - colors
   - customization
 ---
 

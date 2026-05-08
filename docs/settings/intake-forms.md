@@ -126,7 +126,7 @@ Click a preset button to auto-populate all settings at once. You can then custom
 
 Visible only when **Create Assessment** is enabled.
 
-**Parent Assessment** — Select the assessment definition to create. When you pick a parent that has child assessments, the children are automatically included and listed below with their own target response fields.
+**Parent Assessment** — Select the [assessment definition](../../library/index.md) to create. When you pick a parent that has child assessments, the children are automatically included and listed below with their own target response fields.
 
 **Target Responses** — The number of submissions before the assessment is considered complete.
 

@@ -1,7 +1,6 @@
 ---
 tags:
-  - client portal
-  - client view
+  - client-portal
   - overview
 ---
 

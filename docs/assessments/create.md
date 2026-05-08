@@ -3,7 +3,6 @@ route: /create-evaluation-assessment
 tags:
   - assessments
   - create
-  - evaluations
 ---
 
 # Create Assessment

@@ -1,8 +1,7 @@
 ---
 tags:
   - settings
-  - email
-  - templates
+  - email-templates
   - admin
   - notifications
   - branding
@@ -100,7 +99,7 @@ All email templates support dynamic content through template variables, allowing
 
 ## Template Variables Reference
 
-Template variables are placeholders that get replaced with actual assessment data when emails are sent. Use template variables to personalize emails and include dynamic information.
+Template variables are placeholders that get replaced with actual assessment data when emails are sent. Use template variables to personalize emails and include dynamic information. Similar template variables are available in [Web Reports](web-reports.md) for report customization.
 
 ### How to Use Template Variables
 
@@ -183,7 +182,7 @@ Before deploying a customized template:
 
 - **Keep it concise** - Email recipients appreciate clear, brief messages
 - **Include a call to action** - Use link variables like `{{ assessment_invitation_link }}` to guide users to the next step
-- **Use consistent branding** - Include your `{{ primary_logo }}` and style with `{{ primary_color }}`
+- **Use consistent branding** - Include your `{{ primary_logo }}` and style with `{{ primary_color }}` configured in [Branding](branding.md) settings
 - **Test before deploying** - Always send a test email to verify formatting and variable replacement
 - **Provide context** - Include assessment details and company information so recipients understand the purpose
 - **Mobile-friendly HTML** - Ensure your HTML email designs work on mobile devices

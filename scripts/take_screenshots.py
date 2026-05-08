@@ -9,8 +9,9 @@ Usage:
   uv run python scripts/take_screenshots.py custom-data            # custom data only
 
 Available sections:
-  dashboard, account, assessments, library, library-question-types, ecosystem, industries, settings, report-builder, custom-data,
-  email-templates, intake-forms, web-reports, branding
+  dashboard, account, assessments, library, library-question-types, library-scoring, library-icons, library-editor-draft, 
+  library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
+  web-reports, branding
 """
 import argparse
 import asyncio
@@ -20,7 +21,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3ODAwMjE5LCJpYXQiOjE3Nzc3NTcwMTksImp0aSI6ImQ3ZTUxYTEyNDRiNjQyZjI5N2JjNzY3YWRhOWMxMzhiIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.MgYJjpajBmhgafVXbdkGCqNXgps0JKazRKXgkNEkRP8"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc4MzEyNjEwLCJpYXQiOjE3NzgyNjk0MTAsImp0aSI6IjY3MmQ3YjFmY2M3YzRhMzNiNWQ0MzAxNmViNTkxN2M0IiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.sdpzTSzh4ob5ZGz3w-dcx85-efsRgK3ziWgmdkcTgtY"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -1189,25 +1190,123 @@ async def section_library_icons(page):
     print("    note: icon picker screenshots can be manually captured from Assessment Editor or Web Reports editor")
 
 
+# ── Draft Assessment Editor (Getting Started Assessment) ──────────────────────
+
+DRAFT_EDITOR_ID = "4f596be1-8588-4efd-8872-2fcf95b529c7"
+
+
+async def section_library_editor_draft(page):
+    print("\n[library-editor-draft] Getting Started Assessment - DRAFT")
+    await goto(page, f"/library/edit/{DRAFT_EDITOR_ID}", wait_ms=4000)
+
+    async def scroll_main(y):
+        await page.evaluate(f"""
+            (() => {{
+                const el = Array.from(document.querySelectorAll('*')).find(e => {{
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') &&
+                           e.scrollHeight > e.clientHeight + 50;
+                }});
+                if (el) el.scrollTop = {y};
+            }})()
+        """)
+        await page.wait_for_timeout(500)
+
+    # ── Draft editor overview ──────────────────────────────────────────────
+    print("[library-editor-draft] editor overview")
+    await scroll_main(0)
+    await save(page, "library", "library-editor-draft-overview")
+
+    # ── Draft editor toolbar ───────────────────────────────────────────────
+    print("[library-editor-draft] editor toolbar")
+    await save(page, "library", "library-editor-draft-toolbar")
+
+    # ── Draft editor with assessment details ────────────────────────────────
+    print("[library-editor-draft] assessment details expanded")
+    await try_click(page, "button:has-text('Assessment Details')", timeout=3000)
+    await page.wait_for_timeout(600)
+    await save(page, "library", "library-editor-draft-details")
+
+    # ── Draft editor scoring sections ──────────────────────────────────────
+    print("[library-editor-draft] scoring sections")
+    await scroll_main(400)
+    await save(page, "library", "library-editor-draft-scoring")
+
+    # ── Draft editor categories list ───────────────────────────────────────
+    print("[library-editor-draft] categories list")
+    await scroll_main(900)
+    await save(page, "library", "library-editor-draft-categories")
+
+
+# ── Published Assessment Editor (Getting Started Assessment) ────────────────
+
+PUBLISHED_EDITOR_ID = "aa00c4b8-080d-495e-8a66-2b6885381bc4"
+
+
+async def section_library_editor_published(page):
+    print("\n[library-editor-published] Getting Started Assessment - PUBLISHED")
+    await goto(page, f"/library/edit-published/{PUBLISHED_EDITOR_ID}", wait_ms=4000)
+
+    async def scroll_main(y):
+        await page.evaluate(f"""
+            (() => {{
+                const el = Array.from(document.querySelectorAll('*')).find(e => {{
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') &&
+                           e.scrollHeight > e.clientHeight + 50;
+                }});
+                if (el) el.scrollTop = {y};
+            }})()
+        """)
+        await page.wait_for_timeout(500)
+
+    # ── Published editor overview ──────────────────────────────────────────
+    print("[library-editor-published] editor overview")
+    await scroll_main(0)
+    await save(page, "library", "library-editor-published-overview")
+
+    # ── Published editor toolbar ───────────────────────────────────────────
+    print("[library-editor-published] editor toolbar")
+    await save(page, "library", "library-editor-published-toolbar")
+
+    # ── Published editor with assessment details ────────────────────────────
+    print("[library-editor-published] assessment details expanded")
+    await try_click(page, "button:has-text('Assessment Details')", timeout=3000)
+    await page.wait_for_timeout(600)
+    await save(page, "library", "library-editor-published-details")
+
+    # ── Published editor scoring sections ───────────────────────────────────
+    print("[library-editor-published] scoring sections")
+    await scroll_main(400)
+    await save(page, "library", "library-editor-published-scoring")
+
+    # ── Published editor categories list ────────────────────────────────────
+    print("[library-editor-published] categories list")
+    await scroll_main(900)
+    await save(page, "library", "library-editor-published-categories")
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
-    "dashboard":              section_dashboard,
-    "account":                section_account,
-    "assessments":            section_assessments,
-    "library":                section_library,
-    "library-question-types": section_library_question_types,
-    "library-scoring":        section_library_scoring,
-    "library-icons":          section_library_icons,
-    "ecosystem":              section_ecosystem,
-    "industries":       section_industries,
-    "settings":         section_settings,
-    "report-builder":   section_report_builder,
-    "custom-data":      section_custom_data,
-    "email-templates":  section_email_templates,
-    "intake-forms":     section_intake_forms,
-    "web-reports":      section_web_reports,
-    "branding":         section_branding,
+    "dashboard":                    section_dashboard,
+    "account":                      section_account,
+    "assessments":                  section_assessments,
+    "library":                      section_library,
+    "library-question-types":       section_library_question_types,
+    "library-scoring":              section_library_scoring,
+    "library-icons":                section_library_icons,
+    "library-editor-draft":         section_library_editor_draft,
+    "library-editor-published":     section_library_editor_published,
+    "ecosystem":                    section_ecosystem,
+    "industries":                   section_industries,
+    "settings":                     section_settings,
+    "report-builder":               section_report_builder,
+    "custom-data":                  section_custom_data,
+    "email-templates":              section_email_templates,
+    "intake-forms":                 section_intake_forms,
+    "web-reports":                  section_web_reports,
+    "branding":                     section_branding,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

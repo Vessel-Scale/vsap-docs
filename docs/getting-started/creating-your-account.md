@@ -2,9 +2,7 @@
 tags:
   - getting-started
   - onboarding
-  - account
   - setup
-  - login
 ---
 
 # Creating an Account
