@@ -35,6 +35,24 @@ The icon picker provides:
   - **Inverted**: White icon on colored background
   - **Outlined**: Icon outline only
 
+#### Icon Picker Overview
+
+When you open the icon picker, you'll see a modal window displaying the full library of available icons:
+
+![Icon picker modal showing available icons](../assets/screenshots/library/library-icon-picker-overview.png)
+
+#### Browsing Icon Options
+
+You can scroll through the icon library to find the perfect icon for your needs. The modal shows multiple icons organized in a grid:
+
+![Icon picker scrolled to show more icon options](../assets/screenshots/library/library-icon-picker-grid.png)
+
+#### Customization Controls
+
+The icon picker provides easy access to all customization options, including color selection, style choices, and other visual settings:
+
+![Icon picker showing customization controls and style options](../assets/screenshots/library/library-icon-picker-styles.png)
+
 ### Customizing Icons
 
 Once you've selected an icon, you can further customize it:

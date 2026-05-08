@@ -1133,61 +1133,83 @@ async def section_library_scoring(page):
 
 
 async def section_library_icons(page):
-    print("\n[library-icons] opening icon picker modal")
-    # The icon picker modal is embedded in the IconPickerModal component
-    # This section demonstrates how to access it via the settings/branding page
-    await goto(page, "/settings/branding", wait_ms=3000)
-    
-    # Look for any icon or color picker buttons in the branding settings
-    print("[library-icons] looking for icon/color controls in branding")
-    
-    # Find all buttons and look for ones that might open the icon picker
-    potential_icon_buttons = await page.query_selector_all("button")
-    print(f"    found {len(potential_icon_buttons)} buttons on page")
-    
-    # Try to find the icon picker by looking for specific attributes or text
-    for btn in potential_icon_buttons:
-        aria_label = await btn.get_attribute("aria-label")
-        title = await btn.get_attribute("title")
-        text = await btn.inner_text()
-        
-        # Look for buttons related to icons or colors
-        if any(keyword in str(aria_label or text or title).lower() for keyword in ['icon', 'color', 'palette']):
-            print(f"    found potential icon button: {aria_label or text or title}")
-            try:
-                await btn.click()
-                await page.wait_for_timeout(1500)
-                
-                modal = await page.query_selector("[role='dialog']")
-                if modal:
-                    print("[library-icons] captured icon picker modal - overview")
-                    await save(page, "library", "library-icon-picker-modal")
-                    
-                    # Scroll in the modal to show more options
-                    await page.evaluate("""
-                        (() => {
-                            const scrollable = Array.from(document.querySelectorAll('[role="dialog"] *')).find(e => {
-                                const s = window.getComputedStyle(e);
-                                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && 
-                                       e.scrollHeight > e.clientHeight + 100;
-                            });
-                            if (scrollable) scrollable.scrollTop = 250;
-                        })()
-                    """)
-                    await page.wait_for_timeout(800)
-                    
-                    print("[library-icons] captured icon picker modal - scrolled")
-                    await save(page, "library", "library-icon-picker-scrolled")
-                    
-                    # Close modal
-                    await page.keyboard.press("Escape")
-                    await page.wait_for_timeout(500)
-                    return
-            except Exception as e:
-                print(f"    error clicking button: {e}")
-                continue
-    
-    print("    note: icon picker screenshots can be manually captured from Assessment Editor or Web Reports editor")
+    print("\n[library-icons] capturing icon picker")
+    await goto(page, "/library", wait_ms=6000)
+    print(f"    current url: {page.url}")
+
+    # Exact selector from browser devtools:
+    # #root > div > div.main-content.MuiBox-root.css-0 > div > div.MuiBox-root.css-8310hi
+    #   > div.MuiBox-root.css-f01tft > div:nth-child(1) > div
+    #   > div.MuiBox-root.css-144nb58 > div.MuiBox-root.css-740g73 > button
+    icon_btn = await page.query_selector(
+        "#root > div > div.main-content.MuiBox-root.css-0 > div > "
+        "div.MuiBox-root.css-8310hi > div.MuiBox-root.css-f01tft > "
+        "div:nth-child(1) > div > div.MuiBox-root.css-144nb58 > "
+        "div.MuiBox-root.css-740g73 > button"
+    )
+    if not icon_btn:
+        print("[library-icons] exact selector failed")
+        return
+
+    print("[library-icons] clicking icon button...")
+    await icon_btn.click()
+    await page.wait_for_timeout(2000)
+
+    modal = await page.query_selector("[role='dialog']")
+    if not modal:
+        print("[library-icons] no modal opened")
+        return
+
+    # Icons are MuiPaper-root elements (not buttons) — check for them
+    icon_papers = await modal.query_selector_all(".MuiPaper-root[style*='cursor'], .MuiPaper-root")
+    print(f"[library-icons] modal opened, found {len(icon_papers)} Paper elements")
+
+    # Screenshot 1: full modal overview
+    await page.wait_for_timeout(400)
+    print("[library-icons] screenshot 1: overview")
+    await save(page, "library", "library-icon-picker-overview")
+
+    # Screenshot 2: click the 9th icon Paper to select it
+    if len(icon_papers) > 8:
+        try:
+            await icon_papers[8].click()
+            await page.wait_for_timeout(500)
+        except Exception as e:
+            print(f"    select click failed: {e}")
+    print("[library-icons] screenshot 2: icon selected")
+    await save(page, "library", "library-icon-picker-selected")
+
+    # Screenshot 3: scroll down to show more icons
+    await page.evaluate("""
+        (() => {
+            const s = Array.from(document.querySelectorAll('[role="dialog"] *')).find(e => {
+                const st = window.getComputedStyle(e);
+                return (st.overflowY === 'auto' || st.overflowY === 'scroll') &&
+                       e.scrollHeight > e.clientHeight + 100;
+            });
+            if (s) { s.scrollTop = 250; console.log('scrolled', s.scrollTop); }
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    print("[library-icons] screenshot 3: scrolled icons")
+    await save(page, "library", "library-icon-picker-grid")
+
+    # Screenshot 4: scroll back up for controls
+    await page.evaluate("""
+        (() => {
+            const s = Array.from(document.querySelectorAll('[role="dialog"] *')).find(e => {
+                const st = window.getComputedStyle(e);
+                return (st.overflowY === 'auto' || st.overflowY === 'scroll') &&
+                       e.scrollHeight > e.clientHeight + 100;
+            });
+            if (s) s.scrollTop = 0;
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    print("[library-icons] screenshot 4: controls and styles")
+    await save(page, "library", "library-icon-picker-styles")
+
+    print("[library-icons] SUCCESS!")
 
 
 # ── Draft Assessment Editor (Getting Started Assessment) ──────────────────────
