@@ -17,7 +17,8 @@ The Assessment Editor is the primary workspace for building and managing assessm
 
 - Add, edit, reorder, and delete questions
 - Organize questions into categories with descriptions
-- Configure scoring sections with strengths, root causes, solutions, and recommendations
+- Configure landing page and completion page messages with optional images
+- Set scoring sections with strengths, root causes, solutions, and recommendations
 - Preview the full assessment, a single category, or check how the editor looks at a glance
 - Find-and-replace text across the entire assessment at once
 - Undo/redo changes freely before saving
@@ -33,17 +34,144 @@ The editor loads the full assessment in a single scrollable layout. The toolbar 
 
 The toolbar provides one-click access to all major actions. The sidebar panel on the left can be expanded for navigation.
 
+---
+
 ## Assessment Details
+
+The **Assessment Details** section at the very top of the editor is where you configure the assessment's core identity and settings.
 
 ![Assessment Details](../assets/screenshots/library/library-editor-assessment-details.png)
 
-The **Assessment Details** accordion at the top of the editor lets you set the assessment name, description, summary, icon, and other top-level metadata. Expand it to edit these fields.
+Expand this accordion to edit:
+
+- **Assessment Name** — The title shown to respondents
+- **Description** — Internal notes and purpose
+- **Summary** — Brief overview of what the assessment measures
+- **Icon** — Visual identifier for the assessment
+- **Scoring Method** — Averaged (default) or Summed
+
+This is the first thing respondents won't see, but it's essential for organizing your assessment in the system.
+
+---
+
+## Landing Page Configuration
+
+The **Landing Page** is the first screen respondents see when starting your assessment. It sets the tone, provides context, and can include a welcome message and optional image.
+
+![Landing Page Fields](../assets/screenshots/library/library-editor-landing-page.png)
+
+### Summary
+
+The **Summary** field is a required rich text editor where you provide the introductory text shown to respondents before they begin answering questions. This is where you:
+
+- Explain the purpose of the assessment
+- Set expectations for completion time
+- Highlight any important instructions
+- Welcome respondents and build confidence
+
+### Image
+
+The **Image** field allows you to upload or link an optional image displayed on the landing page. Images can help:
+
+- Make the assessment more visually engaging
+- Reinforce your brand identity
+- Provide visual context for the assessment topic
+- Break up text-heavy layouts
+
+#### Adding an Image
+
+You have three options:
+
+1. **Media Library** — Click the media library icon (📷) to browse and select from your organization's media library
+2. **Paste URL** — Paste a direct image URL from the clipboard
+3. **Direct URL Entry** — Paste or type an image URL directly into the **Image URL** field
+
+The URL can be:
+- A direct link to an image file (e.g., `https://example.com/image.png`)
+- A media library URL after selecting from your organization's media collection
+- Any publicly accessible image URL (up to 500 characters)
+
+#### Previewing the Image
+
+Once you enter an image URL, click the **Check** icon to preview the image and ensure it loads correctly. If the image fails to load, the system will display an error message — verify the URL and try again.
+
+### Image Placement
+
+If you add an image, you can choose where it appears on the landing page using the **Image Placement** dropdown:
+
+- **Top** — Image appears above the summary text
+- **Bottom** — Image appears below the summary text
+- **Left** — Image appears to the left of the summary text
+- **Right** — Image appears to the right of the summary text
+
+Choose the placement that best complements your assessment's visual design and the respondent experience.
+
+---
+
+## Completion Page
+
+The **Completion Page** (also called the "Thank You Page") is displayed after respondents complete all questions and submit their assessment. It acknowledges completion and can provide a personalized message and image.
+
+![Completion Page Fields](../assets/screenshots/library/library-editor-thank-you-page.png)
+
+### Heading
+
+The **Heading** field (up to 100 characters) is the main title shown on the completion page. Examples:
+
+- "Thank you for completing the survey!"
+- "Assessment complete — your results are ready"
+- "We appreciate your feedback"
+
+### Summary
+
+The **Summary** field is where you provide additional text or instructions after completion. If you leave it blank, the system defaults to: *"Your feedback is greatly appreciated."*
+
+Use the summary to:
+- Explain what happens next (e.g., "A report will be emailed within 24 hours")
+- Provide next steps or resources
+- Thank respondents again in a personalized way
+- Direct them to additional actions
+
+### Image (Optional)
+
+The **Image** field allows you to add an optional completion graphic or celebratory image. If you don't provide one, the system displays a default survey completion graphic.
+
+Like the Landing Page image, you can:
+
+1. **Select from Media Library** — Click the media library icon (📷) to choose an image
+2. **Paste a URL** — Use the clipboard paste icon to insert a URL
+3. **Enter a URL directly** — Type or paste an image URL (up to 500 characters)
+
+Preview the image using the **Check** icon to ensure it displays correctly before saving.
+
+---
+
+## Categories
+
+All categories appear in the main editor area and are listed at the bottom for easy overview and management.
+
+![Categories](../assets/screenshots/library/library-editor-categories.png)
+
+Each category shows its name and the number of questions it contains. You can reorder them by dragging, add new ones with **Add Category**, or use the action buttons on each row to **preview**, **copy**, or **delete** the category.
+
+![Category Expanded](../assets/screenshots/library/library-editor-category-expanded.png)
+
+Expanding a category reveals all of its questions and the full editing interface for that section. This is where you:
+
+- Add and edit individual questions
+- Set question types and response options
+- Configure numeric ranges
+- Assign scores to answers
+
+---
 
 ## Scoring Sections
 
+Each category has a **Scoring Section** panel where you define what the score means for respondents.
+
 ![Scoring Sections](../assets/screenshots/library/library-editor-scoring.png)
 
-Below the assessment details, each category has a **Scoring Section** panel. This is where you define what the score means for respondents. Each scoring tier (e.g. *At Risk*, *Could Improve*, *Optimal*) can contain:
+Each scoring tier (e.g. *At Risk*, *Could Improve*, *Optimal*) can contain:
 
 - **Strengths** — what the respondent is doing well
 - **Root Causes** — why they may be in this range
@@ -53,16 +181,6 @@ Below the assessment details, each category has a **Scoring Section** panel. Thi
 ![Scoring Section Feedback](../assets/screenshots/library/library-editor-scoring-feedback.png)
 
 The **Scoring Section Feedback** accordion shows AI-generated suggestions for improving your scoring content. Use the **SYNC SCORING** button to pull in updated suggestions.
-
-## Categories
-
-![Categories](../assets/screenshots/library/library-editor-categories.png)
-
-All categories are listed in order at the bottom of the editor. Each category shows its name and the number it holds. You can reorder them by dragging, add new ones with **Add Category**, or use the action buttons on each row to **preview**, **copy**, or **delete** the category.
-
-![Category Expanded](../assets/screenshots/library/library-editor-category-expanded.png)
-
-Expanding a category reveals all of its questions and the full editing interface for that section.
 
 ---
 
@@ -243,98 +361,6 @@ Published assessment categories are visible for reference, with restricted editi
 | Modify scoring | ✓ | Limited |
 | Preview assessment | ✓ | ✓ |
 | View respondent data | View only | View with restrictions |
-
----
-
-## Landing Page Configuration
-
-The **Landing Page** is the first screen respondents see when starting your assessment. It sets the tone, provides context, and can include a welcome message and optional image.
-
-![Landing Page Fields](../assets/screenshots/library/library-editor-landing-page.png)
-
-### Summary
-
-The **Summary** field is a required rich text editor where you provide the introductory text shown to respondents before they begin answering questions. This is where you:
-
-- Explain the purpose of the assessment
-- Set expectations for completion time
-- Highlight any important instructions
-- Welcome respondents and build confidence
-
-### Image
-
-The **Image** field allows you to upload or link an optional image displayed on the landing page. Images can help:
-
-- Make the assessment more visually engaging
-- Reinforce your brand identity
-- Provide visual context for the assessment topic
-- Break up text-heavy layouts
-
-#### Adding an Image
-
-You have three options:
-
-1. **Media Library** — Click the media library icon (📷) to browse and select from your organization's media library
-2. **Paste URL** — Paste a direct image URL from the clipboard
-3. **Direct URL Entry** — Paste or type an image URL directly into the **Image URL** field
-
-The URL can be:
-- A direct link to an image file (e.g., `https://example.com/image.png`)
-- A media library URL after selecting from your organization's media collection
-- Any publicly accessible image URL (up to 500 characters)
-
-#### Previewing the Image
-
-Once you enter an image URL, click the **Check** icon to preview the image and ensure it loads correctly. If the image fails to load, the system will display an error message — verify the URL and try again.
-
-### Image Placement
-
-If you add an image, you can choose where it appears on the landing page using the **Image Placement** dropdown:
-
-- **Top** — Image appears above the summary text
-- **Bottom** — Image appears below the summary text
-- **Left** — Image appears to the left of the summary text
-- **Right** — Image appears to the right of the summary text
-
-Choose the placement that best complements your assessment's visual design and the respondent experience.
-
----
-
-## Completion Page
-
-The **Completion Page** (also called the "Thank You Page") is displayed after respondents complete all questions and submit their assessment. It acknowledges completion and can provide a personalized message and image.
-
-![Completion Page Fields](../assets/screenshots/library/library-editor-thank-you-page.png)
-
-### Heading
-
-The **Heading** field (up to 100 characters) is the main title shown on the completion page. Examples:
-
-- "Thank you for completing the survey!"
-- "Assessment complete — your results are ready"
-- "We appreciate your feedback"
-
-### Summary
-
-The **Summary** field is where you provide additional text or instructions after completion. If you leave it blank, the system defaults to: *"Your feedback is greatly appreciated."*
-
-Use the summary to:
-- Explain what happens next (e.g., "A report will be emailed within 24 hours")
-- Provide next steps or resources
-- Thank respondents again in a personalized way
-- Direct them to additional actions
-
-### Image (Optional)
-
-The **Image** field allows you to add an optional completion graphic or celebratory image. If you don't provide one, the system displays a default survey completion graphic.
-
-Like the Landing Page image, you can:
-
-1. **Select from Media Library** — Click the media library icon (📷) to choose an image
-2. **Paste a URL** — Use the clipboard paste icon to insert a URL
-3. **Enter a URL directly** — Type or paste an image URL (up to 500 characters)
-
-Preview the image using the **Check** icon to ensure it displays correctly before saving.
 
 ---
 
