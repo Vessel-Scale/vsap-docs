@@ -1148,7 +1148,7 @@ async def section_library_icons(page):
         "div.MuiBox-root.css-740g73 > button"
     )
     if not icon_btn:
-        print("[library-icons] exact selector failed")
+        print("[library-icons] icon button not found")
         return
 
     print("[library-icons] clicking icon button...")
@@ -1210,6 +1210,157 @@ async def section_library_icons(page):
     await save(page, "library", "library-icon-picker-styles")
 
     print("[library-icons] SUCCESS!")
+
+
+async def section_library_landing_page(page):
+    print("\n[library-landing-page] capturing landing page configuration")
+    # Use DRAFT_EDITOR_ID to find the form sections
+    await goto(page, f"/library/edit/{DRAFT_EDITOR_ID}", wait_ms=5000)
+    
+    # Check the actual URL we're on
+    actual_url = page.url
+    print(f"[library-landing-page] actual URL: {actual_url}")
+    
+    # Wait for the form to load if we're in the right place
+    if "/edit/" in actual_url:
+        print("[library-landing-page] form is loading...")
+        await page.wait_for_timeout(3000)
+    
+    # Check what's actually on the page
+    page_title = await page.title()
+    print(f"[library-landing-page] page title: {page_title}")
+
+    # Find the "Landing Page" Typography element
+    print("[library-landing-page] searching for 'Landing Page' section")
+    
+    landing_page_found = await page.evaluate("""
+        (() => {
+            const allElements = Array.from(document.querySelectorAll('*'));
+            let landingPageEl = null;
+            
+            for (let el of allElements) {
+                if (el.innerText?.trim() === 'Landing Page' && !el.querySelector('*')) {
+                    landingPageEl = el;
+                    break;
+                }
+            }
+            
+            if (landingPageEl) {
+                landingPageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return true;
+            }
+            return false;
+        })()
+    """)
+    
+    if landing_page_found:
+        print("[library-landing-page] found landing page section")
+        await page.wait_for_timeout(1500)
+        print("[library-landing-page] screenshot: Landing Page fields")
+        await save(page, "library", "library-editor-landing-page")
+    else:
+        print("[library-landing-page] landing page section not found")
+
+
+async def section_library_thank_you_page(page):
+    print("\n[library-thank-you-page] capturing thank you page configuration")
+    # Use DRAFT_EDITOR_ID to find the form sections
+    await goto(page, f"/library/edit/{DRAFT_EDITOR_ID}", wait_ms=5000)
+
+    # Find the "Completion Page" Typography element
+    print("[library-thank-you-page] searching for 'Completion Page' text")
+    completion_page_found = await page.evaluate("""
+        (() => {
+            const allElements = Array.from(document.querySelectorAll('*'));
+            let completionPageEl = null;
+            
+            for (let el of allElements) {
+                if (el.innerText?.trim() === 'Completion Page' && !el.querySelector('*')) {
+                    completionPageEl = el;
+                    break;
+                }
+            }
+            
+            if (completionPageEl) {
+                completionPageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return true;
+            }
+            return false;
+        })()
+    """)
+    
+    if completion_page_found:
+        print("[library-thank-you-page] found completion page section")
+        await page.wait_for_timeout(1500)
+        print("[library-thank-you-page] screenshot: Completion/Thank You fields")
+        await save(page, "library", "library-editor-thank-you-page")
+    else:
+        print("[library-thank-you-page] completion page section not found")
+
+
+async def section_library_media_library(page):
+    print("\n[library-media-library] capturing Media Library drawer")
+    # Use DRAFT_EDITOR_ID to find the media library button
+    await goto(page, f"/library/edit/{DRAFT_EDITOR_ID}", wait_ms=5000)
+
+    # Find the "Landing Page" section to navigate to it
+    print("[library-media-library] finding Landing Page section...")
+    await page.evaluate("""
+        (() => {
+            const allElements = Array.from(document.querySelectorAll('*'));
+            for (let el of allElements) {
+                if (el.innerText?.trim() === 'Landing Page' && !el.querySelector('*')) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return;
+                }
+            }
+        })()
+    """)
+    
+    await page.wait_for_timeout(1500)
+    
+    # Find and click a media library button (PhotoLibraryIcon button)
+    print("[library-media-library] searching for media library button")
+    
+    media_btn_found = await page.evaluate("""
+        (() => {
+            const buttons = Array.from(document.querySelectorAll('button[class*="MuiIconButton"]'));
+            // PhotoLibraryIcon button should be near "Image" text in Landing Page section
+            for (let btn of buttons) {
+                const parent = btn.closest('[class*="MuiBox"]')?.parentElement || btn.parentElement?.parentElement;
+                if (parent && parent.innerText && parent.innerText.toLowerCase().includes('image')) {
+                    // Try to detect if this is a media library button by checking for SVG
+                    const svg = btn.querySelector('svg');
+                    if (svg) {
+                        btn.click();
+                        return true;
+                    }
+                }
+            }
+            return false;
+        })()
+    """)
+    
+    if media_btn_found:
+        print("[library-media-library] clicked media library button")
+        await page.wait_for_timeout(2500)
+        
+        # Check if drawer opened
+        drawer_exists = await page.evaluate("""
+            (() => {
+                return document.querySelector('[class*="MuiDrawer"]') !== null;
+            })()
+        """)
+        
+        if drawer_exists:
+            print("[library-media-library] screenshot: Media Library drawer")
+            await save(page, "library", "library-editor-media-library")
+        
+        # Close the drawer
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
+    else:
+        print("[library-media-library] media library button not found")
 
 
 # ── Draft Assessment Editor (Getting Started Assessment) ──────────────────────
@@ -1318,6 +1469,9 @@ SECTIONS = {
     "library-question-types":       section_library_question_types,
     "library-scoring":              section_library_scoring,
     "library-icons":                section_library_icons,
+    "library-landing-page":         section_library_landing_page,
+    "library-thank-you-page":       section_library_thank_you_page,
+    "library-media-library":        section_library_media_library,
     "library-editor-draft":         section_library_editor_draft,
     "library-editor-published":     section_library_editor_published,
     "ecosystem":                    section_ecosystem,

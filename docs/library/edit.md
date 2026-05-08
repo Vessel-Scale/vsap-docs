@@ -246,9 +246,145 @@ Published assessment categories are visible for reference, with restricted editi
 
 ---
 
+## Landing Page Configuration
+
+The **Landing Page** is the first screen respondents see when starting your assessment. It sets the tone, provides context, and can include a welcome message and optional image.
+
+![Landing Page Fields](../assets/screenshots/library/library-editor-landing-page.png)
+
+### Summary
+
+The **Summary** field is a required rich text editor where you provide the introductory text shown to respondents before they begin answering questions. This is where you:
+
+- Explain the purpose of the assessment
+- Set expectations for completion time
+- Highlight any important instructions
+- Welcome respondents and build confidence
+
+### Image
+
+The **Image** field allows you to upload or link an optional image displayed on the landing page. Images can help:
+
+- Make the assessment more visually engaging
+- Reinforce your brand identity
+- Provide visual context for the assessment topic
+- Break up text-heavy layouts
+
+#### Adding an Image
+
+You have three options:
+
+1. **Media Library** — Click the media library icon (📷) to browse and select from your organization's media library
+2. **Paste URL** — Paste a direct image URL from the clipboard
+3. **Direct URL Entry** — Paste or type an image URL directly into the **Image URL** field
+
+The URL can be:
+- A direct link to an image file (e.g., `https://example.com/image.png`)
+- A media library URL after selecting from your organization's media collection
+- Any publicly accessible image URL (up to 500 characters)
+
+#### Previewing the Image
+
+Once you enter an image URL, click the **Check** icon to preview the image and ensure it loads correctly. If the image fails to load, the system will display an error message — verify the URL and try again.
+
+### Image Placement
+
+If you add an image, you can choose where it appears on the landing page using the **Image Placement** dropdown:
+
+- **Top** — Image appears above the summary text
+- **Bottom** — Image appears below the summary text
+- **Left** — Image appears to the left of the summary text
+- **Right** — Image appears to the right of the summary text
+
+Choose the placement that best complements your assessment's visual design and the respondent experience.
+
+---
+
+## Completion Page
+
+The **Completion Page** (also called the "Thank You Page") is displayed after respondents complete all questions and submit their assessment. It acknowledges completion and can provide a personalized message and image.
+
+![Completion Page Fields](../assets/screenshots/library/library-editor-thank-you-page.png)
+
+### Heading
+
+The **Heading** field (up to 100 characters) is the main title shown on the completion page. Examples:
+
+- "Thank you for completing the survey!"
+- "Assessment complete — your results are ready"
+- "We appreciate your feedback"
+
+### Summary
+
+The **Summary** field is where you provide additional text or instructions after completion. If you leave it blank, the system defaults to: *"Your feedback is greatly appreciated."*
+
+Use the summary to:
+- Explain what happens next (e.g., "A report will be emailed within 24 hours")
+- Provide next steps or resources
+- Thank respondents again in a personalized way
+- Direct them to additional actions
+
+### Image (Optional)
+
+The **Image** field allows you to add an optional completion graphic or celebratory image. If you don't provide one, the system displays a default survey completion graphic.
+
+Like the Landing Page image, you can:
+
+1. **Select from Media Library** — Click the media library icon (📷) to choose an image
+2. **Paste a URL** — Use the clipboard paste icon to insert a URL
+3. **Enter a URL directly** — Type or paste an image URL (up to 500 characters)
+
+Preview the image using the **Check** icon to ensure it displays correctly before saving.
+
+---
+
+## Media Library Integration
+
+The **Media Library** is a centralized repository of images and media assets that you can browse and insert into your assessments. It's integrated throughout the editor, allowing you to quickly add images without managing URLs manually.
+
+![Media Library Drawer](../assets/screenshots/library/library-editor-media-library.png)
+
+### Accessing the Media Library
+
+Throughout the assessment editor, you'll see media library icons (📷) next to image fields:
+
+- **Landing Page Image** field
+- **Completion Page Image** field
+
+Click the media library icon to open the Media Library drawer and browse available media.
+
+### Browsing and Selecting Media
+
+The Media Library drawer displays all available images organized by category. You can:
+
+- **Browse** — Scroll through available media
+- **Search** — Filter media by keywords if search is available
+- **Select** — Click an image to select it and insert its URL into the corresponding field
+- **Preview** — Hover or click images to preview them before selecting
+
+### Benefits of Using the Media Library
+
+- **Consistency** — Use approved brand images and assets across all assessments
+- **Security** — Work with pre-vetted, properly hosted images
+- **Convenience** — No need to manually manage URLs or external links
+- **Organization** — Centrally manage all assessment media in one place
+
+### Managing Your Media Library
+
+To add new images to the media library or manage existing media:
+
+1. Navigate to [Settings → Media Library](../settings/custom-data/media-library.md)
+2. Upload new images or organize existing ones
+3. The images will immediately become available in the Media Library drawer throughout your assessments
+
+For detailed instructions on managing your organization's media library, see the [Media Library](../settings/custom-data/media-library.md) settings guide.
+
+---
+
 ## Related
 
 - [Library](index.md)
 - [Create Assessment](create.md)
 - [Question Types](question-types.md)
 - [Scoring](scoring.md)
+- [Media Library](../settings/custom-data/media-library.md)

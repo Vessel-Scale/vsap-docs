@@ -213,6 +213,100 @@ $$\text{Overall Score} = \sum \text{All Category Scores}$$
 
 ---
 
+## Normalized Scoring (Percentile Ranges)
+
+Normalized scoring converts raw assessment scores into percentiles, displaying results as a percentage of the available score range (0–100%). This approach makes scores intuitive and comparable, regardless of the underlying assessment structure.
+
+### What is Normalized Scoring?
+
+Normalized scoring expresses a respondent's score as a **percentage of the maximum possible score**:
+
+$$\text{Normalized Score (\%)} = \frac{\text{Actual Score} - \text{Min Possible Score}}{\text{Max Possible Score} - \text{Min Possible Score}} \times 100$$
+
+This converts any score into a 0–100 percentile range, making interpretation consistent across all assessments.
+
+#### Example: Normalized Score Calculation
+
+**Scenario:** Assessment with min score 0, max score 50, respondent scores 37.5
+
+$$\text{Normalized Score} = \frac{37.5 - 0}{50 - 0} \times 100 = \frac{37.5}{50} \times 100 = 75\%$$
+
+A respondent who scores 37.5 out of 50 gets a **75% normalized score** — placing them in the upper performance tier.
+
+### Percentile Score Ranges
+
+Normalized scores are typically divided into **three to five performance tiers**. The standard configuration uses three tiers:
+
+![Scoring Percentile Ranges showing At Risk (0-37.5%), Could Improve (37.5-75%), and Optimal (75-100%)](../assets/screenshots/library/library-editor-scoring-percentiles-methodology.png)
+
+| Tier | Range | Interpretation |
+|------|-------|-----------------|
+| **At Risk** | 0–37.5% | Areas requiring attention and improvement |
+| **Could Improve** | 37.5–75% | Significant enhancements needed for growth |
+| **Optimal** | 75–100% | Competence and meeting standards |
+
+### How Normalized Scores Map to Scoring Sections
+
+When you define **Scoring Section Feedback** in your assessment, the platform automatically maps respondent scores to these percentile ranges:
+
+1. **Raw score is calculated** from respondent answers (using your Averaged or Summed method)
+2. **Score is normalized** to a 0–100 percentile using the min/max score range
+3. **Percentile is matched** to a scoring section tier (At Risk, Could Improve, Optimal, etc.)
+4. **Feedback is displayed** with the corresponding tier name, color, and suggestions
+
+#### Example: End-to-End Scoring Flow
+
+| Step | Calculation | Result |
+|------|-------------|--------|
+| **1. Raw score** | Questions scored and summed | 34 out of 50 points |
+| **2. Normalize** | (34 - 0) / (50 - 0) × 100 | **68% percentile** |
+| **3. Tier match** | 68% falls in 37.5–75% range | Matches **"Could Improve"** section |
+| **4. Display** | Show "Could Improve" feedback with yellow color | Respondent sees recommendations for growth |
+
+### Key Advantages of Normalized Scoring
+
+- **Consistent interpretation**: A 75% score means the same thing across all assessments
+- **Easy comparison**: Compare respondents or assessments even with different lengths
+- **Intuitive results**: Percentages are universally understood (0% = lowest, 100% = highest)
+- **Flexible tier definitions**: You can customize tier ranges and names to match your assessment goals
+- **Color-coded feedback**: Each tier has its own color and feedback content for visual clarity
+
+### Customizing Percentile Ranges
+
+You can customize the tier ranges and names to fit your assessment. Common alternatives to the standard three-tier system include:
+
+**Four-tier system:**
+- Below Expectations: 0–25%
+- Developing: 25–50%
+- Proficient: 50–75%
+- Advanced: 75–100%
+
+**Five-tier system:**
+- Critical: 0–20%
+- Below Target: 20–40%
+- Target: 40–60%
+- Above Target: 60–80%
+- Excellent: 80–100%
+
+To customize ranges, edit each **Scoring Section** in Assessment Details and set the Min Score and Max Score to define where each tier begins and ends.
+
+### Common Scenarios
+
+**Scenario 1: Different Assessment Lengths, Same Score Meaning**
+
+| Assessment | Score Earned | Max Possible | Normalized | Tier |
+|-----------|-------------|-------------|-----------|------|
+| Quick Survey (5 questions) | 3.75 | 5 | 75% | Optimal |
+| Full Assessment (20 questions) | 15 | 20 | 75% | Optimal |
+
+Both respondents show **75% — Optimal performance** — even though the raw scores differ.
+
+**Scenario 2: Tracking Progress Over Time**
+
+A respondent completes an assessment and scores 60% (Could Improve). After training, they retake the assessment and score 82% (Optimal). The normalized percentiles make progress immediately clear.
+
+---
+
 ## Related
 
 - [Question Types](question-types.md)
