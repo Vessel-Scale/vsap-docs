@@ -69,6 +69,7 @@ nav:
     - Step 5 — Analyze Results: getting-started/analyze-results.md
     - Step 6 — Create a Web Report: getting-started/create-web-report.md
     - Step 7 — Navigate the Dashboard: getting-started/navigating-the-dashboard.md
+  - FAQ: faq.md
   - Dashboard:
     - Overview: dashboard/index.md
     - Components: dashboard/components.md
