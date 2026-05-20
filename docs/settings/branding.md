@@ -89,6 +89,56 @@ An accent color for alternative states and emphasis. Used in:
 
 ---
 
+## Header & Navigation
+
+### Header Bar Color
+
+Customize the background color of the top navigation bar.
+
+**Use case:** Align the header with your brand colors or dark theme preferences.
+
+**Format:** Hex color code (e.g., `#1e293b` for dark blue, `#ffffff` for white)
+
+**Default:** White (`#ffffff`)
+
+**Features:**
+- Use the color picker to select a custom color
+- Hex input field for precise color codes
+- Predefined color swatches for quick selection
+
+!!! tip
+    When using a dark header background, the breadcrumb and profile text theme (below) can be set to LIGHT to ensure sufficient contrast and readability.
+
+### Breadcrumb & Profile Text Theme
+
+Control the color of navigation breadcrumbs and profile text in the header to ensure optimal contrast with your header background.
+
+**Options:**
+- **DARK** — Use dark text/breadcrumbs (recommended for light header backgrounds)
+- **LIGHT** — Use light text/breadcrumbs (recommended for dark header backgrounds)
+
+**Default:** DARK
+
+**Affected elements:**
+- Breadcrumb navigation (shows current page location)
+- Profile menu text and avatar area
+- Active/inactive breadcrumb indicators
+
+**Color values:**
+
+| Mode | Active | Inactive | Separator |
+|------|--------|----------|-----------|
+| **DARK** | #1e293b | #64748b | #cbd5e1 |
+| **LIGHT** | #ffffff | rgba(255,255,255,0.72) | rgba(255,255,255,0.48) |
+
+!!! example "Example: Dark Theme Setup"
+    - Header Bar Color: `#1e293b` (dark blue-gray)
+    - Breadcrumb & Profile Text Theme: LIGHT
+    
+    This creates a modern dark header with light text for high contrast.
+
+---
+
 ## Login Page Customization
 
 ![Branding Login Page](../assets/screenshots/branding/branding-login-page.png)

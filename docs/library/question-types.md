@@ -24,8 +24,70 @@ Each question type is configured in the assessment editor by clicking a question
 | **Text** | Open-ended text responses | No | Capturing detailed information, comments, explanations |
 | **Numeric** | Single numeric value | Yes | Percentages, dollar amounts, counts, time intervals |
 | **Numeric Range** | Value matched against ranges | Yes | Grouping numeric responses into score ranges |
-| **Multiple Choice** | Single selection from options | Yes | Rating scales, Likert scales, yes/no questions |
+| **Multiple Choice** | Single selection from options | Yes | Custom answer options OR predefined **Preset** scales (see below) |
 | **Multiple Select** | Multiple selections allowed | Yes | Checkbox-style questions with multiple valid answers |
+
+### Special Case: Preset Question Types
+
+**Preset** is a specialized subtype of **Multiple Choice** that uses predefined answer options and scores based on commonly employed scales — such as Likert scales for agreement measurement, confidence scales, quality ratings, and yes/no questions. 
+
+When you select **Question Type: Multiple Choice**, a secondary **Preset** dropdown appears. This allows you to choose from 18+ built-in presets that include:
+- **Likert Scales** (Agreement, Confidence, Clarity)
+- **Rating Scales** (Quality, Frequency)
+- **Binary Scales** (Yes/No)
+
+**Key advantage**: Presets provide standardized answer options and scoring scales, ensuring consistency across assessments and providing respondents with a familiar, professional experience. **Always use a preset if one matches your question** — only create custom Multiple Choice answers when no preset adequately captures your intent.
+
+See the **[Preset Question Types Reference](#preset-question-types-reference)** section below for a complete list of all available presets.
+
+---
+
+## Preset Question Types Reference
+
+When creating a **Multiple Choice** question, the following **Preset** options are available. Each preset includes predefined answer options with consistent scoring scales. **Always use a preset type first if it fits your question semantically** — this ensures consistency and provides a better user experience.
+
+### Agreement Scales
+
+| Preset Name | Answer Options (Left to Right) | Scoring | Use Cases |
+|---|---|---|---|
+| **Likert: Agreement** | Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree | 1, 2, 3, 4, 5 | Standard agreement measurement; opinion and perception questions |
+| **Likert: Agreement (Extended)** | Strongly Disagree, Disagree, Neither agree nor disagree, Agree, Strongly Agree | 1, 2, 3, 4, 5 | 5-point agreement with explicit neutral option |
+| **Likert: Agreement + N/A** | Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree, Not Applicable | 1, 2, 3, 4, 5, (unscored) | Agreement questions where N/A is applicable |
+| **Likert: Agreement (Reversed)** | Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree | 5, 4, 3, 2, 1 | Same as Agreement but options displayed in reverse order (for reverse-coded questions) |
+| **Likert: Agreement Extended (Reversed)** | Strongly Agree, Agree, Neither agree nor disagree, Disagree, Strongly Disagree | 5, 4, 3, 2, 1 | Extended agreement scale displayed in reverse order |
+| **Likert: Agreement + N/A (Reversed)** | Strongly Agree, Agree, Neutral, Disagree, Strongly Disagree, Not Applicable | 5, 4, 3, 2, 1, (unscored) | Agreement scale with N/A displayed in reverse order |
+
+### Confidence Scales
+
+| Preset Name | Answer Options (Left to Right) | Scoring | Use Cases |
+|---|---|---|---|
+| **Likert: Confidence** | Not at all confident, Somewhat confident, Neutral, Confident, Very confident | 1, 2, 3, 4, 5 | Measuring confidence in processes, capabilities, or readiness |
+| **Likert: Confidence (Reversed)** | Very confident, Confident, Neutral, Somewhat confident, Not at all confident | 5, 4, 3, 2, 1 | Confidence scale displayed in reverse order |
+
+### Clarity Scales
+
+| Preset Name | Answer Options (Left to Right) | Scoring | Use Cases |
+|---|---|---|---|
+| **Likert: Clarity** | Very Confusing, Confusing, Neutral, Clear, Very Clear | 1, 2, 3, 4, 5 | Assessing clarity of communication, documentation, processes |
+| **Likert: Clarity (Reversed)** | Very Clear, Clear, Neutral, Confusing, Very Confusing | 5, 4, 3, 2, 1 | Clarity scale displayed in reverse order |
+
+### Quality & Rating Scales
+
+| Preset Name | Answer Options (Left to Right) | Scoring | Use Cases |
+|---|---|---|---|
+| **Likert: Numeric Scale (1–5)** | 1, 2, 3, 4, 5 | 1, 2, 3, 4, 5 | Direct numeric rating scale; simple 1–5 assessment |
+| **Likert: Numeric Scale Reversed** | 5, 4, 3, 2, 1 | 5, 4, 3, 2, 1 | Numeric scale displayed in reverse order |
+| **Rating: Quality** | Excellent, Good, Fair, Poor, Very Poor | 5, 4, 3, 2, 1 | Quality or performance assessment; satisfaction ratings |
+| **Rating: Quality (Reversed)** | Very Poor, Poor, Fair, Good, Excellent | 1, 2, 3, 4, 5 | Quality scale displayed in reverse order |
+| **Rating: Frequency** | Always, Usually, Sometimes, Rarely, Never | 5, 4, 3, 2, 1 | How often something occurs; frequency of actions or conditions |
+| **Rating: Frequency (Reversed)** | Never, Rarely, Sometimes, Usually, Always | 1, 2, 3, 4, 5 | Frequency scale displayed in reverse order |
+
+### Binary Scales
+
+| Preset Name | Answer Options | Scoring | Use Cases |
+|---|---|---|---|
+| **Binary: Yes / No** | Yes, No | 1, 0 | Simple yes/no or presence/absence questions |
+| **Binary: No / Yes (Reversed)** | No, Yes | 0, 1 | Yes/no question displayed with No first |
 
 ---
 

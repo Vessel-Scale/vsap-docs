@@ -69,6 +69,7 @@ nav:
     - Step 5 — Analyze Results: getting-started/analyze-results.md
     - Step 6 — Create a Web Report: getting-started/create-web-report.md
     - Step 7 — Navigate the Dashboard: getting-started/navigating-the-dashboard.md
+  - FAQ: faq.md
   - Dashboard:
     - Overview: dashboard/index.md
     - Components: dashboard/components.md
@@ -108,6 +109,7 @@ nav:
     - Platform Integration: industries/platform-integration.md
   - Settings:
     - Overview: settings/index.md
+    - User Profile: settings/user-profile.md
     - Branding: settings/branding.md
     - Email Templates: settings/email-templates.md
     - Intake Forms: settings/intake-forms.md
