@@ -25,6 +25,10 @@ The Vessel Smart Assessment Platform enables you to:
 
 ## Quick Links
 
+### [Account Settings](settings/user-profile.md)
+- [Edit Your Information](settings/user-profile.md#edit-your-information)
+- [Change Your Password](settings/user-profile.md#change-your-password)
+
 ### [Getting Started](getting-started/index.md)
 - [Creating Your Account](getting-started/creating-your-account.md)
 - [Navigating the Dashboard](getting-started/navigating-the-dashboard.md)
