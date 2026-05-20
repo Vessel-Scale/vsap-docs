@@ -1,24 +1,23 @@
 ---
-route: /settings/user-profile
+route: /account
 tags:
-  - settings
-  - profile
   - account
+  - profile
   - user
 ---
 
-# User Profile & Account Settings
+# Account Settings
 
 Manage your personal account information and security settings.
 
 ## Overview
 
-Your user profile contains your personal information, contact details, and password. Access your profile by:
+Your account settings contain your personal information, contact details, and password security options. Access your account settings by:
 
 1. Clicking your **avatar** in the top-right corner of the header
 2. Selecting **Profile** from the menu
 
-Or navigate directly to the **Profile** page using the URL: `/profile`
+Or navigate directly to the **Account Settings** page using the URL: `/profile`
 
 ---
 
@@ -147,6 +146,5 @@ If you're unable to access the profile page despite being logged in:
 
 ## Related
 
-- [Settings](index.md)
-- [Branding](branding.md)
-- [Permissions](permissions.md)
+- [Branding](../settings/branding.md)
+- [Settings](../settings/index.md)

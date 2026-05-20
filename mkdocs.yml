@@ -59,7 +59,9 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+    - Account Settings: settings/user-profile.md
   - Getting Started:
     - getting-started/index.md
     - Step 1 — Create an Account: getting-started/creating-your-account.md
@@ -109,7 +111,6 @@ nav:
     - Platform Integration: industries/platform-integration.md
   - Settings:
     - Overview: settings/index.md
-    - User Profile: settings/user-profile.md
     - Branding: settings/branding.md
     - Email Templates: settings/email-templates.md
     - Intake Forms: settings/intake-forms.md

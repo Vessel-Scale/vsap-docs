@@ -13,7 +13,6 @@ The Settings section allows administrators to configure platform-wide options fo
 
 ## What you can do here
 
-- Update your personal profile information and change your password
 - Customize your platform's branding — logos, colors, header styling, and terminology
 - Manage active NAICS codes and Regional Manufacturer Associations
 - Configure intake form templates for collecting account information
@@ -24,15 +23,13 @@ The Settings section allows administrators to configure platform-wide options fo
 
 ![Settings](../assets/screenshots/settings/settings.png)
 
-The Settings page provides a centralized location for managing your account and configuring your platform. Users can update their personal information and security settings, while administrators can access all available settings, configure branding to match your organization's identity, manage custom data collections, and control platform features. The settings interface is designed to be intuitive while providing powerful customization options for enterprise deployments.
+The Settings page provides a centralized location for managing your platform configuration. Administrators can access all available settings, configure branding to match your organization's identity, manage custom data collections, and control platform features. The settings interface is designed to be intuitive while providing powerful customization options for enterprise deployments.
 
 ## Access
 
-- **User Profile** — Available to all users
-- **Administrative Settings** — Only available to users with the **admin** role and require the Settings feature flag to be enabled for your account.
+Settings are only available to users with the **admin** role and require the Settings feature flag to be enabled for your account.
 
 ## Related
 
-- [User Profile & Account Settings](user-profile.md)
 - [Branding](branding.md)
 - [Custom Data](custom-data.md)
