@@ -109,6 +109,7 @@ nav:
     - Platform Integration: industries/platform-integration.md
   - Settings:
     - Overview: settings/index.md
+    - User Profile: settings/user-profile.md
     - Branding: settings/branding.md
     - Email Templates: settings/email-templates.md
     - Intake Forms: settings/intake-forms.md
