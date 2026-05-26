@@ -5,45 +5,64 @@ tags:
   - assessment-status
 ---
 
-# Assessments Table
+# Completed Surveys
 
-The **Your Available Assessments** section is the main table clients see when they open the Client Portal. It lists every assessment assigned to the account along with its current status.
+The **Completed Surveys** section is the main table you see when you open the Client Portal. It shows all the assessments assigned to your organization along with their current status.
 
-![Assessments table](../assets/screenshots/client-portal/cp-assessments-table.png)
-
-Clients can narrow the list using the **Search** field or filter by status using the **All Statuses** dropdown. A summary line at the bottom of the table shows the total number of assessments on file (e.g., "You have taken 3 assessments in total").
+You can use the **Search** field to find a specific assessment by name, or use the **All Statuses** dropdown to filter by completion status. A summary at the bottom shows the total number of assessments assigned to your account.
 
 ## Table columns
 
 | Column | Description |
 |--------|-------------|
-| **No** | Row number |
-| **Name** | Assessment template name (bold) and instance name below it |
+| **Name** | The assessment title and instance name |
 | **Status** | Current completion state — see [Status values](#status-values) below |
-| **Updated Date** | Date the assessment was last updated |
+| **Updated Date** | The last date you made changes to this assessment |
 | **Action** | Buttons to interact with the assessment — see [Action buttons](#action-buttons) below |
 
 ## Status values
 
-| Status | Meaning |
-|--------|---------|
-| **Not Started** | The assessment has been assigned but no responses recorded yet |
-| **In Progress** | The assessment has been started but not yet submitted |
-| **Completed** | All responses submitted; results are available |
+| Status | Meaning | Next Step |
+|--------|---------|-----------|
+| **Not Started** | You haven't begun this assessment yet | Click **Take Assessment** to start |
+| **In Progress** | You've started but haven't submitted yet | Click **Take Assessment** to continue where you left off |
+| **Completed** | You've submitted all responses | View your results and analysis |
 
 ## Action buttons
 
-Each row in the table has one or more action icons in the **Action** column:
+Each assessment has action buttons to help you interact with it:
 
-- **Take Assessment** (green ▶ play button) — Opens the assessment survey so the client can fill it out or continue where they left off
-- **Copy Link** (link icon) — Copies a direct link to the assessment that can be shared
+- **Take Assessment** (▶ play button) — Opens the assessment questionnaire. Use this to:
+  - Start a new assessment
+  - Continue an assessment you've already started
+  - Review your submitted responses
 
-!!! note "View Analysis"
-	Once an assessment is completed and results have been built, a view analysis option becomes available. This links directly to the assessment's analysis and report.
+- **Copy Link** (link icon) — Copies a shareable link you can send to colleagues or team members who need to help complete the assessment
+
+- **View Analysis** (visible after completion) — Opens the results and analysis report for completed assessments
+
+## Tips for completing assessments
+
+- **Assessments can be saved** — you don't need to complete them all at once. Your progress is saved automatically as you work.
+- **Return anytime** — use the **Take Assessment** button to come back and finish or review your answers
+- **Questions may have guidance** — read the full question text and any help icons for clarification
+- **Can't take it yet?** — if an assessment shows a status but no **Take Assessment** button, it may be in a different state or archived. Contact your Account Executive for more information.
+
+## Finding new assessments
+
+New assessments don't appear in this table automatically — they appear in the **[Library](library.md)** section. 
+
+To take a new assessment:
+1. Go to **Library** in the left sidebar
+2. Find and click the assessment you want
+3. Click **Launch Assessment**
+4. Once you've responded, it will appear in this **Completed Surveys** table
+
+---
 
 ## Related
 
-- [Client Portal Overview](index.md) — how to access and preview the portal
-- [Industry Benchmarking](industry-benchmarking.md) — score comparison gauge chart
-- [Assessments](../assessments/index.md) — assessment lifecycle overview
-- [Report Builder](../assessments/report-builder.md) — build analysis reports for client review
+- [Library](library.md) — browse and launch new assessments
+- [Client Portal Overview](index.md) — portal navigation overview
+- [Industry Benchmarking](industry-benchmarking.md) — see how your scores compare to industry averages
+- [Assessment Details](../assessments/details.md) — more about assessments and how they work

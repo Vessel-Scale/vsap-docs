@@ -8,29 +8,57 @@ tags:
 
 # Industry Benchmarking
 
-The **Industry Benchmarking** section appears below the assessments table in the Client Portal. It shows how an account's resilience score compares to the industry average across all organizations in the same sector.
+The **Industry Benchmarking** section at the bottom of your Client Portal shows how your organization's resilience score compares to the industry average for your sector.
+
+This helps you understand where you stand relative to similar organizations and identify areas where you might want to focus improvement efforts.
 
 ![Industry benchmarking gauge chart](../assets/screenshots/client-portal/cp-industry-benchmark.png)
 
-When an account has assessments across multiple assessment types, a **tab** appears for each type — click a tab to switch between views.
+If your organization has been assessed across multiple assessment types, a **tab** appears for each type — click a tab to switch between different benchmarking views.
 
-## Reading the gauge
+## Understanding the gauge
 
-The gauge chart displays three score zones:
+The gauge chart shows your score in the context of three performance zones:
 
-| Zone | Color | Meaning |
-|------|-------|---------|
-| **At Risk** | Red | Score is in the lowest range — significant improvement needed |
-| **Could Improve** | Yellow | Score is in the middle range — some improvement recommended |
-| **Optimal** | Green | Score is in the highest range — performing well |
+| Zone | Color | What it means |
+|------|-------|---------------|
+| **At Risk** | 🔴 Red | Your score is in the lowest range — significant improvement is recommended |
+| **Could Improve** | 🟡 Yellow | Your score is in the middle range — there are opportunities to strengthen this area |
+| **Optimal** | 🟢 Green | Your score is in the highest range — you're performing well in this category |
 
-The blue needle indicates the account's current score. Below the gauge, the chart also shows:
+The **blue needle** on the gauge points to your current score. Below the chart you'll see:
 
-- **Your Resilience Score** — the account's computed score
-- **Industry Average Resilience Score** — the average across all accounts in the same industry
+- **Your Resilience Score** — your organization's computed score
+- **Industry Average Resilience Score** — the average score for organizations in your industry
+
+## Using benchmarking data
+
+### Understanding your position
+
+- **Green zone?** You're performing well. Consider what practices or strengths are driving this result.
+- **Yellow zone?** There's room for improvement. Review the associated assessment results and analysis to identify specific areas to address.
+- **Red zone?** This is a priority area. Work with your Account Executive to develop a concrete improvement plan.
+
+### Comparing to industry
+
+The industry average gives you context:
+- If you're **above average**, you're outperforming most of your peers in this area
+- If you're **near average**, you're performing similarly to others in your industry
+- If you're **below average**, there's an opportunity to close the gap and catch up to industry leaders
+
+### Taking action
+
+Industry benchmarking is most useful when combined with your detailed assessment results:
+1. Review where you stand on the gauge
+2. Look at your detailed assessment results to understand **why** you scored where you did
+3. Work with your Account Executive to develop an action plan
+4. Retake the assessment periodically to track your progress
+
+---
 
 ## Related
 
-- [Client Portal Overview](index.md) — how to access and preview the portal
-- [Assessments Table](assessments-table.md) — assessment list, statuses, and action buttons
-- [Report Builder](../assessments/report-builder.md) — the detailed per-category analysis view
+- [Completed Surveys](assessments-table.md) — view and manage your assessments
+- [Library](library.md) — launch new assessments to expand your benchmarking data
+- [Client Portal Overview](index.md) — overview of all portal features
+- [Assessment Details](../assessments/details.md) — more about how assessments work and how scores are calculated
