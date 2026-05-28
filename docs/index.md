@@ -23,6 +23,8 @@ The Vessel Smart Assessment Platform enables you to:
 - **Configure Platform Settings** — Customize branding, email templates, intake forms, and more
 - **Share with Clients** — Give clients access to their own portal to view assessments, track progress, and explore industry benchmarks
 
+If you can't find the help you need here please contact us at [support@vesselscale.com](mailto:support@vesselscale.com)!
+
 ## Quick Links
 
 ### [Account Settings](settings/user-profile.md)
