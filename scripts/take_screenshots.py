@@ -7,11 +7,15 @@ Usage:
   uv run python scripts/take_screenshots.py account                # one section
   uv run python scripts/take_screenshots.py account library        # multiple sections
   uv run python scripts/take_screenshots.py custom-data            # custom data only
+  uv run python scripts/take_screenshots.py client-portal          # client portal only
 
 Available sections:
   dashboard, account, assessments, library, library-question-types, library-scoring, library-icons, library-editor-draft, 
   library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
-  web-reports, branding
+  web-reports, branding, client-portal
+
+Note: client-portal uses CLIENT_BASE_URL (localhost dev) and CLIENT_ACCESS_TOKEN.
+  Update those constants when a stable QA client user exists on the demo env.
 """
 import argparse
 import asyncio
@@ -22,6 +26,13 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
 ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc4MzEyNjEwLCJpYXQiOjE3NzgyNjk0MTAsImp0aSI6IjY3MmQ3YjFmY2M3YzRhMzNiNWQ0MzAxNmViNTkxN2M0IiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.sdpzTSzh4ob5ZGz3w-dcx85-efsRgK3ziWgmdkcTgtY"
+
+# ── Client user credentials (local dev) ───────────────────────────────────────
+# TODO: replace with a stable QA/demo client user once one exists on demo.schema-qa
+# JWT payload: user_id=8d873233, email=kevin+client@vesselscale.com, user_groups=["client"]
+CLIENT_BASE_URL = "http://testv2.localhost:3000"
+CLIENT_API_URL  = "http://testv2.localhost:8000/"
+CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwMDU3MjIyLCJpYXQiOjE3ODAwMTQwMjIsImp0aSI6ImRjNDU1ZmM5NGViNTRhMDg5OGM5YWFmOTZkYjRlMDExIiwidXNlcl9pZCI6IjhkODczMjMzLWVlZmUtNDlhOS04NGU4LWExZDBmNjE5ZmNiZCIsImZ1bGxuYW1lIjoiY2xpZW50IHVzZXIiLCJlbWFpbCI6ImtldmluK2NsaWVudEB2ZXNzZWxzY2FsZS5jb20iLCJ1c2VyX2dyb3VwcyI6WyJjbGllbnQiXX0.GslNC-ptJeACkIz-YBsg5Zb1U8p3voKrcioG7NYIl1A"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -67,6 +78,52 @@ PERSIST_ROOT = json.dumps({
     }),
     "_persist": json.dumps({"version": 1, "rehydrated": True}),
 })
+
+CLIENT_PERSIST_ROOT = json.dumps({
+    "authReducers": json.dumps({
+        "user": {
+            "currentUser": {
+                "access": CLIENT_ACCESS_TOKEN.removeprefix("Bearer "),
+                "refresh": "",
+                "account_id": "",
+                "user_type": ["client"],
+                "profile_image": "",
+                "fullname": "client user",
+                "first_name": "client",
+                "last_name": "user",
+                "email": "kevin+client@vesselscale.com",
+                "is_superuser": False,
+            },
+            "loading": False,
+            "error": False,
+        }
+    }),
+    "_persist": json.dumps({"version": 1, "rehydrated": True}),
+})
+
+
+async def setup_client_auth(page, context):
+    """Switch the browser session to the client user (CLIENT_BASE_URL)."""
+    client_extra_headers = {
+        **EXTRA_HEADERS,
+        "origin":  CLIENT_BASE_URL,
+        "referer": CLIENT_BASE_URL + "/",
+    }
+    await context.set_extra_http_headers(client_extra_headers)
+    client_cookies = [
+        {"name": "API_URL",      "value": CLIENT_API_URL},
+        {"name": "ACCESS_TOKEN", "value": CLIENT_ACCESS_TOKEN},
+    ]
+    await context.add_cookies([{**c, "url": CLIENT_BASE_URL + "/"} for c in client_cookies])
+    await page.goto(CLIENT_BASE_URL, wait_until="domcontentloaded", timeout=15000)
+    await page.evaluate(f"localStorage.setItem('persist:root', {json.dumps(CLIENT_PERSIST_ROOT)})")
+
+
+async def client_goto(page, path, wait_ms=3000, wait_until="networkidle"):
+    """Navigate to a path on CLIENT_BASE_URL."""
+    await page.goto(CLIENT_BASE_URL + path, wait_until=wait_until, timeout=30000)
+    await page.wait_for_timeout(wait_ms)
+    print(f"    url: {page.url}")
 
 
 async def setup_auth(page, context):
@@ -1459,6 +1516,80 @@ async def section_library_editor_published(page):
     await save(page, "library", "library-editor-published-categories")
 
 
+# ── Client Portal (client user view) ─────────────────────────────────────────
+
+async def section_client_portal(page):
+    """
+    Screenshots captured as a CLIENT user from CLIENT_BASE_URL (localhost dev).
+    TODO: re-run against demo.schema-qa once a stable QA client user exists.
+    """
+    print("\n[client-portal] switching to client user auth")
+    await setup_client_auth(page, page.context)
+    await page.wait_for_timeout(1000)
+
+    # ── Portal overview ───────────────────────────────────────────────────────
+    print("[client-portal] navigating to client portal")
+    await client_goto(page, "/client-portal", wait_ms=4000, wait_until="domcontentloaded")
+    await save(page, "client-portal", "cp-overview")
+
+    # ── Your Assessments tab (default) ────────────────────────────────────────
+    print("[client-portal] Your Assessments tab")
+    await try_click(page, "[role='tab']:has-text('Your Assessments')", timeout=4000)
+    await page.wait_for_timeout(1500)
+    await save(page, "client-portal", "cp-your-assessments")
+
+    # ── All Available Assessments tab ─────────────────────────────────────────
+    print("[client-portal] All Available Assessments tab")
+    if await try_click(page, "[role='tab']:has-text('All Available Assessments')", timeout=4000):
+        await page.wait_for_timeout(2000)
+        await save(page, "client-portal", "cp-all-available-assessments")
+
+        # ── Assessment detail modal (client — shows Create button) ────────────
+        print("[client-portal] clicking first assessment card")
+        first_card = page.locator(".MuiCard-root, [class*='card'], [class*='Card']").first
+        if await first_card.count() > 0:
+            await first_card.click(timeout=4000)
+            await page.wait_for_timeout(1500)
+            await save(page, "client-portal", "cp-assessment-detail-modal-client")
+            # Close modal
+            await page.keyboard.press("Escape")
+            await page.wait_for_timeout(500)
+        else:
+            print("    (no cards found — skipping modal screenshot)")
+    else:
+        print("    (All Available Assessments tab not found — skipping)")
+
+    # ── Library tab ───────────────────────────────────────────────────────────
+    print("[client-portal] Library section")
+    if await try_click(page,
+        "a:has-text('Library'), [role='tab']:has-text('Library'), nav a:has-text('Library')",
+        timeout=4000,
+    ):
+        await page.wait_for_timeout(2500)
+        await save(page, "client-portal", "cp-library")
+    else:
+        print("    (Library nav not found — skipping)")
+
+    # ── Industry Benchmarking ─────────────────────────────────────────────────
+    print("[client-portal] Industry Benchmarking section")
+    await client_goto(page, "/client-portal", wait_ms=3000, wait_until="domcontentloaded")
+    if await try_click(page,
+        "a:has-text('Benchmarking'), [role='tab']:has-text('Benchmarking'), "
+        "button:has-text('Benchmarking'), a:has-text('Industry')",
+        timeout=4000,
+    ):
+        await page.wait_for_timeout(2500)
+        await save(page, "client-portal", "cp-industry-benchmarking")
+    else:
+        # Scroll down to find the benchmarking section if it's on the same page
+        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        await page.wait_for_timeout(1000)
+        await save(page, "client-portal", "cp-industry-benchmarking")
+
+    print("[client-portal] done — restoring admin auth")
+    await setup_auth(page, page.context)
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
@@ -1483,6 +1614,7 @@ SECTIONS = {
     "intake-forms":                 section_intake_forms,
     "web-reports":                  section_web_reports,
     "branding":                     section_branding,
+    "client-portal":                section_client_portal,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

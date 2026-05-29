@@ -5,45 +5,69 @@ tags:
   - assessment-status
 ---
 
-# Assessments Table
+# Your Assessments
 
-The **Your Available Assessments** section is the main table clients see when they open the Client Portal. It lists every assessment assigned to the account along with its current status.
+The **Your Assessments** section is the first tab you see in the **Available Assessments** area of the Client Portal. It shows all the assessments assigned to or created by your organization along with their current status.
 
-![Assessments table](../assets/screenshots/client-portal/cp-assessments-table.png)
+You can use the **Search** field to find a specific assessment by name, or use the **All Statuses** dropdown to filter by completion status. A summary at the bottom shows the total number of assessments assigned to your account.
 
-Clients can narrow the list using the **Search** field or filter by status using the **All Statuses** dropdown. A summary line at the bottom of the table shows the total number of assessments on file (e.g., "You have taken 3 assessments in total").
+> The Available Assessments area has two tabs: **Your Assessments** (this page) and **[All Available Assessments](all-available-assessments.md)** — where you can browse every assessment type offered by your organization and start new ones.
+
+![Your Assessments tab](../assets/screenshots/client-portal/cp-your-assessments.png)
 
 ## Table columns
 
 | Column | Description |
 |--------|-------------|
-| **No** | Row number |
-| **Name** | Assessment template name (bold) and instance name below it |
+| **Name** | The assessment title and instance name |
 | **Status** | Current completion state — see [Status values](#status-values) below |
-| **Updated Date** | Date the assessment was last updated |
+| **Updated Date** | The last date any changes were made to this assessment |
 | **Action** | Buttons to interact with the assessment — see [Action buttons](#action-buttons) below |
 
 ## Status values
 
-| Status | Meaning |
-|--------|---------|
-| **Not Started** | The assessment has been assigned but no responses recorded yet |
-| **In Progress** | The assessment has been started but not yet submitted |
-| **Completed** | All responses submitted; results are available |
+| Status | Meaning | Next Step |
+|--------|---------|-----------|
+| **Draft** | The assessment has been created but not yet sent to respondents | Waiting for your Account Executive to launch it, or you can continue editing if you created it yourself |
+| **In Progress** | Respondents have been invited and are actively completing the assessment | Click **Take Assessment** to contribute your responses |
+| **Results Review** | All responses are in — results are being reviewed | View your scores and analysis |
+| **Closed** | The assessment is complete and finalized | View your results and analysis |
 
 ## Action buttons
 
-Each row in the table has one or more action icons in the **Action** column:
+Each row has action buttons depending on the assessment's status and how it was created:
 
-- **Take Assessment** (green ▶ play button) — Opens the assessment survey so the client can fill it out or continue where they left off
-- **Copy Link** (link icon) — Copies a direct link to the assessment that can be shared
+- **Take Assessment** (▶ play button) — Opens the assessment questionnaire. Use this to start, continue, or review your responses when the assessment is In Progress.
 
-!!! note "View Analysis"
-	Once an assessment is completed and results have been built, a view analysis option becomes available. This links directly to the assessment's analysis and report.
+- **View / Edit** (👁 eye icon) — Available on assessments **you created** directly from the portal. Opens the assessment summary page where you can review details, edit responses, or track progress.
+
+- **Copy Link** (link icon) — Copies a shareable link you can send to colleagues or team members who need to help complete the assessment.
+
+- **View Analysis** (chart icon) — Opens the results and analysis report. Available once the assessment has responses.
+
+## Creating your own assessments
+
+Client users can now start new assessments directly from the portal without waiting for an Account Executive to assign one. To create a new assessment:
+
+1. Click the **All Available Assessments** tab (next to "Your Assessments")
+2. Browse the card grid and click on an assessment type you want to run
+3. In the detail modal, click **Create This Assessment for My Account**
+4. Fill in the assessment details and submit
+
+Once created, your new assessment appears in this **Your Assessments** table with a **Draft** status. You'll see a **View / Edit** button on that row to open and manage it.
+
+## Tips for completing assessments
+
+- **Assessments can be saved** — you don't need to complete them all at once. Your progress is saved automatically.
+- **Return anytime** — use **Take Assessment** or **View / Edit** to come back to an in-progress assessment.
+- **Questions may have guidance** — read the full question text and any help icons for clarification.
+- **Can't interact with an assessment?** — if no action button appears, the assessment may be in a state that doesn't allow edits. Contact your Account Executive for help.
+
+---
 
 ## Related
 
-- [Client Portal Overview](index.md) — how to access and preview the portal
-- [Industry Benchmarking](industry-benchmarking.md) — score comparison gauge chart
-- [Assessments](../assessments/index.md) — assessment lifecycle overview
-- [Report Builder](../assessments/report-builder.md) — build analysis reports for client review
+- [All Available Assessments](all-available-assessments.md) — browse assessment types and create new ones
+- [Library](library.md) — the original library for browsing and launching assessments
+- [Client Portal Overview](index.md) — portal navigation overview
+- [Industry Benchmarking](industry-benchmarking.md) — see how your scores compare to industry averages
