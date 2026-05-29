@@ -126,7 +126,8 @@ nav:
   - Client Portal:
     - Overview: client-portal/index.md
     - Library: client-portal/library.md
-    - Assessments Table: client-portal/assessments-table.md
+    - Your Assessments: client-portal/assessments-table.md
+    - All Available Assessments: client-portal/all-available-assessments.md
     - Industry Benchmarking: client-portal/industry-benchmarking.md
     - Account Executive Notes: client-portal/ae-notes.md
 

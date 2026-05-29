@@ -36,7 +36,9 @@ Click **Return to Account** at any time to go back to the Account Details page.
 The Client Portal is headed with the account name followed by "Assessments Overview." It contains three main sections:
 
 - **[Library](library.md)** — browse and launch new assessments from the organization's assessment library
-- **[Completed Surveys](assessments-table.md)** — view all active and completed assessments assigned to your organization
+- **Available Assessments** — a two-tab section:
+  - **[Your Assessments](assessments-table.md)** — all active and completed assessments assigned to or created by your organization
+  - **[All Available Assessments](all-available-assessments.md)** — a card grid of every assessment type offered; client users can create a new assessment directly from here
 - **[Industry Benchmarking](industry-benchmarking.md)** — see how your organization's resilience score compares to industry averages
 
 ![Client Portal full view](../assets/screenshots/client-portal/cp-overview.png)
@@ -45,8 +47,9 @@ The Client Portal is headed with the account name followed by "Assessments Overv
 
 ## Related
 
-- [Library](library.md) — browse and launch assessments (NEW)
-- [Completed Surveys](assessments-table.md) — table columns, statuses, and action buttons
+- [Library](library.md) — browse and launch assessments
+- [Your Assessments](assessments-table.md) — table columns, statuses, and action buttons
+- [All Available Assessments](all-available-assessments.md) — browse assessment types and self-create new assessments
 - [Industry Benchmarking](industry-benchmarking.md) — gauge chart and score zones
 - [Account Executive Notes](ae-notes.md) — differences between client and AE views
 - [Account Details](../accounts/details.md) — where to find the View as Client button

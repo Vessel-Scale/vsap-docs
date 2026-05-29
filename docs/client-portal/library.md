@@ -15,6 +15,8 @@ The **Library** section is where you can browse and launch new assessments for y
 2. Click **Library** in the left sidebar
 3. You'll see all available assessments organized in a searchable, filterable interface
 
+![Client Portal Library](../assets/screenshots/client-portal/cp-library.png)
+
 ---
 
 ## Finding assessments

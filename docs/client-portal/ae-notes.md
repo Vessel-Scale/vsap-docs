@@ -26,12 +26,13 @@ This page explains what **Account Executives** and **Administrators** see in the
 - In the admin area: Ability to manage which assessments appear in the client library
 - Control over assessment visibility per account/client
 
-### Completed Surveys
+### Available Assessments — Your Assessments tab
 
 **Clients see:**
-- All assessments assigned to their account
-- Current status (Not Started, In Progress, Completed)
+- All assessments assigned to their account, plus any they created themselves
+- Current status (Draft, In Progress, Results Review, Closed)
 - Ability to take/continue assessments
+- **View / Edit** button on client-created assessments
 - Last updated date
 - Copy link button to share with colleagues
 
@@ -39,7 +40,18 @@ This page explains what **Account Executives** and **Administrators** see in the
 - Same view when using "View as Client"
 - In the admin area: Can assign new assessments to accounts
 - Can view completion progress across all your accounts
-- Can see which clients haven't started assigned assessments
+
+### Available Assessments — All Available Assessments tab
+
+**Clients see:**
+- A card grid of every active, top-level assessment type in the organization
+- Assessment icon and name on each card
+- Clicking a card opens a detail modal with description and a **Create This Assessment for My Account** button
+
+**You (AE/Admin) see:**
+- Same card grid when using "View as Client"
+- Clicking a card opens the same modal, but instead of a create button you see an info notice: *"This feature is only available to client users. In preview mode, use the Create button in the sidebar to create an assessment for this account."*
+- To create an assessment on a client's behalf, use the standard **Create Assessment** flow from the admin sidebar
 
 ### Industry Benchmarking
 
@@ -150,6 +162,7 @@ Clients can copy assessment links from the portal, but you can also:
 
 - [Client Portal Overview](index.md) — main client portal guide
 - [Library](library.md) — client-focused library documentation
-- [Completed Surveys](assessments-table.md) — client-focused survey documentation
+- [Your Assessments](assessments-table.md) — client-focused survey documentation
+- [All Available Assessments](all-available-assessments.md) — new self-service tab
 - [Account Details](../accounts/details.md) — where to manage accounts and access
 - [Accounts Overview](../accounts/index.md) — account management guide
