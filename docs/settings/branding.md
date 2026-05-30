@@ -198,8 +198,9 @@ When users build custom reports in the Report Builder, they work with sections o
 | Root Causes | Underlying reasons for challenges |
 | Solutions | Proposed approaches to address gaps |
 | Recommended Actions | Specific next steps and recommendations |
+| Qualitative Insights | AI-generated summary of open-ended responses, editable by the report author |
 
-**To customize:** Enter your preferred term or phase for each category tab.
+**To customize:** Enter your preferred term or phrase for each category tab. The name you set here appears in both the Report Builder editor and in published Web Reports.
 
 ### Category Tab Descriptions
 
@@ -210,8 +211,12 @@ Short help text displayed under each tab name in the Report Builder. These guide
 - **Strengths** (default): "Highlight the team strengths for future success."
 - **Gaps, Challenges, & Threats** (default): "Identify areas where team goals aren't met, cite specific opportunities, or discuss external risks."
 - **Root Causes** (default): "Explain the underlying reasons for the challenges identified above."
+- **Qualitative Insights** (default): "Summary of responses to open-ended questions in this category. Edit as needed."
 
 **To customize:** Provide a brief, action-oriented description for each section.
+
+!!! note "Qualitative Insights"
+    The **Qualitative Insights** tab is populated automatically from AI-generated summaries of respondents' open-ended answers. The tab name and description you set here appear both in the Report Builder editor (as help text) and in published Web Reports (as the accordion section label).
 
 ---
 

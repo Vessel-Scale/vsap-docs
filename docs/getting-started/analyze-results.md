@@ -31,7 +31,10 @@ Switch between **category tabs** at the top to review each section. For each cat
 
 - A **gauge chart** showing the score and zone (At Risk / Could Improve / Optimal)
 - A **Pillar Responses Summary** breaking down each question
-- **Analysis Notes** fields to document Strengths, Gaps & Challenges, Root Causes, and a Plan of Action
+- **Analysis Notes** fields to document Strengths, Gaps & Challenges, Root Causes, Qualitative Insights, and a Plan of Action
+
+!!! tip "Qualitative Insights"
+    The **Qualitative Insights** tab contains an AI-generated summary of open-ended question responses for the category. Review and edit the content before including it in a published report.
 
 ---
 
