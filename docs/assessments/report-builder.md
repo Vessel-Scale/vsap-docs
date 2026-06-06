@@ -39,16 +39,43 @@ The Report Builder is divided into two main panels:
 
 ### Right Panel — Analysis Notes
 
-The Analysis Notes panel is where you record your professional analysis for each category. There are four structured sections:
+The Analysis Notes panel is where you record your professional analysis for each category. There are five structured sections:
 
 | Section | Purpose |
 |---|---|
 | **Strengths** | Highlight what the team is doing well |
 | **Gaps, Challenges, & Threats** | Identify areas where goals and expectations are not being met |
 | **Root Causes** | Describe the underlying reasons for any failures or shortfalls |
+| **Qualitative Insights** | AI-generated summary of open-ended question responses — review and edit as needed |
 | **Plan of Action** | Outline recommended next steps |
 
 Click **+ Add [Section]** to expand a section and enter your notes. Notes are saved per category — switch between category tabs to add analysis for each.
+
+---
+
+## Qualitative Insights
+
+The **Qualitative Insights** section surfaces an AI-generated summary of all open-ended question responses for a category, giving you a quick starting point for your narrative analysis.
+
+![Qualitative Insights in the Report Builder](../assets/screenshots/getting-started/gs-report-builder.png)
+
+### How It Works
+
+1. When you open a category in the Report Builder, the Qualitative Insights section shows a summary automatically generated from respondents' free-text answers.
+2. Review the generated content — it reflects themes and patterns across all open-ended responses for that category.
+3. Click into the text to edit, expand, or refine the content before including it in a report.
+4. Saved changes persist as part of the category's analysis notes.
+
+!!! tip
+    Qualitative Insights is a starting point, not a finished product. Review the AI-generated summary for accuracy and add your own professional interpretation before publishing.
+
+### Viewing in the Web Report
+
+When a Web Report is published, Qualitative Insights appears as an expandable accordion section in the **Analysis Notes** area of each category — clearly labeled and distinct from the quantitative score sections.
+
+### Customizing the Tab Name
+
+The label **"Qualitative Insights"** can be renamed in **Settings → Branding** under the **Report Builder Customization** section. See [Branding — Report Builder Customization](../settings/branding.md#report-builder-customization) for details.
 
 ---
 
