@@ -5,23 +5,20 @@
   <div class="llm-helpers-container">
     <span class="llm-helpers-label">Get AI Help:</span>
     <a href="#" id="chatgpt-link" class="llm-button llm-chatgpt" target="_blank" rel="noopener">
-      <svg class="llm-icon" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-      </svg>
+      <img class="llm-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/openai.svg" alt="ChatGPT">
       ChatGPT
     </a>
     <a href="#" id="claude-link" class="llm-button llm-claude" target="_blank" rel="noopener">
-      <svg class="llm-icon" viewBox="0 0 24 24" fill="currentColor">
-        <text x="6" y="18" font-size="16" font-weight="bold">C</text>
-      </svg>
+      <img class="llm-icon" src="https://cdn.simpleicons.org/anthropic/6b21a8" alt="Claude">
       Claude
     </a>
     <a href="#" id="gemini-link" class="llm-button llm-gemini" target="_blank" rel="noopener">
-      <svg class="llm-icon" viewBox="0 0 24 24" fill="currentColor">
-        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2"/>
-      </svg>
+      <img class="llm-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/google.svg" alt="Gemini">
       Gemini
+    </a>
+    <a href="#" id="perplexity-link" class="llm-button llm-perplexity" target="_blank" rel="noopener">
+      <img class="llm-icon" src="https://cdn.simpleicons.org/perplexity/c41c3b" alt="Perplexity">
+      Perplexity
     </a>
   </div>
 </div>
@@ -84,6 +81,7 @@
     width: 16px;
     height: 16px;
     display: inline-block;
+    filter: invert(0);
   }
 
   .llm-chatgpt {
@@ -120,6 +118,18 @@
     background: #dbeafe;
     color: #1e40af;
     border-color: #bfdbfe;
+  }
+
+  .llm-perplexity {
+    background: #fef3f2;
+    color: #c41c3b;
+    border-color: #fdcccc;
+  }
+
+  .llm-perplexity:hover {
+    background: #fdcccc;
+    color: #c41c3b;
+    border-color: #fbaaaa;
   }
 
   @media (max-width: 768px) {
@@ -216,18 +226,38 @@
     3. Critical information
     4. Helpful tips and best practices`;
     
+    const perplexityPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
+    
+    Important: Please use visual elements including:
+    - Bold text for key concepts
+    - Bullet points for lists
+    - Code blocks where applicable
+    - Sections with clear headers
+    
+    Focus on:
+    1. Main purpose and overview
+    2. Key steps or features
+    3. Important details to remember
+    4. Any warnings or tips
+    
+    Make your response visually scannable with good formatting.`;
+    
     // Encode prompts for URL
     const chatgptLink = `https://chat.openai.com/?q=${encodeURIComponent(chatgptPrompt)}`;
-    const claudeLink = `https://claude.ai?q=${encodeURIComponent(claudePrompt)}`;
-    const geminiLink = `https://gemini.google.com?q=${encodeURIComponent(geminiPrompt)}`;
+    const claudeLink = `https://claude.ai/new?q=${encodeURIComponent(claudePrompt)}`;
+    const geminiLink = `https://www.google.com/search?udm=50&aep=11&q=${encodeURIComponent(geminiPrompt)}&sourceid=chrome`;
+    const perplexityLink = `https://www.perplexity.ai/search/new?q=${encodeURIComponent(perplexityPrompt)}`;
     
     // Set the links
     const chatgptButton = document.getElementById('chatgpt-link');
     const claudeButton = document.getElementById('claude-link');
     const geminiButton = document.getElementById('gemini-link');
+    const perplexityButton = document.getElementById('perplexity-link');
     
     if (chatgptButton) chatgptButton.href = chatgptLink;
     if (claudeButton) claudeButton.href = claudeLink;
+    if (geminiButton) geminiButton.href = geminiLink;
+    if (perplexityButton) perplexityButton.href = perplexityLink;
     if (geminiButton) geminiButton.href = geminiLink;
   });
 </script>
