@@ -182,7 +182,7 @@
     const currentTitle = document.title || 'Documentation';
     
     // Create prompts for each LLM
-    const chatgptPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
+    const standardPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
     
     Focus on:
     1. Main purpose and overview
@@ -190,29 +190,10 @@
     3. Important details to remember
     4. Any warnings or tips`;
     
-    const claudePrompt = `Please read and provide a comprehensive summary of this documentation page: ${publicUrl}
-    
-    Cover:
-    1. What is the main topic?
-    2. What are the key steps or features?
-    3. What should users know?
-    4. Any important tips or warnings?`;
-    
-    const geminiPrompt = `Analyze and explain this documentation page for me: ${publicUrl}
-    
-    Include:
-    1. Purpose of this feature/page
-    2. Main procedures or concepts
-    3. Critical information
-    4. Helpful tips and best practices`;
-    
-    const perplexityPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
-    
-    Focus on:
-    1. Main purpose and overview
-    2. Key steps or features
-    3. Important details to remember
-    4. Any warnings or tips`;
+    const chatgptPrompt = standardPrompt;
+    const claudePrompt = standardPrompt;
+    const geminiPrompt = standardPrompt;
+    const perplexityPrompt = standardPrompt;
     
     // Encode prompts for URL
     const chatgptLink = `https://chat.openai.com/?q=${encodeURIComponent(chatgptPrompt)}`;
