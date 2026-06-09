@@ -184,27 +184,13 @@
     // Create prompts for each LLM
     const chatgptPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
     
-    Important: Please use visual elements including:
-    - Bold text for key concepts
-    - Bullet points for lists
-    - Code blocks where applicable
-    - Sections with clear headers
-    
     Focus on:
     1. Main purpose and overview
     2. Key steps or features
     3. Important details to remember
-    4. Any warnings or tips
-    
-    Make your response visually scannable with good formatting.`;
+    4. Any warnings or tips`;
     
     const claudePrompt = `Please read and provide a comprehensive summary of this documentation page: ${publicUrl}
-    
-    Use rich formatting including:
-    - **Bold** for important terms
-    - • Bullet points for steps
-    - Code blocks for technical content
-    - Headers for different sections
     
     Cover:
     1. What is the main topic?
@@ -214,12 +200,6 @@
     
     const geminiPrompt = `Analyze and explain this documentation page for me: ${publicUrl}
     
-    Please structure your response with:
-    - Clear headers and sections
-    - **Bold formatting** for key points
-    - Bullet lists for steps or features
-    - Code examples where relevant
-    
     Include:
     1. Purpose of this feature/page
     2. Main procedures or concepts
@@ -228,19 +208,11 @@
     
     const perplexityPrompt = `Please read and summarize the content from this documentation page: ${publicUrl}
     
-    Important: Please use visual elements including:
-    - Bold text for key concepts
-    - Bullet points for lists
-    - Code blocks where applicable
-    - Sections with clear headers
-    
     Focus on:
     1. Main purpose and overview
     2. Key steps or features
     3. Important details to remember
-    4. Any warnings or tips
-    
-    Make your response visually scannable with good formatting.`;
+    4. Any warnings or tips`;
     
     // Encode prompts for URL
     const chatgptLink = `https://chat.openai.com/?q=${encodeURIComponent(chatgptPrompt)}`;
