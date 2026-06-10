@@ -4,12 +4,24 @@
 <div class="llm-helpers-banner">
   <div class="llm-helpers-container">
     <span class="llm-helpers-label">Get AI Help:</span>
+    <a href="#" id="vessel-ai-link" class="llm-button llm-vessel-ai" title="Open Vessel AI Assistant" style="display: none;">
+      <svg class="llm-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      VesselAI
+    </a>
+    <div id="vessel-ai-unavailable" class="llm-button llm-vessel-ai-unavailable" style="display: none;" title="VesselAI is only available within the VSAP platform">
+      <svg class="llm-icon" viewBox="0 0 24 24" fill="currentColor" opacity="0.5">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+      VesselAI
+    </div>
     <a href="#" id="chatgpt-link" class="llm-button llm-chatgpt" target="_blank" rel="noopener">
       <img class="llm-icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/openai.svg" alt="ChatGPT">
       ChatGPT
     </a>
     <a href="#" id="claude-link" class="llm-button llm-claude" target="_blank" rel="noopener">
-      <img class="llm-icon" src="https://cdn.simpleicons.org/anthropic/6b21a8" alt="Claude">
+      <img class="llm-icon" src="https://cdn.simpleicons.org/anthropic/FF7B3F" alt="Claude">
       Claude
     </a>
     <a href="#" id="gemini-link" class="llm-button llm-gemini" target="_blank" rel="noopener">
@@ -33,9 +45,6 @@
     background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
     border-bottom: 1px solid #dee2e6;
     padding: 12px 0;
-    position: sticky;
-    top: 60px;
-    z-index: 999;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
   }
@@ -97,15 +106,15 @@
   }
 
   .llm-claude {
-    background: #faf5ff;
-    color: #6b21a8;
-    border-color: #e9d5ff;
+    background: #fff5f0;
+    color: #FF7B3F;
+    border-color: #ffd9cc;
   }
 
   .llm-claude:hover {
-    background: #e9d5ff;
-    color: #6b21a8;
-    border-color: #d8b4fe;
+    background: #ffd9cc;
+    color: #FF7B3F;
+    border-color: #ffb8a3;
   }
 
   .llm-gemini {
@@ -130,6 +139,57 @@
     background: #fdcccc;
     color: #c41c3b;
     border-color: #fbaaaa;
+  }
+
+  .llm-vessel-ai {
+    background: #f0e6ff;
+    color: #6938AA;
+    border: 1px solid #e0d0ff;
+  }
+
+  .llm-vessel-ai:hover {
+    background: #e0d0ff;
+    color: #6938AA;
+    border-color: #d0b8ff;
+  }
+
+  .llm-vessel-ai .llm-icon {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    color: #6938AA !important;
+  }
+  
+  #vessel-ai-link .llm-icon {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+  
+  #vessel-ai-unavailable .llm-icon {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+
+  .llm-vessel-ai-unavailable {
+    background: #f3f4f6;
+    color: #9ca3af;
+    border: 1px solid #e5e7eb;
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  .llm-vessel-ai-unavailable:hover {
+    background: #f3f4f6;
+    color: #9ca3af;
+    transform: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   @media (max-width: 768px) {
@@ -175,7 +235,7 @@
 {% block scripts %}
 {{ super() }}
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  function initializeButtons() {
     // Get the current page path and construct the public URL
     const pagePath = window.location.pathname;
     const publicUrl = `https://docs.vesselscale.com${pagePath}`;
@@ -201,7 +261,7 @@
     const geminiLink = `https://www.google.com/search?udm=50&aep=11&q=${encodeURIComponent(geminiPrompt)}&sourceid=chrome`;
     const perplexityLink = `https://www.perplexity.ai/search/new?q=${encodeURIComponent(perplexityPrompt)}`;
     
-    // Set the links
+    // Set the external AI links
     const chatgptButton = document.getElementById('chatgpt-link');
     const claudeButton = document.getElementById('claude-link');
     const geminiButton = document.getElementById('gemini-link');
@@ -212,6 +272,31 @@
     if (geminiButton) geminiButton.href = geminiLink;
     if (perplexityButton) perplexityButton.href = perplexityLink;
     if (geminiButton) geminiButton.href = geminiLink;
-  });
+    
+    // Handle VesselAI button — only works if docs are loaded inside the VSAP app
+    const isInIframe = window.parent !== window;
+    const vesselAiButton = document.getElementById('vessel-ai-link');
+    const vesselAiUnavailable = document.getElementById('vessel-ai-unavailable');
+    
+    if (isInIframe && vesselAiButton) {
+      // Inside the app — show functional button
+      vesselAiButton.style.display = 'inline-flex';
+      vesselAiButton.href = '#';
+      vesselAiButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Send message to parent window to open the Help Assistant chat
+        window.parent.postMessage({ type: 'openVesselAI' }, '*');
+      });
+    } else if (vesselAiUnavailable) {
+      // Outside the app — show unavailable message
+      vesselAiUnavailable.style.display = 'inline-flex';
+    }
+  }
+
+  // Try to initialize on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', initializeButtons);
+
+  // Also try after a short delay to handle async rendering
+  setTimeout(initializeButtons, 500);
 </script>
 {% endblock %}
