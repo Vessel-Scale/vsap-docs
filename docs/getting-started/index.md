@@ -16,8 +16,8 @@ This quick-start guide walks you through the core workflow in four essential ste
 ```mermaid
 graph LR
     A["<b>Step 1</b><br/>Add an Account"] --> B["<b>Step 2</b><br/>Design an Assessment"]
-    B --> C["<b>Step 3</b><br/>Deliver an Assessment"]
-    C --> D["<b>Step 4</b><br/>Deliver Results"]
+    B --> C["<b>Step 3</b><br/>Deliver your Assessment"]
+    C --> D["<b>Step 4</b><br/>Provide Results"]
     
     classDef stepBox fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000,rx:12px,ry:12px
     class A,B,C,D stepBox
@@ -47,21 +47,21 @@ Create assessment templates in the Library with questions, categories, and scori
 
 ---
 
-## Step 3 — Deliver an Assessment
+## Step 3 — Deliver your Assessment
 
 Create assessment instances and share them with respondents. Collect responses via direct links or anonymous survey links.
 
-[View Step 3 — Deliver an Assessment](deliver-assessment.md){ .md-button }
+[View Step 3 — Deliver your Assessment](deliver-assessment.md){ .md-button }
 
 **Key Topics:** Creating assessments, sharing with respondents, tracking responses
 
 ---
 
-## Step 4 — Deliver Results
+## Step 4 — Provide Results
 
 Analyze responses using the Report Builder and publish polished web reports to share findings with clients.
 
-[View Step 4 — Deliver Results](deliver-results.md){ .md-button }
+[View Step 4 — Provide Results](deliver-results.md){ .md-button }
 
 **Key Topics:** Report builder, analyzing scores, web reports, branding
 

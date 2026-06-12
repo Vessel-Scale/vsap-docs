@@ -12,7 +12,7 @@ Usage:
 Available sections:
   dashboard, account, assessments, library, library-question-types, library-scoring, library-icons, library-editor-draft, 
   library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
-  web-reports, branding, client-portal
+  web-reports, branding, client-portal, getting-started
 
 Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
@@ -502,9 +502,6 @@ async def section_account(page):
     ):
         await save(page, "account", "account-edit")
 
-    print("[account] export/import buttons - back to account list")
-    await goto(page, "/account", wait_ms=2000)
-    
     print("[account] export button (renamed from Download)")
     if await try_click(page, "button:has-text('Export')", timeout=3000):
         await page.wait_for_timeout(1500)
@@ -1755,6 +1752,27 @@ async def section_client_portal(page):
     await setup_auth(page, page.context)
 
 
+# ── Getting Started (UI elements for guides) ──────────────────────────────────
+
+async def section_getting_started(page):
+    print("\n[getting-started] Create menu in sidebar")
+    await goto(page, "/account", wait_ms=3000)
+    
+    # Click the Create button to open the dropdown
+    print("[getting-started] clicking + Create button")
+    if await try_click(page, 
+        "button:has-text('Create')",
+        "button:has(svg[data-testid='AddIcon'])",
+        "[aria-label*='Create']",
+        "button[aria-haspopup='menu']:has-text('Create')",
+        timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "getting-started", "gs-create-menu-new-account")
+        # Close menu
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
+
+
 # ── Section registry ───────────────────────────────────────────────────────────
 
 SECTIONS = {
@@ -1780,6 +1798,7 @@ SECTIONS = {
     "web-reports":                  section_web_reports,
     "branding":                     section_branding,
     "client-portal":                section_client_portal,
+    "getting-started":              section_getting_started,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

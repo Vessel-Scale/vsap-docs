@@ -18,8 +18,8 @@ The Getting Started guide covers these four steps:
 
 1. **Add an Account** — Create or invite clients to register
 2. **Design an Assessment** — Build assessment templates with custom questions
-3. **Deliver an Assessment** — Share and collect responses
-4. **Deliver Results** — Analyze findings and publish branded reports
+3. **Deliver your Assessment** — Share and collect responses
+4. **Provide Results** — Analyze findings and publish branded reports
 
 ## Platform Overview
 

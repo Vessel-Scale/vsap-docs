@@ -7,7 +7,7 @@ tags:
   - web-reports
 ---
 
-# Step 4 — Deliver Results
+# Step 4 — Provide Results
 
 When responses come in, use the Report Builder to analyze scores and document your findings. Then publish a branded web report to share results with your client.
 

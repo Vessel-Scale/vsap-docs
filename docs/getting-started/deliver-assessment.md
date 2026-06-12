@@ -7,7 +7,7 @@ tags:
   - respondents
 ---
 
-# Step 3 — Deliver an Assessment
+# Step 3 — Deliver your Assessment
 
 Create assessment instances from your Library template and share them with respondents to collect their feedback.
 
@@ -96,7 +96,7 @@ Key information displayed:
 
 ## Next Step
 
-[Step 4 — Deliver Results](deliver-results.md){ .md-button }
+[Step 4 — Provide Results](deliver-results.md){ .md-button }
 
 ---
 

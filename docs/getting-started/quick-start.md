@@ -14,8 +14,8 @@ The VSAP process is straightforward:
 
 1. **Add an Account** — Create or invite clients to register in your system
 2. **Design an Assessment** — Build assessment templates with custom questions and scoring
-3. **Deliver an Assessment** — Share assessments and collect responses from respondents
-4. **Deliver Results** — Analyze findings, document insights, and publish branded reports
+3. **Deliver your Assessment** — Share assessments and collect responses from respondents
+4. **Provide Results** — Analyze findings, document insights, and publish branded reports
 
 [→ View Complete Getting Started Guide](index.md){ .md-button .md-button--primary }
 
@@ -23,8 +23,8 @@ The VSAP process is straightforward:
 
 - [Step 1 — Add an Account](creating-your-account.md) — Client registration and account setup
 - [Step 2 — Design an Assessment](design-assessment.md) — Create templates and define scoring
-- [Step 3 — Deliver an Assessment](deliver-assessment.md) — Share and collect responses
-- [Step 4 — Deliver Results](deliver-results.md) — Analyze, document, and publish findings
+- [Step 3 — Deliver your Assessment](deliver-assessment.md) — Share and collect responses
+- [Step 4 — Provide Results](deliver-results.md) — Analyze, document, and publish findings
 
 ## Ready to Dive Deeper?
 

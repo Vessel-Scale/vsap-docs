@@ -30,15 +30,15 @@ Learn more: [Accounts Overview](../accounts/index.md)
 
 ### Option A — Create from the Sidebar
 
-Click the **+ Create** button at the top of the sidebar and select **New Account**.
+Click the **+ Create** button in the sidebar and select **Add Account**.
 
-![+ Create menu with New Account highlighted](../assets/screenshots/getting-started/gs-create-menu-new-account.png)
+![+ Create menu with Add Account highlighted](../assets/screenshots/getting-started/gs-create-menu-new-account.png)
 
 This opens the Create Account form directly.
 
 ### Option B — Add Account Button
 
-From the Accounts list page, click **+ Add Account** in the top-right corner.
+From the Accounts list page, click **Add Account** in the top-right corner.
 
 Both methods open the same Create Account form.
 

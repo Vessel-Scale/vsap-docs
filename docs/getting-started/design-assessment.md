@@ -9,6 +9,9 @@ tags:
 
 Before creating individual assessments, you need an assessment **template** in the Library. The Library is where you define the questions, scoring rules, and categories that all assessments of that type will use.
 
+!!! note "Terminology"
+    In your organization, assessments might be called "Evaluations", "Surveys", "Reviews", or something else entirely. You can customize what the platform calls assessments in **[Settings → Branding](../settings/branding.md#assessment-property-name)**. All references throughout the system will use your chosen terminology.
+
 ---
 
 ## Opening the Library
@@ -64,7 +67,7 @@ See [Library Reference](../library/index.md) for complete template management in
 
 ## Next Step
 
-[Step 3 — Deliver an Assessment](deliver-assessment.md){ .md-button }
+[Step 3 — Deliver your Assessment](deliver-assessment.md){ .md-button }
 
 ---
 
