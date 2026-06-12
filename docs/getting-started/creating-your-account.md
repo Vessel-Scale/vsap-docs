@@ -5,9 +5,12 @@ tags:
   - setup
 ---
 
-# Creating an Account
+# Step 1 — Add an Account
 
 In VSAP, an **account** represents a client organization you are assessing. Before you can run an assessment, you need to create at least one account.
+
+!!! note "Let Clients Create Their Own Account"
+    External users can self-register and populate their own account details through the **Intake Form**. Simply share an intake form link with them, and their submission automatically creates an account in your system. See [Configure Intake Forms](../settings/intake-forms.md) for details on how to set this up.
 
 ---
 
@@ -18,6 +21,8 @@ Navigate to **Accounts** in the sidebar to see all existing accounts.
 ![Accounts list showing company name, website, city, status, and last updated](../assets/screenshots/getting-started/gs-account-list.png)
 
 Use the search bar to filter by name, website, or city. Toggle between **All**, **Active**, and **Inactive** to narrow the list.
+
+Learn more: [Accounts Overview](../accounts/index.md)
 
 ---
 
@@ -51,8 +56,9 @@ The form has three sections:
 
 Click **Save** when done. You will be taken to the new account's detail page.
 
-!!! tip "Want the client to fill in their own details?"
-    Use **Share Intake Form** from the **+ Create** menu. This sends the client a link to a survey form where they enter their own information. See [Intake Forms](../settings/intake-forms.md) to configure the form.
+### Full Reference
+
+For detailed information on all account fields, see [Create Account Reference](../accounts/create.md).
 
 ---
 
@@ -60,7 +66,11 @@ Click **Save** when done. You will be taken to the new account's detail page.
 
 [Step 2 — Design an Assessment](design-assessment.md){ .md-button }
 
+---
+
 ## Related
 
-- [Create Account Reference](../accounts/create.md) — Full field reference
+- [Create Account Reference](../accounts/create.md) — Full field reference and options
 - [Accounts Overview](../accounts/index.md) — Manage all client organizations
+- [Intake Forms](../settings/intake-forms.md) — Let clients self-register
+- [Account Details Page](../accounts/details.md) — View and edit account information

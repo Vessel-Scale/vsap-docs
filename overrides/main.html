@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="llm-helpers-banner">
+<div class="llm-helpers-banner" data-initialized="false">
   <div class="llm-helpers-container">
     <span class="llm-helpers-label">Get AI Help:</span>
     <a href="#" id="vessel-ai-link" class="llm-button llm-vessel-ai" title="Open Vessel AI Assistant" style="display: none;">
@@ -47,6 +47,12 @@
     padding: 12px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+
+  .llm-helpers-banner[data-initialized="true"] {
+    opacity: 1;
   }
 
   .llm-helpers-container {
@@ -154,27 +160,27 @@
   }
 
   .llm-vessel-ai .llm-icon {
-    width: 24px !important;
-    height: 24px !important;
-    min-width: 24px !important;
-    min-height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
     display: inline-block !important;
     flex-shrink: 0 !important;
     color: #6938AA !important;
   }
   
   #vessel-ai-link .llm-icon {
-    width: 24px !important;
-    height: 24px !important;
-    min-width: 24px !important;
-    min-height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
   }
   
   #vessel-ai-unavailable .llm-icon {
-    width: 24px !important;
-    height: 24px !important;
-    min-width: 24px !important;
-    min-height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
   }
 
   .llm-vessel-ai-unavailable {
@@ -290,6 +296,12 @@
     } else if (vesselAiUnavailable) {
       // Outside the app — show unavailable message
       vesselAiUnavailable.style.display = 'inline-flex';
+    }
+    
+    // Mark banner as initialized to trigger fade-in
+    const banner = document.querySelector('.llm-helpers-banner');
+    if (banner) {
+      banner.setAttribute('data-initialized', 'true');
     }
   }
 

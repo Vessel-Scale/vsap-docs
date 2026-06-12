@@ -40,6 +40,7 @@ extra_css:
 
 extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
 
 plugins:
   - search
@@ -48,7 +49,11 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
@@ -62,16 +67,13 @@ markdown_extensions:
 nav:
   - Home:
     - index.md
-    - Account Settings: settings/user-profile.md
+    - Getting Started: getting-started/quick-start.md
   - Getting Started:
     - getting-started/index.md
-    - Step 1 — Create an Account: getting-started/creating-your-account.md
+    - Step 1 — Add an Account: getting-started/creating-your-account.md
     - Step 2 — Design an Assessment: getting-started/design-assessment.md
-    - Step 3 — Create an Assessment: getting-started/create-assessment.md
-    - Step 4 — Send to Respondents: getting-started/send-assessment.md
-    - Step 5 — Analyze Results: getting-started/analyze-results.md
-    - Step 6 — Create a Web Report: getting-started/create-web-report.md
-    - Step 7 — Navigate the Dashboard: getting-started/navigating-the-dashboard.md
+    - Step 3 — Deliver an Assessment: getting-started/deliver-assessment.md
+    - Step 4 — Deliver Results: getting-started/deliver-results.md
   - FAQ: faq.md
   - Dashboard:
     - Overview: dashboard/index.md

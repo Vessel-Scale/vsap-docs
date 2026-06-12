@@ -1,13 +1,25 @@
 ---
 tags:
-  - getting-started
   - overview
   - home
 ---
 
-# VSAP Help Center
+# Vessel Smart Assessment Platform (VSAP) - Help Center
 
-Welcome to the Vessel Smart Assessment Platform (VSAP) documentation. VSAP is a comprehensive assessment and business intelligence platform for manufacturers suppliers, and more, that powers smart assessments designed to help you and your customer transforming results into intelligence to uncover gaps, guide growth, and scale impact efficiently.
+Welcome to the Vessel Smart Assessment Platform (VSAP) documentation. VSAP is a comprehensive assessment and business intelligence platform for manufacturers, suppliers, and more, that powers smart assessments designed to help you and your customers transform results into intelligence to uncover gaps, guide growth, and scale impact efficiently.
+
+## Getting Started
+
+New to VSAP? Start here! Learn the four essential steps to run assessments, analyze results, and share findings with clients.
+
+**[→ Go to Getting Started Guide](getting-started/quick-start.md){ .md-button .md-button--primary }**
+
+The Getting Started guide covers these four steps:
+
+1. **Add an Account** — Create or invite clients to register
+2. **Design an Assessment** — Build assessment templates with custom questions
+3. **Deliver an Assessment** — Share and collect responses
+4. **Deliver Results** — Analyze findings and publish branded reports
 
 ## Platform Overview
 
@@ -25,15 +37,9 @@ The Vessel Smart Assessment Platform enables you to:
 
 If you can't find the help you need here please contact us at [support@vesselscale.com](mailto:support@vesselscale.com)!
 
-## Quick Links
+---
 
-### [Account Settings](settings/user-profile.md)
-- [Edit Your Information](settings/user-profile.md#edit-your-information)
-- [Change Your Password](settings/user-profile.md#change-your-password)
-
-### [Getting Started](getting-started/index.md)
-- [Creating Your Account](getting-started/creating-your-account.md)
-- [Navigating the Dashboard](getting-started/navigating-the-dashboard.md)
+## Quick Navigation
 
 ### [Dashboard & Insights](dashboard/index.md)
 - [Dashboard Overview](dashboard/index.md)
