@@ -127,6 +127,30 @@ The Geocoding section allows you to assign geographic coordinates to an account 
 
 ---
 
+## Reports Tab
+
+The **Reports** tab provides a centralized view of all assessment reports generated for this account. This tab shows:
+
+- **All assessment reports** linked to assessments for this account
+- **Report types** — Web reports, PDF reports, or analysis documents
+- **Generation dates** — When each report was created
+- **Quick actions** — View, download, or manage reports
+
+From this tab, you can:
+
+- **Review assessment reports** — View completed reports from any assessment for this account
+- **Manage PDF access** — Control which PDF report templates are available (configured in Overview tab)
+- **Manage Web access** — Control which Web Report templates are available (configured in Overview tab)
+- **Share reports** — Generate and share specific reports with clients or stakeholders
+
+For more details on creating and managing reports, see:
+
+- **[Report Builder](../assessments/report-builder.md)** — How to analyze results and write assessment reports
+- **[PDF Reports](../settings/pdf-reports.md)** — Configure and manage PDF report templates
+- **[Web Reports](../settings/web-reports.md)** — Create and manage web-based report templates
+
+---
+
 ## Related
 
 - [Edit Account](edit.md) — Update account information

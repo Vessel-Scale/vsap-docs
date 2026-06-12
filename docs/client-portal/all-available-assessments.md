@@ -53,7 +53,24 @@ This is intentional — to create an assessment on behalf of a client, use the s
 
 ## What assessments appear here?
 
-The grid shows all **active, top-level** assessment types in your organization's library — the same assessment definitions that appear in the Library. Sub-assessments (child assessments nested inside a parent) are not shown here.
+The grid shows all **active, top-level, and publicly available** assessment types in your organization's library. This includes:
+
+- **Public assessments** that your organization has published and made available to clients
+- **Top-level assessments only** — Sub-assessments (child assessments nested inside a parent) are not shown here
+- **Assessments assigned to your account** also appear in your **[Your Assessments](assessments-table.md)** tab
+
+Private assessments created for specific accounts do not appear in this grid — only public assessments that are available organization-wide.
+
+---
+
+## Draft Status
+
+When you create an assessment from this tab, it starts as a **Draft**. You can:
+
+- **Continue editing** — The assessment is not yet live for other respondents
+- **Save your progress** — Changes are saved automatically as you work
+- **Return anytime** — Use **View / Edit** in your **[Your Assessments](assessments-table.md)** tab to pick up where you left off
+- **Publish when ready** — Once complete, your Account Executive can publish it if needed
 
 ---
 
@@ -62,3 +79,4 @@ The grid shows all **active, top-level** assessment types in your organization's
 - [Your Assessments](assessments-table.md) — view and manage assessments assigned to your account
 - [Library](library.md) — the sidebar library for browsing and launching assessments
 - [Client Portal Overview](index.md) — portal navigation overview
+- [Assessment Visibility](../assessments/details.md#assessment-visibility--privacy) — public vs private assessments

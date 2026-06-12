@@ -24,15 +24,15 @@ The export feature lets you download all accounts from the system in either CSV 
 
 ### How to Export
 
-1. From the **Account List** page, click the **Download** button in the top right toolbar
+1. From the **Account List** page, click the **Export** button in the top right toolbar
 2. Select your preferred format:
    - **CSV** — Tabular format, good for spreadsheets and data analysis
    - **YAML** — Structured format with full relationship details, good for backups and re-imports
 3. The file will download to your computer with the filename `accounts_export_[date].csv` or `accounts_export_[date].yaml`
 
-![Account list with Download and Upload buttons](../assets/screenshots/account/account-list.png)
+![Account list with Export and Import buttons](../assets/screenshots/account/account-list.png)
 
-![Download format picker modal](../assets/screenshots/account/account-list-download-modal.png)
+![Export format picker modal](../assets/screenshots/account/account-list-download-modal.png)
 
 ### Export Formats
 
@@ -134,7 +134,7 @@ The import feature lets you add multiple accounts at once by uploading a CSV or 
 
 ![Import dialog with Paste, Upload, and edit options](../assets/screenshots/account/account-list-upload-modal.png)
 
-1. From the **Account List** page, click the **Upload** button in the top toolbar
+1. From the **Account List** page, click the **Import** button in the top toolbar
 2. The import dialog will open with three options:
    - **Paste** — Copy account data directly from clipboard
    - **Upload** — Select a CSV or YAML file from your computer

@@ -26,12 +26,12 @@ You can use the **Search** field to find a specific assessment by name, or use t
 
 ## Status values
 
-| Status | Meaning | Next Step |
-|--------|---------|-----------|
-| **Draft** | The assessment has been created but not yet sent to respondents | Waiting for your Account Executive to launch it, or you can continue editing if you created it yourself |
-| **In Progress** | Respondents have been invited and are actively completing the assessment | Click **Take Assessment** to contribute your responses |
-| **Results Review** | All responses are in — results are being reviewed | View your scores and analysis |
-| **Closed** | The assessment is complete and finalized | View your results and analysis |
+| Status | Meaning | What it means for you | Next Step |
+|--------|---------|----------------------|-----------|
+| **Draft** | The assessment has been created but not yet sent to respondents | You can continue editing your responses, or wait for your Account Executive to launch it | Save your progress anytime and return to resume; or contact your AE if you need help finalizing |
+| **In Progress** | Respondents have been invited and are actively completing the assessment | The assessment is live — respondents are filling in answers | Click **Take Assessment** to contribute your responses |
+| **Results Review** | All responses are in — results are being reviewed | Your responses have been submitted and are being analyzed | View your scores and analysis when your AE has completed the review |
+| **Closed** | The assessment is complete and finalized | All responses are locked and final reports have been generated | View your final results and analysis in read-only mode |
 
 ## Action buttons
 
@@ -45,6 +45,21 @@ Each row has action buttons depending on the assessment's status and how it was 
 
 - **View Analysis** (chart icon) — Opens the results and analysis report. Available once the assessment has responses.
 
+## Read-Only Mode
+
+Once an assessment reaches **Closed** status, you can view the completed assessment in **read-only mode**. This means:
+
+- ✓ You can **view** all responses, scores, and analysis
+- ✓ You can **review** category breakdowns and scoring details  
+- ✓ You can **read** the Account Executive's analysis notes and recommendations
+- ✗ You **cannot edit** responses or add new answers
+- ✗ You **cannot modify** scores or analysis
+- ✗ You **cannot change** the assessment structure or questions
+
+Read-only mode ensures that completed assessments remain final and accurate for reporting and archival purposes. If you need to make changes to a closed assessment, contact your Account Executive.
+
+---
+
 ## Creating your own assessments
 
 Client users can now start new assessments directly from the portal without waiting for an Account Executive to assign one. To create a new assessment:
@@ -55,6 +70,17 @@ Client users can now start new assessments directly from the portal without wait
 4. Fill in the assessment details and submit
 
 Once created, your new assessment appears in this **Your Assessments** table with a **Draft** status. You'll see a **View / Edit** button on that row to open and manage it.
+
+### Managing Your Draft Assessment
+
+When you've created an assessment as a **Draft**, you can:
+
+- **Save as you go** — Your responses and progress save automatically as you fill in answers
+- **Return anytime** — Close the assessment and come back later using **View / Edit** — your work is preserved
+- **Continue editing** — Add more responses or modify existing answers until you're ready
+- **Notify your AE** — When ready, contact your Account Executive to launch or publish the assessment to respondents
+
+The draft remains under your control until your Account Executive takes the next action (such as launching it for broader respondent participation).
 
 ## Tips for completing assessments
 
