@@ -1674,71 +1674,82 @@ async def section_library_editor_published(page):
 
 async def section_client_portal(page):
     """
-    Screenshots captured as a CLIENT user from CLIENT_BASE_URL (localhost dev).
-    TODO: re-run against demo.schema-qa once a stable QA client user exists.
+    Screenshots captured as a CLIENT user from CLIENT_BASE_URL.
+    Uses the actual client assessment endpoints: /dashboard and /client-assessments
     """
     print("\n[client-portal] switching to client user auth")
     await setup_client_auth(page, page.context)
     await page.wait_for_timeout(1000)
 
-    # ── Portal overview ───────────────────────────────────────────────────────
-    print("[client-portal] navigating to client portal")
-    await client_goto(page, "/client-portal", wait_ms=4000, wait_until="domcontentloaded")
+    # ── Portal overview (dashboard) ────────────────────────────────────────────
+    print("[client-portal] navigating to client dashboard")
+    await client_goto(page, "/dashboard", wait_ms=4000, wait_until="domcontentloaded")
     await save(page, "client-portal", "cp-overview")
 
-    # ── Your Assessments tab (default) ────────────────────────────────────────
-    print("[client-portal] Your Assessments tab")
-    await try_click(page, "[role='tab']:has-text('Your Assessments')", timeout=4000)
-    await page.wait_for_timeout(1500)
+    # ── Your Assessments / Available Assessments ──────────────────────────────
+    print("[client-portal] navigating to client assessments")
+    await client_goto(page, "/client-assessments", wait_ms=6000, wait_until="domcontentloaded")
+    await page.wait_for_timeout(2000)  # Extra wait for content to fully render
     await save(page, "client-portal", "cp-your-assessments")
 
-    # ── All Available Assessments tab ─────────────────────────────────────────
-    print("[client-portal] All Available Assessments tab")
-    if await try_click(page, "[role='tab']:has-text('All Available Assessments')", timeout=4000):
-        await page.wait_for_timeout(2000)
-        await save(page, "client-portal", "cp-all-available-assessments")
+    # ── All Available Assessments tab ──────────────────────────────────────────
+    print("[client-portal] clicking Available Assessments tab")
+    
+    # First, wait for the tab container to exist
+    try:
+        await page.wait_for_selector("[role='tablist'], .MuiTabs-root", timeout=5000)
+    except:
+        pass
+    
+    # Try to find and click a button that contains "Your Assessments" or "Available"
+    try:
+        your_assessments_btn = page.locator("button:has-text('Your Assessments')")
+        if await your_assessments_btn.count() > 0:
+            # Click the next button after this one
+            buttons = page.locator("button")
+            button_list = await buttons.all()
+            for i, btn in enumerate(button_list):
+                text = await btn.text_content()
+                if text and "Your Assessments" in text and i + 1 < len(button_list):
+                    await button_list[i + 1].click()
+                    break
+            else:
+                # Fallback: try to find by partial text match
+                available_btn = page.locator("button:has-text('Available')")
+                if await available_btn.count() > 0:
+                    await available_btn.click()
+    except Exception as e:
+        pass
+    
+    await page.wait_for_timeout(2000)
+    await save(page, "client-portal", "cp-all-available-assessments")
 
-        # ── Assessment detail modal (client — shows Create button) ────────────
-        print("[client-portal] clicking first assessment card")
-        first_card = page.locator(".MuiCard-root, [class*='card'], [class*='Card']").first
-        if await first_card.count() > 0:
-            await first_card.click(timeout=4000)
-            await page.wait_for_timeout(1500)
-            await save(page, "client-portal", "cp-assessment-detail-modal-client")
-            # Close modal
-            await page.keyboard.press("Escape")
-            await page.wait_for_timeout(500)
-        else:
-            print("    (no cards found — skipping modal screenshot)")
+    # ── Assessment detail modal (client — shows Create button) ────────────
+    print("[client-portal] clicking first assessment card")
+    first_card = page.locator(".MuiCard-root").first
+    if await first_card.count() > 0:
+        await first_card.click(timeout=4000)
+        await page.wait_for_timeout(1500)
+        await save(page, "client-portal", "cp-assessment-detail-modal-client")
+        # Close modal
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
     else:
-        print("    (All Available Assessments tab not found — skipping)")
+        print("    (no cards found — skipping modal screenshot)")
 
-    # ── Library tab ───────────────────────────────────────────────────────────
-    print("[client-portal] Library section")
-    if await try_click(page,
-        "a:has-text('Library'), [role='tab']:has-text('Library'), nav a:has-text('Library')",
-        timeout=4000,
-    ):
-        await page.wait_for_timeout(2500)
-        await save(page, "client-portal", "cp-library")
-    else:
-        print("    (Library nav not found — skipping)")
+    # ── Library ───────────────────────────────────────────────────────────────
+    print("[client-portal] navigating to Library")
+    await client_goto(page, "/library", wait_ms=3000, wait_until="domcontentloaded")
+    await save(page, "client-portal", "cp-library")
 
     # ── Industry Benchmarking ─────────────────────────────────────────────────
     print("[client-portal] Industry Benchmarking section")
-    await client_goto(page, "/client-portal", wait_ms=3000, wait_until="domcontentloaded")
-    if await try_click(page,
-        "a:has-text('Benchmarking'), [role='tab']:has-text('Benchmarking'), "
-        "button:has-text('Benchmarking'), a:has-text('Industry')",
-        timeout=4000,
-    ):
-        await page.wait_for_timeout(2500)
-        await save(page, "client-portal", "cp-industry-benchmarking")
-    else:
-        # Scroll down to find the benchmarking section if it's on the same page
-        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        await page.wait_for_timeout(1000)
-        await save(page, "client-portal", "cp-industry-benchmarking")
+    await client_goto(page, "/client-assessments", wait_ms=6000, wait_until="domcontentloaded")
+    await page.wait_for_timeout(2000)  # Extra wait for content to fully render
+    # Scroll down to find benchmarking section
+    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+    await page.wait_for_timeout(1000)
+    await save(page, "client-portal", "cp-industry-benchmarking")
 
     print("[client-portal] done — restoring admin auth")
     await setup_auth(page, page.context)

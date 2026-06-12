@@ -6,84 +6,89 @@ tags:
 
 # Client Portal
 
-The **Client Portal** is the main view your clients see when they log into VSAP. It shows them their assigned assessments, current status, how their scores compare to industry benchmarks, and access to the assessment library to launch new evaluations.
+Welcome to your **Client Portal** — your central hub for managing and completing assessments with Vessel Scale. Here you'll find all your assigned assessments, track your progress, view your scores, and access new evaluations your organization has made available to you.
 
-As an administrator or Account Executive, you can preview the portal exactly as a client would experience it using the **View as Client** button on any Account Details page.
-
-> **For Administrators & Account Executives**: See [Account Executive Notes](ae-notes.md) for what you see versus what clients see, and how to manage permissions and access.
+![Client Portal Overview](../assets/screenshots/client-portal/cp-overview.png)
 
 ---
 
-## Assessment Visibility & What Clients See
+## What You Can Do in the Client Portal
 
-The Client Portal displays assessments based on the **visibility and assignment** settings:
+The Client Portal gives you access to:
 
-### Assessments Clients See
-
-Clients can access:
-
-- **Assessments assigned to them** — Any assessment your team has assigned to their account, regardless of whether it's marked public or private
-- **Public assessments in the Library** — Browse and launch any public assessment your organization offers
-- **Public assessment cards in "All Available Assessments"** — Self-start new assessments from the card grid
-
-### Assessments Clients Cannot See
-
-Clients cannot see:
-
-- **Private assessments not assigned to them** — Private assessments created for other accounts remain hidden
-- **Admin-only or draft assessments** — Drafts and admin-only settings are not visible in the client view
-
-### What Admins & AEs See
-
-When you use **View as Client** to preview the portal:
-
-- You see everything the client would see (assigned and public assessments)
-- The **yellow preview banner** confirms you're viewing as the client
-- You can edit or manage assessments normally by returning to Account Details
-- You can verify clients have the correct access before reaching out to them
+- **Your Assessments** — View all assessments assigned to you, track their status, and continue working on in-progress evaluations
+- **All Available Assessments** — Browse every assessment type your organization offers and start new ones on your own without waiting for an assignment
+- **Assessment Library** — Search and discover assessments by name, description, or category
+- **Industry Benchmarking** — See how your organization's resilience score compares to industry averages in your sector
+- **Analysis & Results** — Review completed assessments, view your scores, and read analysis notes from your Account Executive
 
 ---
 
-## Accessing the Client Portal
+## Portal Layout
 
-### Previewing as an administrator
+The Client Portal is organized into three main sections:
 
-To see what a specific client sees in their portal:
+**[Your Assessments](assessments-table.md)** — A table showing all assessments assigned to or created by you:
+- View status (Draft, In Progress, Results Review, Closed)
+- Take assessments or continue where you left off
+- View completed results
+- Copy links to share with colleagues
 
-1. Navigate to the **Account Details** page for that client
-2. Click **View as Client** in the action bar
+**[All Available Assessments](all-available-assessments.md)** — A card grid showing every assessment your organization offers:
+- Browse and explore available assessment types
+- Create new assessments directly from the card grid
+- No need to wait for your Account Executive to assign one
 
-![View as Client button](../assets/screenshots/client-portal/cp-account-action-bar.png)
+**[Industry Benchmarking](industry-benchmarking.md)** — See your performance compared to industry standards:
+- Gauge chart showing your resilience score
+- Color-coded zones (At Risk, Could Improve, Optimal)
+- Industry average comparison
 
-This opens the portal in **Preview Mode** — you see exactly what the client sees, with a yellow banner at the top confirming you are in preview mode and not the client view itself.
-
-![Preview Mode banner](../assets/screenshots/client-portal/cp-preview-banner.png)
-
-Click **Return to Account** at any time to go back to the Account Details page.
+**[Assessment Library](library.md)** — Searchable collection of all assessments:
+- Find assessments by name, description, or category
+- Launch new evaluations instantly
+- Discover what's available to you
 
 ---
 
-## What the portal contains
+## Assessment Status & What's Next
 
-The Client Portal is headed with the account name followed by "Assessments Overview." It contains three main sections:
+When you access an assessment, here's what you'll see:
 
-- **[Library](library.md)** — browse and launch new assessments from the organization's assessment library
-- **Available Assessments** — a two-tab section:
-  - **[Your Assessments](assessments-table.md)** — all active and completed assessments assigned to or created by your organization
-  - **[All Available Assessments](all-available-assessments.md)** — a card grid of every public assessment type offered; client users can create a new assessment directly from here
-- **[Industry Benchmarking](industry-benchmarking.md)** — see how your organization's resilience score compares to industry averages
+| Status | What it means | What you do |
+|--------|---------------|-----------|
+| **Draft** | Assessment created but not yet finalized | Continue editing your responses; they save automatically |
+| **In Progress** | Assessment is live and responses are being collected | Submit your responses; others may be filling theirs in |
+| **Results Review** | All responses are in; being analyzed | Your Account Executive is reviewing and preparing analysis |
+| **Closed** | Assessment is complete and final | View your final scores, analysis, and recommendations |
 
-![Client Portal full view](../assets/screenshots/client-portal/cp-overview.png)
+> **💡 Tip:** Your work saves automatically as you complete assessments. You can close and return to in-progress assessments anytime without losing your progress.
+
+---
+
+## Getting Started
+
+1. Log into VSAP and navigate to the **Client Portal**
+2. Check **[Your Assessments](assessments-table.md)** for any assessments waiting for you
+3. If none are ready, browse **[All Available Assessments](all-available-assessments.md)** to self-start a new evaluation
+4. Once assessments are completed, view results and benchmarking data to understand your performance
+
+---
+
+## Administrators & Account Executives
+
+> **For those managing client access:** See [Account Executive Notes](ae-notes.md) to understand what clients see, how to configure visibility, and how to manage permissions.
+
+To preview the client portal experience for a specific account, visit the **Account Details** page and click **View as Client**. This shows you exactly what that client sees when they log in.
 
 ---
 
 ## Related
 
-- [Library](library.md) — browse and launch assessments
-- [Your Assessments](assessments-table.md) — table columns, statuses, and action buttons
-- [All Available Assessments](all-available-assessments.md) — browse assessment types and self-create new assessments
-- [Industry Benchmarking](industry-benchmarking.md) — gauge chart and score zones
-- [Account Executive Notes](ae-notes.md) — differences between client and AE views
-- [Account Details](../accounts/details.md) — where to find the View as Client button
-- [Web Reports](../settings/web-reports.md) — control which reports appear in the portal
-- [Assessment Visibility](../assessments/details.md#assessment-visibility--privacy) — public vs private assessments
+- [Your Assessments](assessments-table.md) — Track your assessments and take action
+- [All Available Assessments](all-available-assessments.md) — Self-create new assessments
+- [Assessment Library](library.md) — Browse and search assessments
+- [Industry Benchmarking](industry-benchmarking.md) — Compare your performance to industry peers
+- [Account Executive Notes](ae-notes.md) — For admins: managing client access and visibility
+- [Assessment Visibility](../assessments/details.md#assessment-visibility--privacy) — How your Account Executive controls what you see
+
