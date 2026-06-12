@@ -14,8 +14,7 @@ Available sections:
   library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
   web-reports, branding, client-portal
 
-Note: client-portal uses CLIENT_BASE_URL (localhost dev) and CLIENT_ACCESS_TOKEN.
-  Update those constants when a stable QA client user exists on the demo env.
+Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
 import argparse
 import asyncio
@@ -27,12 +26,11 @@ from playwright.async_api import async_playwright
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
 ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMzI5MzAyLCJpYXQiOjE3ODEyODYxMDIsImp0aSI6Ijg0NWFmOGE0OGQyYjQxYjViNmNlZTNkNDlhZWM5NjYwIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.ksjvzXNoP8F2kV5vVSeQbqoO_DtGDC3MyPP8V5IyUns"
 
-# ── Client user credentials (local dev) ───────────────────────────────────────
-# TODO: replace with a stable QA/demo client user once one exists on demo.schema-qa
-# JWT payload: user_id=8d873233, email=kevin+client@vesselscale.com, user_groups=["client"]
-CLIENT_BASE_URL = "http://testv2.localhost:3000"
-CLIENT_API_URL  = "http://testv2.localhost:8000/"
-CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwMDU3MjIyLCJpYXQiOjE3ODAwMTQwMjIsImp0aSI6ImRjNDU1ZmM5NGViNTRhMDg5OGM5YWFmOTZkYjRlMDExIiwidXNlcl9pZCI6IjhkODczMjMzLWVlZmUtNDlhOS04NGU4LWExZDBmNjE5ZmNiZCIsImZ1bGxuYW1lIjoiY2xpZW50IHVzZXIiLCJlbWFpbCI6ImtldmluK2NsaWVudEB2ZXNzZWxzY2FsZS5jb20iLCJ1c2VyX2dyb3VwcyI6WyJjbGllbnQiXX0.GslNC-ptJeACkIz-YBsg5Zb1U8p3voKrcioG7NYIl1A"
+# ── Client user credentials (QA demo environment) ───────────────────────────────────
+# JWT payload: user_id=26b5d45a, email=kevin+client@vesselscale.com, user_groups=["client"]
+CLIENT_BASE_URL = "https://demo.schema-qa.vesselscale.com"
+CLIENT_API_URL  = "https://demo.schema-api-qa.vesselscale.com/"
+CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMzQ3MzIwLCJpYXQiOjE3ODEzMDQxMjAsImp0aSI6ImFlNGY0ZjM1OTNiMzRmOGZiZmVhYzhjMzFlNzYzYjI0IiwidXNlcl9pZCI6IjI2YjVkNDVhLTI1YzItNDg3Ny04YjFlLTNhMGJkZmQzMzU5MiIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW4rY2xpZW50QHZlc3NlbHNjYWxlLmNvbSIsInVzZXJfZ3JvdXBzIjpbImNsaWVudCJdfQ.4KnF9tGn_ApBy8DmtzShDb2T_OLU3AzMk1T3hYvMg-A"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
