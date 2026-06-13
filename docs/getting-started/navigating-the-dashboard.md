@@ -1,12 +1,11 @@
 ---
 tags:
-  - getting-started
-  - onboarding
   - dashboard
+  - onboarding
   - navigation
 ---
 
-# Step 7 — Navigate the Dashboard
+# Dashboard Overview
 
 The **Dashboard** gives you a high-level view of all assessment activity across your accounts — scores, trends, response counts, and more.
 
@@ -45,11 +44,15 @@ Use the **assessment definition dropdown** at the top to switch between differen
 - [Configure the dashboard](../dashboard/configure.md) — Add, remove, or reorder component cards
 - [Download CSV](../dashboard/download.md) — Export all assessment data
 - [Pivot Table](../dashboard/pivot-table.md) — Slice and filter by any dimension
+- [Ecosystem View](../ecosystem/index.md) — Compare performance across multiple accounts
 
 [Full guide: Dashboard](../dashboard/index.md){ .md-button }
+
+---
 
 ## Related
 
 - [Dashboard Overview](../dashboard/index.md) — Complete dashboard documentation
 - [Configure Dashboard](../dashboard/configure.md) — Customize components
 - [Ecosystem View](../ecosystem/index.md) — Compare across accounts
+- [Getting Started Guide](index.md) — Return to the Getting Started overview

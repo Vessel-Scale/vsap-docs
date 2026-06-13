@@ -12,7 +12,7 @@ The **Industry Benchmarking** section at the bottom of your Client Portal shows 
 
 This helps you understand where you stand relative to similar organizations and identify areas where you might want to focus improvement efforts.
 
-![Industry benchmarking gauge chart](../assets/screenshots/client-portal/cp-industry-benchmark.png)
+![Industry benchmarking gauge chart](../assets/screenshots/client-portal/cp-industry-benchmarking.png)
 
 If your organization has been assessed across multiple assessment types, a **tab** appears for each type — click a tab to switch between different benchmarking views.
 

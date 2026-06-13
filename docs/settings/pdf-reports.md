@@ -9,28 +9,33 @@ tags:
 
 # PDF Reports
 
-PDF Reports are custom-designed report templates tailored to your organization's specific needs.
+PDF Reports are custom-designed report templates tailored to your organization's specific needs. You can configure which PDF report templates are available for specific accounts.
 
 ## Overview
 
-PDF Reports allow you to deliver assessment results in professionally formatted PDF documents with custom branding, layouts, and content structures. Unlike Web Reports which are self-service configurable, PDF Reports are currently designed and implemented on a **case-by-case basis**.
+PDF Reports allow you to deliver assessment results in professionally formatted PDF documents with custom branding, layouts, and content structures. Each PDF report template can be configured on a per-account basis, giving you control over which reports are available to clients.
 
-## Current Status
+## Configuring PDF Reports for an Account
 
-PDF Reports are not yet available for self-service configuration. Each PDF report template is custom-built to meet unique organizational and stakeholder requirements.
+To enable PDF reports for a specific account:
 
-## How to Request a PDF Report
+1. Navigate to **Accounts** and open the account detail page
+2. On the **Overview** tab, locate the **PDF Reports** panel
+3. Check the boxes next to the PDF report templates you want to make available for this account
+4. The configuration saves immediately
 
-If you would like to create a custom PDF report template for your organization, please **contact Vessel Impact** for a consultation. Our team will work with you to:
+Once enabled, the selected PDF report templates become available for that account's assessments. When viewing assessment results for that account, you can generate and download a PDF report in the selected formats.
+
+## Creating Custom PDF Reports
+
+PDF report templates are custom-designed to meet your organization's unique needs. If you would like to create a new PDF report template, please **contact Vessel Impact** for a consultation. Our team will work with you to:
 
 - Understand your reporting requirements
 - Design the layout and content structure
 - Determine the data and branding elements to include
 - Implement and test the template
 
-## Future Availability
-
-PDF Report templates may be added as a self-service feature in the future, similar to the configurable Web Reports. Check back for updates or contact Vessel Impact for the latest information.
+Once created, the new template will be available for configuration on account detail pages.
 
 ## Related Sections
 

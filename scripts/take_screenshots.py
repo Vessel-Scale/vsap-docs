@@ -12,10 +12,9 @@ Usage:
 Available sections:
   dashboard, account, assessments, library, library-question-types, library-scoring, library-icons, library-editor-draft, 
   library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
-  web-reports, branding, client-portal
+  web-reports, branding, client-portal, getting-started
 
-Note: client-portal uses CLIENT_BASE_URL (localhost dev) and CLIENT_ACCESS_TOKEN.
-  Update those constants when a stable QA client user exists on the demo env.
+Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
 import argparse
 import asyncio
@@ -25,14 +24,13 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc4MzEyNjEwLCJpYXQiOjE3NzgyNjk0MTAsImp0aSI6IjY3MmQ3YjFmY2M3YzRhMzNiNWQ0MzAxNmViNTkxN2M0IiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.sdpzTSzh4ob5ZGz3w-dcx85-efsRgK3ziWgmdkcTgtY"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMzI5MzAyLCJpYXQiOjE3ODEyODYxMDIsImp0aSI6Ijg0NWFmOGE0OGQyYjQxYjViNmNlZTNkNDlhZWM5NjYwIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.ksjvzXNoP8F2kV5vVSeQbqoO_DtGDC3MyPP8V5IyUns"
 
-# ── Client user credentials (local dev) ───────────────────────────────────────
-# TODO: replace with a stable QA/demo client user once one exists on demo.schema-qa
-# JWT payload: user_id=8d873233, email=kevin+client@vesselscale.com, user_groups=["client"]
-CLIENT_BASE_URL = "http://testv2.localhost:3000"
-CLIENT_API_URL  = "http://testv2.localhost:8000/"
-CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwMDU3MjIyLCJpYXQiOjE3ODAwMTQwMjIsImp0aSI6ImRjNDU1ZmM5NGViNTRhMDg5OGM5YWFmOTZkYjRlMDExIiwidXNlcl9pZCI6IjhkODczMjMzLWVlZmUtNDlhOS04NGU4LWExZDBmNjE5ZmNiZCIsImZ1bGxuYW1lIjoiY2xpZW50IHVzZXIiLCJlbWFpbCI6ImtldmluK2NsaWVudEB2ZXNzZWxzY2FsZS5jb20iLCJ1c2VyX2dyb3VwcyI6WyJjbGllbnQiXX0.GslNC-ptJeACkIz-YBsg5Zb1U8p3voKrcioG7NYIl1A"
+# ── Client user credentials (QA demo environment) ───────────────────────────────────
+# JWT payload: user_id=26b5d45a, email=kevin+client@vesselscale.com, user_groups=["client"]
+CLIENT_BASE_URL = "https://demo.schema-qa.vesselscale.com"
+CLIENT_API_URL  = "https://demo.schema-api-qa.vesselscale.com/"
+CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMzQ3MzIwLCJpYXQiOjE3ODEzMDQxMjAsImp0aSI6ImFlNGY0ZjM1OTNiMzRmOGZiZmVhYzhjMzFlNzYzYjI0IiwidXNlcl9pZCI6IjI2YjVkNDVhLTI1YzItNDg3Ny04YjFlLTNhMGJkZmQzMzU5MiIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW4rY2xpZW50QHZlc3NlbHNjYWxlLmNvbSIsInVzZXJfZ3JvdXBzIjpbImNsaWVudCJdfQ.4KnF9tGn_ApBy8DmtzShDb2T_OLU3AzMk1T3hYvMg-A"
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -315,23 +313,179 @@ async def section_account(page):
     await goto(page, f"/account/{VESSEL_ACCOUNT_ID}", wait_ms=2000)
     print(f"    url: {page.url}")
 
-    # Overview tab (default)
-    print("[account] details - overview tab")
+    # Overview tab (default) - full page view
+    print("[account] details - overview tab (full page)")
     await try_click(page, "button:has-text('Overview'), [role='tab']:has-text('Overview')", timeout=3000)
     await page.wait_for_timeout(800)
     await save(page, "account", "account-details-overview")
+    
+    # Overview tab - scrolled to show more content
+    print("[account] details - overview tab (scrolled)")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            }) || document.documentElement;
+            el.scrollTop = 600;
+        })()
+    """)
+    await page.wait_for_timeout(400)
+    await save(page, "account", "account-details-overview-scrolled")
+    
+    # Reset scroll
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            }) || document.documentElement;
+            el.scrollTop = 0;
+        })()
+    """)
+    await page.wait_for_timeout(400)
 
     # Assessments tab
     print("[account] details - assessments tab")
     if await try_click(page, "button:has-text('Assessments'), [role='tab']:has-text('Assessments')", timeout=3000):
         await page.wait_for_timeout(1000)
         await save(page, "account", "account-details-assessments")
+        
+        # Assessments tab - scrolled
+        print("[account] details - assessments tab (scrolled)")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 400;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "account", "account-details-assessments-scrolled")
+        
+        # Reset scroll
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 0;
+            })()
+        """)
+        await page.wait_for_timeout(400)
 
-    # Settings tab
-    print("[account] details - settings tab")
-    if await try_click(page, "button:has-text('Settings'), [role='tab']:has-text('Settings')", timeout=3000):
+    # Reports tab (NEW in v2.60)
+    print("[account] details - reports tab")
+    if await try_click(page, "button:has-text('Reports'), [role='tab']:has-text('Reports')", timeout=3000):
         await page.wait_for_timeout(1000)
-        await save(page, "account", "account-details-settings")
+        await save(page, "account", "account-details-reports")
+        
+        # Reports tab - scrolled
+        print("[account] details - reports tab (scrolled)")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 400;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "account", "account-details-reports-scrolled")
+        
+        # Reset scroll
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 0;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+    else:
+        print("    (Reports tab not found - may not be available yet)")
+
+    # Contacts tab (NEW in v2.60)
+    print("[account] details - contacts tab")
+    if await try_click(page, 
+        "button:has-text('Contacts')", 
+        "[role='tab']:has-text('Contacts')",
+        timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "account", "account-details-contacts")
+        
+        # Contacts tab - scrolled
+        print("[account] details - contacts tab (scrolled)")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 400;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "account", "account-details-contacts-scrolled")
+        
+        # Reset scroll
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 0;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+    else:
+        print("    (Contacts tab not found - may not be available yet)")
+
+    # Assignments tab (RENAMED from Settings in v2.60)
+    print("[account] details - assignments tab (formerly Settings)")
+    if await try_click(page, 
+        "button:has-text('Assignments')", 
+        "[role='tab']:has-text('Assignments')",
+        "button[aria-selected='false']:has-text('Assignments')",
+        "[role='tablist'] button:nth-child(5)",
+        timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "account", "account-details-assignments")
+        
+        # Assignments tab - scrolled
+        print("[account] details - assignments tab (scrolled)")
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 400;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+        await save(page, "account", "account-details-assignments-scrolled")
+        
+        # Reset scroll
+        await page.evaluate("""
+            (() => {
+                const el = Array.from(document.querySelectorAll('*')).find(e => {
+                    const s = window.getComputedStyle(e);
+                    return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+                }) || document.documentElement;
+                el.scrollTop = 0;
+            })()
+        """)
+        await page.wait_for_timeout(400)
+    else:
+        print("    (Assignments tab not found)")
 
     # Keep legacy screenshot name for backwards compat (overview tab)
     await try_click(page, "button:has-text('Overview'), [role='tab']:has-text('Overview')", timeout=3000)
@@ -348,28 +502,25 @@ async def section_account(page):
     ):
         await save(page, "account", "account-edit")
 
-    print("[account] download/upload buttons - back to account list")
-    await goto(page, "/account", wait_ms=2000)
-    
-    print("[account] download button")
-    if await try_click(page, "button:has-text('Download')", timeout=3000):
+    print("[account] export button (renamed from Download)")
+    if await try_click(page, "button:has-text('Export')", timeout=3000):
         await page.wait_for_timeout(1500)
         await save(page, "account", "account-list-download-modal")
         await page.keyboard.press("Escape")
         await page.wait_for_timeout(500)
 
-    print("[account] upload button")
-    if await try_click(page, "button:has-text('Upload')", timeout=3000):
+    print("[account] import button (renamed from Upload)")
+    if await try_click(page, "button:has-text('Import')", timeout=3000):
         await page.wait_for_timeout(1500)
         await save(page, "account", "account-list-upload-modal")
         
         # Show AI Instructions copy
-        print("[account] upload modal - AI Instructions button")
+        print("[account] import modal - AI Instructions button")
         if await try_click(page, "button:has-text('AI Instructions')", timeout=3000):
             await page.wait_for_timeout(1000)
         
         # Show paste option
-        print("[account] upload modal - paste option")
+        print("[account] import modal - paste option")
         if await try_click(page, "button:has-text('Paste')", timeout=3000):
             await page.wait_for_timeout(1000)
             await save(page, "account", "account-list-upload-modal-paste")
@@ -1520,74 +1671,106 @@ async def section_library_editor_published(page):
 
 async def section_client_portal(page):
     """
-    Screenshots captured as a CLIENT user from CLIENT_BASE_URL (localhost dev).
-    TODO: re-run against demo.schema-qa once a stable QA client user exists.
+    Screenshots captured as a CLIENT user from CLIENT_BASE_URL.
+    Uses the actual client assessment endpoints: /dashboard and /client-assessments
     """
     print("\n[client-portal] switching to client user auth")
     await setup_client_auth(page, page.context)
     await page.wait_for_timeout(1000)
 
-    # ── Portal overview ───────────────────────────────────────────────────────
-    print("[client-portal] navigating to client portal")
-    await client_goto(page, "/client-portal", wait_ms=4000, wait_until="domcontentloaded")
+    # ── Portal overview (dashboard) ────────────────────────────────────────────
+    print("[client-portal] navigating to client dashboard")
+    await client_goto(page, "/dashboard", wait_ms=4000, wait_until="domcontentloaded")
     await save(page, "client-portal", "cp-overview")
 
-    # ── Your Assessments tab (default) ────────────────────────────────────────
-    print("[client-portal] Your Assessments tab")
-    await try_click(page, "[role='tab']:has-text('Your Assessments')", timeout=4000)
-    await page.wait_for_timeout(1500)
+    # ── Your Assessments / Available Assessments ──────────────────────────────
+    print("[client-portal] navigating to client assessments")
+    await client_goto(page, "/client-assessments", wait_ms=6000, wait_until="domcontentloaded")
+    await page.wait_for_timeout(2000)  # Extra wait for content to fully render
     await save(page, "client-portal", "cp-your-assessments")
 
-    # ── All Available Assessments tab ─────────────────────────────────────────
-    print("[client-portal] All Available Assessments tab")
-    if await try_click(page, "[role='tab']:has-text('All Available Assessments')", timeout=4000):
-        await page.wait_for_timeout(2000)
-        await save(page, "client-portal", "cp-all-available-assessments")
+    # ── All Available Assessments tab ──────────────────────────────────────────
+    print("[client-portal] clicking Available Assessments tab")
+    
+    # First, wait for the tab container to exist
+    try:
+        await page.wait_for_selector("[role='tablist'], .MuiTabs-root", timeout=5000)
+    except:
+        pass
+    
+    # Try to find and click a button that contains "Your Assessments" or "Available"
+    try:
+        your_assessments_btn = page.locator("button:has-text('Your Assessments')")
+        if await your_assessments_btn.count() > 0:
+            # Click the next button after this one
+            buttons = page.locator("button")
+            button_list = await buttons.all()
+            for i, btn in enumerate(button_list):
+                text = await btn.text_content()
+                if text and "Your Assessments" in text and i + 1 < len(button_list):
+                    await button_list[i + 1].click()
+                    break
+            else:
+                # Fallback: try to find by partial text match
+                available_btn = page.locator("button:has-text('Available')")
+                if await available_btn.count() > 0:
+                    await available_btn.click()
+    except Exception as e:
+        pass
+    
+    await page.wait_for_timeout(2000)
+    await save(page, "client-portal", "cp-all-available-assessments")
 
-        # ── Assessment detail modal (client — shows Create button) ────────────
-        print("[client-portal] clicking first assessment card")
-        first_card = page.locator(".MuiCard-root, [class*='card'], [class*='Card']").first
-        if await first_card.count() > 0:
-            await first_card.click(timeout=4000)
-            await page.wait_for_timeout(1500)
-            await save(page, "client-portal", "cp-assessment-detail-modal-client")
-            # Close modal
-            await page.keyboard.press("Escape")
-            await page.wait_for_timeout(500)
-        else:
-            print("    (no cards found — skipping modal screenshot)")
+    # ── Assessment detail modal (client — shows Create button) ────────────
+    print("[client-portal] clicking first assessment card")
+    first_card = page.locator(".MuiCard-root").first
+    if await first_card.count() > 0:
+        await first_card.click(timeout=4000)
+        await page.wait_for_timeout(1500)
+        await save(page, "client-portal", "cp-assessment-detail-modal-client")
+        # Close modal
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
     else:
-        print("    (All Available Assessments tab not found — skipping)")
+        print("    (no cards found — skipping modal screenshot)")
 
-    # ── Library tab ───────────────────────────────────────────────────────────
-    print("[client-portal] Library section")
-    if await try_click(page,
-        "a:has-text('Library'), [role='tab']:has-text('Library'), nav a:has-text('Library')",
-        timeout=4000,
-    ):
-        await page.wait_for_timeout(2500)
-        await save(page, "client-portal", "cp-library")
-    else:
-        print("    (Library nav not found — skipping)")
+    # ── Library ───────────────────────────────────────────────────────────────
+    print("[client-portal] navigating to Library")
+    await client_goto(page, "/library", wait_ms=3000, wait_until="domcontentloaded")
+    await save(page, "client-portal", "cp-library")
 
     # ── Industry Benchmarking ─────────────────────────────────────────────────
     print("[client-portal] Industry Benchmarking section")
-    await client_goto(page, "/client-portal", wait_ms=3000, wait_until="domcontentloaded")
-    if await try_click(page,
-        "a:has-text('Benchmarking'), [role='tab']:has-text('Benchmarking'), "
-        "button:has-text('Benchmarking'), a:has-text('Industry')",
-        timeout=4000,
-    ):
-        await page.wait_for_timeout(2500)
-        await save(page, "client-portal", "cp-industry-benchmarking")
-    else:
-        # Scroll down to find the benchmarking section if it's on the same page
-        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        await page.wait_for_timeout(1000)
-        await save(page, "client-portal", "cp-industry-benchmarking")
+    await client_goto(page, "/client-assessments", wait_ms=6000, wait_until="domcontentloaded")
+    await page.wait_for_timeout(2000)  # Extra wait for content to fully render
+    # Scroll down to find benchmarking section
+    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+    await page.wait_for_timeout(1000)
+    await save(page, "client-portal", "cp-industry-benchmarking")
 
     print("[client-portal] done — restoring admin auth")
     await setup_auth(page, page.context)
+
+
+# ── Getting Started (UI elements for guides) ──────────────────────────────────
+
+async def section_getting_started(page):
+    print("\n[getting-started] Create menu in sidebar")
+    await goto(page, "/account", wait_ms=3000)
+    
+    # Click the Create button to open the dropdown
+    print("[getting-started] clicking + Create button")
+    if await try_click(page, 
+        "button:has-text('Create')",
+        "button:has(svg[data-testid='AddIcon'])",
+        "[aria-label*='Create']",
+        "button[aria-haspopup='menu']:has-text('Create')",
+        timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "getting-started", "gs-create-menu-new-account")
+        # Close menu
+        await page.keyboard.press("Escape")
+        await page.wait_for_timeout(500)
 
 
 # ── Section registry ───────────────────────────────────────────────────────────
@@ -1615,6 +1798,7 @@ SECTIONS = {
     "web-reports":                  section_web_reports,
     "branding":                     section_branding,
     "client-portal":                section_client_portal,
+    "getting-started":              section_getting_started,
 }
 
 ALL_SECTIONS = list(SECTIONS.keys())

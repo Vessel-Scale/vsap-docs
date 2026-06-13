@@ -79,6 +79,16 @@ These actions appear on every card regardless of status:
 |--------|-----------|-------------|
 | **Deprecate** | Published, not a child, not already deprecated, admin/superuser only | Marks the assessment (and any linked children) as deprecated, indicating it is no longer in active use. The label shows the total count if children are included (e.g., `Deprecate (3 assessments)`). Requires confirmation. Non-admins see the item disabled. |
 
+### Deprecated assessments
+
+Once an assessment is marked as **deprecated**, the following actions become available:
+
+| Action | What it does |
+|--------|-------------|
+| **Undeprecate** | Removes the deprecated status and returns the assessment (and any linked children) to active use. Requires confirmation. |
+
+Deprecated assessments are visually marked with a **Deprecated** badge on the card and do not appear in the client portal's available assessments list. Use **Undeprecate** if you need to bring a deprecated assessment back into active use.
+
 ### Locked assessments
 
 If an assessment is **locked** (e.g., read-only due to a subscription limit), the following actions are intercepted and open a **Locked** dialog instead of proceeding: Edit, Copy to New Draft, Download Config, Share Preview Link, Publish, Deprecate, Link to Parent, Unlink from Parent, and Delete. The dialog explains the restriction and links to Vessel support to unlock.

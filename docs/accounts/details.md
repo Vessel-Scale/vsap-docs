@@ -9,12 +9,14 @@ tags:
 
 # Account Details
 
-The Account Details page shows all information associated with a specific account. It is organized into three tabs: **Overview**, **Assessments**, and **Settings**.
+The Account Details page shows all information associated with a specific account. It is organized into five tabs: **Overview**, **Assessments**, **Reports**, **Contacts**, and **Assignments**.
 
 ## What you can do here
 
 - View contact information, industry classification, and location
 - See all assessments linked to this account
+- Review all assessment reports generated for this account
+- Manage team contacts and their portal access
 - Assign team members to roles for this account
 - Configure which Web Reports appear in the Client Portal
 - Edit the account or preview the Client Portal as the client sees it
@@ -40,6 +42,8 @@ Use this to:
 ![Account Details — Overview](../assets/screenshots/account/account-details-overview.png)
 
 The **Overview** tab provides a comprehensive snapshot of the organization: company name, contact information, geographic location, NAICS industry codes, and operational details. This is your starting point for understanding the complete profile of an account and its current status in the system.
+
+![Account Details — Overview (scrolled)](../assets/screenshots/account/account-details-overview-scrolled.png)
 
 ### Web Reports Configuration
 
@@ -79,13 +83,69 @@ The **Assessments** tab displays all assessments associated with this account. F
 
 This gives you a complete audit trail of the account's assessment activity and makes it easy to track progress across multiple assessments over time. Use the search bar and status filter to narrow down the list.
 
+![Account Details — Assessments (scrolled)](../assets/screenshots/account/account-details-assessments-scrolled.png)
+
 ---
 
-## Settings tab
+## Reports Tab
 
-![Account Details — Settings](../assets/screenshots/account/account-details-settings.png)
+The **Reports** tab provides a centralized view of all assessment reports generated for this account. 
 
-The **Settings** tab controls team assignments for this account — designating who will receive update notifications and manage the client relationship.
+![Account Details — Reports](../assets/screenshots/account/account-details-reports.png)
+
+This tab shows:
+
+- **All assessment reports** linked to assessments for this account
+- **Report types** — Web reports, PDF reports, or analysis documents
+- **Generation dates** — When each report was created
+- **Quick actions** — View, download, or manage reports
+
+From this tab, you can:
+
+- **Review assessment reports** — View completed reports from any assessment for this account
+- **Manage PDF access** — Control which PDF report templates are available (configured in Overview tab)
+- **Manage Web access** — Control which Web Report templates are available (configured in Overview tab)
+- **Share reports** — Generate and share specific reports with clients or stakeholders
+
+![Account Details — Reports (scrolled)](../assets/screenshots/account/account-details-reports-scrolled.png)
+
+For more details on creating and managing reports, see:
+
+- **[Report Builder](../assessments/report-builder.md)** — How to analyze results and write assessment reports
+- **[PDF Reports](../settings/pdf-reports.md)** — Configure and manage PDF report templates
+- **[Web Reports](../settings/web-reports.md)** — Create and manage web-based report templates
+
+---
+
+## Contacts Tab
+
+The **Contacts** tab allows you to manage team members and contacts associated with this account.
+
+![Account Details — Contacts](../assets/screenshots/account/account-details-contacts.png)
+
+This tab shows all contacts linked to the account, including:
+
+- Contact name and role
+- Email address and phone number
+- Portal access status (whether they can access the Client Portal)
+- Account assignment status
+
+You can:
+
+- **Add new contacts** — Invite team members to the account
+- **Update contact info** — Edit phone, email, and other details
+- **Manage portal access** — Control who can access the Client Portal
+- **Remove contacts** — Unassign contacts from the account
+
+![Account Details — Contacts (scrolled)](../assets/screenshots/account/account-details-contacts-scrolled.png)
+
+---
+
+## Assignments Tab
+
+![Account Details — Assignments](../assets/screenshots/account/account-details-assignments.png)
+
+The **Assignments** tab controls team assignments for this account — designating who will receive update notifications and manage the client relationship.
 
 ### Team Assignments
 
@@ -104,7 +164,7 @@ The **Manager of Client Services** role designates the primary person responsibl
 
 **To assign a Manager of Client Services:**
 
-1. Open the **Settings** tab on the Account Details page
+1. Open the **Assignments** tab on the Account Details page
 2. Under **Team Assignments**, locate the **Manager of Client Services** (or your organization's equivalent role name) section
 3. Click **+ Add Person** to open the user selector
 4. Search for and select the user to assign
@@ -115,6 +175,8 @@ To remove a user, click the **×** on their assignment card.
 #### Other role slots
 
 Additional role slots (such as **Support**) may appear depending on how your organization has configured team roles in Branding settings. Each works the same way — click **+ Add Person** to assign a user.
+
+![Account Details — Assignments (scrolled)](../assets/screenshots/account/account-details-assignments-scrolled.png)
 
 ---
 
