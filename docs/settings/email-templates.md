@@ -140,6 +140,8 @@ Please click the link below to get started:
 
 ### Important Notes
 
+- **Expiry date variable** - The `{{ expiry_date }}` variable now correctly uses the assessment end date. Previously, it referenced an incorrect date field. This ensures reminder emails and invitations display the accurate expiration date to participants.
+- **Recipient name handling** - The `{{ recipient_name }}` variable gracefully handles cases where recipient names are not available. If a name is missing, it returns an empty string instead of breaking the template, allowing emails to still render cleanly.
 - **Unknown variables** - If you use a variable name that doesn't exist (e.g., `{{ unknown_var }}`), it will be left as-is in the output. Always verify you're using the exact variable names shown above.
 - **Template rendering** - Variables are processed and replaced server-side before emails are sent.
 - **Personalization** - Use variables in both subject lines and body content to create personalized, context-aware communications.

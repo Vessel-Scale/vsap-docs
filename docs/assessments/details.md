@@ -52,6 +52,20 @@ Once you open an assessment, the details page displays:
 - **Status** — Current state (Completed, In Progress, Results Review, etc.)
 - **Executive Contact** — Person assigned to manage this assessment
 
+### Assessment Status Timeline
+
+At the top of the assessment header, a visual progress bar shows the assessment's lifecycle:
+
+![Assessment Status Timeline](../assets/screenshots/assessments/assessment-details-overview.png)
+
+The timeline displays four key stages:
+- **Draft** — Assessment is being prepared
+- **In Progress** — Participants are actively completing the assessment
+- **Results Review** — Responses have been collected and are under review
+- **Closed** — Assessment is complete and archived
+
+The current stage is highlighted with a pulsing animation, and the bar fills progressively as the assessment moves through its lifecycle.
+
 Below the header, you'll find two main sections:
 
 ### Responses Section
