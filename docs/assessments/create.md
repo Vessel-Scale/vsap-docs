@@ -24,6 +24,10 @@ When creating a new assessment, you'll start with the form header where you:
 - **Set Evaluation Date**: Specify when the assessment was performed
 - **Assign Respondent**: Choose who will complete or is completing the assessment
 
+You can also configure:
+- **Close Reminder Days** — Set how many days before the assessment closes to automatically send reminder emails to incomplete respondents
+- **Assessment Close Date** — Define when participant access will expire
+
 ### Pre-filled from the Client Portal
 
 If you arrived here by clicking **Create This Assessment for My Account** in the Client Portal's [All Available Assessments](../client-portal/all-available-assessments.md) tab, the **Account** and **Assessment Definition** fields will already be filled in and locked — you don't need to change them. Fill in the remaining fields and submit.

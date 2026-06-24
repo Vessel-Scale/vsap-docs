@@ -79,6 +79,9 @@ Use this hierarchy in `changelog.md`:
 - Avoid technical jargon unless essential
 - Be concise—aim for 1-2 sentences per item
 - Group related features to show interconnections
+- **Minimize bullet points**: Only add separate bullets for distinct user-facing changes; combine related aspects into single bullets to improve readability
+- Avoid adding fluff or redundant bullets that restate the same feature from different angles
+- **Be specific**: If a change only affects one or two specific items (e.g., a single template variable, one field fix), name them explicitly rather than using vague language like "improved" or "enhanced"
 
 ### 6. **Examples of Good vs Bad**
 

@@ -4,6 +4,36 @@
 
 ---
 
+## v2.61
+
+### Core Features & Enhancements
+
+#### **Assessment Status Visualization**
+- **Assessment Status Timeline**: New visual progress bar showing assessment lifecycle (Draft → In Progress → Results Review → Closed) with animated status indicators and real-time status tracking
+
+#### **Email Tracking & Automation**
+- **Email Tracking Implementation**: New email tracking system to monitor assessment invitations and reminder emails
+- **Reminder Automation**: Automated reminder delivery system with configurable days before assessment close
+- **Email Preview Functionality**: Preview assessment and reminder emails before they are sent to recipients
+
+#### **Assessment Recipient Management**
+- **Flexible Recipient Name Handling**: Improved recipient creation and name management with support for optional names and flexible update options
+- **Contact Search Functionality**: New contact search view for quickly finding and managing contacts by account
+
+#### **Assessment Content & Reporting**
+- **Report Data Builder Bug Fix**: Fixed custom scoring threshold labels that were not being properly rendered in reports; now correctly displays category-level thresholds
+- **Getting Started Assessment Seed Update**: Updated the database seed content with detailed descriptions and comprehensive scoring sections; removed assessment-level suggestions and consolidated to category-level only for clearer guidance to new users
+- **Assessment Close Reminders**: Configure reminder frequency and days before assessment closure
+
+#### **Assessment Form Improvements**
+- **Responsive Assessment Forms**: Improved layout and responsiveness in Create and Edit Assessment forms for better usability across devices
+
+#### **Email Template Improvements**
+- **Fixed Expiry Date Variable**: Properly uses assessment end date in email templates instead of incorrect variable reference
+- **Graceful Recipient Name Handling**: Email templates now handle missing recipient names by returning an empty string instead of breaking the template
+
+---
+
 ## v2.60
 
 ### Core Features & Enhancements

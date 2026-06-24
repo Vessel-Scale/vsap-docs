@@ -95,10 +95,13 @@ If an assessment is **locked** (e.g., read-only due to a subscription limit), th
 
 ## Import Options
 
-Two buttons in the toolbar allow you to create a new definition from an existing config file:
+An **Import** button in the toolbar allows you to create a new assessment definition from an existing configuration:
 
-- **Upload** — Select a `.yaml` or `.yml` file from disk to create a new draft
-- **Paste** — Opens a dialog where you can paste YAML directly or read from the clipboard
+- Click **Import** to open a modal with two options:
+  - **Upload from file** — Select a `.yaml` or `.yml` file from disk to create a new draft
+  - **Paste YAML** — Paste YAML configuration directly or read from the clipboard
+
+Both options create a new independent draft assessment. The import modal consolidates these workflows into a single entry point for adding assessments to your library.
 
 ## Related
 
