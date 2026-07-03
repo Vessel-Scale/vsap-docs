@@ -4,6 +4,35 @@
 
 ---
 
+## v2.63
+
+### Core Features & Enhancements
+
+#### **Web Report Configuration Enhancements**
+- **Response Distribution Modal Control**: New configuration option to enable/disable response distribution modal in web reports, providing more granular control over report presentation and user experience
+
+### User Experience Improvements
+
+- **Assessment Form Navigation**: Removed back button from the first tab of assessment evaluation forms for streamlined navigation and clearer user flow
+- **Web Report Display**: Enhanced flexibility in web report customization and display options
+
+---
+
+## v2.62
+
+### Core Features & Enhancements
+
+#### **Email Template Improvements**
+- **Email Template Format Conversion**: Enhanced markdown link support in email templates with automatic conversion to HTML format for improved email client compatibility and link reliability
+- **Assessment Invitation Link Fixes**: Fixed origin sanitization in invitation links to properly handle various protocol variations and improved assessment invite endpoint routing for reliable invitation delivery
+
+### User Experience Improvements
+
+- **Email Delivery**: Improved email template rendering across different email clients with better link handling
+- **Assessment Invitations**: More reliable assessment invitation links and delivery mechanisms
+
+---
+
 ## v2.61
 
 ### Core Features & Enhancements
