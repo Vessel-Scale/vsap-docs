@@ -4,6 +4,52 @@
 
 ---
 
+## v2.64
+
+### Core Features & Enhancements
+
+#### **Impact Tracker Feature**
+- **Action Item Management**: New Impact Tracker system (formerly Action Tracker) for managing action items, comments, and impact metrics within assessments
+- **Item Prioritization**: Priority levels and status tracking for action items with WONTDO status support
+- **Impact Metrics**: Track impact metrics and status breakdowns for action items with comment editing capabilities
+- **Assessment Closing Integration**: Action tracker checks and validation when closing assessments
+- **Assessment Filtering**: Lock assessment filter in Impact Tracker tab with ability to target specific assessment IDs
+
+#### **Web Report Enhancements**
+- **Default Report Templates**: Automatic default intake form and web report template generation for published assessments
+- **Report Access Controls**: Toggle functionality for web report access with enhanced role-based visibility (showing enabled status for admins and account executives)
+- **Response Distribution Control**: Enhanced configuration option to enable/disable response distribution modal visibility in web reports
+
+#### **Assessment Form & Preview Improvements**
+- **Assessment Navigation Enhancements**: Improved tab navigation and data fetching on status changes with enhanced tab styling and responsiveness
+- **Content Blocks Support**: New support for rendering optional content blocks before and after various report sections
+- **Form Styling Updates**: Updated button background colors to use theme palette across intake forms, PDF reports, and web reports lists for consistent visual appearance
+
+#### **Score & Visualization Improvements**
+- **Score Animation Effects**: Enhanced score animations with smooth transitions and fixed decimal formatting for better visual feedback
+- **Progress Bar Animation**: Animated progress bar with CSS transitions for enhanced assessment score display
+- **Question Distribution Modal**: New modal displaying response distribution charts and statistics for question responses
+- **Assessment Status Indicators**: Added tooltips with descriptions for assessment status steps in the status bar
+
+#### **Assessment Repair & Data Integrity**
+- **YAML Assessment Repair Command**: Enhanced management command to repair corrupted YAML assessments with improved validation for question types, possible answers, and preset name reconstruction
+- **Assessment Structure Updates**: Updated assessment structure in default intake form to use camelCase keys for consistency
+- **Nested Structure Support**: Improved repair command to handle both nested and flat structures with better field merging
+
+#### **Intake Form Configuration**
+- **Definition-Based Filtering**: Enhanced intake form picker modal with ability to filter forms by assessment definition ID
+- **Assessment Structure Consistency**: Automatic structure standardization across assessment definitions
+
+### User Experience Improvements
+
+- **Design Refinements**: Numerous usability improvements including button styling, color palette consistency, and visual feedback enhancements
+- **Loading State Improvements**: Better loading state handling with Redux integration for improved user feedback during data fetching
+- **Assessment Workflow**: Enhanced assessment closing process with integrated action tracker checks and clearer status transitions
+- **Navigation Clarity**: Removed back button from first tab of assessment forms for streamlined navigation flow
+- **Icon Consistency**: Improved visual consistency with theme-aware color palettes and icon styling
+
+---
+
 ## v2.63
 
 ### Core Features & Enhancements
