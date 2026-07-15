@@ -4,6 +4,53 @@
 
 ---
 
+## v2.65
+
+### Core Features & Enhancements
+
+#### **Directors Dashboard**
+- **New Directors Dashboard**: Comprehensive analytics and management interface for directors with configurable components
+- **Dashboard Analytics Pivot**: CSV and YAML export capabilities for directors analytics data
+- **Company Size & Business Distribution Analysis**: New analytics views for company size and business size distribution by NAICS code
+- **Action Tracker Integration**: Integrated action tracker items view in directors dashboard with filtering and metrics display
+- **Impact Metrics Dashboard**: Aggregated action tracker data visualization for ecosystem impact tracking
+- **Offered Solutions Tracking**: New directors feature for tracking and managing offered solutions
+
+#### **Ecosystem Map & Congressional Districts**
+- **State Borders Selector**: Enhanced map control to highlight and customize state boundaries with color picker and line styling options
+- **Congressional Districts Control**: New map control for selecting and displaying Congressional District overlays
+- **Enhanced Filtering**: Improved map filter dropdowns for status and priority with better typography and visibility
+- **Impact Metrics View**: New impact metrics visualization in ecosystem map with filtering and data aggregation
+
+#### **Sidebar Navigation & Creation Flow**
+- **Navigation State Persistence**: Sidebar navigation state now persists across page reloads using session storage
+- **Enhanced Create Button**: Redesigned CreateButton with descriptions, icons, and assessment definition context for improved discoverability
+- **Intake Form Creation**: New quick-create button in IntakeFormPickerModal when no forms exist
+- **Assessment Context Navigation**: Assessment definition ID passed through navigation state for streamlined creation flow
+
+#### **Intake Form Enhancements**
+- **Email Validation & Notifications**: New email validation with user notifications for invalid or duplicate email addresses
+- **EULA Footer Component**: Integrated EULA footer across intake form pages (Landing and Methodology pages)
+- **Enhanced Error Handling**: Replaced failure modal with improved error modal for better error communication
+- **Configuration Validation**: Enhanced intake form configuration validation and improved logging for debugging
+
+#### **Assessment Collection Improvements**
+- **No Assessments State**: Improved empty state messaging with action buttons for creating new assessments in collections
+- **Assessment Noun Pluralization**: Smart pluralization helper for customizable assessment terminology across collection interfaces
+
+#### **Account Source Tracking**
+- **Source Field Standardization**: New source field for accounts created through intake form with standardized assignment in import process
+
+### User Experience Improvements
+
+- **Accordion Icon Animation**: Enhanced accordion expand/collapse animations across components for smoother interactions
+- **Dashboard Configuration Modal**: Drag-and-drop reordering for directors dashboard components with visual improvements
+- **Map Legend**: Enhanced color gradient functions for better contrast in score and impact legends
+- **Component Styling**: Improved card borders, hover effects, and typography consistency across ecosystem and dashboard interfaces
+- **Impact Chart Display**: Enhanced Action Tracker Impact Chart with icon styling and priority display improvements
+
+---
+
 ## v2.64
 
 ### Core Features & Enhancements
