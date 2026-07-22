@@ -160,6 +160,67 @@ For more details, see:
 
 ---
 
+## Impact Tracker Tab
+
+Once an assessment reaches **Results Review** status, an **Impact Tracker** tab becomes available. This tab displays all action items created from findings in this assessment.
+
+### What You Can Do
+
+- **View all action items** — See all actions generated from this assessment's findings
+- **Create new actions** — Add action items for additional findings identified during review
+- **Update status** — Change action status (Open, In Progress, Complete, Won't Do)
+- **Record impact metrics** — Document the business outcomes from completed actions
+- **Collaborate** — Add internal notes or client-facing comments to action items
+
+### Action Item Lifecycle
+
+When you close an assessment, VSAP automatically:
+
+1. **Extracts findings** from the assessment results and recommendations
+2. **Creates action items** for each identified gap or opportunity
+3. **Pre-populates context** including assessment category, scoring details, and recommended actions
+4. **Assigns to team members** for follow-up and implementation
+
+This ensures no insights are lost and all assessment findings flow into your accountability and measurement system.
+
+### Workflow
+
+**Assessment Closed** → **Action Items Created** → **Implemented & Tracked** → **Impact Metrics Recorded** → **Results on Directors Dashboard**
+
+For complete details, see [Impact Tracker](../impact-tracker/index.md).
+
+---
+
+## Assessment Closure Workflow
+
+When you're ready to close an assessment, the Assessment Details page guides you through the closure process:
+
+### Preparing to Close
+
+Before closing, ensure:
+- All responses have been collected
+- Scores and analysis are complete
+- Any recommendations have been reviewed
+- Your team has documented all findings
+
+### Closing the Assessment
+
+1. On the Assessment Details page, click **Close Assessment** or **Mark as Complete**
+2. Review the assessment status timeline
+3. Confirm you're ready to transition to closed status
+4. Action items are automatically created from the assessment findings
+
+### Post-Closure
+
+Once closed:
+- The assessment moves to **Closed** status in the timeline
+- The Impact Tracker tab becomes fully active
+- Action items are available for team tracking
+- The assessment is archived but remains viewable for reference
+- You can reopen if needed for additional work
+
+---
+
 ## Editing an Assessment
 
 From the Assessment Details page, you can edit the assessment to modify responses. The editor shows:
@@ -179,4 +240,6 @@ The editor provides a consistent interface whether creating a new assessment or 
 - [Report Builder](report-builder.md) — Create custom reports
 - [Question Types](question-types.md) — Question type details
 - [Scoring](scoring.md) — Scoring system explanation
+- [Impact Tracker](../impact-tracker/index.md) — Track action items and measure impact
+- [Directors Dashboard](../dashboard/directors-dashboard.md) — Executive-level impact metrics
 

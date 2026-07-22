@@ -77,10 +77,15 @@ nav:
   - FAQ: faq.md
   - Dashboard:
     - Overview: dashboard/index.md
+    - Directors Dashboard: dashboard/directors-dashboard.md
     - Components: dashboard/components.md
     - Configure Dashboard: dashboard/configure.md
     - Download CSV: dashboard/download.md
     - Pivot Table: dashboard/pivot-table.md
+  - Impact Tracker:
+    - Overview: impact-tracker/index.md
+    - Collaboration & Comments: impact-tracker/collaboration.md
+    - Impact Metrics: impact-tracker/metrics.md
   - Accounts:
     - Overview: accounts/index.md
     - Account Details: accounts/details.md

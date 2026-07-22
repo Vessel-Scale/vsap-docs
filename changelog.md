@@ -4,6 +4,34 @@
 
 ---
 
+## v2.66
+
+### Core Features & Enhancements
+
+#### **Assessment Workflow Guide**
+- **New Workflow Guide Card**: Comprehensive guided workflow interface for managing assessment lifecycle from start to completion with status-aware navigation and built-in report management
+- **Dynamic Status & Branding**: Workflow guide automatically adapts based on assessment status with styling that reflects organization branding for consistent visual experience
+
+#### **Assessment Report Sharing**
+- **Share Report Functionality**: Consilidate web/pdf share assessment reports directly from assessment details with modal interface for easy distribution
+
+#### **NAICS Explorer Navigation**
+- **Sector Grouping & Organization**: Enhanced NAICS Explorer with logical sector grouping and improved navigation structure for better data exploration
+- **URL Sync & Navigation History**: Navigation state now syncs with URL parameters, enabling shareable exploration sessions and preserving user search context
+
+#### **Link Editing & Rich Content**
+- **LinkedText Component**: New component implementation enabling inline link editing and management across assessment content
+
+#### **User & Admin Management**
+- **Admin User Management**: New admin endpoints for managing tenant users with full CRUD operations (create, read, update, delete)
+
+### User Experience Improvements
+- **CreateButton Styling**: Improved CreateButton with hover effects and border radius for better visual feedback
+- **Assessment Component Layout**: Various layout and styling improvements across assessment detail components for better visual hierarchy
+- **Dynamic Assessment Terminology**: Assessment noun labels now dynamically updated throughout the interface for consistency
+
+---
+
 ## v2.65
 
 ### Core Features & Enhancements

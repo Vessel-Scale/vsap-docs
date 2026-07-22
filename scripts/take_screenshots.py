@@ -10,9 +10,9 @@ Usage:
   uv run python scripts/take_screenshots.py client-portal          # client portal only
 
 Available sections:
-  dashboard, account, assessments, library, library-question-types, library-scoring, library-icons, library-editor-draft, 
-  library-editor-published, ecosystem, industries, settings, report-builder, custom-data, email-templates, intake-forms, 
-  web-reports, branding, client-portal, getting-started
+  dashboard, directors-dashboard, impact-tracker, account, assessments, library, library-question-types, library-scoring, 
+  library-icons, library-editor-draft, library-editor-published, ecosystem, industries, settings, report-builder, custom-data, 
+  email-templates, intake-forms, web-reports, branding, client-portal, getting-started
 
 Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
@@ -24,7 +24,7 @@ from pathlib import Path
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://demo.schema-qa.vesselscale.com"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgyMzU3ODQ2LCJpYXQiOjE3ODIzMTQ2NDYsImp0aSI6IjY0NzdmYjE0MzM0YzRhZTVhYzEyN2I4MmU3ODA0YzNmIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.-HejyS3h2NoGhpliwYi6HJsh1EPu-iyJFo0VIbHFoiI"
+ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg0NzgxODA4LCJpYXQiOjE3ODQ3Mzg2MDgsImp0aSI6ImU0NGFjZmNkN2FlOTRkYzZiOWNjNjBkNDNlNmU2NTIyIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.tYY9qmvg3lRtDupx0HuGze5wKiv7uWzMXytOUsv8kIc"
 
 # ── Client user credentials (QA demo environment) ───────────────────────────────────
 # JWT payload: user_id=26b5d45a, email=kevin+client@vesselscale.com, user_groups=["client"]
@@ -303,6 +303,92 @@ async def section_dashboard(page):
         await load_btn.click()
         await page.wait_for_timeout(3000)
         await save(page, "dashboard", "dashboard-pivot-table")
+
+
+async def section_directors_dashboard(page):
+    print("\n[directors-dashboard] overview")
+    # Directors Dashboard is the default Dashboard view
+    await goto(page, "/dashboard", wait_ms=4000)
+    await save(page, "directors-dashboard", "directors-dashboard")
+
+    print("[directors-dashboard] scrolled - offered solutions")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            });
+            if (el) el.scrollTop = 500;
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    await save(page, "directors-dashboard", "directors-dashboard-offered-solutions")
+
+    print("[directors-dashboard] scrolled - company size")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            });
+            if (el) el.scrollTop = 1000;
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    await save(page, "directors-dashboard", "directors-dashboard-company-size")
+
+    print("[directors-dashboard] scrolled - action items")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            });
+            if (el) el.scrollTop = 1500;
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    await save(page, "directors-dashboard", "directors-dashboard-action-items")
+
+    print("[directors-dashboard] scrolled - impact metrics")
+    await page.evaluate("""
+        (() => {
+            const el = Array.from(document.querySelectorAll('*')).find(e => {
+                const s = window.getComputedStyle(e);
+                return (s.overflowY === 'auto' || s.overflowY === 'scroll') && e.scrollHeight > e.clientHeight + 50;
+            });
+            if (el) el.scrollTop = 2000;
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    await save(page, "directors-dashboard", "directors-dashboard-impact-metrics")
+
+
+async def section_impact_tracker(page):
+    print("\n[impact-tracker] list")
+    # Action Tracker is accessed from Account details page
+    VESSEL_ACCOUNT_ID = "51899e42-31b1-4545-9574-70df220581c5"
+    await goto(page, f"/account/{VESSEL_ACCOUNT_ID}", wait_ms=2000)
+    
+    # Click the Actions/Impact Tracker tab
+    print("[impact-tracker] clicking Actions tab")
+    if await try_click(page, 
+        "button:has-text('Actions')",
+        "[role='tab']:has-text('Actions')",
+        "button:has-text('Action')",
+        "[role='tab']:has-text('Action')",
+        timeout=3000):
+        await page.wait_for_timeout(1500)
+        await save(page, "impact-tracker", "impact-tracker-list")
+
+        print("[impact-tracker] list - scrolled")
+        await page.evaluate("window.scrollTo(0, 600)")
+        await page.wait_for_timeout(500)
+        await save(page, "impact-tracker", "impact-tracker-list-scrolled")
+        await page.evaluate("window.scrollTo(0, 0)")
+        await page.wait_for_timeout(500)
+    else:
+        print("[impact-tracker] Actions tab not found")
 
 
 async def section_account(page):
@@ -1779,6 +1865,8 @@ async def section_getting_started(page):
 
 SECTIONS = {
     "dashboard":                    section_dashboard,
+    "directors-dashboard":          section_directors_dashboard,
+    "impact-tracker":               section_impact_tracker,
     "account":                      section_account,
     "assessments":                  section_assessments,
     "library":                      section_library,
