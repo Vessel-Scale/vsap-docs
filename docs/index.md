@@ -43,7 +43,13 @@ If you can't find the help you need here please contact us at [support@vesselsca
 
 ### [Dashboard & Insights](dashboard/index.md)
 - [Dashboard Overview](dashboard/index.md)
+- [Directors Dashboard](dashboard/directors-dashboard.md)
 - [Pivot Table Analysis](dashboard/pivot-table.md)
+
+### [Impact Tracker](impact-tracker/index.md)
+- [Impact Tracker Overview](impact-tracker/index.md)
+- [Collaboration & Comments](impact-tracker/collaboration.md)
+- [Impact Metrics Guide](impact-tracker/metrics.md)
 
 ### [Accounts](accounts/index.md)
 - [Account Management](accounts/index.md)

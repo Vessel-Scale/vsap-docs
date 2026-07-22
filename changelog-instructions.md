@@ -35,13 +35,16 @@ git log <PREVIOUS_VERSION>..v<NEW_VERSION> --oneline --no-decorate
 ### 3. **Filter & Organize Changes**
 
 **INCLUDE:**
-- ✅ User-facing features (new capabilities, UI/UX improvements)
-- ✅ Significant performance enhancements that users will notice
+- ✅ Totally new features and major functionality additions
+- ✅ Significant UI/UX improvements (structural changes, new workflows, important visual redesigns)
+- ✅ Meaningful performance enhancements that users will experience
 - ✅ New authentication methods or security improvements
 - ✅ New reporting or data export capabilities
 - ✅ Enhanced integrations visible to end users
 
 **EXCLUDE:**
+- ❌ Minor style tweaks, spacing adjustments, or visual polish (e.g., button color changes, form padding adjustments)
+- ❌ Typo fixes and wording corrections
 - ❌ Dev-only refactoring and code cleanup
 - ❌ Dependency updates (unless critical for user experience)
 - ❌ Internal bug fixes (.0 and .1 patch versions)
@@ -78,26 +81,51 @@ Use this hierarchy in `changelog.md`:
 - Focus on *what users can do* and *how it improves their experience*
 - Avoid technical jargon unless essential
 - Be concise—aim for 1-2 sentences per item
-- Group related features to show interconnections
-- **Minimize bullet points**: Only add separate bullets for distinct user-facing changes; combine related aspects into single bullets to improve readability
+- **Be specific and precise**: Name the exact component, field, or workflow affected (e.g., "Contact Email field validation" instead of "improved validation")
+- **Only create bullets for significant changes**: New features, major workflows, substantial UI redesigns. Combine minor related fixes into a single concise line or exclude entirely if trivial
+- Avoid vague language like "improved", "enhanced", or "updated" without explaining what specifically changed
 - Avoid adding fluff or redundant bullets that restate the same feature from different angles
-- **Be specific**: If a change only affects one or two specific items (e.g., a single template variable, one field fix), name them explicitly rather than using vague language like "improved" or "enhanced"
+- Group related features to show interconnections, but only if they constitute meaningful changes
 
 ### 6. **Examples of Good vs Bad**
 
-**❌ Bad:**
+**❌ Bad (too vague):**
 > Refactor ContactCard component and remove unused imports
 
-**✅ Good:**
-> **Enhanced Contact Management**: Improved contact card interface with clearer styling and portal access indicators
+**✅ Good (specific and developer-focused, exclude from changelog):**
+> (Don't include internal refactoring—skip it entirely)
 
 ---
 
-**❌ Bad:**
+**❌ Bad (vague, minor change):**
+> Improved contact card styling
+
+**✅ Good (skip minor style tweaks, only include if major redesign):**
+> (Exclude minor styling—only include if restructuring the contact card workflow itself)
+
+---
+
+**❌ Bad (too vague):**
 > Add is_client_visible field to YamlAssessment model
 
-**✅ Good:**
-> **Client Assessment Visibility Controls**: New ability to create assessments visible exclusively to client portal users for self-service completion
+**✅ Good (specific, user-facing, meaningful feature):**
+> **Client-Only Assessments**: Create assessments visible exclusively to client portal users for self-service completion
+
+---
+
+**❌ Bad (sounds like a feature but too minor):**
+> Fixed typos in assessment template
+
+**✅ Good (exclude, not user-facing):**
+> (Don't include—typos don't go in the changelog)
+
+---
+
+**❌ Bad (vague, sounds like minor tweaks):**
+> Updated form fields and improved layout
+
+**✅ Good (specific and significant):**
+> **Redesigned Contact Intake Form**: New multi-step workflow with inline validation and progress indicators
 
 ---
 

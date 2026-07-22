@@ -13,6 +13,7 @@ The Settings section allows administrators to configure platform-wide options fo
 
 ## What you can do here
 
+- Manage users and assign roles — control access levels across your organization
 - Customize your platform's branding — logos, colors, header styling, and terminology
 - Manage active NAICS codes and Regional Manufacturer Associations
 - Configure intake form templates for collecting account information
@@ -29,7 +30,14 @@ The Settings page provides a centralized location for managing your platform con
 
 Settings are only available to users with the **admin** role and require the Settings feature flag to be enabled for your account.
 
-## Related
+## In this section
 
+- [Manage Users](users.md) — invite users, assign roles, and control access
+- [Permissions & User Roles](permissions.md) — understand roles and capabilities
 - [Branding](branding.md)
 - [Custom Data](custom-data.md)
+- [Email Templates](email-templates.md)
+- [Web Reports](web-reports.md)
+- [PDF Reports](pdf-reports.md)
+- [Intake Forms](intake-forms.md)
+- [User Profile](user-profile.md)

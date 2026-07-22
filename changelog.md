@@ -4,6 +4,156 @@
 
 ---
 
+## v2.66
+
+### Core Features & Enhancements
+
+#### **Assessment Workflow Guide**
+- **New Workflow Guide Card**: Comprehensive guided workflow interface for managing assessment lifecycle from start to completion with status-aware navigation and built-in report management
+- **Dynamic Status & Branding**: Workflow guide automatically adapts based on assessment status with styling that reflects organization branding for consistent visual experience
+
+#### **Assessment Report Sharing**
+- **Share Report Functionality**: Consilidate web/pdf share assessment reports directly from assessment details with modal interface for easy distribution
+
+#### **NAICS Explorer Navigation**
+- **Sector Grouping & Organization**: Enhanced NAICS Explorer with logical sector grouping and improved navigation structure for better data exploration
+- **URL Sync & Navigation History**: Navigation state now syncs with URL parameters, enabling shareable exploration sessions and preserving user search context
+
+#### **Link Editing & Rich Content**
+- **LinkedText Component**: New component implementation enabling inline link editing and management across assessment content
+
+#### **User & Admin Management**
+- **Admin User Management**: New admin endpoints for managing tenant users with full CRUD operations (create, read, update, delete)
+
+### User Experience Improvements
+- **CreateButton Styling**: Improved CreateButton with hover effects and border radius for better visual feedback
+- **Assessment Component Layout**: Various layout and styling improvements across assessment detail components for better visual hierarchy
+- **Dynamic Assessment Terminology**: Assessment noun labels now dynamically updated throughout the interface for consistency
+
+---
+
+## v2.65
+
+### Core Features & Enhancements
+
+#### **Directors Dashboard**
+- **New Directors Dashboard**: Comprehensive analytics and management interface for directors with configurable components
+- **Dashboard Analytics Pivot**: CSV and YAML export capabilities for directors analytics data
+- **Company Size & Business Distribution Analysis**: New analytics views for company size and business size distribution by NAICS code
+- **Action Tracker Integration**: Integrated action tracker items view in directors dashboard with filtering and metrics display
+- **Impact Metrics Dashboard**: Aggregated action tracker data visualization for ecosystem impact tracking
+- **Offered Solutions Tracking**: New directors feature for tracking and managing offered solutions
+
+#### **Ecosystem Map & Congressional Districts**
+- **State Borders Selector**: Enhanced map control to highlight and customize state boundaries with color picker and line styling options
+- **Congressional Districts Control**: New map control for selecting and displaying Congressional District overlays
+- **Enhanced Filtering**: Improved map filter dropdowns for status and priority with better typography and visibility
+- **Impact Metrics View**: New impact metrics visualization in ecosystem map with filtering and data aggregation
+
+#### **Sidebar Navigation & Creation Flow**
+- **Navigation State Persistence**: Sidebar navigation state now persists across page reloads using session storage
+- **Enhanced Create Button**: Redesigned CreateButton with descriptions, icons, and assessment definition context for improved discoverability
+- **Intake Form Creation**: New quick-create button in IntakeFormPickerModal when no forms exist
+- **Assessment Context Navigation**: Assessment definition ID passed through navigation state for streamlined creation flow
+
+#### **Intake Form Enhancements**
+- **Email Validation & Notifications**: New email validation with user notifications for invalid or duplicate email addresses
+- **EULA Footer Component**: Integrated EULA footer across intake form pages (Landing and Methodology pages)
+- **Enhanced Error Handling**: Replaced failure modal with improved error modal for better error communication
+- **Configuration Validation**: Enhanced intake form configuration validation and improved logging for debugging
+
+#### **Assessment Collection Improvements**
+- **No Assessments State**: Improved empty state messaging with action buttons for creating new assessments in collections
+- **Assessment Noun Pluralization**: Smart pluralization helper for customizable assessment terminology across collection interfaces
+
+#### **Account Source Tracking**
+- **Source Field Standardization**: New source field for accounts created through intake form with standardized assignment in import process
+
+### User Experience Improvements
+
+- **Accordion Icon Animation**: Enhanced accordion expand/collapse animations across components for smoother interactions
+- **Dashboard Configuration Modal**: Drag-and-drop reordering for directors dashboard components with visual improvements
+- **Map Legend**: Enhanced color gradient functions for better contrast in score and impact legends
+- **Component Styling**: Improved card borders, hover effects, and typography consistency across ecosystem and dashboard interfaces
+- **Impact Chart Display**: Enhanced Action Tracker Impact Chart with icon styling and priority display improvements
+
+---
+
+## v2.64
+
+### Core Features & Enhancements
+
+#### **Impact Tracker Feature**
+- **Action Item Management**: New Impact Tracker system (formerly Action Tracker) for managing action items, comments, and impact metrics within assessments
+- **Item Prioritization**: Priority levels and status tracking for action items with WONTDO status support
+- **Impact Metrics**: Track impact metrics and status breakdowns for action items with comment editing capabilities
+- **Assessment Closing Integration**: Action tracker checks and validation when closing assessments
+- **Assessment Filtering**: Lock assessment filter in Impact Tracker tab with ability to target specific assessment IDs
+
+#### **Web Report Enhancements**
+- **Default Report Templates**: Automatic default intake form and web report template generation for published assessments
+- **Report Access Controls**: Toggle functionality for web report access with enhanced role-based visibility (showing enabled status for admins and account executives)
+- **Response Distribution Control**: Enhanced configuration option to enable/disable response distribution modal visibility in web reports
+
+#### **Assessment Form & Preview Improvements**
+- **Assessment Navigation Enhancements**: Improved tab navigation and data fetching on status changes with enhanced tab styling and responsiveness
+- **Content Blocks Support**: New support for rendering optional content blocks before and after various report sections
+- **Form Styling Updates**: Updated button background colors to use theme palette across intake forms, PDF reports, and web reports lists for consistent visual appearance
+
+#### **Score & Visualization Improvements**
+- **Score Animation Effects**: Enhanced score animations with smooth transitions and fixed decimal formatting for better visual feedback
+- **Progress Bar Animation**: Animated progress bar with CSS transitions for enhanced assessment score display
+- **Question Distribution Modal**: New modal displaying response distribution charts and statistics for question responses
+- **Assessment Status Indicators**: Added tooltips with descriptions for assessment status steps in the status bar
+
+#### **Assessment Repair & Data Integrity**
+- **YAML Assessment Repair Command**: Enhanced management command to repair corrupted YAML assessments with improved validation for question types, possible answers, and preset name reconstruction
+- **Assessment Structure Updates**: Updated assessment structure in default intake form to use camelCase keys for consistency
+- **Nested Structure Support**: Improved repair command to handle both nested and flat structures with better field merging
+
+#### **Intake Form Configuration**
+- **Definition-Based Filtering**: Enhanced intake form picker modal with ability to filter forms by assessment definition ID
+- **Assessment Structure Consistency**: Automatic structure standardization across assessment definitions
+
+### User Experience Improvements
+
+- **Design Refinements**: Numerous usability improvements including button styling, color palette consistency, and visual feedback enhancements
+- **Loading State Improvements**: Better loading state handling with Redux integration for improved user feedback during data fetching
+- **Assessment Workflow**: Enhanced assessment closing process with integrated action tracker checks and clearer status transitions
+- **Navigation Clarity**: Removed back button from first tab of assessment forms for streamlined navigation flow
+- **Icon Consistency**: Improved visual consistency with theme-aware color palettes and icon styling
+
+---
+
+## v2.63
+
+### Core Features & Enhancements
+
+#### **Web Report Configuration Enhancements**
+- **Response Distribution Modal Control**: New configuration option to enable/disable response distribution modal in web reports, providing more granular control over report presentation and user experience
+
+### User Experience Improvements
+
+- **Assessment Form Navigation**: Removed back button from the first tab of assessment evaluation forms for streamlined navigation and clearer user flow
+- **Web Report Display**: Enhanced flexibility in web report customization and display options
+
+---
+
+## v2.62
+
+### Core Features & Enhancements
+
+#### **Email Template Improvements**
+- **Email Template Format Conversion**: Enhanced markdown link support in email templates with automatic conversion to HTML format for improved email client compatibility and link reliability
+- **Assessment Invitation Link Fixes**: Fixed origin sanitization in invitation links to properly handle various protocol variations and improved assessment invite endpoint routing for reliable invitation delivery
+
+### User Experience Improvements
+
+- **Email Delivery**: Improved email template rendering across different email clients with better link handling
+- **Assessment Invitations**: More reliable assessment invitation links and delivery mechanisms
+
+---
+
 ## v2.61
 
 ### Core Features & Enhancements

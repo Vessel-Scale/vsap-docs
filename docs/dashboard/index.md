@@ -9,7 +9,7 @@ tags:
 
 # Dashboard
 
-The Dashboard gives you an at-a-glance view of all assessments for a selected assessment definition — scores, completion status, account breakdowns, and more.
+The Dashboard gives you an at-a-glance view of all assessments for a selected assessment definition — scores, completion status, account breakdowns, and more. For executive-level insights across your entire ecosystem, see the [Directors Dashboard](directors-dashboard.md).
 
 ## What you can do here
 
@@ -37,11 +37,25 @@ The assessment definition selector at the top of the page controls which assessm
 
 The dashboard displays up to 11 analytics components. See [Components](components.md) for a description and screenshot of each one.
 
+## Directors Dashboard vs. Standard Dashboard
+
+The **Standard Dashboard** focuses on a single assessment definition with detailed analytics. The **[Directors Dashboard](directors-dashboard.md)** provides executive-level insights across your entire ecosystem:
+
+| Feature | Standard Dashboard | Directors Dashboard |
+|---------|-------------------|----------------------|
+| **Scope** | Single assessment definition | Entire ecosystem |
+| **Audience** | Assessment managers, analysts | Directors, leadership |
+| **Metrics** | Assessment-specific analytics | Organization-wide impact |
+| **Components** | 11 assessment analytics | Offered solutions, action items, impact metrics |
+| **Focus** | Performance metrics | Strategic impact and ROI |
+
 ## Related
 
 - [Getting Started: Step 7](../../getting-started/navigating-the-dashboard.md) — Quick-start guide to the dashboard
+- [Directors Dashboard](directors-dashboard.md)
 - [Components](components.md)
 - [Configure Dashboard](configure.md)
 - [Download CSV](download.md)
 - [Pivot Table](pivot-table.md)
 - [Assessments](../assessments/index.md)
+- [Impact Tracker](../impact-tracker/index.md)

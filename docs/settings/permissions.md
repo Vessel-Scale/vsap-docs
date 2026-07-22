@@ -13,6 +13,8 @@ User permissions in the system are managed through three distinct roles. Each ro
 
 ## Overview
 
+![Users management interface showing active users and roles](../assets/screenshots/settings/settings-users.png)
+
 The three user roles are:
 
 1. **Admin** - Full system access and configuration

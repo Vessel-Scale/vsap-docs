@@ -1,26 +1,28 @@
 ---
 tags:
   - getting-started
+  - preparation
   - library
   - design
+  - templates
 ---
 
-# Step 2 — Design an Assessment
+# Preparation Step 2 — Design an Assessment
 
-Before creating individual assessments, you need an assessment **template** in the Library. The Library is where you define the questions, scoring rules, and categories that all assessments of that type will use.
+Before creating individual assessments for clients, you need to build an assessment **template** in the Library. The template defines the questions, scoring rules, and categories that all assessments of that type will use.
 
 !!! note "Terminology"
-    In your organization, assessments might be called "Evaluations", "Surveys", "Reviews", or something else entirely. You can customize what the platform calls assessments in **[Settings → Branding](../settings/branding.md#assessment-property-name)**. All references throughout the system will use your chosen terminology.
+    In your organization, assessments might be called "Evaluations", "Surveys", "Reviews", or something else entirely. You can customize what the platform calls assessments in **[Settings → Branding](../../settings/branding.md#assessment-property-name)**. All references throughout the system will use your chosen terminology.
 
 ---
 
 ## Opening the Library
 
-Click **Library** in the left sidebar.
+Click **Library** in the left sidebar to access assessment templates.
 
-![Library showing list of assessment templates](../assets/screenshots/getting-started/gs-library.png)
+![Library showing list of assessment templates](../../assets/screenshots/getting-started/gs-library.png)
 
-See [Library Overview](../library/index.md) for complete details on managing assessment templates.
+See [Library Overview](../../library/index.md) for complete details on managing assessment templates.
 
 ---
 
@@ -28,7 +30,7 @@ See [Library Overview](../library/index.md) for complete details on managing ass
 
 Click **+ Design Assessment** in the top-right corner.
 
-![+ Design Assessment button in the Library](../assets/screenshots/getting-started/gs-design-assessment-btn.png)
+![+ Design Assessment button in the Library](../../assets/screenshots/getting-started/gs-design-assessment-btn.png)
 
 The template editor opens. Give it a name, then add categories and questions.
 
@@ -42,13 +44,13 @@ The template editor opens. Give it a name, then add categories and questions.
 | **Questions** | Individual prompts within each category — supports multiple choice, rating scales, open-ended text, and more |
 | **Scoring** | Define score zones: At Risk, Could Improve, Optimal — controls how results are calculated |
 
-Learn more: [Question Types](../library/question-types.md) | [Scoring Rules](../library/scoring.md)
+Learn more: [Question Types](../../library/question-types.md) | [Scoring Rules](../../library/scoring.md)
 
 ---
 
 ## Using an Existing Template
 
-If a template already exists that fits your needs, you can use it directly when [creating an assessment](deliver-assessment.md) — you do not need to create a new one.
+If a template already exists that fits your needs, you can use it directly when [creating an assessment](../workflow/step-1-assign.md) — you do not need to create a new one.
 
 Browse existing templates in the Library and search by name or category to find what you need.
 
@@ -67,7 +69,7 @@ See [Library Reference](../library/index.md) for complete template management in
 
 ## Next Step
 
-[Step 3 — Deliver your Assessment](deliver-assessment.md){ .md-button }
+[Step 3 — Deliver your Assessment](../workflow/step-3-deliver.md){ .md-button }
 
 ---
 
