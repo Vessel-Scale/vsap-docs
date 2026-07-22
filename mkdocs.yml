@@ -67,7 +67,7 @@ markdown_extensions:
 nav:
   - Home:
     - index.md
-    - Getting Started: getting-started/quick-start.md
+    - Getting Started: getting-started/index.md
   - Getting Started:
     - getting-started/index.md
     - Before You Begin:
