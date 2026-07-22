@@ -70,22 +70,16 @@ nav:
     - Getting Started: getting-started/quick-start.md
   - Getting Started:
     - getting-started/index.md
-    - Step 1 — Add an Account: getting-started/creating-your-account.md
-    - Step 2 — Design an Assessment: getting-started/design-assessment.md
-    - Step 3 — Deliver your Assessment: getting-started/deliver-assessment.md
-    - Step 4 — Provide Results: getting-started/deliver-results.md
+    - Before You Begin:
+      - Prep Step 1 — Add an Account: getting-started/before-you-begin/add-account.md
+      - Prep Step 2 — Design an Assessment: getting-started/before-you-begin/design-assessment.md
+    - The Workflow:
+      - Step 1 — Assign Assessment: getting-started/workflow/step-1-assign.md
+      - Step 2 — Publish Assessment: getting-started/workflow/step-2-publish.md
+      - Step 3 — Deliver Assessment: getting-started/workflow/step-3-deliver.md
+      - Step 4 — Build Report: getting-started/workflow/step-4-build-report.md
+      - Step 5 — Provide Results: getting-started/workflow/step-5-provide-results.md
   - FAQ: faq.md
-  - Dashboard:
-    - Overview: dashboard/index.md
-    - Directors Dashboard: dashboard/directors-dashboard.md
-    - Components: dashboard/components.md
-    - Configure Dashboard: dashboard/configure.md
-    - Download CSV: dashboard/download.md
-    - Pivot Table: dashboard/pivot-table.md
-  - Impact Tracker:
-    - Overview: impact-tracker/index.md
-    - Collaboration & Comments: impact-tracker/collaboration.md
-    - Impact Metrics: impact-tracker/metrics.md
   - Accounts:
     - Overview: accounts/index.md
     - Account Details: accounts/details.md
@@ -120,9 +114,10 @@ nav:
   - Settings:
     - Overview: settings/index.md
     - Branding: settings/branding.md
+    - Permissions: settings/permissions.md    
     - Email Templates: settings/email-templates.md
     - Intake Forms: settings/intake-forms.md
-    - Permissions: settings/permissions.md
+    - Manage Users: settings/users.md    
     - Custom Data:
       - Overview: settings/custom-data/index.md
       - NAICS Codes: settings/custom-data/naics.md
@@ -138,6 +133,17 @@ nav:
     - All Available Assessments: client-portal/all-available-assessments.md
     - Industry Benchmarking: client-portal/industry-benchmarking.md
     - Account Executive Notes: client-portal/ae-notes.md
+  - Dashboards:
+    - Overview: dashboard/index.md
+    - Directors Dashboard: dashboard/directors-dashboard.md
+    - Components: dashboard/components.md
+    - Configure Dashboard: dashboard/configure.md
+    - Download CSV: dashboard/download.md
+    - Pivot Table: dashboard/pivot-table.md
+  - Impact Tracking:
+    - Overview: impact-tracker/index.md
+    - Collaboration & Comments: impact-tracker/collaboration.md
+    - Impact Metrics: impact-tracker/metrics.md
 
 extra:
   social:

@@ -1,16 +1,18 @@
 ---
 tags:
   - getting-started
+  - preparation
   - onboarding
   - setup
+  - accounts
 ---
 
-# Step 1 — Add an Account
+# Preparation Step 1 — Add an Account
 
-In VSAP, an **account** represents a client organization you are assessing. Before you can run an assessment, you need to create at least one account.
+Before you can run assessments, you need to set up at least one **account** in VSAP. An account represents a client organization that you will assess.
 
 !!! note "Let Clients Create Their Own Account"
-    External users can self-register and populate their own account details through the **Intake Form**. Simply share an intake form link with them, and their submission automatically creates an account in your system. See [Configure Intake Forms](../settings/intake-forms.md) for details on how to set this up.
+    External users can self-register and populate their own account details through the **Intake Form**. Simply share an intake form link with them, and their submission automatically creates an account in your system. See [Configure Intake Forms](../../settings/intake-forms.md) for details on how to set this up.
 
 ---
 
@@ -18,11 +20,11 @@ In VSAP, an **account** represents a client organization you are assessing. Befo
 
 Navigate to **Accounts** in the sidebar to see all existing accounts.
 
-![Accounts list showing company name, website, city, status, and last updated](../assets/screenshots/getting-started/gs-account-list.png)
+![Accounts list showing company name, website, city, status, and last updated](../../assets/screenshots/getting-started/gs-account-list.png)
 
 Use the search bar to filter by name, website, or city. Toggle between **All**, **Active**, and **Inactive** to narrow the list.
 
-Learn more: [Accounts Overview](../accounts/index.md)
+Learn more: [Accounts Overview](../../accounts/index.md)
 
 ---
 
@@ -32,7 +34,7 @@ Learn more: [Accounts Overview](../accounts/index.md)
 
 Click the **+ Create** button in the sidebar and select **Add Account**.
 
-![+ Create menu with Add Account highlighted](../assets/screenshots/getting-started/gs-create-menu-new-account.png)
+![+ Create menu with Add Account highlighted](../../assets/screenshots/getting-started/gs-create-menu-new-account.png)
 
 This opens the Create Account form directly.
 

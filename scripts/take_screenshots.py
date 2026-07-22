@@ -12,7 +12,7 @@ Usage:
 Available sections:
   dashboard, directors-dashboard, impact-tracker, account, assessments, library, library-question-types, library-scoring, 
   library-icons, library-editor-draft, library-editor-published, ecosystem, industries, settings, report-builder, custom-data, 
-  email-templates, intake-forms, web-reports, branding, client-portal, getting-started
+  email-templates, intake-forms, web-reports, branding, client-portal, assessment-workflow-guide, getting-started
 
 Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
@@ -829,8 +829,38 @@ async def section_ecosystem(page):
     print("[ecosystem] filters panel visible")
     await save(page, "ecosystem", "ecosystem-filters")
 
+    # ── Location Tab ─────────────────────────────────────────────────────────
+    print("[ecosystem] capturing Location tab view")
+    if await try_click(page,
+        "button:has-text('Location')",
+        "[role='tab']:has-text('Location')",
+        "button[role='tab']:nth-child(1)",
+    ):
+        await page.wait_for_timeout(2000)
+        await save(page, "ecosystem", "ecosystem-location-tab")
+
+    # ── Impact Tab (STATE=ID filtered) ────────────────────────────────────────
+    print("[ecosystem] navigating to Impact tab with STATE=ID filter")
+    await goto(page,
+        "/ecosystem-map?states=ID&view=impact&mapLng=-114.39444049999997&mapLat=45.482684510312225&mapZoom=5.611925766808547",
+        wait_ms=5000,
+        wait_until="domcontentloaded",
+    )
+    await save(page, "ecosystem", "ecosystem-impact-tab")
+
+    # ── Score Tab ────────────────────────────────────────────────────────────
+    print("[ecosystem] capturing Score tab view")
+    await goto(page, "/ecosystem-map", wait_ms=8000, wait_until="domcontentloaded")
+    if await try_click(page,
+        "button:has-text('Score')",
+        "[role='tab']:has-text('Score')",
+        "button[role='tab']:nth-child(3)",
+    ):
+        await page.wait_for_timeout(2000)
+        await save(page, "ecosystem", "ecosystem-score-tab")
+
     # ── Assessment filter with Supplier Business Health Assessment ──────────
-    print("[ecosystem] selecting Supplier Business Health Assessment")
+    print("[ecosystem] selecting Supplier Business Health Assessment for Score view")
     if await try_click(page,
         "label:has-text('Assessment') ~ * [role='combobox']",
         "div:has(> label:has-text('Assessment')) .MuiSelect-select",
@@ -843,33 +873,25 @@ async def section_ecosystem(page):
             "[role='listbox'] li:has-text('Supplier Business Health')",
         ):
             await page.wait_for_timeout(2000)
+            await save(page, "ecosystem", "ecosystem-scores-suppliers")
 
-            # Click the "Scores" button to show scores view
-            print("[ecosystem] switching to Scores view")
+            # Capture Score Category dropdown
+            print("[ecosystem] capturing Score Category dropdown")
             if await try_click(page,
-                "button:has-text('Scores')",
-                "[role='button']:has-text('Scores')",
+                "label:has-text('Score Category') ~ * [role='combobox']",
+                "div:has(> label:has-text('Score Category')) .MuiSelect-select",
             ):
-                await page.wait_for_timeout(3000)
-                await save(page, "ecosystem", "ecosystem-scores-suppliers")
+                await page.wait_for_timeout(1000)
+                await save(page, "ecosystem", "ecosystem-score-category-dropdown")
 
-                # Capture Score Category dropdown
-                print("[ecosystem] capturing Score Category dropdown")
+                # Select Financial Stability
+                print("[ecosystem] selecting Financial Stability category")
                 if await try_click(page,
-                    "label:has-text('Score Category') ~ * [role='combobox']",
-                    "div:has(> label:has-text('Score Category')) .MuiSelect-select",
+                    "[role='option']:has-text('Financial Stability')",
+                    "[role='listbox'] li:has-text('Financial Stability')",
                 ):
-                    await page.wait_for_timeout(1000)
-                    await save(page, "ecosystem", "ecosystem-score-category-dropdown")
-
-                    # Select Financial Stability
-                    print("[ecosystem] selecting Financial Stability category")
-                    if await try_click(page,
-                        "[role='option']:has-text('Financial Stability')",
-                        "[role='listbox'] li:has-text('Financial Stability')",
-                    ):
-                        await page.wait_for_timeout(2000)
-                        await save(page, "ecosystem", "ecosystem-scores-financial-stability")
+                    await page.wait_for_timeout(2000)
+                    await save(page, "ecosystem", "ecosystem-scores-financial-stability")
 
     # Apply a NAICS sector filter — click the Sector dropdown, pick first option
     print("[ecosystem] NAICS sector filter - opening")
@@ -919,6 +941,9 @@ async def section_ecosystem(page):
         print("    (no account list item found)")
 
 
+
+
+
 async def section_industries(page):
     print("\n[industries] overview - sector level")
     await goto(page, "/naics-explorer")
@@ -964,6 +989,11 @@ async def section_settings(page):
     print("\n[settings]")
     await goto(page, "/settings")
     await save(page, "settings", "settings")
+
+    # ── Users & Permissions ────────────────────────────────────────────────────
+    print("[settings] users and permissions")
+    await goto(page, "/settings/users", wait_ms=3000)
+    await save(page, "settings", "settings-users")
 
 
 async def section_report_builder(page):
@@ -1842,6 +1872,115 @@ async def section_client_portal(page):
 
 # ── Getting Started (UI elements for guides) ──────────────────────────────────
 
+async def section_assessment_workflow_guide(page):
+    """
+    Captures the Assessment Workflow Guide card and related UI elements.
+    Uses a specific assessment instance to show the workflow steps.
+    """
+    ASSESSMENT_ID = "bd3f6a72-1207-47f9-8cae-dd3394fdd4d4"
+    
+    print("\n[assessment-workflow-guide] navigating to assessment details")
+    await goto(page, f"/evaluation-assessment-detail/{ASSESSMENT_ID}", wait_ms=3000)
+    
+    # ── Full page overview ─────────────────────────────────────────────────
+    print("[assessment-workflow-guide] full page overview")
+    await save(page, "getting-started", "assessment-workflow-full")
+    
+    # ── Workflow Guide card - Step 1 (Assign) – typically already expanded ──
+    print("[assessment-workflow-guide] workflow guide card - full view")
+    # Scroll to the left to show the workflow guide card
+    await page.evaluate("window.scrollTo(0, 0)")
+    await page.wait_for_timeout(500)
+    await save(page, "getting-started", "assessment-workflow-card")
+    
+    # ── Expand Step 2 (Publish) ────────────────────────────────────────────
+    print("[assessment-workflow-guide] expanding Step 2 - Publish")
+    if await try_click(page,
+        "button:has-text('Publish')",
+        "[class*='AccordionSummary']:has-text('Publish')",
+        "h3:has-text('Publish') ~ *",
+        timeout=3000):
+        await page.wait_for_timeout(800)
+        await save(page, "getting-started", "workflow-step-2-publish")
+    
+    # ── Expand Step 3 (Deliver) ────────────────────────────────────────────
+    print("[assessment-workflow-guide] expanding Step 3 - Deliver")
+    if await try_click(page,
+        "button:has-text('Deliver')",
+        "[class*='AccordionSummary']:has-text('Deliver')",
+        "h3:has-text('Deliver') ~ *",
+        timeout=3000):
+        await page.wait_for_timeout(800)
+        await save(page, "getting-started", "workflow-step-3-deliver")
+    
+    # ── Expand Step 4 (Build Report) ───────────────────────────────────────
+    print("[assessment-workflow-guide] expanding Step 4 - Build Report")
+    if await try_click(page,
+        "button:has-text('Build Report')",
+        "[class*='AccordionSummary']:has-text('Build Report')",
+        "h3:has-text('Build Report') ~ *",
+        timeout=3000):
+        await page.wait_for_timeout(800)
+        await save(page, "getting-started", "workflow-step-4-build-report")
+    
+    # ── Expand Step 5 (Provide Results) ────────────────────────────────────
+    print("[assessment-workflow-guide] expanding Step 5 - Provide Results")
+    if await try_click(page,
+        "button:has-text('Provide Results')",
+        "[class*='AccordionSummary']:has-text('Provide Results')",
+        "h3:has-text('Provide Results') ~ *",
+        timeout=3000):
+        await page.wait_for_timeout(800)
+        await save(page, "getting-started", "workflow-step-5-provide-results")
+    
+    # ── Assessment tabs and headers ────────────────────────────────────────
+    print("[assessment-workflow-guide] assessment detail header and tabs")
+    await page.evaluate("window.scrollTo(0, 0)")
+    await page.wait_for_timeout(500)
+    # Take screenshot of the top header area with status and action buttons
+    await page.screenshot(
+        path=str(OUTPUT_DIR / "getting-started" / "assessment-header.png"),
+        clip={"x": 0, "y": 0, "width": 1400, "height": 150},
+    )
+    print("  + getting-started/assessment-header.png")
+    
+    # ── Action buttons toolbar ─────────────────────────────────────────────
+    print("[assessment-workflow-guide] action buttons toolbar")
+    # Scroll right to show the full toolbar area
+    await page.evaluate("""
+        (() => {
+            const toolbar = Array.from(document.querySelectorAll('*')).find(e => {
+                const text = e.innerText || '';
+                return text.includes('Edit') && e.querySelector('button');
+            });
+            if (toolbar) {
+                const rect = toolbar.getBoundingClientRect();
+                window.scrollTo(0, Math.max(0, rect.top - 200));
+            }
+        })()
+    """)
+    await page.wait_for_timeout(500)
+    await save(page, "getting-started", "assessment-toolbar-actions")
+    
+    # ── Summary tab content with workflow guide ─────────────────────────────
+    print("[assessment-workflow-guide] summary tab overview")
+    if await try_click(page, 
+        "button:has-text('Summary')",
+        "[role='tab']:has-text('Summary')",
+        timeout=3000):
+        await page.wait_for_timeout(1000)
+        await save(page, "getting-started", "assessment-summary-tab")
+    
+    # ── Analysis tab ───────────────────────────────────────────────────────
+    print("[assessment-workflow-guide] analysis tab")
+    if await try_click(page,
+        "button:has-text('Analysis')",
+        "[role='tab']:has-text('Analysis')",
+        timeout=3000):
+        await page.wait_for_timeout(2000)
+        await save(page, "getting-started", "assessment-analysis-tab")
+
+
 async def section_getting_started(page):
     print("\n[getting-started] Create menu in sidebar")
     await goto(page, "/account", wait_ms=3000)
@@ -1888,6 +2027,7 @@ SECTIONS = {
     "web-reports":                  section_web_reports,
     "branding":                     section_branding,
     "client-portal":                section_client_portal,
+    "assessment-workflow-guide":    section_assessment_workflow_guide,
     "getting-started":              section_getting_started,
 }
 
