@@ -781,7 +781,7 @@ async def section_library(page):
     print("[library] preview - full assessment")
     await scroll_main(0)
     await page.wait_for_timeout(300)
-    if await try_click(page, "button[aria-label='Preview Assessment']", timeout=5000):
+    if await try_click(page, "button[aria-label='Preview']", timeout=5000):
         await page.wait_for_timeout(2500)
         await save(page, "library", "library-preview-full-assessment")
 
@@ -796,7 +796,7 @@ async def section_library(page):
         await try_click(page, "[aria-label='close']", "[aria-label='Close']", "button:has-text('Close')", "button:has-text('Cancel')")
         await page.wait_for_timeout(600)
     else:
-        print("    (Preview Assessment button not found)")
+        print("    (Preview button not found)")
 
     # ── Preview: first category ────────────────────────────────────────────
     print("[library] preview - category")
