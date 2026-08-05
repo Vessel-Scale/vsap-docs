@@ -4,6 +4,27 @@
 
 ---
 
+## v2.67
+
+### Core Features & Enhancements
+
+#### **Assessment Auditor with AI Integration**
+- **Assessment Auditor**: LLM-powered assessment validation service with interactive auditor modal featuring deterministic rules, severity filtering, and elapsed time tracking; includes action menu in YAML Assessment Editor for quick access to preview, audit, media library, and replace options
+
+#### **Region Management & Enhanced Exports**
+- **Region Support**: Enhanced account management with region-based organization and filtering capabilities
+- **Advanced Data Export**: New export functionality for accounts, clients, and dashboard analytics with CSV/YAML downloads and configurable dataset selection
+
+#### **Scoring & Performance Improvements**
+- **Enhanced Scoring & Validation**: Improved scoring method dropdown with better styling, optimized score aggregation in dashboards, and intelligent conversion of preset questions with custom answers to multiple_choice format
+
+### User Experience Improvements
+
+- **Auditor & Editor Enhancements**: Improved auditor state management, severity filtering, and hover-based action menu in YAML Assessment Editor with dynamic branding integration
+- **UI/UX Refinements**: Updated tab styling in NAICS Explorer and improved error handling for missing data states
+
+---
+
 ## v2.66
 
 ### Core Features & Enhancements
