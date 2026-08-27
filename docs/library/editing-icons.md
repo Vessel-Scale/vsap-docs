@@ -26,7 +26,7 @@ The icon picker modal can be accessed from:
 
 The icon picker provides:
 
-- **Icon Library**: 50+ Material Design business icons to choose from
+- **Icon Library**: 2,164+ Material-UI Filled icons to choose from (dynamically loaded)
 - **Search/Filter**: Find icons quickly by name or category
 - **Color Picker**: Select custom colors for your icons
 - **Style Options**: Choose from multiple icon styles
