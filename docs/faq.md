@@ -61,6 +61,7 @@ The translation feature is built into most modern browsers:
 **Benefits**
 
 This built-in translation feature allows you to:
+
 - ✅ Provide assessments to respondents in their preferred language
 - ✅ Eliminate language barriers — no need to manually translate or create duplicate assessments
 - ✅ Maintain assessment consistency — all respondents see the same questions and scoring
@@ -129,6 +130,7 @@ YAML (*Yet Another Markup Language*) is a plain-text format used for storing str
 YAML is particularly useful for more complex or structured data that doesn't fit neatly into a simple CSV table format. While CSV works great for flat, tabular data with a fixed number of columns, YAML can represent nested structures, lists, and complex relationships — exactly what you need for detailed account and assessment configurations.
 
 **Key benefits of YAML:**
+
 - ✅ **Human-readable** — Easy to read and edit in any plain text editor (Notepad, VS Code, etc.)
 - ✅ **AI-friendly** — AI agents can readily help you convert YAML files to other formats or edit them
 - ✅ **Supports complex structures** — Handles nested data, lists, and relationships that CSV cannot represent
