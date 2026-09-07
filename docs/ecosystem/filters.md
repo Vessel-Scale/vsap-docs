@@ -36,6 +36,13 @@ The NAICS filter section provides four cascading Autocomplete fields — Sector,
 
 This matches the same NAICS structure described in [Industries](../industries/index.md).
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/fT7b-x43kRQ?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel EcoSystem | Map Filters</strong></p>
+</div>
+
 ## Related
 
 - [Ecosystem Map](index.md) — overview

@@ -24,6 +24,13 @@ The Accounts section lets you manage all organizations and companies tracked in 
 
 The account list displays all organizations currently tracked in your system. From this view, you can quickly see key information about each account including the company name, industry classification, location, and any associated evaluations. This list serves as your central hub for account management, allowing you to search, filter, and organize accounts by various criteria to find exactly what you need.
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/QX61T3cffOg?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Accounts | Overview Tab</strong></p>
+</div>
+
 ## Related
 
 - [Account Details](details.md)

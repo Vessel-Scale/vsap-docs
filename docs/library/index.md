@@ -32,6 +32,13 @@ The Library is your central inventory of assessment templates. Definitions here 
 - [Question Types](question-types.md) — Reference for all question types and their configuration options
 - [Scoring](scoring.md) — Understand how assessment scores are calculated and displayed
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/Frn3pG8YsiI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Library | Overview</strong></p>
+</div>
+
 ## Related
 
 - [Getting Started: Step 2](../../getting-started/design-assessment.md) — Quick-start guide to designing assessments

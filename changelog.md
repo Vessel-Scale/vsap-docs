@@ -4,6 +4,42 @@
 
 ---
 
+## v2.69
+
+### Core Features & Enhancements
+
+#### **Assessment Response Management**
+- **Response Inclusion/Exclusion Control**: Manage individual assessment responses with the ability to include or exclude specific responses from analysis and reporting
+
+#### **Advanced Data Export Options**
+- **Response Grouping in YAML Exports**: New option to group assessment responses by respondent when exporting assessment data in YAML format for better organization and analysis
+
+#### **Dashboard Enhancements**
+- **Assessments by Account Executive Widget**: New directors dashboard widget showing assessment counts and status breakdown organized by account executive
+
+#### **Public Library & Assessment Management**
+- **Enhanced Category Management**: New Entrepreneurship category added to public library with improved category icon handling and marquee logo display
+- **Global Assessment Counter**: Animated assessment count display showing total assessments available in the public library
+
+#### **AI Features & Configuration**
+- **Mock Answer Generation Control**: Per-tenant feature flag to control whether AI-generated answers are automatically created during assessment evaluation
+
+#### **Authentication & Security**
+- **OIDC Login Enhancements**: Improved OIDC login flow with enhanced error handling and loading state management for more reliable single sign-on
+- **Extended Session Tokens**: Refresh token lifetime extended from 1 day to 5 days for improved user session stability
+- **Redis TLS Support**: Enhanced Redis cache configuration with TLS encryption support for secure connections in production environments
+
+### User Experience Improvements
+
+- **Dashboard Responsiveness**: Improved responsive design for Directors Dashboard and Account Executive dashboard widgets on smaller screens
+- **Help System Integration**: New help icon in header with integrated video links to Vessel tutorial videos for contextual learning and guidance
+- **YAML Editor Validation**: Added validation for duplicate keys in YAML assessments to prevent configuration errors
+- **Icon Selection UI**: Enhanced icon picker modal with display of selected icon name below the icon grid for better user feedback
+- **AI Recommendation Styling**: Improved button styles and SaveButton component in AI recommendation dialogs for better visual consistency
+- **Assessment Details Display**: Updated response titles to use assessment names for improved clarity and context
+
+---
+
 ## v2.68
 
 ### Core Features & Enhancements

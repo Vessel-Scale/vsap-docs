@@ -63,6 +63,13 @@ The **Score** view overlays assessment results as color-coded markers to visuali
 
 Use the Score view to identify which regions have highest/lowest assessment results and track performance across your account base.
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/1QJUH_MbRCM?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel EcoSystem | Overview</strong></p>
+</div>
+
 ## Filtering Your Data
 
 Use the **Filters** panel on the left to narrow which accounts appear on all tabs:
