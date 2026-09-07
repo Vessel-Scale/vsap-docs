@@ -38,6 +38,13 @@ After setting the top section details, you'll use the assessment editor to fill 
 
 The editor interface is the same whether you're filling in responses while creating a new assessment or editing responses later in Assessment Details.
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/utqqZ1hAfQk?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Assessment | Publishing Assessment</strong></p>
+</div>
+
 ## Related
 
 - [Getting Started: Step 3](../../getting-started/create-assessment.md) — Quick-start guide to creating assessments

@@ -198,7 +198,7 @@ Click the **PREVIEW** button (`VisibilityIcon`) in the top toolbar to open a ful
 
 Scroll through the preview to review every question and response option. This is the recommended final check before saving or publishing.
 
-**How to access:** Click `PREVIEW` in the top toolbar (labeled **Preview Assessment**).
+**How to access:** Click `PREVIEW` in the top toolbar (labeled **Preview**).
 
 ---
 

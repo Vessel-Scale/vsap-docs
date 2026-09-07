@@ -232,6 +232,26 @@ From the Assessment Details page, you can edit the assessment to modify response
 
 The editor provides a consistent interface whether creating a new assessment or revisiting responses to an existing one.
 
+---
+
+## Help Videos
+
+Watch these tutorials to learn how to manage assessment details:
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+
+<div>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/AvWxnsELq_g?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Assessment | Assessment Details Overview</strong></p>
+</div>
+
+<div>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/hsy7FxNY22Y?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Assessment | Closing Assessment</strong></p>
+</div>
+
+</div>
+
 ## Related
 
 - [Getting Started: Step 5](../../getting-started/analyze-results.md) — Quick-start guide to analyzing results

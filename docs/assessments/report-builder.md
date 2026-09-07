@@ -98,6 +98,13 @@ Once your analysis is complete, return to the **Assessment Details** page to exp
 - **PDF** — Generate a formatted PDF report. See [PDF Reports](pdf-reports.md).
 - **Web** — Publish findings as a shareable web report. See [Web Reports](../settings/web-reports.md).
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/ZYHj_q0UjDI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Assessment | Assessment Results Review</strong></p>
+</div>
+
 ## Related
 
 - [Getting Started: Step 5](../../getting-started/analyze-results.md) — Quick-start guide to analyzing results

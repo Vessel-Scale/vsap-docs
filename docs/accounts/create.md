@@ -36,6 +36,13 @@ See [Edit Account](edit.md) for a full description of each field.
 
 After filling in the required fields, click **Save** to create the account. Validation errors will be displayed if required fields are missing or invalid data is entered. Once saved, you'll be taken to the new account's details page where you can begin adding assessments.
 
+## Help Video
+
+<div style="max-width: 500px;">
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/GrQaQj1xV6Q?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><strong>Vessel Accounts | Adding an Account</strong></p>
+</div>
+
 ## Related
 
 - [Getting Started: Step 1](../../getting-started/creating-your-account.md) — Quick-start guide to creating accounts

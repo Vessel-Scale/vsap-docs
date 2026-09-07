@@ -51,6 +51,7 @@ git log <PREVIOUS_VERSION>..v<NEW_VERSION> --oneline --no-decorate
 - ❌ Test suite improvements
 - ❌ Developer documentation updates
 - ❌ Internal code restructuring
+- ❌ **ANY technical implementation details**: API endpoints, data models, database changes, backend services, or architecture—NEVER mention these even if they're required to build the feature (developers can review git logs). Example: Don't say "New region data model and API endpoints"—say "Region-based organization capabilities"
 
 ### 4. **Structure & Write**
 
@@ -78,16 +79,47 @@ Use this hierarchy in `changelog.md`:
 ### 5. **Guidelines for Writing Descriptions**
 
 - Write from **user perspective** (not developer)
-- Focus on *what users can do* and *how it improves their experience*
+- Focus on **what users can do in the UI** and *how it improves their experience*
+- **Only document user-facing features**: If a user won't see it or interact with it in the product, exclude it (developers can review git logs)
+- **NEVER mention technical implementation**: No API endpoints, data models, backend services, database changes, or architecture details. Focus ONLY on the user capability and UI impact
 - Avoid technical jargon unless essential
-- Be concise—aim for 1-2 sentences per item
+- **Be extremely concise**: Aim for ONE bullet point per feature (or TWO MAX for truly big features), combining related functionality into single descriptions
+- **Merge related features aggressively**: Don't create separate bullets for minor variations of the same feature (e.g., don't list "Account Export" and "Client Export" separately—combine as "Advanced Data Export")
 - **Be specific and precise**: Name the exact component, field, or workflow affected (e.g., "Contact Email field validation" instead of "improved validation")
-- **Only create bullets for significant changes**: New features, major workflows, substantial UI redesigns. Combine minor related fixes into a single concise line or exclude entirely if trivial
+- **Only create bullets for significant changes**: New features, major workflows, substantial UI redesigns. Combine or exclude minor related fixes
 - Avoid vague language like "improved", "enhanced", or "updated" without explaining what specifically changed
 - Avoid adding fluff or redundant bullets that restate the same feature from different angles
-- Group related features to show interconnections, but only if they constitute meaningful changes
+- Group related features into single bullets to show interconnections while keeping descriptions tight and focused
 
-### 6. **Examples of Good vs Bad**
+### 6. **Examples of Conciseness & User Focus**
+
+**❌ Bad (technical implementation details—users don't care):**
+> - **Region Management**: New region data model and API endpoints for managing regions across the platform
+
+**✅ Good (focus on user capability):**
+> - **Region Support**: Enhanced account management with region-based organization and filtering capabilities
+
+---
+
+**❌ Bad (too many separate bullets for one feature):**
+> - Async Account Export: Asynchronous account export functionality with status polling and download capabilities
+> - Async Client Export: New export functionality for client lists with status tracking and flexible download options
+> - Dashboard Analytics Downloads: Enhanced dashboard with CSV and YAML export options for status scores
+> - Dataset Selection for Exports: Configurable dataset selection when exporting dashboard analytics
+
+**✅ Good (merged into one concise bullet):**
+> - **Advanced Data Export**: Asynchronous export functionality for accounts, clients, and dashboard analytics with CSV/YAML downloads and configurable dataset selection
+
+---
+
+**❌ Bad (too many separate UX items):**
+> - Auditor Modal State Management: Improved state reset on AuditorModal close
+> - Auditor Severity Filtering: Enhanced filter functionality in AuditorModal
+> - Assessment Editor Menu: Hover-based action menu in YAML Assessment Editor
+> - Dynamic Assessment Terminology: Branding-driven dynamic assessment term integration
+
+**✅ Good (merged into single concise bullet):**
+> - **Auditor & Editor Enhancements**: Improved auditor state management, severity filtering, and hover-based action menu with dynamic branding integration
 
 **❌ Bad (too vague):**
 > Refactor ContactCard component and remove unused imports

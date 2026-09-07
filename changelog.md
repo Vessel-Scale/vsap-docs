@@ -4,6 +4,100 @@
 
 ---
 
+## v2.69
+
+### Core Features & Enhancements
+
+#### **Assessment Response Management**
+- **Response Inclusion/Exclusion Control**: Manage individual assessment responses with the ability to include or exclude specific responses from analysis and reporting
+
+#### **Advanced Data Export Options**
+- **Response Grouping in YAML Exports**: New option to group assessment responses by respondent when exporting assessment data in YAML format for better organization and analysis
+
+#### **Dashboard Enhancements**
+- **Assessments by Account Executive Widget**: New directors dashboard widget showing assessment counts and status breakdown organized by account executive
+
+#### **Public Library & Assessment Management**
+- **Enhanced Category Management**: New Entrepreneurship category added to public library with improved category icon handling and marquee logo display
+- **Global Assessment Counter**: Animated assessment count display showing total assessments available in the public library
+
+#### **AI Features & Configuration**
+- **Mock Answer Generation Control**: Per-tenant feature flag to control whether AI-generated answers are automatically created during assessment evaluation
+
+#### **Authentication & Security**
+- **OIDC Login Enhancements**: Improved OIDC login flow with enhanced error handling and loading state management for more reliable single sign-on
+- **Extended Session Tokens**: Refresh token lifetime extended from 1 day to 5 days for improved user session stability
+- **Redis TLS Support**: Enhanced Redis cache configuration with TLS encryption support for secure connections in production environments
+
+### User Experience Improvements
+
+- **Dashboard Responsiveness**: Improved responsive design for Directors Dashboard and Account Executive dashboard widgets on smaller screens
+- **Help System Integration**: New help icon in header with integrated video links to Vessel tutorial videos for contextual learning and guidance
+- **YAML Editor Validation**: Added validation for duplicate keys in YAML assessments to prevent configuration errors
+- **Icon Selection UI**: Enhanced icon picker modal with display of selected icon name below the icon grid for better user feedback
+- **AI Recommendation Styling**: Improved button styles and SaveButton component in AI recommendation dialogs for better visual consistency
+- **Assessment Details Display**: Updated response titles to use assessment names for improved clarity and context
+
+---
+
+## v2.68
+
+### Core Features & Enhancements
+
+#### **AI-Powered Assessment Creation**
+- **AI Assessment Creator**: New AI-powered assistant for rapid assessment creation with chat interface, providing automated guidance and YAML generation for building assessments from scratch
+
+#### **AI-Generated Web Reports**
+- **AI Web Report Creator**: Intelligent web report generation using AI to analyze assessment data, extract website content, and automatically structure report sections with appropriate visualizations and styling
+
+#### **Public Assessment Library**
+- **Assessment Library Browser**: New public library feature for discovering and browsing community assessments with categorization and filtering capabilities
+- **Assessment Copying & Versioning**: Import assessments from the public library with automatic version management and duplicate name handling
+- **Bulk Assessment Import**: Ability to copy multiple assessments at once from the library into your workspace
+
+#### **Enhanced Qualitative Insights**
+- **AI-Generated Recommendations**: Integrated AI assistant for generating actionable recommendations based on qualitative insights with separated identified and AI-generated content
+- **Qualitative Insights Display**: Improved visualization and organization of qualitative insights alongside quantitative assessment results
+
+#### **Advanced Web Report Capabilities**
+- **Webpage Content Integration**: Automatic extraction and processing of website content for enhanced web reports with improved image handling and context integration
+- **Report Styling & Formatting**: Enhanced CSS color and font extraction from source materials with support for custom subsection headers and styling options
+- **Optional Report Sections**: Ability to configure which assessment categories appear in web reports with customizable section layouts
+
+#### **Scoring & Visualization Improvements**
+- **Enhanced Score Calculations**: Improved scoring logic for Gas Gauge and Bar Chart visualizations with averaged min/max score handling
+- **Response Distribution & Analytics**: Comprehensive tracking of assessment responses with duplicate submission prevention and enhanced initialization logic
+
+### User Experience Improvements
+
+- **Performance Optimization**: Improved component performance across Assessment Creator, Web Report Creator, and YAML Editor with memoization and debouncing
+- **Help Assistant Integration**: Enhanced help assistant with guidance on scoring methods and workflow switching
+- **Category & Metadata Handling**: Improved category extraction and validation from YAML assessments with better user feedback
+- **Field Validation**: New character length limits and validation for assessment field names to ensure data consistency
+
+---
+
+## v2.67
+
+### Core Features & Enhancements
+
+#### **Assessment Auditor with AI Integration**
+- **Assessment Auditor**: LLM-powered assessment validation service with interactive auditor modal featuring deterministic rules, severity filtering, and elapsed time tracking; includes action menu in YAML Assessment Editor for quick access to preview, audit, media library, and replace options
+
+#### **Region Management & Enhanced Exports**
+- **Region Support**: Enhanced account management with region-based organization and filtering capabilities
+- **Advanced Data Export**: New export functionality for accounts, clients, and dashboard analytics with CSV/YAML downloads and configurable dataset selection
+
+#### **Scoring & Performance Improvements**
+- **Enhanced Scoring & Validation**: Improved scoring method dropdown with better styling, optimized score aggregation in dashboards, and intelligent conversion of preset questions with custom answers to multiple_choice format
+
+### User Experience Improvements
+
+- **Auditor & Editor Enhancements**: Improved auditor state management, severity filtering, and hover-based action menu in YAML Assessment Editor with dynamic branding integration
+- **UI/UX Refinements**: Updated tab styling in NAICS Explorer and improved error handling for missing data states
+
+---
+
 ## v2.66
 
 ### Core Features & Enhancements

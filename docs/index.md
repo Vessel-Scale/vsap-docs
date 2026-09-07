@@ -12,7 +12,7 @@ Welcome to the Vessel Smart Assessment Platform (VSAP) documentation. VSAP is a 
 
 New to VSAP? Start here! Learn the four essential steps to run assessments, analyze results, and share findings with clients.
 
-**[→ Go to Getting Started Guide](getting-started/quick-start.md){ .md-button .md-button--primary }**
+**[→ Go to Getting Started Guide](getting-started/index.md){ .md-button .md-button--primary }**
 
 The Getting Started guide covers these four steps:
 
