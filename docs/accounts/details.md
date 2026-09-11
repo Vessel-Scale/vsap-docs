@@ -196,27 +196,27 @@ Watch these tutorials to learn how to manage accounts:
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
 
 <div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/CJV1hJH3buQ?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/CJV1hJH3buQ?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Details Overview Tab</strong></p>
 </div>
 
 <div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/C_Yzetqp48E?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/C_Yzetqp48E?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Actions Tab</strong></p>
 </div>
 
 <div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/i-3KG9HmdSw?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/i-3KG9HmdSw?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Assessments Tab</strong></p>
 </div>
 
 <div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/QB8HkZTt4VA?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/QB8HkZTt4VA?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Web Report Tab</strong></p>
 </div>
 
 <div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/uiF0BoFv92o?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed/uiF0BoFv92o?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Contacts Tab</strong></p>
 </div>
 

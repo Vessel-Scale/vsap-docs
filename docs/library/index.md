@@ -34,9 +34,9 @@ The Library is your central inventory of assessment templates. Definitions here 
 
 ## Help Video
 
-<div style="max-width: 500px;">
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/Frn3pG8YsiI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<p><strong>Vessel Library | Overview</strong></p>
+<div>
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/Frn3pG8YsiI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
+<p><strong>Shared Template Library | Overview</strong></p>
 </div>
 
 ## Related

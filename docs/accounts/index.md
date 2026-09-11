@@ -26,8 +26,8 @@ The account list displays all organizations currently tracked in your system. Fr
 
 ## Help Video
 
-<div style="max-width: 500px;">
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/QX61T3cffOg?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/QX61T3cffOg?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Overview Tab</strong></p>
 </div>
 

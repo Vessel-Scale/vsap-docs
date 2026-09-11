@@ -92,8 +92,8 @@ Export dashboard data for external reporting and analysis:
 
 ## Help Video
 
-<div style="max-width: 500px;">
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/PocvyPATCi0?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/PocvyPATCi0?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Dashboard | Directors</strong></p>
 </div>
 

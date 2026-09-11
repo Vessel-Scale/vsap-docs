@@ -38,8 +38,8 @@ After filling in the required fields, click **Save** to create the account. Vali
 
 ## Help Video
 
-<div style="max-width: 500px;">
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/GrQaQj1xV6Q?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<iframe width="100%" height="280" src="https://www.youtube.com/embed/GrQaQj1xV6Q?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
 <p><strong>Vessel Accounts | Adding an Account</strong></p>
 </div>
 

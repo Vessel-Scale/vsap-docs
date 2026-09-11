@@ -31,3 +31,22 @@
 .md-footer-meta {
   display: none;
 }
+
+/* Responsive YouTube embeds — aspect-ratio on wrapper, NOT the iframe */
+/* aspect-ratio on the iframe itself blocks fullscreen; wrapper approach avoids that */
+.md-typeset div:has(> iframe[src*="youtube.com"]) {
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+}
+
+.md-typeset div:has(> iframe[src*="youtube.com"]) > iframe[src*="youtube.com"] {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 8px !important;
+  display: block !important;
+}
