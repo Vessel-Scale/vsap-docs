@@ -71,6 +71,12 @@ Use this hierarchy in `changelog.md`:
 - Minor UI/UX enhancements
 - Accessibility improvements
 
+### Bug Fixes
+- Critical and user-facing bug fixes only
+- One-line descriptions: "Fixed [what] that caused [impact]"
+- No technical implementation details
+- Order by severity/impact to users
+
 ### Notes
 - Mention any special considerations
 - Link to related features from previous versions if relevant
@@ -83,15 +89,25 @@ Use this hierarchy in `changelog.md`:
 - **Only document user-facing features**: If a user won't see it or interact with it in the product, exclude it (developers can review git logs)
 - **NEVER mention technical implementation**: No API endpoints, data models, backend services, database changes, or architecture details. Focus ONLY on the user capability and UI impact
 - Avoid technical jargon unless essential
-- **Be extremely concise**: Aim for ONE bullet point per feature (or TWO MAX for truly big features), combining related functionality into single descriptions
-- **Merge related features aggressively**: Don't create separate bullets for minor variations of the same feature (e.g., don't list "Account Export" and "Client Export" separately—combine as "Advanced Data Export")
+- **Be extremely concise**: Aim for ONE bullet point per feature category, combining ALL related functionality into single descriptions
+- **Merge related features AGGRESSIVELY**: Group all related changes under ONE heading and ONE bullet. Don't create separate bullets for variations or sub-features (e.g., don't list "Account Export" and "Client Export" separately—combine as "Advanced Data Export"; don't list "OIDC Flow", "Multi-Tenant Resolution", and "Higher Logic" separately—combine as single OIDC bullet)
 - **Be specific and precise**: Name the exact component, field, or workflow affected (e.g., "Contact Email field validation" instead of "improved validation")
 - **Only create bullets for significant changes**: New features, major workflows, substantial UI redesigns. Combine or exclude minor related fixes
 - Avoid vague language like "improved", "enhanced", or "updated" without explaining what specifically changed
 - Avoid adding fluff or redundant bullets that restate the same feature from different angles
 - Group related features into single bullets to show interconnections while keeping descriptions tight and focused
 
-### 6. **Examples of Conciseness & User Focus**
+### 5.1 **Bug Fixes Section Guidelines**
+
+- **INCLUDE**: Critical bugs, data loss issues, broken workflows, crashes, or fixes that significantly impact user experience
+- **EXCLUDE**: Minor visual glitches, typo fixes, non-critical UI polish, internal data consistency fixes users won't notice
+- **Format**: Keep it BRIEF — single sentence maximum per bug fix
+- **Structure**: "Fixed [what was broken] that [impact on users]" or "Fixed [component/feature] [specific issue]"
+- **NO technical details**: Don't explain the root cause or code changes, only what was fixed and how it affected users
+- **Order by importance**: List most critical fixes first
+- **Keep it short**: Use fewer words than feature descriptions—these are fixes, not new capabilities
+
+### 7. **Examples of Conciseness & User Focus**
 
 **❌ Bad (technical implementation details—users don't care):**
 > - **Region Management**: New region data model and API endpoints for managing regions across the platform
@@ -158,6 +174,32 @@ Use this hierarchy in `changelog.md`:
 
 **✅ Good (specific and significant):**
 > **Redesigned Contact Intake Form**: New multi-step workflow with inline validation and progress indicators
+
+---
+
+## Bug Fix Examples
+
+**❌ Bad (too technical):**
+> Fixed null reference exception in AuditorCard component when assessment is undefined
+
+**✅ Good (user impact focused):**
+> Fixed crash when viewing audits on deleted assessments
+
+---
+
+**❌ Bad (too minor, exclude):**
+> Fixed typo in help text
+
+**✅ Good (only include critical/user-facing issues):**
+> (Don't include—minor typos aren't changelog-worthy)
+
+---
+
+**❌ Bad (internal detail, exclude):**
+> Fixed database query timeout in reports
+
+**✅ Good (user-facing impact):**
+> Fixed dashboard analytics reports timing out for large accounts
 
 ---
 

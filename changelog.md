@@ -4,6 +4,30 @@
 
 ---
 
+## v2.70
+
+### Core Features & Enhancements
+
+#### **Client Portal V2 Redesign**
+- **Client Portal V2**: Completely redesigned client dashboard with modernized layout, peer cohort analytics with colored performance bands and sector grouping, dedicated Actions page for tracking follow-up items, and multi-tab assessment navigation (behind feature flag, pending customer rollout)
+
+#### **Enterprise Authentication & Integration**
+- **OIDC & Higher Logic Integration**: Complete OIDC authentication overhaul with robust state validation, error handling, multi-tenant support for shared and dedicated patterns, X-Forwarded-Proto proxy support, and seamless Higher Logic API integration for enterprise identity management
+
+#### **User & Tenant Management**
+- **Bulk User Provisioning**: Streamlined ability to add users from PUBLIC tenant to any target schema and expanded feature flag controls with explicit true/false state visibility
+
+### User Experience Improvements
+
+- **Help System**: Continued refinement of help integration with video links and contextual guidance
+
+### Bug Fixes
+
+- Fixed critical OIDC authentication issues: state validation cache backend incompatibility, incorrect user identity from missing prompt=login parameter, callback URL scheme mismatch with proxy environments, and first-time login 404 routing
+- Fixed cross-account dashboard endpoint access by restricting to admin and Account Executive users only
+
+---
+
 ## v2.69
 
 ### Core Features & Enhancements
