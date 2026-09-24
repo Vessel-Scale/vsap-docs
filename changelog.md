@@ -4,6 +4,35 @@
 
 ---
 
+## v2.71
+
+### Core Features & Enhancements
+
+#### **Action Tracker Global Items**
+- **Global Action Items**: Support for global (category-independent) items in Key Priorities and Implementation Details sections, enabling org-wide action tracking across all assessment categories
+
+#### **Enhanced Close Assessment Dialog**
+- **User-Editable Action Items in Close Flow**: New ability to create, edit, and exclude action items directly within the assessment closure dialog with auto-save and inline editing for streamlined workflow completion
+
+#### **Action Tracker UI Improvements**
+- **Merged Parent-Child Statements**: Display of consolidated parent and child assessment statements in action item details with modal view for complete context
+- **Item Dialog Feature Parity**: Full feature parity between add and edit item dialogs with responsive grid layout, calendar date selection, and comprehensive category management
+
+#### **Peer Cohort & Assessment Scoring**
+- **In-Progress Assessment Filtering**: Improved peer cohort trend analysis and dashboard scoring by automatically excluding in-progress assessments for accurate comparative metrics
+
+#### **Client Portal V2 Responsiveness**
+- **Enhanced Responsive Layout**: Improved layout breakpoints for summary and action cards in Client Portal V2 for better mobile and tablet experiences
+
+### Bug Fixes
+
+- Fixed in-progress assessments incorrectly affecting peer cohort trend analysis and dashboard scoring
+- Fixed Global Items category not appearing in Key Priorities and Implementation Details tabs
+- Fixed assessment status reverting to Results Review when canceling the close assessment dialog
+- Fixed action item category dropdown not showing all available categories in the Add Item dialog
+
+---
+
 ## v2.70
 
 ### Core Features & Enhancements
