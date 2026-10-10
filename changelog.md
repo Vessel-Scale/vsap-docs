@@ -4,6 +4,32 @@
 
 ---
 
+## v2.72
+
+### Core Features & Enhancements
+
+#### **Evidence Management & Secure Access**
+- **Evidence Uploads with Metadata**: Upload assessment evidence with descriptions and tags, edit evidence metadata after upload, and access private evidence files through secure links for controlled sharing
+
+#### **Client Portal V2 Account Management**
+- **Client Account Profile & Users**: New client-facing Account page with account detail editing, richer organization profile fields, and expanded user cards that include contact details and last login visibility
+
+#### **Parent-Child Assessment Visibility**
+- **Child Assessment Status & Response Context**: Assessment lists now show child assessment names, status, response counts, and grouped notes for clearer multi-assessment progress tracking
+
+### User Experience Improvements
+
+- **Assessment Flow Guidance**: Assessment previews now auto-scroll to the next unanswered question
+- **Editing Continuity**: Improved persistence for assessment notes and YAML editor workspace state to reduce lost in-progress changes *NOTE*: this is a significant UI/UX change - notes are no longer "auto-saved" on REPORT BUILDER because of user reported bugs. There is now an explict SAVE button which provides confirmation to user that results have been saved to database
+
+### Bug Fixes
+
+- Fixed preset question workflows dropping question-level suggestions when saving
+- Fixed client portal account routing and preview edge cases that could show incorrect or missing account details
+- Fixed account assessment data so PDF report availability is correctly reflected in relevant views
+
+---
+
 ## v2.71
 
 ### Core Features & Enhancements
