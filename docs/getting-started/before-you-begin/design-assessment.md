@@ -63,7 +63,7 @@ Browse existing templates in the Library and search by name or category to find 
 - **Archive a template:** Hide inactive templates from the list
 - **View usage:** See which assessments use each template
 
-See [Library Reference](../library/index.md) for complete template management instructions.
+See [Library Reference](../../library/index.md) for complete template management instructions.
 
 ---
 
@@ -75,7 +75,7 @@ See [Library Reference](../library/index.md) for complete template management in
 
 ## Related
 
-- [Library Overview](../library/index.md) — Assessment template management and best practices
-- [Question Types](../library/question-types.md) — Supported question formats and use cases
-- [Scoring Rules](../library/scoring.md) — Define score zones and thresholds
+- [Library Overview](../../library/index.md) — Assessment template management and best practices
+- [Question Types](../../library/question-types.md) — Supported question formats and use cases
+- [Scoring Rules](../../library/scoring.md) — Define score zones and thresholds
 - [Assessment Categories](../library/categories.md) — Organize your assessment structure

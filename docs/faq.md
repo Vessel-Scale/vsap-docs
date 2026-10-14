@@ -278,7 +278,7 @@ Visit the [Edit Account](accounts/edit.md) page to learn how to update your acco
 
 ## How do I design a custom Assessment Definition?
 
-The [Design an Assessment](getting-started/design-assessment.md) guide in Getting Started covers creating your custom assessment structure.
+The [Design an Assessment](getting-started/before-you-begin/design-assessment.md) guide in Getting Started covers creating your custom assessment structure.
 
 ---
 

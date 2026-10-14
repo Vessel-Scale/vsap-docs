@@ -41,4 +41,4 @@ The Library is your central inventory of assessment templates. Definitions here 
 
 ## Related
 
-- [Getting Started: Step 2](../../getting-started/design-assessment.md) — Quick-start guide to designing assessments
+- [Getting Started: Step 2](../getting-started/before-you-begin/design-assessment.md) — Quick-start guide to designing assessments

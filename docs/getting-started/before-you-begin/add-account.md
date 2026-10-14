@@ -60,7 +60,7 @@ Click **Save** when done. You will be taken to the new account's detail page.
 
 ### Full Reference
 
-For detailed information on all account fields, see [Create Account Reference](../accounts/create.md).
+For detailed information on all account fields, see [Create Account Reference](../../accounts/create.md).
 
 ---
 
@@ -72,7 +72,7 @@ For detailed information on all account fields, see [Create Account Reference](.
 
 ## Related
 
-- [Create Account Reference](../accounts/create.md) — Full field reference and options
-- [Accounts Overview](../accounts/index.md) — Manage all client organizations
-- [Intake Forms](../settings/intake-forms.md) — Let clients self-register
-- [Account Details Page](../accounts/details.md) — View and edit account information
+- [Create Account Reference](../../accounts/create.md) — Full field reference and options
+- [Accounts Overview](../../accounts/index.md) — Manage all client organizations
+- [Intake Forms](../../settings/intake-forms.md) — Let clients self-register
+- [Account Details Page](../../accounts/details.md) — View and edit account information
