@@ -35,7 +35,7 @@ Settings are only available to users with the **admin** role and require the Set
 - [Manage Users](users.md) — invite users, assign roles, and control access
 - [Permissions & User Roles](permissions.md) — understand roles and capabilities
 - [Branding](branding.md)
-- [Custom Data](custom-data.md)
+- [Custom Data](custom-data/index.md)
 - [Email Templates](email-templates.md)
 - [Web Reports](web-reports.md)
 - [PDF Reports](pdf-reports.md)

@@ -41,5 +41,5 @@ Once set, the code propagates to all features in the table above without any add
 - [Dashboard](../dashboard/index.md) — charts that use NAICS sector/subsector data
 - [Ecosystem Map → Filters](../ecosystem/filters.md) — filter by NAICS in the map
 - [Settings → Intake Forms](../settings/intake-forms.md) — configure the Industry Type page
-- [Settings → Custom Data](../settings/custom-data.md) — manage active NAICS codes
+- [Settings → Custom Data](../settings/custom-data/index.md) — manage active NAICS codes
 - [Settings → Web Reports](../settings/web-reports.md) — use industry classification in report templates
