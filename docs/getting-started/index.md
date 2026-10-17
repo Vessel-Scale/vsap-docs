@@ -110,8 +110,8 @@ Close the assessment and share polished web reports and PDF reports with clients
 
 Once you've mastered the core workflow, explore these related features:
 
-- [**Dashboards**](../dashboards/index.md) — View assessment activity and trends across all accounts
+- [**Dashboards**](../dashboard/index.md) — View assessment activity and trends across all accounts
 - [**Ecosystem View**](../ecosystem/index.md) — Compare performance across multiple accounts
-- [**Impact Tracking**](../impact-tracking/index.md) — Manage action items and track impact metrics
+- [**Impact Tracking**](../impact-tracker/index.md) — Manage action items and track impact metrics
 - [**Settings**](../settings/index.md) — Configure intake forms, web reports, branding, and more
 - [**Library**](../library/index.md) — Build and manage assessment templates

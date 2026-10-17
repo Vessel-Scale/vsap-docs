@@ -323,7 +323,7 @@ Web Reports are stored as YAML-backed configurations, but the editor manages tha
 
 - [Getting Started: Step 6](../../getting-started/create-web-report.md) — Quick-start guide to creating web reports
 - [Settings](index.md) - Settings overview
-- [Custom Data](custom-data.md) - Manage reference data used in reports
-- [Media Library](custom-data.md#media-library) - Upload and manage media assets
+- [Custom Data](custom-data/index.md) - Manage reference data used in reports
+- [Media Library](custom-data/media-library.md) - Upload and manage media assets
 - [Branding](branding.md) - Organization branding and styling
 - [Assessments](../assessments/index.md) - Assessment overview

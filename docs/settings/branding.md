@@ -256,4 +256,4 @@ Define the employee count boundaries used to classify companies as Small, Medium
 - [Settings](index.md)
 - [Email Templates](email-templates.md)
 - [Intake Forms](intake-forms.md)
-- [Custom Data](custom-data.md)
+- [Custom Data](custom-data/index.md)

@@ -85,7 +85,7 @@ If you can't find the help you need here please contact us at [support@vesselsca
 ### [Settings & Configuration](settings/index.md)
 - [Settings Overview](settings/index.md)
 - [Branding](settings/branding.md)
-- [Custom Data](settings/custom-data.md)
+- [Custom Data](settings/custom-data/index.md)
 - [Email Templates](settings/email-templates.md)
 - [Intake Forms](settings/intake-forms.md)
 - [Web Reports](settings/web-reports.md)

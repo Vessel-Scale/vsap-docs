@@ -34,7 +34,7 @@ If you arrived here by clicking **Create This Assessment for My Account** in the
 
 ## Editor
 
-After setting the top section details, you'll use the assessment editor to fill in responses to questions organized by category. For complete details about working in the editor—adding responses, managing categories, and navigating questions—see [Edit Assessment](details.md#edit-assessment).
+After setting the top section details, you'll use the assessment editor to fill in responses to questions organized by category. For complete details about working in the editor—adding responses, managing categories, and navigating questions—see [Edit Assessment](details.md#editing-an-assessment).
 
 The editor interface is the same whether you're filling in responses while creating a new assessment or editing responses later in Assessment Details.
 
@@ -51,4 +51,4 @@ The editor interface is the same whether you're filling in responses while creat
 - [All Available Assessments](../client-portal/all-available-assessments.md) — how clients can self-start assessments from the portal
 - [Assessments](index.md)
 - [Library](../library/index.md)
-- [Edit Assessment](details.md#edit-assessment)
+- [Edit Assessment](details.md#editing-an-assessment)

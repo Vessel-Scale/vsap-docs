@@ -143,11 +143,11 @@ To create custom report templates:
 
 Once you've published your first web report, explore these additional features:
 
-- [Configure Web Report Templates](../settings/web-reports.md) — Create and manage report designs
-- [PDF Reports](../assessments/pdf-reports.md) — Export findings as a downloadable PDF
-- [Branding Settings](../settings/branding.md) — Customize all reports with your logo and colors
-- [Assessment Scoring Details](../assessments/scoring.md) — Understand score calculations
-- [Report Builder Reference](../assessments/report-builder.md) — Detailed analysis tools and options
+- [Configure Web Report Templates](../../settings/web-reports.md) — Create and manage report designs
+- [PDF Reports](../../assessments/pdf-reports.md) — Export findings as a downloadable PDF
+- [Branding Settings](../../settings/branding.md) — Customize all reports with your logo and colors
+- [Assessment Scoring Details](../../assessments/scoring.md) — Understand score calculations
+- [Report Builder Reference](../../assessments/report-builder.md) — Detailed analysis tools and options
 
 ---
 
@@ -155,17 +155,17 @@ Once you've published your first web report, explore these additional features:
 
 After mastering the four-step workflow, you can explore:
 
-- **[Dashboard](../dashboard/index.md)** — View assessment activity and trends across all accounts
-- **[Ecosystem View](../ecosystem/index.md)** — Compare performance across multiple accounts
-- **[Settings](../settings/index.md)** — Configure intake forms, web reports, branding, and more
-- **[Library](../library/index.md)** — Build and manage assessment templates
+- **[Dashboard](../../dashboard/index.md)** — View assessment activity and trends across all accounts
+- **[Ecosystem View](../../ecosystem/index.md)** — Compare performance across multiple accounts
+- **[Settings](../../settings/index.md)** — Configure intake forms, web reports, branding, and more
+- **[Library](../../library/index.md)** — Build and manage assessment templates
 
 ---
 
 ## Related
 
-- [Report Builder Reference](../assessments/report-builder.md) — Detailed analysis tools
-- [Web Reports Reference](../settings/web-reports.md) — Template creation and management
-- [Assessment Scoring](../assessments/scoring.md) — Understand score calculations
-- [PDF Reports](../assessments/pdf-reports.md) — Export findings as PDF
-- [Branding](../settings/branding.md) — Customize report appearance and colors
+- [Report Builder Reference](../../assessments/report-builder.md) — Detailed analysis tools
+- [Web Reports Reference](../../settings/web-reports.md) — Template creation and management
+- [Assessment Scoring](../../assessments/scoring.md) — Understand score calculations
+- [PDF Reports](../../assessments/pdf-reports.md) — Export findings as PDF
+- [Branding](../../settings/branding.md) — Customize report appearance and colors

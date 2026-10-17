@@ -98,4 +98,4 @@ The **AI assistant** (spark icon) can help if you describe a business in plain l
 - [Industries Overview](index.md)
 - [Platform Integration](platform-integration.md) — how these codes power dashboards, reports, and map filters
 - [Ecosystem Map → Filters](../ecosystem/filters.md) — filter the map by NAICS Sector or Subsector
-- [Settings → Custom Data](../settings/custom-data.md) — manage which codes are active
+- [Settings → Custom Data](../settings/custom-data/index.md) — manage which codes are active
