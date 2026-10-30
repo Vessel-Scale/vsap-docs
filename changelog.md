@@ -4,6 +4,29 @@
 
 ---
 
+## v2.73
+
+### Core Features & Enhancements
+
+#### **Action Tracker Project Links**
+- **Project Link Integration**: Add project URLs and custom link labels to action items for direct tracking integration and workflow management
+
+### User Experience Improvements
+
+- **Report Collapse Controls**: Report accordions now fully collapse for improved navigation through assessment sections
+- **Account Executive Dashboard**: Redesigned score band visualizations with threshold-driven bars replacing gas gauges for clearer performance assessment
+- **Category Card Layout**: Improved spacing and width adjustments in category detail cards for better visual organization
+- **Dashboard & Export Refinements**: Enhanced data export options with auto-injected parent assessment and year columns for accurate parent-child assessment analysis
+
+### Bug Fixes
+
+- Fixed OIDC feature flag enforcement: Baldrige login button now only appears for tenants with the Higher Logic OIDC feature flag enabled
+- Fixed OIDC provider selection to properly handle multiple active providers across multi-tenant environments
+- Fixed evidence endpoint access restrictions to prevent unauthorized respondent activity
+- Fixed peer cohort calculations to prevent random cohort merging in edge cases
+
+---
+
 ## v2.72
 
 ### Core Features & Enhancements
