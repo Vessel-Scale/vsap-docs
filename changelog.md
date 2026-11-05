@@ -4,6 +4,39 @@
 
 ---
 
+## v2.74
+
+### Core Features & Enhancements
+
+#### **AI PDF Reports & Sharing**
+- **Generate and Share PDFs**: Generate AI-formatted PDFs from web reports, choose report density and detail, and share stored PDFs through Share Report. Report defaults now include more assessment content, with configurable branding, cover pages, and table of contents.
+
+#### **Assessment-Specific Report Access**
+- **Report Links & Visibility**: Open and share reports from account assessments and control which reports are available for each individual assessment.
+
+#### **Web Report Editing**
+- **Integrated Edit & Preview Workspace**: Build reports in a two-panel workspace with a resizable sidebar, full-report and section previews, popout preview, and table-of-contents navigation. The legacy PDF template editor has been retired.
+
+### User Experience Improvements
+
+- **Evidence Review**: Preview evidence throughout assessment previews and Analysis, including PDFs; respondents can view and delete their own draft uploads before submission.
+- **Navigation**: Find Library and Reports under Assessments, and Intake Forms under Accounts.
+
+### Bug Fixes
+
+- Fixed evidence uploads causing assessment submission to fail or failing to remain attached after submission.
+- Fixed deleted questions and categories affecting assessment scores and reports, and missing scores appearing as zero.
+- Fixed assessment analysis failing to refresh after changes and AI suggestions appearing under the wrong contributor.
+- Fixed assessment dashboard and response management access so users only see authorized accounts.
+- Fixed account assignment lists omitting eligible administrators and account executives.
+- Fixed assessment resume links losing the named respondent's identity.
+
+### Notes
+
+- Conditional-question authoring controls remain unavailable in this release; existing saved conditional assessments retain their behavior.
+
+---
+
 ## v2.73
 
 ### Core Features & Enhancements
