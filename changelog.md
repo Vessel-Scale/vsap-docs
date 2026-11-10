@@ -4,6 +4,35 @@
 
 ---
 
+## v2.75
+
+### Core Features & Enhancements
+
+#### **Getting Started & Contextual Help**
+- **Guided Workflows**: Role-specific Getting Started pages explain the assessment workflow with illustrated steps, relevant actions, and contextual help for staff and client portal users.
+
+#### **Assessment Editing & Conditional Questions**
+- **Unified Editor & Preview**: Navigate assessment settings, categories, questions, and media in a resizable sidebar with inline and popout previews, consistent Edit/Preview controls, and visible save status. Optionally enable conditional authoring to add follow-up questions, required explanations, and section visibility rules.
+
+#### **Account Data in Exports & Pivots**
+- **Optional Account Columns**: Choose additional account details for dashboard exports and pivot analysis, including addresses, contact details, business identifiers, regions, and industry codes.
+
+### User Experience Improvements
+
+- **Report Contents Navigation**: Choose whether to show detailed table-of-contents entries and expand or collapse them when navigating reports.
+
+### Bug Fixes
+
+- Fixed Find and Replace missing or failing to synchronize changes across assessment editor text.
+- Fixed account-specific report previews showing the wrong account identity or assessment start and closing dates.
+
+### Notes
+
+- Reports use browser printing unless AI PDF generation is explicitly enabled in the report settings.
+- Conditional-question authoring is available as an optional setting, replacing the release hold noted in v2.74.
+
+---
+
 ## v2.74
 
 ### Core Features & Enhancements
