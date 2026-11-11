@@ -51,4 +51,12 @@ Use **Actions** for ongoing work after that handoff. Reclosing an assessment doe
 
 **Started** tracks respondents who have begun but have not submitted; **Received** tracks submitted responses. A started draft is not a received response. Use these counts with Target Responses to understand collection progress and follow up before closing collection.
 
-Where response-management controls are available, select the submitted response and choose whether to include or exclude it from analysis. Excluding a response keeps its record while removing its contribution to calculated results and reporting; it does not delete the response. Re-include it when it should contribute again. Recheck counts and scores after changing inclusion, then review saved findings and regenerate any PDF that needs the updated results.
+Where response-management controls are available:
+
+1. Select the submitted response you want to review.
+2. Choose whether to **include or exclude** it from analysis.
+3. Recheck response counts and calculated scores after changing inclusion.
+4. Review saved findings and regenerate any PDF that needs the updated results.
+5. Re-include the response when it should contribute again.
+
+Excluding a response keeps its record while removing its contribution to calculated results and reporting; it does not delete the response.
