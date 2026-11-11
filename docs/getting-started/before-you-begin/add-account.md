@@ -40,3 +40,5 @@ Share an existing intake form to copy its public link, or create a new form to c
 ## Continue
 
 [Design an assessment](design-assessment.md) · [Account reference](../../accounts/index.md) · [Intake forms](../../settings/intake-forms.md)
+
+For individual accounts or general surveys, see [Can an account represent an individual or a general survey?](../../faq.md#can-an-account-represent-an-individual-or-a-general-survey).

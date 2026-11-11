@@ -10,6 +10,26 @@ The **Getting Started** landing page in the application guides you from account 
 
 ![Getting Started landing page with Prepare, Deliver, and Analyze](../assets/screenshots/v275/getting-started.png)
 
+## Prepare → Deliver → Analyze
+
+These are the same three illustrations used by the product’s Getting Started landing page.
+
+<div class="grid cards" markdown>
+
+- **1. Prepare**
+
+    ![Prepare: accounts and intake, assessments and surveys](../assets/workflow/01-vessel-intake.png)
+
+- **2. Deliver**
+
+    ![Deliver: responses, scoring, recommendations, reports and actions](../assets/workflow/02-vessel-delivery.png)
+
+- **3. Analyze**
+
+    ![Analyze: dashboards, ecosystem intelligence and progress over time](../assets/workflow/03-vessel-analysis.png)
+
+</div>
+
 ## Use the landing page
 
 Select a phase in the illustrated header to jump to its cards. Select a card to open a detailed guide, then use its action button to continue in the application. Tutorial buttons open the related videos. **Where to find** guidance helps locate the next action. The header help button opens relevant workflow guidance where a matching guide is available.

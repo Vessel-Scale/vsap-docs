@@ -46,3 +46,9 @@ Before first closure, save the analysis and Plan of Action and review the report
 Use **Actions** for ongoing work after that handoff. Reclosing an assessment does not recreate or automatically refresh existing action items. Add or edit items directly, including assessment-level Global Items for priorities and implementation work.
 
 [Getting Started](../getting-started/index.md) · [Scoring](scoring.md) · [Question types](question-types.md) · [Share results](../getting-started/workflow/step-5-provide-results.md) · [Action Tracker](../impact-tracker/index.md)
+
+## Started responses and inclusion in analysis
+
+**Started** tracks respondents who have begun but have not submitted; **Received** tracks submitted responses. A started draft is not a received response. Use these counts with Target Responses to understand collection progress and follow up before closing collection.
+
+Where response-management controls are available, select the submitted response and choose whether to include or exclude it from analysis. Excluding a response keeps its record while removing its contribution to calculated results and reporting; it does not delete the response. Re-include it when it should contribute again. Recheck counts and scores after changing inclusion, then review saved findings and regenerate any PDF that needs the updated results.

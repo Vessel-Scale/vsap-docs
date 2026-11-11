@@ -4,7 +4,7 @@ tags:
   - analysis
 ---
 
-# Analyze
+# 3. Analyze
 
 After delivering assessments and sharing results, use the **Analyze** phase of Getting Started to explore patterns and follow outcomes. Select a card for its detailed in-product guide and use the action button to open the workspace or choose the account/assessment to investigate.
 

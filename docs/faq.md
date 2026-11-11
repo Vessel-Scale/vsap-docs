@@ -66,3 +66,19 @@ YAML is a structured text format used for template and data import/export. Use a
 Refresh the page, confirm your account and role, and check that the assessment’s status and dates permit the action. Use current sidebar navigation to revisit the workspace. If the problem persists, contact [support@vesselscale.com](mailto:support@vesselscale.com) with the page, action, and error message. Avoid including credentials in a support screenshot.
 
 [Settings](settings/index.md) · [Profile](settings/user-profile.md) · [Permissions](settings/permissions.md)
+
+## Can an account represent an individual or a general survey?
+
+Yes. Use one account per individual when you need to keep that person’s assessments and results together. For a general survey, such as nominations, use a clearly named shared account when responses should be grouped together. Decide how respondents and results should be organized before assigning assessments. An intake form can collect the person’s contact information and create the account, and can optionally create an assessment. Review its account naming and assessment settings before sharing it.
+
+See [Add an account](getting-started/before-you-begin/add-account.md) and [Intake Forms](settings/intake-forms.md).
+
+## Can I answer an assessment without an internet connection?
+
+Prepare while connected: create or obtain the assessment link, open it, and select **Continue** to load the questionnaire. Save or bookmark that exact link before disconnecting. Keep the same browser and device, leave the loaded questionnaire open, and do not clear browser/site data. Local browser storage can preserve draft work, but it is not a submitted response or a guarantee that a closed page will reopen offline.
+
+Reconnect before submitting, then confirm that submission succeeds. Before relying on this for field work, test the complete flow with a non-production assessment on the intended device: open and Continue while connected, disconnect before answering, complete the questionnaire, reconnect, and submit. This refresh has not verified that full offline scenario; contact your assessment owner if it fails.
+
+## Why does a sidebar single click return me to the last page?
+
+A single click can restore the last page you visited within that sidebar section, including an editor. Double-click the section to return to its root/list page instead. Save pending edits before navigating away.

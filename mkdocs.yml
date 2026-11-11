@@ -69,15 +69,15 @@ nav:
     - index.md
   - Getting Started:
     - Landing Page: getting-started/index.md
-    - Prepare:
+    - 1. Prepare:
       - Add an account: getting-started/before-you-begin/add-account.md
       - Design an assessment: getting-started/before-you-begin/design-assessment.md
-    - Deliver:
+    - 2. Deliver:
       - 1 — Assign an assessment: getting-started/workflow/step-1-assign.md
       - 2 — Deliver to respondents: getting-started/workflow/step-3-deliver.md
       - 3 — Build your report: getting-started/workflow/step-4-build-report.md
       - 4 — Share the results: getting-started/workflow/step-5-provide-results.md
-    - Analyze: getting-started/analyze.md
+    - 3. Analyze: getting-started/analyze.md
     - Start Response Collection: getting-started/workflow/step-2-publish.md
   - FAQ: faq.md
   - Accounts:
