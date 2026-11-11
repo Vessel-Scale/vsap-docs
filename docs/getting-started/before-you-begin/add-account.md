@@ -1,78 +1,42 @@
 ---
 tags:
   - getting-started
-  - preparation
-  - onboarding
-  - setup
-  - accounts
 ---
 
-# Preparation Step 1 — Add an Account
+# Add an account
 
-Before you can run assessments, you need to set up at least one **account** in VSAP. An account represents a client organization that you will assess.
+Give each client organization a home for its assessments and results. Add business details and contacts yourself, or share an intake form so organizations can enter their own information.
 
-!!! note "Let Clients Create Their Own Account"
-    External users can self-register and populate their own account details through the **Intake Form**. Simply share an intake form link with them, and their submission automatically creates an account in your system. See [Configure Intake Forms](../../settings/intake-forms.md) for details on how to set this up.
+![Add an account guide in Getting Started](../../assets/screenshots/v275/guide-add-an-account.png)
 
----
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-## The Accounts List
+## What can an account represent?
 
-Navigate to **Accounts** in the sidebar to see all existing accounts.
+An account commonly represents a company or organization, but it can also represent a single individual or serve as a general account for surveys. Choose the approach that fits your work: group general survey responses under one account, or create separate accounts for individuals when you want to keep their assessments and results together.
 
-![Accounts list showing company name, website, city, status, and last updated](../../assets/screenshots/getting-started/gs-account-list.png)
 
-Use the search bar to filter by name, website, or city. Toggle between **All**, **Active**, and **Inactive** to narrow the list.
+## Add an account yourself
 
-Learn more: [Accounts Overview](../../accounts/index.md)
+Create an account for the organization you will assess. Add its business details, industry, location, and contacts so future assessments connect to the right organization.
 
----
+Use Add account when you have the information ready and want to enter it yourself.
 
-## Two Ways to Create an Account
 
-### Option A — Create from the Sidebar
+## Browse and manage your accounts
 
-Click the **+ Create** button in the sidebar and select **Add Account**.
+The Accounts list brings your client organizations together in one place. Search for an organization, filter by active or inactive status, and open an account to review its details, contacts, and assessments. Check this list before adding an organization to see whether it is already in the platform.
 
-![+ Create menu with Add Account highlighted](../../assets/screenshots/getting-started/gs-create-menu-new-account.png)
 
-This opens the Create Account form directly.
+## Let organizations get started with an intake form
 
-### Option B — Add Account Button
+Prefer to let organizations enter their own details? Share an account intake form with them. The form collects business and contact information and creates the account when they submit it, reducing manual setup.
 
-From the Accounts list page, click **Add Account** in the top-right corner.
+Intake forms can collect account details only, or optionally create an assessment and redirect the respondent straight into it. Enable Create Assessment and select the assessment template in the form configuration to connect account onboarding with assessment delivery.
 
-Both methods open the same Create Account form.
+Share an existing intake form to copy its public link, or create a new form to customize the questions, branding, and assessment options.
 
----
 
-## Filling In the Create Account Form
+## Continue
 
-The form has three sections:
-
-| Section | Key Fields |
-|---|---|
-| **General Info** | Company name *(required)*, email, address, website, country, state, city, zip code, company logo |
-| **Contacts** | First name *(required)*, last name *(required)*, email *(required)*, phone, contact type, role |
-| **Additional Information** | DUNS number, UEI, PSC, region, employee count, annual sales, business description, and other organizational attributes |
-
-Click **Save** when done. You will be taken to the new account's detail page.
-
-### Full Reference
-
-For detailed information on all account fields, see [Create Account Reference](../../accounts/create.md).
-
----
-
-## Next Step
-
-[Step 2 — Design an Assessment](design-assessment.md){ .md-button }
-
----
-
-## Related
-
-- [Create Account Reference](../../accounts/create.md) — Full field reference and options
-- [Accounts Overview](../../accounts/index.md) — Manage all client organizations
-- [Intake Forms](../../settings/intake-forms.md) — Let clients self-register
-- [Account Details Page](../../accounts/details.md) — View and edit account information
+[Design an assessment](design-assessment.md) · [Account reference](../../accounts/index.md) · [Intake forms](../../settings/intake-forms.md)

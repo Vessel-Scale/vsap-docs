@@ -2,67 +2,28 @@
 route: /dashboard
 tags:
   - dashboard
-  - analytics
-  - overview
-  - reporting
 ---
 
 # Dashboard
 
-The Dashboard gives you an at-a-glance view of all assessments for a selected assessment definition — scores, completion status, account breakdowns, and more. For executive-level insights across your entire ecosystem, see the [Directors Dashboard](directors-dashboard.md).
+Configure charts, explore results by assessment type or across your program, and export or pivot the data. Compare scores in the AE view or review broader activity and impact in the Directors Dashboard, where available.
 
-## What you can do here
+![Dashboard with assessment type selector and analytics tools](../assets/screenshots/v275/dashboard.png)
 
-- View aggregate metrics across all assessments for the selected definition
-- Browse and interact with 11 built-in analytics components
-- [Configure which components are visible](configure.md) and their order
-- [Download a CSV export](download.md) of all assessment data
-- Open the [Pivot Table](pivot-table.md) for flexible cross-sectional analysis
+## AE dashboard: one assessment type at a time
 
-## Dashboard Overview
+The Account Executive (AE) dashboard focuses on the assessment type selected in the dropdown at the top. It brings together the assessments and responses for that type across accounts, so you can compare like-for-like scores, categories, questions, and response progress.
 
-![Dashboard overview](../assets/screenshots/dashboard/dashboard.png)
+Select a different assessment type to change the data being analyzed. Use this view to understand how accounts are performing on a particular assessment and identify common strengths, gaps, or follow-up needs.
 
-The assessment definition selector at the top of the page controls which assessment's data is displayed across all components. The toolbar in the top-right corner provides quick access to configuration, the pivot table, and CSV download.
+## Directors Dashboard: across all assessment types
 
-![Dashboard toolbar](../assets/screenshots/dashboard/dashboard-toolbar.png)
+The Directors Dashboard provides higher-level aggregation across assessment types and accounts. For users with Directors access, choose Directors Dashboard in the same dropdown to view the bigger picture of your assessment program.
 
-| Button | Action |
-|--------|--------|
-| Configure (sliders icon) | Open [Configure Dashboard](configure.md) to add, remove, or reorder components |
-| Pivot Table (grid icon) | Navigate to the [Pivot Table](pivot-table.md) for tabular analysis |
-| Download CSV (download icon) | [Download](download.md) all assessment data as a CSV file |
+Its components include assessments by type and status, assessments by Account Executive, overall activity, frequently offered solutions, company and industry composition, and action-tracker impact metrics. Use this view for leadership reporting, program reach, delivery activity, and outcomes; use the AE view for detailed scores within a particular assessment type.
 
-## Components
+## Explore the results
 
-The dashboard displays up to 11 analytics components. See [Components](components.md) for a description and screenshot of each one.
+Use **Configure** to choose components and layout, **Export** for a downloadable dataset, and **Analytics** for pivot analysis. Each view reflects its selected assessment type or program scope and your authorized accounts. Finalized score and peer comparisons exclude in-progress assessments.
 
-## Directors Dashboard vs. Standard Dashboard
-
-The **Standard Dashboard** focuses on a single assessment definition with detailed analytics. The **[Directors Dashboard](directors-dashboard.md)** provides executive-level insights across your entire ecosystem:
-
-| Feature | Standard Dashboard | Directors Dashboard |
-|---------|-------------------|----------------------|
-| **Scope** | Single assessment definition | Entire ecosystem |
-| **Audience** | Assessment managers, analysts | Directors, leadership |
-| **Metrics** | Assessment-specific analytics | Organization-wide impact |
-| **Components** | 11 assessment analytics | Offered solutions, action items, impact metrics |
-| **Focus** | Performance metrics | Strategic impact and ROI |
-
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/z6gOy1IBZW0?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Dashboard | Overview</strong></p>
-</div>
-
-## Related
-
-- [Getting Started: Step 7](../../getting-started/navigating-the-dashboard.md) — Quick-start guide to the dashboard
-- [Directors Dashboard](directors-dashboard.md)
-- [Components](components.md)
-- [Configure Dashboard](configure.md)
-- [Download CSV](download.md)
-- [Pivot Table](pivot-table.md)
-- [Assessments](../assessments/index.md)
-- [Impact Tracker](../impact-tracker/index.md)
+[Components](components.md) · [Configure](configure.md) · [Export](download.md) · [Pivot tables](pivot-table.md) · [Directors Dashboard](directors-dashboard.md)

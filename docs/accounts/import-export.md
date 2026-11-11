@@ -1,11 +1,13 @@
 ---
-route: /import-export-accounts
+route: /account
 tags:
   - accounts
   - import-export
 ---
 
 # Import & Export Accounts
+
+Open **Accounts** and choose **Import** or **Export** from the list toolbar. These account-data tools are separate from Dashboard **Export**, which produces assessment response/analytics data. Use a current account export as the reference for field names and nested YAML structure before importing.
 
 Bulk import and export accounts using CSV or YAML formats. This feature lets you quickly manage large numbers of accounts without manually creating each one.
 
@@ -30,9 +32,9 @@ The export feature lets you download all accounts from the system in either CSV 
    - **YAML** — Structured format with full relationship details, good for backups and re-imports
 3. The file will download to your computer with the filename `accounts_export_[date].csv` or `accounts_export_[date].yaml`
 
-![Account list with Export and Import buttons](../assets/screenshots/account/account-list.png)
+![Account list with Export and Import buttons](../assets/screenshots/v275/accounts.png)
 
-![Export format picker modal](../assets/screenshots/account/account-list-download-modal.png)
+![Export format picker modal](../assets/screenshots/v275/account-export.png)
 
 ### Export Formats
 
@@ -132,7 +134,7 @@ The import feature lets you add multiple accounts at once by uploading a CSV or 
 
 ### How to Import
 
-![Import dialog with Paste, Upload, and edit options](../assets/screenshots/account/account-list-upload-modal.png)
+![Import dialog with Paste, Upload, and edit options](../assets/screenshots/v275/account-import.png)
 
 1. From the **Account List** page, click the **Import** button in the top toolbar
 2. The import dialog will open with three options:

@@ -1,44 +1,25 @@
 ---
-route: /library
+route: /evaluation-assessment-list/library
 tags:
   - library
-  - assessment-definitions
-  - overview
 ---
 
-# Library
+# Assessment Library
 
-The Library contains all assessment definitions — the blueprints used to create evaluations across your accounts.
+Open **Assessments → Library** to manage reusable assessment templates. Your templates provide the questions, categories, scoring rules, and feedback used when assigning an assessment to an account.
 
-## What you can do here
+![Staff Library with draft and published templates](../assets/screenshots/v275/library.png)
 
-- Browse all available assessment definitions
-- View the structure, questions, and status of each assessment
-- Create new assessment definitions
-- Edit and publish drafts
-- Manage parent/child assessment groups
+## Start from shared content
 
-## Overview
+Choose **Browse** to explore the **Shared Template Library**. Preview the available Vessel templates and copy a useful starting point into your own Library as a draft. Customize that copy for your audience and your organization’s services before publishing it.
 
-![Library List](../assets/screenshots/library/library-list.png)
+Use **Design Assessment** to build your own template, or **Import** for supported YAML input. Where enabled, AI Creator can help draft content; review questions, scoring, and recommendations before client use.
 
-The Library is your central inventory of assessment templates. Definitions here can be in **Draft**, **Published**, or **Deprecated** status and can be organized into parent/child groups for multi-part evaluations. Each card shows the assessment name, icon, status badges, version, and last-updated date.
+## Manage the lifecycle
 
-## In this section
+Edit drafts freely and preview the respondent experience before publishing. Published text can be updated through the text-only editor, while scores, ordering, and structure are locked. Use the appropriate draft/version workflow for structural changes. Publishing a template makes it reusable; it does not start a client’s response collection.
 
-- [Assessment List](list.md) — Browse the list, understand card actions, and manage definitions
-- [Create Assessment](create.md) — Build a new assessment definition from scratch
-- [Edit Assessment](edit.md) — Modify an existing definition's YAML, categories, and settings
-- [Question Types](question-types.md) — Reference for all question types and their configuration options
-- [Scoring](scoring.md) — Understand how assessment scores are calculated and displayed
+The **Client** visibility control determines whether an eligible published top-level template appears in the client Library. The staff Library, Shared Template Library, and client Library are separate catalogs.
 
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/Frn3pG8YsiI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Shared Template Library | Overview</strong></p>
-</div>
-
-## Related
-
-- [Getting Started: Step 2](../getting-started/before-you-begin/design-assessment.md) — Quick-start guide to designing assessments
+[Template list](list.md) · [Create](create.md) · [Edit and preview](edit.md) · [Question types](question-types.md) · [Scoring](scoring.md) · [Icons](editing-icons.md)

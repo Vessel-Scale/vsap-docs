@@ -1,37 +1,20 @@
 ---
 tags:
   - ecosystem
-  - map
-  - accounts
-  - clients
-  - details
 ---
 
-# Account List & Details
+# Accounts on the Map
 
-The Ecosystem Map surfaces account information in two places: a scrollable **Account List** panel and a **Account Details** panel that opens when you select an account.
+## Open an account and explore its assessments
 
-## Account List
+Click any account marker on the map or an account in the list to open its details panel. Review the organization’s location and business information, then use the Assessments area to see the assessments it has taken or been assigned, their statuses, dates, and response progress.
 
-The panel between the Filters and the map shows a scrollable list of all accounts matching the current filters. Each row shows the account name and location. Click any row to open the Account Details panel on the right.
+Select an assessment to open its details and investigate the results behind the map. The account panel also has an Impact area for its tracked action items, helping you connect geographic patterns with the specific assessments and follow-up work for that organization.
 
-## Account Details
+## Investigate a result
 
-Clicking an account in the list (or clicking its marker on the map) opens the **Account Details** panel on the right side of the screen.
+Use the map’s account list or select a mapped account to inspect it. Check its location and organization details, then inspect the relevant assessment or impact context using the available controls. Account visibility follows your permissions; the map does not reveal client-private assessments to ordinary staff.
 
-![Account Details panel](../assets/screenshots/ecosystem/ecosystem-account-detail.png)
+If an account is missing from the map, review filters and whether it has a valid mapped location. Update its address from the account workspace when appropriate.
 
-The panel shows:
-
-- **Name and address** — the geocoded address if available
-- **Contact email**
-- **Assessments** — all assessments sent to this account, with status, dates, response count, and assigned team member
-
-For geocoded accounts, a **View Legislators** button appears at the bottom of the panel — see [Legislators](legislators.md) for details.
-
-## Related
-
-- [Ecosystem Map](index.md) — overview
-- [Filters](filters.md) — narrow which accounts appear in the list
-- [Legislators](legislators.md) — view elected officials for any geocoded account
-- [Accounts](../accounts/index.md) — full account management outside the map
+[Map filters](filters.md) · [Account workspace](../accounts/details.md) · [Scores](scores.md)

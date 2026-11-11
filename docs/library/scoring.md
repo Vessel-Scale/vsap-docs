@@ -1,5 +1,5 @@
 ---
-route: /assessment-scoring
+route: /evaluation-assessment-list/library
 tags:
   - library
   - scoring
@@ -9,7 +9,12 @@ tags:
 
 # Assessment Scoring
 
+Configure scoring in **Assessments → Library** using the template settings and category/question editors. A chart style does not select the scoring method. Review the active questions and included responses, keep missing scores distinct from zero, and check thresholds after changes. Current dashboard score displays can use threshold-based bars; the scoring rules below still govern the results.
+
 Assessment scores are calculated from respondent answers and displayed using one of two scoring methods — **Averaged** (the default) or **Summed**. Understanding how each method works helps you design assessments that communicate results clearly.
+
+
+![Category and scoring configuration in the current editor](../assets/screenshots/v275/editor-category.png)
 
 ## How Scoring Works
 
@@ -26,7 +31,6 @@ When respondents complete an assessment:
 
 The **Scoring Method** field is in the Assessment Details section of the library editor.
 
-![Scoring Method dropdown showing "Averaging" selected](../assets/screenshots/library/library-editor-scoring-method.png)
 
 | Method | Description |
 |--------|-------------|
@@ -37,15 +41,15 @@ The **Scoring Method** field is in the Assessment Details section of the library
 
 ### Averaged Scoring *(Default)*
 
-With Averaging, every question's score contributes equally, and the final result stays within the same range regardless of how many questions are in the assessment.
+For equally scored questions, averaging divides the total earned score by the number of scored questions. Comparability still depends on the configured answer ranges and assessment content; averaging does not force every template onto a 1–5 scale.
 
 $$\text{Averaged Score} = \frac{\text{Sum of All Question Scores}}{\text{Number of Questions}}$$
 
 #### Key Characteristics
 
-- **Consistent scale**: Score range stays the same no matter how many questions the assessment has
-- **Easy comparison**: Assessments with different lengths can be compared directly
-- **Intuitive**: A score of 4.2 means the same thing across all assessments
+- **Scale depends on configuration**: Questions using the same scoring range can retain that range as question count changes
+- **Comparable with context**: Compare different lengths only when the scoring scales and measured content are compatible
+- **Interpret with thresholds**: A value such as 4.2 must be read against that template’s configured range and feedback
 
 #### Example: Averaged Scoring
 
@@ -64,7 +68,7 @@ $$\text{Averaged Score} = \frac{\text{Sum of All Question Scores}}{\text{Number 
 | Assessment A | 20 pts | 5 questions | 4.0 |
 | Assessment B | 40 pts | 10 questions | 4.0 |
 
-Both show **4.0** — directly comparable despite different lengths.
+Both show **4.0** in this example because their question scoring ranges are compatible. Check content and ranges before comparing different templates.
 
 ---
 
@@ -111,7 +115,7 @@ The raw totals differ — you must account for different maximums when comparing
 | When absolute totals matter to your analysis | **Summed** |
 
 !!! tip "When in doubt, use Averaging"
-    Averaging is the default for good reason — it keeps scores consistent and comparable regardless of how you grow or change your assessment over time.
+    Averaging is the default. Keep score ranges and content compatible when comparing results over time; adding or changing questions can change the meaning of a result.
 
 ---
 
@@ -119,7 +123,6 @@ The raw totals differ — you must account for different maximums when comparing
 
 The **Scoring Section Feedback** accordion in Assessment Details lets you define named score ranges (sections) that appear on the respondent's results page with tailored feedback.
 
-![Scoring Section Feedback expanded showing At Risk, Could Improve, and Optimal sections](../assets/screenshots/library/library-editor-scoring-sections.png)
 
 Each section defines:
 
@@ -134,7 +137,6 @@ Each section defines:
 
 **SYNC SCORING** automatically recalculates and evenly distributes the score range thresholds across all of your scoring sections based on the current assessment configuration.
 
-![SYNC SCORING button above the expanded scoring sections list](../assets/screenshots/library/library-editor-sync-scoring-expanded.png)
 
 Use it whenever you:
 
@@ -152,7 +154,6 @@ Use it whenever you:
 
 Click the **pencil icon** (✏) on any scoring section row to open the section editor.
 
-![Edit Scoring Section modal showing Section Title, Min/Max Score, color fields, and a live preview](../assets/screenshots/library/library-editor-scoring-edit-section.png)
 
 The editor includes:
 
@@ -237,7 +238,6 @@ A respondent who scores 37.5 out of 50 gets a **75% normalized score** — placi
 
 Normalized scores are typically divided into **three to five performance tiers**. The standard configuration uses three tiers:
 
-![Scoring Percentile Ranges showing At Risk (0-37.5%), Could Improve (37.5-75%), and Optimal (75-100%)](../assets/screenshots/library/library-editor-scoring-percentiles-methodology.png)
 
 | Tier | Range | Interpretation |
 |------|-------|-----------------|

@@ -1,171 +1,50 @@
 ---
 tags:
   - getting-started
-  - workflow
-  - assessments
-  - reports
-  - results
-  - web-reports
-  - pdf-reports
 ---
 
-# Workflow Step 5 — Provide Results
+# Share the results
 
-Close the assessment and share your findings with the client using web reports and PDF reports. This is the final step of the assessment workflow.
+Review next steps with the client, share the web report, and choose an AI PDF or Print to PDF. Confirm report access and refine the actions that will carry into the Action Tracker when you first close the assessment.
 
----
+![Share the results guide in Getting Started](../../assets/screenshots/v275/guide-share-the-results.png)
 
-## What You'll Do in This Step
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-1. **Close the Assessment** — Move from Results Review to Closed status
-2. **Create Web & PDF Reports** — Generate shareable reports with findings
-3. **Share Results** — Publish reports and share links with clients
+## Review suggestions and agree on project next steps
 
----
+Review the suggestions, recommendations, and Plan of Action with your client before finalizing the assessment. Use the findings to discuss where support is needed, which opportunities matter most, and what a practical first project could look like.
 
-## Closing Your Assessment
+When closing the assessment for the first time, review and refine the items selected for the Action Tracker. Keep the useful items and exclude anything that should not carry forward. The selected category suggestions and Plan of Action items populate these four lists:
 
-Once you've finished building recommendations and analysis:
+Use these lists as a project kickoff discussion guide. Agree on scope, priorities, owners, timing, and the support your organization will provide. If the assessment has already been closed, update the Action Tracker items directly rather than expecting another close to recreate them.
 
-1. Navigate to the **Assessment Details** page
-2. In the **Assessment Workflow Guide**, look for **Step 5 — Provide Results**
-3. Click **Close Assessment** or use the status dropdown to change the status to **Closed**
+- **Recommended Actions** — Category-level recommended actions: what the client could do to address gaps or pursue opportunities.
+- **Solutions** — Category-level offerings and support: which services, programs, resources, or expertise could help the client take those actions.
+- **Key Priorities** — Plan of Action priorities: what the reviewer and client agree should come first.
+- **Implementation Details & Timing** — Plan of Action delivery details: how the work could be carried out, who should be involved, and the proposed timing.
 
-Once closed:
-- ✅ Assessment moves to final status
-- ✅ No new responses can be submitted
-- ✅ Reports are ready to be generated and shared
-- ✅ Assessment appears in historical records
+## Close and share the web report
 
----
+Save the final notes and recommendations, preview the web report, and close the assessment when the findings and next steps are ready. Closing makes the results available to clients according to their report access settings.
 
-## Creating a Web Report
+Use the report options in the assessment details to share the web report link. Confirm that the chosen report is enabled for the client’s account, and use the report as the shared reference for your results review and project kickoff conversation.
 
-### What is a Web Report?
 
-A **Web Report** publishes your assessment findings as a branded, interactive web page that clients can view in their browser. It includes:
+## Create an AI PDF report
 
-- Visual charts and gauges for each category
-- Your documented analysis and recommendations
-- Custom branding (logo, colors, styling)
-- Responsive design that works on all devices
+Where AI PDF is enabled for a web report, use its AI PDF option in the report options or the PDF button on the web report to generate a downloadable document from the report content. Generation can take a little time; review the finished PDF before downloading and sharing it.
 
-![Report Builder for creating web and PDF reports](../../assets/screenshots/getting-started/gs-report-builder.png)
+Choose AI PDF when you want a generated PDF version of the report for sharing or offline review. This is a separate generation step from printing the web page.
 
-### How to Create a Web Report
 
-From the Assessment Details page:
+## Print the web report to PDF
 
-1. Click the **Share** button in the action bar
-2. Select **Web Report** from the options
-3. Choose a report template (or create a new one in Settings)
-4. Review the preview
-5. Click **Publish**
+For a browser-produced PDF of the web report, use Print on the report when available, or open your browser’s Print command and select Save as PDF. Check the print preview, page size, and margins before saving.
 
-A shareable URL is generated that you can send to the client.
+Print to PDF uses the web report’s print layout and does not run AI PDF generation. Use it when you want to save or print the report directly from your browser.
 
-[Full guide: Web Reports](../../settings/web-reports.md){ .md-button }
 
----
+## Continue
 
-## Creating a PDF Report
-
-### What is a PDF Report?
-
-A **PDF Report** exports your assessment findings as a professionally formatted PDF document that can be downloaded, printed, and archived. It includes all the same content as the web report in a portable format.
-
-### How to Create a PDF Report
-
-From the Assessment Details page:
-
-1. Click **PDF** in the action bar
-2. Choose a PDF report template
-3. Review the preview
-4. Click **Download** or **Send**
-
-[Full guide: PDF Reports](../../assessments/pdf-reports.md){ .md-button }
-
----
-
-## Sharing Results with Clients
-
-You can share reports through multiple channels:
-
-| Method | Best For |
-|--------|----------|
-| **Web Report Link** | Interactive viewing, quick sharing via email or chat |
-| **PDF Download** | Archiving, printing, offline access |
-| **Client Portal** | Self-service access if clients have portal login |
-| **Email** | Direct delivery with automatic notifications |
-
----
-
-## Configuring Report Templates
-
-To create custom report templates:
-
-1. Navigate to **Settings** in the sidebar
-2. Go to **Web Reports** or **PDF Reports**
-3. Click **+ Create Report Template**
-4. Configure:
-   - **Template Name** — Descriptive name for this template
-   - **Sections** — Choose which content to display
-   - **Branding** — Add logo, colors, custom styling
-   - **Content** — Select analysis notes, scores, insights to include
-
-[Full guide: Web Report Settings](../../settings/web-reports.md){ .md-button }
-[Full guide: PDF Report Settings](../../settings/pdf-reports.md){ .md-button }
-
----
-
-## After Providing Results
-
-✅ **Assessment is Closed** — All data is finalized  
-✅ **Reports Published** — Results are shared with clients  
-✅ **Historical Record Created** — Assessment appears in your assessment history  
-✅ **Next Assessment Ready** — Create a new assessment for the next evaluation cycle  
-
----
-
-## Related
-
-- [Assessment Details Reference](../../assessments/details.md) — Full assessment management
-- [Web Reports](../../settings/web-reports.md) — Create and manage web report templates
-- [PDF Reports](../../settings/pdf-reports.md) — Configure PDF report templates
-- [Report Builder](../../assessments/report-builder.md) — Edit analysis and recommendations
-- **Recommendations** — Your suggested plan of action
-- **Branded Design** — Your logo, colors, and custom styling
-- **Professional Layout** — Easy-to-read, mobile-friendly format
-
----
-
-## Going Deeper
-
-Once you've published your first web report, explore these additional features:
-
-- [Configure Web Report Templates](../../settings/web-reports.md) — Create and manage report designs
-- [PDF Reports](../../assessments/pdf-reports.md) — Export findings as a downloadable PDF
-- [Branding Settings](../../settings/branding.md) — Customize all reports with your logo and colors
-- [Assessment Scoring Details](../../assessments/scoring.md) — Understand score calculations
-- [Report Builder Reference](../../assessments/report-builder.md) — Detailed analysis tools and options
-
----
-
-## Optional: Explore Additional Features
-
-After mastering the four-step workflow, you can explore:
-
-- **[Dashboard](../../dashboard/index.md)** — View assessment activity and trends across all accounts
-- **[Ecosystem View](../../ecosystem/index.md)** — Compare performance across multiple accounts
-- **[Settings](../../settings/index.md)** — Configure intake forms, web reports, branding, and more
-- **[Library](../../library/index.md)** — Build and manage assessment templates
-
----
-
-## Related
-
-- [Report Builder Reference](../../assessments/report-builder.md) — Detailed analysis tools
-- [Web Reports Reference](../../settings/web-reports.md) — Template creation and management
-- [Assessment Scoring](../../assessments/scoring.md) — Understand score calculations
-- [PDF Reports](../../assessments/pdf-reports.md) — Export findings as PDF
-- [Branding](../../settings/branding.md) — Customize report appearance and colors
+[Track and measure impact](../../impact-tracker/index.md) · [PDF reports](../../assessments/pdf-reports.md) · [Explore your dashboard](../../dashboard/index.md)

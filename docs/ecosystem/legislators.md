@@ -1,39 +1,20 @@
 ---
 tags:
   - ecosystem
-  - legislators
-  - government
-  - geography
-  - regions
 ---
 
-# Legislators
+# Legislators and Congressional Districts
 
-For any geocoded account (one with a verified address), the Ecosystem Map can show the elected officials who represent that business's location.
+## Add congressional districts and find legislators
 
-## Accessing Legislators
+Use the Congressional Districts map control and select one or more states to add district boundaries and labels. Adjust the line color, width, and style to make the overlay easy to read alongside account locations, scores, or impact. Use it to relate your program’s reach and outcomes to congressional geography.
 
-Open the [Account Details](accounts.md) panel by clicking an account in the list or on the map. For geocoded accounts, a **View Legislators** button appears at the bottom of the panel. Click it to open the Legislators sidebar.
+For quick reference, select an account with a mapped location and choose View Legislators. The sidebar lists the officials representing that location, including state representatives and senators and U.S. representatives and senators, with district information and available contact links.
 
-## Legislators Sidebar
+Use the district overlay for geographic context and the account’s legislator details for a focused reference when preparing outreach, briefings, or discussions about regional needs and impact.
 
-![Legislators sidebar](../assets/screenshots/ecosystem/ecosystem-legislators.png)
+## Use the map context
 
-The sidebar shows the elected officials for the account's address, organized into two sections:
+Use the available district and legislator controls to relate account locations and outcomes to regions. Pan or zoom to the area you want to investigate, check active filters, and inspect the available district or legislator information. Visibility and available datasets follow your organization’s configuration.
 
-| Level | Officials shown |
-|-------|----------------|
-| **State** | State Representatives and State Senators for the district |
-| **Federal** | U.S. Representatives and U.S. Senators |
-
-Each legislator card shows:
-
-- Photo
-- Title and district
-- Party affiliation
-- Contact icons (email, phone, website)
-
-## Related
-
-- [Ecosystem Map](index.md) — overview
-- [Account List & Details](accounts.md) — open an account to access its legislators
+[Map overview](index.md) · [Filters](filters.md) · [Account locations](accounts.md)

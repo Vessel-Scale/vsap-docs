@@ -1,152 +1,45 @@
 ---
-route: /impact-tracker
 tags:
   - impact-tracker
-  - action-items
-  - impact-metrics
-  - assessment-closure
-  - collaboration
 ---
 
-# Impact Tracker
+# Action Tracker
 
-The Impact Tracker is a comprehensive system for managing action items and tracking their impact on your assessment ecosystem. It enables seamless handoff of assessment findings into actionable improvement initiatives with built-in collaboration tools and impact measurement.
+Manage the work behind your recommendations, record impact metrics, and explore the results in dashboards and on the map. Keep priorities, due dates, and progress current in the Action Tracker, and update business outcomes as clients confirm results.
 
-## What you can do here
+![Client portal Actions area with the four follow-up lists](../assets/screenshots/v275/client-actions.png)
 
-- View and manage all action items from assessments
-- Track action item status and priority
-- Record impact metrics and business outcomes
-- Collaborate with team members and clients via comments
-- Visualize impact data on the Directors Dashboard
-- Filter and search actions by assessment, account, or category
+## Keep the connection from findings to action
 
-## Key Concepts
+The Action Tracker is initially populated from the suggestions and Plan of Action items reviewed when an assessment is closed for the first time. Selected category recommendations become Recommended Actions and Solutions; the assessment’s Plan of Action supplies Key Priorities and Implementation Details & Timing.
 
-### Action Item Lifecycle
+Those items retain their account, assessment, and category context, so you can trace follow-up work back to the organization and findings that prompted it. Category-based items remain associated with their category; priorities and implementation details are assessment-level Global Items.
 
-**1. Creation — Actions Copied After Assessment Close**
+After that initial handoff, manage and refine the items directly in the tracker. Reclosing an assessment does not recreate or automatically refresh its existing action items.
 
-When an assessment is marked as closed, VSAP automatically creates action items for findings identified during the assessment. This ensures:
-- No insights are lost when assessments complete
-- All recommendations flow into a trackable system
-- Action items are pre-populated with assessment context
+## Manage existing items and add new work
 
-**2. Status Management & Prioritization**
+Open the Actions area for an account or a closed assessment, or work with the client through their portal’s Actions area. Select an assessment and switch between the four lists to review the relevant work; use category, status, priority, and search controls to focus the list.
 
-Each action item can be assigned:
-- **Status** — Open, In Progress, Complete, or Won't Do
-- **Priority** — Low, Medium, High, or Critical
-- **Owner** — Assigned account executive, manager, or team member
+Use Add Item to record additional recommendations, opportunities, or project steps as they arise. Select the relevant assessment and, for category-based lists, the appropriate category so manually added work stays connected to the same account and assessment context.
 
-**3. Impact Metrics Recording**
+Edit the item text, update its status and priority, set a due date, and use comments to record discussions and progress. Add a project link when the work is tracked in another system. Keep items current as work moves through Open, In Progress, On Hold, and Completed, or mark items Not Applicable or Won’t Do when appropriate.
 
-Once actions are in progress or completed, track their business impact:
-- Quantifiable metrics (cost savings, efficiency gains, etc.)
-- Qualitative outcomes (improvements in capability, customer satisfaction, etc.)
-- Timeline to completion
-- Risk mitigation achieved
+## Aggregate the impact for dashboard analysis
 
-### Impact Aggregation for Directors Dashboard
+The item-level metrics roll up across accounts and assessments in the Directors Dashboard’s impact component. This connects individual improvement projects to a higher-level picture of the value your program is delivering.
 
-Impact data flows into the [Directors Dashboard](../dashboard/directors-dashboard.md) for executive visibility:
-- Aggregate impact metrics across all action items
-- Ecosystem-level impact trends and patterns
-- ROI on improvement initiatives
-- Success rate tracking
+Choose the metric, status, priority, and aggregation you want to analyze. Use Sum for additive totals and Mean or Max for comparisons where appropriate, then explore bar, line, area, or donut views. Use the dashboard’s analytics and export tools to examine the underlying data and prepare program or leadership reporting.
 
-## Accessing the Impact Tracker
+Keep the item records and measurement basis up to date: dashboard totals and comparisons depend on the metrics and filters you have chosen.
 
-The Impact Tracker is available from:
-1. **Main Navigation** — Click **Impact Tracker** in the sidebar
-2. **Assessment Details** — Click the **Impact Tracker** tab on any closed assessment
-3. **Directors Dashboard** — Drill into impact metrics cards
+## See where the impact is happening
 
-![Impact Tracker action list view](../assets/screenshots/impact-tracker/impact-tracker-list.png)
-![Impact Tracker scrolled view](../assets/screenshots/impact-tracker/impact-tracker-list-scrolled.png)
+In Ecosystem, switch to Impact to put the same recorded action-tracker metrics on the map for accounts with mapped locations. Select a metric and Sum, Mean, or Max, then filter by status, priority, geography, industry, or account characteristics.
 
-## User Roles & Collaboration
+Use the map to see where savings, revenue opportunities, jobs, time savings, and other outcomes are concentrated. Select an account to inspect its Impact items and the assessments behind them, connecting regional patterns back to the work with each client.
 
-### For Account Executives
-- Create and assign action items after assessment close
-- Update status and priority
-- Record impact metrics
-- Monitor all actions across their accounts
-- Add comments and notes for collaboration
 
-### For Clients
-- View action items related to their organization
-- Update status on assigned actions
-- Add comments and feedback
-- Track progress toward goals
-- See impact metrics related to their improvements
+List names can follow your organization’s terminology.
 
-### For Directors & Leadership
-- View aggregated impact metrics across the entire ecosystem
-- Identify trends and high-impact initiatives
-- Access analytics on action item completion rates
-- Export impact data for strategic planning
-
-## Working with Action Items
-
-### Creating Actions
-
-Actions are typically created automatically when assessments close, but you can also:
-1. Create standalone actions from the Impact Tracker
-2. Link actions to specific assessment findings
-3. Assign to accounts and responsible parties
-4. Set initial priority and timeline
-
-### Updating Impact Metrics
-
-Record the real-world outcomes of actions:
-
-1. Open an action item
-2. Go to the **Impact Metrics** section
-3. Enter:
-   - **Quantifiable outcomes** (e.g., cost savings, time saved)
-   - **Qualitative improvements** (e.g., capability improvements)
-   - **Completion date** and **time to complete**
-   - **Supporting documentation** or evidence
-
-### Collaboration Features
-
-Add comments and updates throughout an action's lifecycle:
-- Internal notes for your team
-- Client-facing updates on progress
-- Status change notifications
-- Impact metric validations
-
-## Filtering & Searching
-
-Use powerful filtering to find relevant actions:
-- **By Assessment** — All actions from a specific assessment
-- **By Account** — All actions for a client organization
-- **By Status** — Open, In Progress, Complete, Won't Do
-- **By Priority** — Filter high-priority items needing attention
-- **By Category** — Group by assessment category or business area
-- **By Timeline** — Find overdue or upcoming actions
-
-## Permissions & Visibility
-
-- **Account Executives** — Can see all actions for their assigned accounts
-- **Client Users** — Can see only actions related to their organization
-- **Directors** — Can see all actions and impact metrics (read-only or edit depending on role)
-- **Admins** — Full access to all actions across the system
-
-## Best Practices
-
-- **Timely Entry** — Create action items immediately when assessments close
-- **Clear Ownership** — Always assign specific owners to action items
-- **Regular Updates** — Update status and metrics at least monthly
-- **Evidence Collection** — Document impact with supporting data
-- **Client Communication** — Keep clients informed of action progress via comments
-- **Leadership Review** — Present impact metrics to leadership quarterly
-
-## Related
-
-- [Assessment Details](../assessments/details.md)
-- [Assessment Closure](../assessments/details.md#assessment-closure)
-- [Directors Dashboard](../dashboard/directors-dashboard.md)
-- [Collaboration & Comments](collaboration.md)
-- [Impact Metrics Guide](metrics.md)
+[Impact metrics](metrics.md) · [Collaboration](collaboration.md) · [Share the results](../getting-started/workflow/step-5-provide-results.md)

@@ -1,56 +1,25 @@
 ---
-route: /library/create
+route: /evaluation-assessment-list/library/create
 tags:
   - library
-  - assessment-definitions
-  - create
 ---
 
-# Create Assessment Definition
+# Design an Assessment Template
 
-Assessment definitions are the templates used to create new assessments. Use the Assessment Editor to build a new definition with sections, questions, and scoring rules.
+Open **Getting Started → Design an assessment** or **Assessments → Library**. Start with **Browse** to copy a Shared Template Library template into your Library as a draft, or choose **Design Assessment** to create your own.
 
-## Getting Started
+## Prepare reusable content
 
-To create a new assessment definition:
+1. Define the intended audience, goals, and the support your organization can offer.
+2. Set the assessment’s name, terminology, internal description, and group tags.
+3. Write the respondent-facing landing page and completion message; optionally add images.
+4. Organize categories and questions, choose response types, and configure scoring and feedback.
+5. Where enabled, choose the evidence default and opt into conditional authoring when you need follow-up questions or visibility rules.
+6. Preview the full questionnaire and test relevant answer paths.
+7. Save the draft and confirm the saved state, then publish when ready for reuse.
 
-1. Navigate to the **Assessment Library** (Assessments > Library)
-2. Click the **Design Assessment** button at the top of the Assessment List
-3. The Assessment Editor will open with a blank definition ready for configuration
+AI Creator can help draft or refine content where enabled. Review its proposed questions, scoring, and suggestions before publishing. For a first rollout, work with the Vessel team to choose a template and align the recommendations with your services and expertise.
 
-## Editor Overview
+Publishing a template and starting an account assessment are separate. After publishing, [assign an assessment](../assessments/create.md) to an account and start collection from its details.
 
-The Assessment Editor provides a complete interface for building assessment definitions. You'll configure:
-
-### Top Section
-- **Assessment Name** — The title of your assessment definition
-- **Noun Descriptor** — The term used for respondents (e.g., "Facility", "Establishment", "Plant")
-- **Scoring Method** — Choose between "Averaging" (consistent scale) or "Summing" (total points). See [Scoring](scoring.md) for more details on how to configure score zones.
-- **Description** — Internal documentation about the assessment's purpose
-- **Summary** — Concise overview (appears in the Library list)
-
-### Assessment Structure
-- **Groups** — Organize questions into logical sections (e.g., "Leadership", "Operations", "Technology")
-- **Questions** — Add questions within each group, specifying type, parameters, and scoring
-
-### Question Configuration
-Add questions within groups by selecting a question type and configuring its parameters. Each question type has different options:
-
-- **Text** — Open-ended responses (Required, Scorable)
-- **Numeric** — Single numeric values with optional units (Min/Max/Step)
-- **Numeric Range** — Values matched against score ranges
-- **Multiple Choice** — Single selection from predefined options
-- **Multiple Select** — Multiple selections with optional limits
-
-See the [Question Types](question-types.md) page for detailed information about each question type and its configuration options.
-
-## Next Steps
-
-Once you've configured your assessment definition, see [Edit Assessment Definition](edit.md) for comprehensive guidance on working with the editor, managing questions, configuring scoring, and publishing your definition.
-
-## Related
-
-- [Library](index.md)
-- [Edit Assessment Definition](edit.md)
-- [Question Types](question-types.md)
-- [Scoring](scoring.md)
+[Design guide](../getting-started/before-you-begin/design-assessment.md) · [Editor reference](edit.md) · [Question types](question-types.md) · [Scoring](scoring.md)

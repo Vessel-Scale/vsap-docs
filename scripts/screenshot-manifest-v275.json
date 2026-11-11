@@ -1,0 +1,775 @@
+{
+  "account-assessments": {
+    "file": "docs/assets/screenshots/v275/account-assessments.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5",
+    "captured_utc": "2026-11-11T00:26:35.422729+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/details.md"
+    ]
+  },
+  "account-details": {
+    "file": "docs/assets/screenshots/v275/account-details.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5",
+    "captured_utc": "2026-11-11T00:26:26.166949+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/details.md"
+    ]
+  },
+  "account-edit": {
+    "file": "docs/assets/screenshots/v275/account-edit.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/edit",
+    "captured_utc": "2026-11-11T00:11:08.555440+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/edit.md"
+    ]
+  },
+  "account-export": {
+    "file": "docs/assets/screenshots/v275/account-export.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account",
+    "captured_utc": "2026-11-11T00:29:29.999868+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/import-export.md"
+    ]
+  },
+  "account-import": {
+    "file": "docs/assets/screenshots/v275/account-import.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account",
+    "captured_utc": "2026-11-11T00:29:13.950233+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/import-export.md"
+    ]
+  },
+  "account-reports": {
+    "file": "docs/assets/screenshots/v275/account-reports.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5",
+    "captured_utc": "2026-11-11T00:26:34.920833+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/details.md"
+    ]
+  },
+  "accounts": {
+    "file": "docs/assets/screenshots/v275/accounts.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account",
+    "captured_utc": "2026-11-11T00:10:49.484065+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/import-export.md",
+      "docs/accounts/index.md"
+    ]
+  },
+  "assessment-analysis": {
+    "file": "docs/assets/screenshots/v275/assessment-analysis.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-detail/bd3f6a72-1207-47f9-8cae-dd3394fdd4d4",
+    "captured_utc": "2026-11-11T00:11:24.109934+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/assessments/details.md"
+    ]
+  },
+  "assessment-details": {
+    "file": "docs/assets/screenshots/v275/assessment-details.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-detail/bd3f6a72-1207-47f9-8cae-dd3394fdd4d4",
+    "captured_utc": "2026-11-11T00:11:22.762638+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/assessments/details.md"
+    ]
+  },
+  "assessments": {
+    "file": "docs/assets/screenshots/v275/assessments.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list",
+    "captured_utc": "2026-11-11T00:11:13.393847+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/assessments/index.md"
+    ]
+  },
+  "assign-assessment": {
+    "file": "docs/assets/screenshots/v275/assign-assessment.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/create-evaluation-assessment",
+    "captured_utc": "2026-11-11T00:12:49.831998+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/assessments/create.md"
+    ]
+  },
+  "branding": {
+    "file": "docs/assets/screenshots/v275/branding.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/branding",
+    "captured_utc": "2026-11-11T00:12:07.782080+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/branding.md"
+    ]
+  },
+  "client-account": {
+    "file": "docs/assets/screenshots/v275/client-account.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/my-account",
+    "captured_utc": "2026-11-11T00:27:39.718804+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/index.md"
+    ]
+  },
+  "client-actions": {
+    "file": "docs/assets/screenshots/v275/client-actions.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/actions",
+    "captured_utc": "2026-11-11T00:27:52.597698+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/impact-tracker/index.md"
+    ]
+  },
+  "client-assessments": {
+    "file": "docs/assets/screenshots/v275/client-assessments.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/assessments",
+    "captured_utc": "2026-11-11T00:27:13.796972+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/assessments-table.md"
+    ]
+  },
+  "client-dashboard": {
+    "file": "docs/assets/screenshots/v275/client-dashboard.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/dashboard",
+    "captured_utc": "2026-11-11T00:12:55.113706+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/index.md"
+    ]
+  },
+  "client-getting-started": {
+    "file": "docs/assets/screenshots/v275/client-getting-started.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/get-started",
+    "captured_utc": "2026-11-11T00:12:50.203657+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/getting-started.md"
+    ]
+  },
+  "client-industries": {
+    "file": "docs/assets/screenshots/v275/client-industries.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/industries",
+    "captured_utc": "2026-11-11T00:28:05.465621+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/industry-benchmarking.md"
+    ]
+  },
+  "client-library": {
+    "file": "docs/assets/screenshots/v275/client-library.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/51899e42-31b1-4545-9574-70df220581c5/client-portal/client-assessments",
+    "captured_utc": "2026-11-11T00:31:42.634890+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/client-portal/library.md"
+    ]
+  },
+  "create-account": {
+    "file": "docs/assets/screenshots/v275/create-account.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/create-account",
+    "captured_utc": "2026-11-11T00:10:54.333779+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/accounts/create.md"
+    ]
+  },
+  "custom-data": {
+    "file": "docs/assets/screenshots/v275/custom-data.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/custom-data",
+    "captured_utc": "2026-11-11T00:12:21.834725+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/custom-data/index.md"
+    ]
+  },
+  "dashboard": {
+    "file": "docs/assets/screenshots/v275/dashboard.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/dashboard",
+    "captured_utc": "2026-11-11T00:27:00.775788+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/dashboard/components.md",
+      "docs/dashboard/index.md"
+    ]
+  },
+  "dashboard-configure": {
+    "file": "docs/assets/screenshots/v275/dashboard-configure.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/dashboard",
+    "captured_utc": "2026-11-11T00:25:40.221369+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/dashboard/configure.md"
+    ]
+  },
+  "dashboard-export": {
+    "file": "docs/assets/screenshots/v275/dashboard-export.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/dashboard",
+    "captured_utc": "2026-11-11T00:29:16.243449+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/dashboard/download.md"
+    ]
+  },
+  "dashboard-pivot": {
+    "file": "docs/assets/screenshots/v275/dashboard-pivot.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/dashboard/pivot/5fc69894-e839-4255-8c47-46dafcd773ec",
+    "captured_utc": "2026-11-11T00:28:58.094440+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/dashboard/pivot-table.md"
+    ]
+  },
+  "directors-dashboard": {
+    "file": "docs/assets/screenshots/v275/directors-dashboard.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/dashboard",
+    "captured_utc": "2026-11-11T00:25:36.419031+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/dashboard/directors-dashboard.md"
+    ]
+  },
+  "ecosystem": {
+    "file": "docs/assets/screenshots/v275/ecosystem.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/ecosystem-map",
+    "captured_utc": "2026-11-11T00:22:17.673598+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/ecosystem/index.md"
+    ]
+  },
+  "ecosystem-filters": {
+    "file": "docs/assets/screenshots/v275/ecosystem-filters.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/ecosystem-map",
+    "captured_utc": "2026-11-11T00:28:25.240532+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/ecosystem/filters.md"
+    ]
+  },
+  "ecosystem-score": {
+    "file": "docs/assets/screenshots/v275/ecosystem-score.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/ecosystem-map",
+    "captured_utc": "2026-11-11T00:31:57.184362+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/ecosystem/scores.md"
+    ]
+  },
+  "editor-category": {
+    "file": "docs/assets/screenshots/v275/editor-category.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-11T00:23:27.410241+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/edit.md",
+      "docs/library/scoring.md"
+    ]
+  },
+  "editor-icons": {
+    "file": "docs/assets/screenshots/v275/editor-icons.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-11T00:23:46.773645+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/editing-icons.md"
+    ]
+  },
+  "editor-preview": {
+    "file": "docs/assets/screenshots/v275/editor-preview.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-11T00:23:29.980036+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/edit.md"
+    ]
+  },
+  "editor-question": {
+    "file": "docs/assets/screenshots/v275/editor-question.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-11T00:32:13.168147+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/question-types.md"
+    ]
+  },
+  "email-editor": {
+    "file": "docs/assets/screenshots/v275/email-editor.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/email-templates/4",
+    "captured_utc": "2026-11-11T00:27:43.086807+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/email-templates.md"
+    ]
+  },
+  "email-templates": {
+    "file": "docs/assets/screenshots/v275/email-templates.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/email-templates",
+    "captured_utc": "2026-11-11T00:12:12.425083+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/email-templates.md"
+    ]
+  },
+  "getting-started": {
+    "file": "docs/assets/screenshots/v275/getting-started.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:30.527699+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/index.md",
+      "docs/index.md"
+    ]
+  },
+  "guide-add-an-account": {
+    "file": "docs/assets/screenshots/v275/guide-add-an-account.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:31.621854+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/before-you-begin/add-account.md"
+    ]
+  },
+  "guide-assign-an-assessment": {
+    "file": "docs/assets/screenshots/v275/guide-assign-an-assessment.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:34.590986+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/workflow/step-1-assign.md"
+    ]
+  },
+  "guide-build-your-report": {
+    "file": "docs/assets/screenshots/v275/guide-build-your-report.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:37.342536+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/workflow/step-4-build-report.md"
+    ]
+  },
+  "guide-deliver-to-respondents": {
+    "file": "docs/assets/screenshots/v275/guide-deliver-to-respondents.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:35.925358+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/workflow/step-3-deliver.md"
+    ]
+  },
+  "guide-design-an-assessment": {
+    "file": "docs/assets/screenshots/v275/guide-design-an-assessment.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:33.075053+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/before-you-begin/design-assessment.md"
+    ]
+  },
+  "guide-share-the-results": {
+    "file": "docs/assets/screenshots/v275/guide-share-the-results.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/get-started",
+    "captured_utc": "2026-11-11T00:10:38.857744+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/getting-started/workflow/step-5-provide-results.md"
+    ]
+  },
+  "industries": {
+    "file": "docs/assets/screenshots/v275/industries.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/naics-explorer",
+    "captured_utc": "2026-11-11T00:16:05.493351+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/industries/hierarchy.md",
+      "docs/industries/index.md"
+    ]
+  },
+  "intake-editor": {
+    "file": "docs/assets/screenshots/v275/intake-editor.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/intake-form/a9e8ec6e-851c-499b-888e-99553ced42e4",
+    "captured_utc": "2026-11-11T00:27:29.785725+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/intake-forms.md"
+    ]
+  },
+  "intake-forms": {
+    "file": "docs/assets/screenshots/v275/intake-forms.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/account/intake-form",
+    "captured_utc": "2026-11-11T00:11:43.374047+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/intake-forms.md"
+    ]
+  },
+  "library": {
+    "file": "docs/assets/screenshots/v275/library.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library",
+    "captured_utc": "2026-11-11T00:11:28.968186+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/index.md",
+      "docs/library/list.md"
+    ]
+  },
+  "library-editor": {
+    "file": "docs/assets/screenshots/v275/library-editor.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library",
+    "captured_utc": "2026-11-11T00:12:33.156549+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/edit.md"
+    ]
+  },
+  "media-library": {
+    "file": "docs/assets/screenshots/v275/media-library.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/custom-data/media-library",
+    "captured_utc": "2026-11-11T00:12:40.648818+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/custom-data/media-library.md"
+    ]
+  },
+  "naics": {
+    "file": "docs/assets/screenshots/v275/naics.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/custom-data/naics",
+    "captured_utc": "2026-11-11T00:22:05.683741+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/custom-data/naics.md"
+    ]
+  },
+  "profile": {
+    "file": "docs/assets/screenshots/v275/profile.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/profile",
+    "captured_utc": "2026-11-11T00:28:57.671950+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/user-profile.md"
+    ]
+  },
+  "published-editor": {
+    "file": "docs/assets/screenshots/v275/published-editor.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit-published/aa00c4b8-080d-495e-8a66-2b6885381bc4",
+    "captured_utc": "2026-11-11T00:31:28.427117+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/edit.md"
+    ]
+  },
+  "regions": {
+    "file": "docs/assets/screenshots/v275/regions.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/custom-data/regions",
+    "captured_utc": "2026-11-11T00:12:36.020432+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/custom-data/regions.md"
+    ]
+  },
+  "report-builder": {
+    "file": "docs/assets/screenshots/v275/report-builder.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-detail/bd3f6a72-1207-47f9-8cae-dd3394fdd4d4/evaluation-assessment-analysis-score",
+    "captured_utc": "2026-11-11T00:16:34.293446+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/assessments/report-builder.md"
+    ]
+  },
+  "report-editor": {
+    "file": "docs/assets/screenshots/v275/report-editor.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/reports/3e707ee3-2198-463d-a5a6-03b29559cbe9",
+    "captured_utc": "2026-11-11T00:25:11.751881+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/web-reports.md"
+    ]
+  },
+  "reports": {
+    "file": "docs/assets/screenshots/v275/reports.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/reports",
+    "captured_utc": "2026-11-11T00:11:38.800268+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/web-reports.md"
+    ]
+  },
+  "rma": {
+    "file": "docs/assets/screenshots/v275/rma.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/custom-data/rma",
+    "captured_utc": "2026-11-11T00:12:31.288026+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/custom-data/rma.md"
+    ]
+  },
+  "settings": {
+    "file": "docs/assets/screenshots/v275/settings.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings",
+    "captured_utc": "2026-11-11T00:12:03.084084+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/index.md"
+    ]
+  },
+  "users": {
+    "file": "docs/assets/screenshots/v275/users.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/settings/users",
+    "captured_utc": "2026-11-11T00:12:17.118423+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/users.md"
+    ]
+  },
+  "web-report": {
+    "file": "docs/assets/screenshots/v275/web-report.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/report/bd3f6a72-1207-47f9-8cae-dd3394fdd4d4/3e707ee3-2198-463d-a5a6-03b29559cbe9/getting-started-assessment-detailed-report",
+    "captured_utc": "2026-11-11T00:25:28.026470+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/settings/web-reports.md"
+    ]
+  }
+}

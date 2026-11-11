@@ -2,59 +2,24 @@
 route: /dashboard/pivot/:assessmentDefinitionUuid
 tags:
   - dashboard
-  - pivot-table
-  - analytics
-  - reporting
-  - filter
 ---
 
-# Pivot Table
+# Pivot Table Analytics
 
-The Pivot Table lets you explore all assessment response data for a selected assessment definition in a flexible tabular format. You choose which columns to include, then load the data for sorting, filtering, and export.
+Open **Analytics** from the dashboard. In the AE view, analysis follows the selected assessment type; in Directors, it uses the program dataset available to you.
 
-## What you can do here
+![Pivot Table Analytics column selector](../assets/screenshots/v275/dashboard-pivot.png)
 
-- Select which assessment data and account data columns to include
-- View all response records in a scrollable data grid
-- Switch between **Grid**, **Pivot**, and **Chart** view modes
-- Adjust row size (S / M / L)
-- Export the current view
+## Choose fields and load
 
-## Opening the Pivot Table
+Select the assessment and account columns needed for your analysis, then load the data. The selector shows non-null counts and quick choices such as **All**, **Has Data**, and **None**. Check the option to exclude records with no Answer Score when you only want scored responses.
 
-Click the **Pivot Table** button (grid icon) in the top-right toolbar of the dashboard. You can return to the dashboard at any time with the **Back to Dashboard** button.
+Additional account columns are opt-in, including addresses, contact details, business identifiers, regions, and industry codes. Include the appropriate parent assessment and year context when comparing related assessments or reporting periods.
 
-## Column Selector
+## Explore the workspace
 
-![Pivot Table column selector](../assets/screenshots/dashboard/dashboard-pivot-selector.png)
+Switch between **Grid**, **Pivot**, and **Chart** views. Sort and filter records, group the data, choose the aggregation that fits your question, and export the current view. Use **Columns** to adjust the fields and **Back to Dashboard** when finished.
 
-When the pivot table opens, a column selector dialog appears. It is divided into two groups:
+Check whether a measure should be summed, averaged, or counted before interpreting it. Keep missing scores distinct from zero values.
 
-- **Assessment Data** — question-level fields such as Account Name, Answer Score, Answer Text, Assessment Name, Category, Question Text, and more
-- **Account Data** — account attributes such as City, Company Size, NAICS Industry, Employee Count, Federal Contractor status, and more
-
-Each column shows a count of non-null values (e.g. `50 / 50`). Use the **All**, **Has Data**, or **None** toggles to quickly select or deselect columns within a group.
-
-The **Exclude records with no Answer Score** checkbox (checked by default) filters out text-type questions that are not scored.
-
-Click **Load Pivot Table** to fetch the data with your selected columns.
-
-## Data Grid
-
-![Pivot Table data grid](../assets/screenshots/dashboard/dashboard-pivot-table.png)
-
-The grid displays one row per question response. Columns are sortable. The header shows the total records loaded and the number of columns selected.
-
-Use the **Columns** button in the top-right of the grid to show or hide columns without going back to the column selector.
-
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/7Ym3GtXLe0o?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Dashboard | How to Export Data & Use the Pivot Table</strong></p>
-</div>
-
-## Related
-
-- [Download CSV](download.md) — export all data without column selection
-- [Dashboard Overview](index.md)
+[Export data](download.md) · [Dashboard](index.md) · [Directors Dashboard](directors-dashboard.md)

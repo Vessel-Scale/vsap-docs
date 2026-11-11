@@ -8,6 +8,8 @@ tags:
 
 # Accounts
 
+Start with **Getting Started → Prepare → Add an account**, or open **Accounts** in the sidebar. Check for an existing organization before adding another. Use **Accounts → Intake Forms** when organizations should enter their own information. Account-specific assessments, reports, contacts, assignments, and actions are grouped on the account details page.
+
 The Accounts section lets you manage all organizations and companies tracked in the platform.
 
 ## What you can do here
@@ -20,7 +22,7 @@ The Accounts section lets you manage all organizations and companies tracked in 
 
 ## Account List
 
-![Account List](../assets/screenshots/account/account-list.png)
+![Account List](../assets/screenshots/v275/accounts.png)
 
 The account list displays all organizations currently tracked in your system. From this view, you can quickly see key information about each account including the company name, industry classification, location, and any associated evaluations. This list serves as your central hub for account management, allowing you to search, filter, and organize accounts by various criteria to find exactly what you need.
 

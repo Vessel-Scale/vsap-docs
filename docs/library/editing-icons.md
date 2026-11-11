@@ -8,7 +8,12 @@ tags:
 
 # Editing Icons
 
+In the current Library editor, use **Assessment Settings** or select the category/question you are editing in Navigation, then choose the available icon control. Review the icon in **Preview** and use **Save Changes** to persist the template. Icon choices affect presentation, while scoring remains defined by the question and template settings.
+
 Icons are used throughout your assessments to enhance visual representation and improve user experience. This guide explains how to select, customize, and manage icons for your assessment content.
+
+
+![Current icon picker](../assets/screenshots/v275/editor-icons.png)
 
 ## Icon Picker Modal
 
@@ -39,19 +44,16 @@ The icon picker provides:
 
 When you open the icon picker, you'll see a modal window displaying the full library of available icons:
 
-![Icon picker modal showing available icons](../assets/screenshots/library/library-icon-picker-overview.png)
 
 #### Browsing Icon Options
 
 You can scroll through the icon library to find the perfect icon for your needs. The modal shows multiple icons organized in a grid:
 
-![Icon picker scrolled to show more icon options](../assets/screenshots/library/library-icon-picker-grid.png)
 
 #### Customization Controls
 
 The icon picker provides easy access to all customization options, including color selection, style choices, and other visual settings:
 
-![Icon picker showing customization controls and style options](../assets/screenshots/library/library-icon-picker-styles.png)
 
 ### Customizing Icons
 

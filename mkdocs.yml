@@ -67,18 +67,18 @@ markdown_extensions:
 nav:
   - Home:
     - index.md
-    - Getting Started: getting-started/index.md
   - Getting Started:
-    - getting-started/index.md
-    - Before You Begin:
-      - Prep Step 1 — Add an Account: getting-started/before-you-begin/add-account.md
-      - Prep Step 2 — Design an Assessment: getting-started/before-you-begin/design-assessment.md
-    - The Workflow:
-      - Step 1 — Assign Assessment: getting-started/workflow/step-1-assign.md
-      - Step 2 — Publish Assessment: getting-started/workflow/step-2-publish.md
-      - Step 3 — Deliver Assessment: getting-started/workflow/step-3-deliver.md
-      - Step 4 — Build Report: getting-started/workflow/step-4-build-report.md
-      - Step 5 — Provide Results: getting-started/workflow/step-5-provide-results.md
+    - Landing Page: getting-started/index.md
+    - Prepare:
+      - Add an account: getting-started/before-you-begin/add-account.md
+      - Design an assessment: getting-started/before-you-begin/design-assessment.md
+    - Deliver:
+      - 1 — Assign an assessment: getting-started/workflow/step-1-assign.md
+      - 2 — Deliver to respondents: getting-started/workflow/step-3-deliver.md
+      - 3 — Build your report: getting-started/workflow/step-4-build-report.md
+      - 4 — Share the results: getting-started/workflow/step-5-provide-results.md
+    - Analyze: getting-started/analyze.md
+    - Start Response Collection: getting-started/workflow/step-2-publish.md
   - FAQ: faq.md
   - Accounts:
     - Overview: accounts/index.md
@@ -86,13 +86,18 @@ nav:
     - Create Account: accounts/create.md
     - Edit Account: accounts/edit.md
     - Import & Export: accounts/import-export.md
+    - Intake Forms: settings/intake-forms.md
   - Assessments:
     - Overview: assessments/index.md
     - Assessment Details: assessments/details.md
-    - Create Assessment: assessments/create.md
+    - Assign Assessment: assessments/create.md
+    - Question Types: assessments/question-types.md
+    - Read Scores: assessments/scoring.md
     - Reports:
       - Web: assessments/report-builder.md
       - PDF: assessments/pdf-reports.md
+      - Template Settings: settings/web-reports.md
+      - PDF Settings: settings/pdf-reports.md
   - Library:
     - Overview: library/index.md
     - Assessment List: library/list.md
@@ -116,17 +121,16 @@ nav:
     - Branding: settings/branding.md
     - Permissions: settings/permissions.md    
     - Email Templates: settings/email-templates.md
-    - Intake Forms: settings/intake-forms.md
+    - Your Profile: settings/user-profile.md
     - Manage Users: settings/users.md    
     - Custom Data:
       - Overview: settings/custom-data/index.md
       - NAICS Codes: settings/custom-data/naics.md
       - Regional Associations: settings/custom-data/rma.md
+      - Regions: settings/custom-data/regions.md
       - Media Library: settings/custom-data/media-library.md    
-    - Reports: 
-      - Web: settings/web-reports.md
-      - PDF: settings/pdf-reports.md
   - Client Portal:
+    - Getting Started: client-portal/getting-started.md
     - Overview: client-portal/index.md
     - Library: client-portal/library.md
     - Your Assessments: client-portal/assessments-table.md
@@ -138,9 +142,9 @@ nav:
     - Directors Dashboard: dashboard/directors-dashboard.md
     - Components: dashboard/components.md
     - Configure Dashboard: dashboard/configure.md
-    - Download CSV: dashboard/download.md
+    - Export Data: dashboard/download.md
     - Pivot Table: dashboard/pivot-table.md
-  - Impact Tracking:
+  - Action Tracker:
     - Overview: impact-tracker/index.md
     - Collaboration & Comments: impact-tracker/collaboration.md
     - Impact Metrics: impact-tracker/metrics.md

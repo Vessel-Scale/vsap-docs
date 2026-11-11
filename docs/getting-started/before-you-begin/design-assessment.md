@@ -1,81 +1,46 @@
 ---
 tags:
   - getting-started
-  - preparation
-  - library
-  - design
-  - templates
 ---
 
-# Preparation Step 2 — Design an Assessment
+# Design an assessment
 
-Before creating individual assessments for clients, you need to build an assessment **template** in the Library. The template defines the questions, scoring rules, and categories that all assessments of that type will use.
+Start with a Vessel template, then tailor questions and recommendations to your organization. Adjust categories and scoring to fit your goals, then preview and publish a reusable template for future assessments.
 
-!!! note "Terminology"
-    In your organization, assessments might be called "Evaluations", "Surveys", "Reviews", or something else entirely. You can customize what the platform calls assessments in **[Settings → Branding](../../settings/branding.md#assessment-property-name)**. All references throughout the system will use your chosen terminology.
+![Design an assessment guide in Getting Started](../../assets/screenshots/v275/guide-design-an-assessment.png)
 
----
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-## Opening the Library
+## Start with the Shared Template Library
 
-Click **Library** in the left sidebar to access assessment templates.
+The best starting point is the Shared Template Library: a collection of Vessel-created assessment content you can adapt to your needs, rather than starting with a blank page.
 
-![Library showing list of assessment templates](../../assets/screenshots/getting-started/gs-library.png)
+Use Browse Shared Template Library below to explore the shared template categories. Preview a template to review its questions and structure, and copy the one you want into your own Library as a draft. Your copy is ready to customize while the shared original stays available for others.
 
-See [Library Overview](../../library/index.md) for complete details on managing assessment templates.
 
----
+## Make the template your own
 
-## Creating a New Template
+Adapt the draft to your audience and goals. Edit the questions, organize categories, and adjust scoring rules and performance zones to reflect what matters to the organizations you support.
 
-Click **+ Design Assessment** in the top-right corner.
+Add suggestions and recommendations that align with your organization’s offerings, such as services, programs, resources, and areas of expertise. This connects the gaps an assessment uncovers with practical support your team can provide.
 
-![+ Design Assessment button in the Library](../../assets/screenshots/getting-started/gs-design-assessment-btn.png)
+Preview the experience and review the scoring and recommendations before publishing the template. Each assessment assigned from it then uses the same structure, making results easier to compare across accounts and over time.
 
-The template editor opens. Give it a name, then add categories and questions.
 
----
+## Build your first template with the Vessel team
 
-## What Goes in a Template
+For your first assessment, work with the Vessel team to get started. Bring your goals, intended audience, existing questions, and an overview of your organization’s offerings so the team can help you choose a starting template and plan the right customization.
 
-| Element | Description |
-|---|---|
-| **Categories** | Top-level groupings (e.g., User Experience, Plan of Action) — organize your assessment structure |
-| **Questions** | Individual prompts within each category — supports multiple choice, rating scales, open-ended text, and more |
-| **Scoring** | Define score zones: At Risk, Could Improve, Optimal — controls how results are calculated |
+Review your categories, scoring approach, and recommendations together before your first rollout. This gives your team a foundation you can reuse and refine as your program grows.
 
-Learn more: [Question Types](../../library/question-types.md) | [Scoring Rules](../../library/scoring.md)
 
----
+## Get a head start with the AI assistant
 
-## Using an Existing Template
+Where enabled, use AI Creator in the template editor to help draft or refine assessment content. Describe your goals, audience, and the changes you want, including the services and resources your recommendations should point toward.
 
-If a template already exists that fits your needs, you can use it directly when [creating an assessment](../workflow/step-1-assign.md) — you do not need to create a new one.
+Use the assistant alongside your own expertise and support from the Vessel team. Review the proposed questions, scoring, and suggestions, then preview and test the template before publishing it for client use.
 
-Browse existing templates in the Library and search by name or category to find what you need.
 
----
+## Continue
 
-## Editing & Managing Templates
-
-- **Edit a template:** Click the template name in the Library to open the editor
-- **Duplicate a template:** Use the duplicate option to create a variation based on an existing template
-- **Archive a template:** Hide inactive templates from the list
-- **View usage:** See which assessments use each template
-
-See [Library Reference](../../library/index.md) for complete template management instructions.
-
----
-
-## Next Step
-
-[Step 3 — Deliver your Assessment](../workflow/step-3-deliver.md){ .md-button }
-
----
-
-## Related
-
-- [Library Overview](../../library/index.md) — Assessment template management and best practices
-- [Question Types](../../library/question-types.md) — Supported question formats and use cases
-- [Scoring Rules](../../library/scoring.md) — Define score zones and thresholds
-- [Assessment Categories](../library/categories.md) — Organize your assessment structure
+[Assign an assessment](../workflow/step-1-assign.md) · [Library editor](../../library/edit.md) · [Scoring](../../library/scoring.md)

@@ -1,72 +1,37 @@
 ---
 tags:
   - getting-started
-  - workflow
-  - assessments
-  - share
-  - respondents
-  - delivery
 ---
 
-# Workflow Step 3 — Deliver Assessment
+# Deliver to respondents
 
-Once your assessment is published, share it with respondents to start collecting their responses.
+Start your assessment, share links, and follow response progress. Use an anonymous link or personalized invitations, then move to Results Review when collection is complete.
 
----
+![Deliver to respondents guide in Getting Started](../../assets/screenshots/v275/guide-deliver-to-respondents.png)
 
-## Sharing Your Assessment
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-On the Assessment Details page, scroll down to the **Assessment Delivery** section or look for the **Deliver Assessment** card in the Workflow Guide.
+## Start the assessment
 
-![Deliver Assessment workflow step](../../assets/screenshots/getting-started/workflow-step-3-deliver.png)
+Open your assessment from the assessment list and review its questions, scoring, dates, recipients, and settings while it is still in Draft. Make any final changes before starting response collection.
 
-There are two ways to share the assessment:
+When you are ready to start, change the assessment status from Draft to In Progress. This prepares it to collect responses within any Start Date and End Date you have set. If dates are set, check that the start date has arrived and the end date has not passed before sharing links with respondents.
 
-### Anonymous Survey Link
 
-Copy the **Assessment Link** and share it however you like — email, chat, or your organization's portal. Anyone with the link can submit a response once the assessment is published and not closed.
+## Share links and invite respondents
 
-**Best for:** Open, broad-based feedback
+Use the delivery options in the assessment details to share the assessment. Copy the anonymous assessment link for broad feedback, or add Direct Recipients for personalized links and individual response tracking.
 
-### Direct Recipients
+Choose the delivery method that fits your audience, confirm the recipient details, and share the links once the assessment is In Progress and open for responses.
 
-Click **+ Add Recipient** to send a unique, personalized link to a specific email address. Direct links are tied to that recipient and track which person submitted each response.
 
-**Best for:** Individual feedback, specific people you need to assess
+## Track responses and finish collection
 
----
+Check response counts, individual recipient progress, and completion status in the assessment details. Keep the assessment open while you are collecting responses and use your configured reminders to follow up with people who have not responded.
 
-## Before You Share
+When collection is finished, move the assessment to Results Review so you can analyze the responses and build your report.
 
-✅ **Assessment must be Published** — Status must be **In Progress** (done in Step 2)  
-✅ **Assessment must be Open** — The current date must be between the start and end dates  
-✅ **Recipients are ready** — Add any specific respondents if using direct links  
 
----
+## Continue
 
-## Tracking Responses
-
-The assessment detail page shows real-time response counts:
-- **Total Responses** — How many responses you've received
-- **Response Status** — In Progress vs. Completed
-- **Respondent List** — See who has responded (for direct recipients)
-
----
-
-## Pausing or Stopping Collection
-
-To stop collecting responses before the end date, you can **close** the assessment from the Assessment Details page. Once closed, no new responses can be submitted.
-
----
-
-## Next Step
-
-[Workflow Step 4 — Build Report & Recommendations](step-4-build-report.md){ .md-button .md-button--primary }
-
----
-
-## Related
-
-- [Assessment Details Reference](../../assessments/details.md) — Full assessment management
-- [Respondent Management](../../assessments/details.md) — Adding and tracking respondents
-- [Anonymous Links](../../assessments/details.md) — Sharing without collecting names
+[Build your report](step-4-build-report.md) · [Assessment details](../../assessments/details.md)

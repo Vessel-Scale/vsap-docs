@@ -1,114 +1,39 @@
 ---
-route: /assessments/report-builder
+route: /evaluation-assessment-detail/:id/evaluation-assessment-analysis-score
 tags:
   - assessments
-  - reports
-  - analysis
-  - report-builder
 ---
 
 # Report Builder
 
-The Report Builder is where you analyze assessment results and document your findings. It is accessible from the **Assessment Details** page once the assessment has received at least one response.
+Report Builder holds the findings and recommendations for **one assessment**. A reusable [web report template](../settings/web-reports.md) defines how that content appears to readers.
 
-## Opening the Report Builder
+## Open and review
 
-From the **Assessment Details** page, click **Build Report** in the top action bar.
+Once responses are available, open **Assessment Details → Build Report**. Use **Analysis** to inspect scores and responses, and move to **Results Review** when collection finishes.
 
-![Assessment Details page showing Build Report button](../assets/screenshots/getting-started/gs-assessment-detail.png)
+![Report Builder for an individual assessment](../assets/screenshots/v275/report-builder.png)
 
-!!! note
-    The **Build Report** button is only active when the assessment has received responses. If the button appears grayed out, ensure the assessment is published and that respondents have submitted their answers.
+Review category results, the responses behind them, and any supporting evidence. Check which responses are included in analysis. Missing scores should be understood as missing data rather than assumed to be zero. Score zones and labels follow the template’s configuration.
 
----
+## Write findings and recommendations
 
-## Report Builder Layout
+Work through each category and document the supported strengths, gaps, root causes, qualitative insights, solutions, and recommended actions shown in your organization’s configuration. Distinguish the client’s responses from your interpretation and recommendations.
 
-![Report Builder showing category scores and analysis notes](../assets/screenshots/getting-started/gs-report-builder.png)
+Where enabled, **AI Suggestions** can draft category findings and a baseline Plan of Action. Review the generated content, remove unsupported statements, and connect the proposed actions to useful services, programs, and resources. Check the contributor and category context before accepting suggestions.
 
-The Report Builder is divided into two main panels:
+## Save notes explicitly
 
-### Left Panel — Assessment Results
+Use **Save Notes** to persist notes and recommendations, and confirm the success message. Report Builder notes require an explicit save. Save before leaving or previewing the final client report; an in-editor change alone does not confirm it is stored.
 
-**Category Tabs** at the top let you switch between the assessment's categories (e.g., User Experience, Content Quality, Plan of Action). Each tab shows:
+## Build a Plan of Action
 
-| Section | Description |
-|---|---|
-| **Assessment Results by Category** | A gauge chart showing the category's average score and zone (At Risk / Could Improve / Optimal) |
-| **Pillar Responses Summary** | A breakdown of each question in the category, with the respondent's self-score alongside the assessor's score |
+Capture **Key Priorities** and **Implementation Details & Timing** for the whole assessment. Agree on the work, responsibilities, sequence, and timing with the client. These assessment-level items become Global Items in the Action Tracker at first closure; category recommendations retain category context.
 
-### Right Panel — Analysis Notes
+## Preview and share
 
-The Analysis Notes panel is where you record your professional analysis for each category. There are five structured sections:
+Preview the assessment with the intended web report template. Its standard introduction, methodology, and organization content combine with this assessment’s scores, saved analysis, and Plan of Action. Confirm the account name and assessment dates.
 
-| Section | Purpose |
-|---|---|
-| **Strengths** | Highlight what the team is doing well |
-| **Gaps, Challenges, & Threats** | Identify areas where goals and expectations are not being met |
-| **Root Causes** | Describe the underlying reasons for any failures or shortfalls |
-| **Qualitative Insights** | AI-generated summary of open-ended question responses — review and edit as needed |
-| **Plan of Action** | Outline recommended next steps |
+Configure client report access for the specific assessment, review the proposed actions at first closure, then share the web report. Use browser printing for PDF output by default; AI PDF is a separate option when enabled for that web report.
 
-Click **+ Add [Section]** to expand a section and enter your notes. Notes are saved per category — switch between category tabs to add analysis for each.
-
----
-
-## Qualitative Insights
-
-The **Qualitative Insights** section surfaces an AI-generated summary of all open-ended question responses for a category, giving you a quick starting point for your narrative analysis.
-
-![Qualitative Insights in the Report Builder](../assets/screenshots/getting-started/gs-report-builder.png)
-
-### How It Works
-
-1. When you open a category in the Report Builder, the Qualitative Insights section shows a summary automatically generated from respondents' free-text answers.
-2. Review the generated content — it reflects themes and patterns across all open-ended responses for that category.
-3. Click into the text to edit, expand, or refine the content before including it in a report.
-4. Saved changes persist as part of the category's analysis notes.
-
-!!! tip
-    Qualitative Insights is a starting point, not a finished product. Review the AI-generated summary for accuracy and add your own professional interpretation before publishing.
-
-### Viewing in the Web Report
-
-When a Web Report is published, Qualitative Insights appears as an expandable accordion section in the **Analysis Notes** area of each category — clearly labeled and distinct from the quantitative score sections.
-
-### Customizing the Tab Name
-
-The label **"Qualitative Insights"** can be renamed in **Settings → Branding** under the **Report Builder Customization** section. See [Branding — Report Builder Customization](../settings/branding.md#report-builder-customization) for details.
-
----
-
-## Score Zones
-
-Scores are automatically mapped to one of three zones based on the assessment's scoring configuration:
-
-| Zone | Meaning |
-|---|---|
-| **At Risk** | Performance is significantly below expectations |
-| **Could Improve** | Performance is below optimal but showing potential |
-| **Optimal** | Performance meets or exceeds expectations |
-
----
-
-## Exporting Results
-
-Once your analysis is complete, return to the **Assessment Details** page to export or publish:
-
-- **PDF** — Generate a formatted PDF report. See [PDF Reports](pdf-reports.md).
-- **Web** — Publish findings as a shareable web report. See [Web Reports](../settings/web-reports.md).
-
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/ZYHj_q0UjDI?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Assessment | Assessment Results Review</strong></p>
-</div>
-
-## Related
-
-- [Getting Started: Step 5](../../getting-started/analyze-results.md) — Quick-start guide to analyzing results
-- [Assessment Details](details.md) — Full assessment management
-- [Assessment Scoring](scoring.md) — Score calculation reference
-- [PDF Reports](pdf-reports.md) — Export as PDF
-- [Web Reports](../settings/web-reports.md) — Publish shareable reports
+[Build your report guide](../getting-started/workflow/step-4-build-report.md) · [Share the results](../getting-started/workflow/step-5-provide-results.md) · [PDF reports](pdf-reports.md)

@@ -10,11 +10,13 @@ tags:
 
 # Media Library
 
+Open **Settings → Custom Data → Media Library** to manage shared assets. The unified assessment and report editors also provide a **Media** sidebar so you can find images while editing. After selecting an image, inspect its preview and explicitly save the template changes you intend to retain. Respondent evidence files are handled separately on assessment questions.
+
 Store and manage images and other media assets used across your reports, web content, and branding. Media uploaded here can be referenced in web reports, email templates, and custom content blocks.
 
 ## Overview
 
-![Media Library](../../assets/screenshots/custom-data/media-library.png)
+![Media Library](../../assets/screenshots/v275/media-library.png)
 
 The Media Library serves as a central repository for all images and visual assets your organization uses. Once uploaded, these assets can be easily inserted into reports, emails, and other content without needing to manage file URLs or locations.
 
@@ -73,7 +75,6 @@ When you click on any media item, a preview dialog appears showing:
 - Edit button to modify the metadata
 - File information (type, size, dimensions, upload date)
 
-![Media Preview Dialog](../../assets/screenshots/custom-data/media-preview-dialog.png)
 
 ### Color Picker Functionality
 
@@ -91,7 +92,6 @@ The image preview dialog includes an **interactive color picker** overlay that l
 - **Color Documentation** - Create a reference guide of your brand's color palette from existing assets
 - **Quick Design Reference** - No need to use separate color picker tools; extract colors directly from uploaded images
 
-![Color Picker in Action](../../assets/screenshots/custom-data/media-color-picker.png)
 
 ## Where Media is Used
 

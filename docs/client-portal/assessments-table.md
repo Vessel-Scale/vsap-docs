@@ -1,99 +1,35 @@
 ---
 tags:
   - client-portal
-  - assessments
-  - assessment-status
 ---
 
 # Your Assessments
 
-The **Your Assessments** section is the first tab you see in the **Available Assessments** area of the Client Portal. It shows all the assessments assigned to or created by your organization along with their current status.
+Open **Assessments** in the Client Portal to see assessments assigned to your organization and those your account has created. Search by name and filter by status to find the right work.
 
-You can use the **Search** field to find a specific assessment by name, or use the **All Statuses** dropdown to filter by completion status. A summary at the bottom shows the total number of assessments assigned to your account.
+![Client assessment list with available actions](../assets/screenshots/v275/client-assessments.png)
 
-> The Available Assessments area has two tabs: **Your Assessments** (this page) and **[All Available Assessments](all-available-assessments.md)** — where you can browse every assessment type offered by your organization and start new ones.
+## Respond or manage
 
-![Your Assessments tab](../assets/screenshots/client-portal/cp-your-assessments.png)
+Use **Take Assessment** when available to answer the questionnaire. Follow the questions and submit when complete. Retain the personalized invitation or resume link when returning to an open assessment so your respondent identity stays attached.
 
-## Table columns
+For an assessment you created yourself, use **View / Edit** when offered to check its title, dates, privacy, and response options. Use **Copy Link** or the available sharing controls to invite colleagues. Check the response window before inviting people. Contact your account executive to change an assessment they assigned.
 
-| Column | Description |
-|--------|-------------|
-| **Name** | The assessment title and instance name |
-| **Status** | Current completion state — see [Status values](#status-values) below |
-| **Updated Date** | The last date any changes were made to this assessment |
-| **Action** | Buttons to interact with the assessment — see [Action buttons](#action-buttons) below |
+## Understand status
 
-## Status values
+| Status | Meaning |
+| --- | --- |
+| Draft | Preparation; review the available setup controls before inviting respondents. |
+| In Progress | Collection is active within any configured start/end dates. |
+| Results Review | Responses and recommendations are being reviewed. |
+| Closed | Finalized results and reports can be available according to access settings. |
 
-| Status | Meaning | What it means for you | Next Step |
-|--------|---------|----------------------|-----------|
-| **Draft** | The assessment has been created but not yet sent to respondents | You can continue editing your responses, or wait for your Account Executive to launch it | Save your progress anytime and return to resume; or contact your AE if you need help finalizing |
-| **In Progress** | Respondents have been invited and are actively completing the assessment | The assessment is live — respondents are filling in answers | Click **Take Assessment** to contribute your responses |
-| **Results Review** | All responses are in — results are being reviewed | Your responses have been submitted and are being analyzed | View your scores and analysis when your AE has completed the review |
-| **Closed** | The assessment is complete and finalized | All responses are locked and final reports have been generated | View your final results and analysis in read-only mode |
+Report and response buttons depend on status, permissions, and configuration. For grouped assessments, inspect child names, status, and response counts to understand which part needs attention.
 
-## Action buttons
+## Evidence and results
 
-Each row has action buttons depending on the assessment's status and how it was created:
+Where enabled, upload supporting evidence for the relevant question. Preview your draft files, including PDFs, and remove incorrect uploads before submitting. After results are released, open the available report and discuss recommendations with your account executive. PDF output uses browser printing unless AI PDF is enabled for that report.
 
-- **Take Assessment** (▶ play button) — Opens the assessment questionnaire. Use this to start, continue, or review your responses when the assessment is In Progress.
+Client-private assessments remain within the account team when **Hide from account executives & admins** is selected; staff preview does not bypass that setting.
 
-- **View / Edit** (👁 eye icon) — Available on assessments **you created** directly from the portal. Opens the assessment summary page where you can review details, edit responses, or track progress.
-
-- **Copy Link** (link icon) — Copies a shareable link you can send to colleagues or team members who need to help complete the assessment.
-
-- **View Analysis** (chart icon) — Opens the results and analysis report. Available once the assessment has responses.
-
-## Read-Only Mode
-
-Once an assessment reaches **Closed** status, you can view the completed assessment in **read-only mode**. This means:
-
-- ✓ You can **view** all responses, scores, and analysis
-- ✓ You can **review** category breakdowns and scoring details  
-- ✓ You can **read** the Account Executive's analysis notes and recommendations
-- ✗ You **cannot edit** responses or add new answers
-- ✗ You **cannot modify** scores or analysis
-- ✗ You **cannot change** the assessment structure or questions
-
-Read-only mode ensures that completed assessments remain final and accurate for reporting and archival purposes. If you need to make changes to a closed assessment, contact your Account Executive.
-
----
-
-## Creating your own assessments
-
-Client users can now start new assessments directly from the portal without waiting for an Account Executive to assign one. To create a new assessment:
-
-1. Click the **All Available Assessments** tab (next to "Your Assessments")
-2. Browse the card grid and click on an assessment type you want to run
-3. In the detail modal, click **Create This Assessment for My Account**
-4. Fill in the assessment details and submit
-
-Once created, your new assessment appears in this **Your Assessments** table with a **Draft** status. You'll see a **View / Edit** button on that row to open and manage it.
-
-### Managing Your Draft Assessment
-
-When you've created an assessment as a **Draft**, you can:
-
-- **Save as you go** — Your responses and progress save automatically as you fill in answers
-- **Return anytime** — Close the assessment and come back later using **View / Edit** — your work is preserved
-- **Continue editing** — Add more responses or modify existing answers until you're ready
-- **Notify your AE** — When ready, contact your Account Executive to launch or publish the assessment to respondents
-
-The draft remains under your control until your Account Executive takes the next action (such as launching it for broader respondent participation).
-
-## Tips for completing assessments
-
-- **Assessments can be saved** — you don't need to complete them all at once. Your progress is saved automatically.
-- **Return anytime** — use **Take Assessment** or **View / Edit** to come back to an in-progress assessment.
-- **Questions may have guidance** — read the full question text and any help icons for clarification.
-- **Can't interact with an assessment?** — if no action button appears, the assessment may be in a state that doesn't allow edits. Contact your Account Executive for help.
-
----
-
-## Related
-
-- [All Available Assessments](all-available-assessments.md) — browse assessment types and create new ones
-- [Library](library.md) — the original library for browsing and launching assessments
-- [Client Portal Overview](index.md) — portal navigation overview
-- [Industry Benchmarking](industry-benchmarking.md) — see how your scores compare to industry averages
+[Getting Started](getting-started.md) · [Start from the Library](library.md) · [Portal overview](index.md)

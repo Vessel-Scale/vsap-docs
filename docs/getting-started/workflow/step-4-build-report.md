@@ -1,101 +1,36 @@
 ---
 tags:
   - getting-started
-  - workflow
-  - assessments
-  - reports
-  - analysis
-  - recommendations
-  - ai
 ---
 
-# Workflow Step 4 — Build Report & Recommendations
+# Build your report
 
-Once you've collected assessment responses, analyze them and create a comprehensive report with recommendations for each category.
+Combine a reusable web report template with findings and recommendations from each assessment. Add your analysis and Plan of Action in Report Builder, then preview how they appear alongside the template’s standard content.
 
----
+![Build your report guide in Getting Started](../../assets/screenshots/v275/guide-build-your-report.png)
 
-## When to Build Your Report
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-- At least one respondent has submitted their response
-- Assessment status is **Results Review**
-- You've reviewed the responses and are ready to document your analysis
+## Web report template: reusable content
 
----
+The web report template defines the report’s layout, branding, and standard content. Administrators can create and manage templates in the Reports list, then reuse a template across all assessments that use that report design.
 
-## Opening the Report Builder
+Write the sections that stay the same once, such as your Introduction, Methodology, About section, organization background, and descriptions of your approach. That content is reused whenever the template is used, so you do not need to rewrite it for every assessment.
 
-From the Assessment Details page:
+Include the dynamic sections you want the template to display, such as category scores, category analysis, assessment notes, and Plan of Action. The layout and standard narrative stay consistent while those sections draw their results and notes from the individual assessment.
 
-![Build Report workflow step](../../assets/screenshots/getting-started/workflow-step-4-build-report.png)
 
-1. Look for the **Build Report** step in the **Assessment Workflow Guide** card
-2. Click **Review in Analysis Tab** or navigate to the **Analysis** tab
+## Report Builder: results and recommendations
 
----
+The Report Builder is where you develop the content that changes for each assessment. Once responses are available, open the assessment’s details and choose Build Report or its Analysis tab to review scores and responses. Move to Results Review when response collection is finished.
 
-## Using AI to Generate Recommendations
+Document the strengths, gaps, root causes, notes, and recommendations supported by this assessment’s results. Build a Plan of Action that connects those findings to practical next steps, including the services, programs, and resources your organization can offer.
 
-The Workflow Guide offers AI-powered suggestions to accelerate your analysis:
+Where enabled, AI smart suggestions can help draft category findings and recommendations and create a baseline Plan of Action from the assessment’s responses. Use that draft as a starting point: review the suggestions, customize the priorities and actions, and add your professional judgment and knowledge of the client.
 
-1. In Step 4 of the Workflow Guide, click **Generate Recommendations** (sparkle icon)
-2. The AI will:
-   - Analyze all responses
-   - Identify patterns and trends
-   - Generate initial recommendations for each category
-3. Review and edit the AI-generated content to match your expertise and insights
+Save your notes and recommendations, then preview the assessment using your chosen web report template. The report combines the template’s reusable introduction, methodology, and about content with this assessment’s scores, analysis, recommendations, and Plan of Action.
 
-!!! tip "Make it Your Own"
-    AI generates a starting point — review, edit, and refine the recommendations to reflect your professional judgment and knowledge of the client.
 
----
+## Continue
 
-## Manual Analysis Process
-
-In the Report Builder, review each category:
-
-| Element | Description |
-|---------|-------------|
-| **Category Score** | Gauge chart showing the score and performance zone (At Risk / Could Improve / Optimal) |
-| **Question Responses** | Summary of how respondents answered each question |
-| **Strengths** | What the client is doing well |
-| **Gaps & Challenges** | Areas for improvement |
-| **Root Causes** | Why these gaps exist |
-| **Qualitative Insights** | Summary of open-ended question responses |
-| **Plan of Action** | Specific next steps and recommendations |
-
----
-
-## Building Category Recommendations
-
-For each category, document:
-
-1. **Strengths** — What's working well based on the responses
-2. **Gaps & Challenges** — Areas where performance lags
-3. **Root Causes** — Why these gaps exist
-4. **Plan of Action** — Specific recommendations and next steps
-
----
-
-## Moving to Results Review
-
-When your assessment reaches **Results Review** status:
-
-✅ **All responses are locked** — No new responses can be submitted  
-✅ **Report Builder is available** — You can now add recommendations  
-✅ **Next step: Close & Share** — Once complete, close the assessment and publish results  
-
----
-
-## Next Step
-
-[Workflow Step 5 — Provide Results](step-5-provide-results.md){ .md-button .md-button--primary }
-
----
-
-## Related
-
-- [Report Builder Reference](../../assessments/report-builder.md) — Detailed analysis tools
-- [Assessment Scoring](../../assessments/scoring.md) — Understand score calculations
-- [PDF Reports](../../assessments/pdf-reports.md) — Export findings as PDF
-- [Web Reports](../../assessments/report-builder.md) — Share interactive reports with clients
+[Share the results](step-5-provide-results.md) · [Report Builder reference](../../assessments/report-builder.md) · [Reusable report templates](../../settings/web-reports.md)

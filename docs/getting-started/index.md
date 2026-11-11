@@ -1,117 +1,60 @@
 ---
+route: /get-started
 tags:
   - getting-started
-  - onboarding
-  - overview
 ---
 
 # Getting Started
 
-The **Vessel Smart Assessment Platform (VSAP)** helps you manage the full lifecycle of client assessments — from onboarding accounts and designing assessment templates, through the complete workflow of assigning, publishing, delivering, analyzing, and reporting on assessment results.
+The **Getting Started** landing page in the application guides you from account setup to client results and measurable outcomes. Open it from the rocket icon in the sidebar. Staff see **Prepare → Deliver → Analyze**; clients see a guide for their own account.
 
-This quick-start guide walks you through everything you need to know. Start with the **Preparation** steps, then follow the **Workflow** steps that match what you'll see in the Assessment Details page.
+![Getting Started landing page with Prepare, Deliver, and Analyze](../assets/screenshots/v275/getting-started.png)
 
----
+## Use the landing page
 
-## BEFORE YOU BEGIN — Preparation Steps
+Select a phase in the illustrated header to jump to its cards. Select a card to open a detailed guide, then use its action button to continue in the application. Tutorial buttons open the related videos. **Where to find** guidance helps locate the next action. The header help button opens relevant workflow guidance where a matching guide is available.
 
-These two steps get your system ready before you start the assessment workflow.
+The guides and actions reflect your role, enabled features, and organization’s terminology. Some actions ask you to choose an account or assessment first.
 
-### Preparation Step 1 — Add an Account
+## 1. Prepare
 
-Create client organizations in the system. You can add accounts manually or invite external users to self-populate via the Intake Form.
+| Card | What you do |
+| --- | --- |
+| [Add an account](before-you-begin/add-account.md) | Keep an organization’s contacts and results together; enter its information or share an intake form. |
+| [Design an assessment](before-you-begin/design-assessment.md) | Browse the Shared Template Library, copy a starting template, tailor questions, scoring, and recommendations, then publish your reusable template. |
 
-[View Prep Step 1 — Add an Account](before-you-begin/add-account.md){ .md-button .md-button--primary }
+For your first template, work with the Vessel team to connect your assessment’s recommendations to the services, programs, and expertise your organization can provide.
 
-**Key Topics:** Account setup, contacts, intake forms
+## 2. Deliver
 
----
+| Step | Card | What you do |
+| --- | --- | --- |
+| 1 | [Assign an assessment](workflow/step-1-assign.md) | Choose an account and template, plan dates, recipients, response targets, and reminders, then save a draft. |
+| 2 | [Deliver to respondents](workflow/step-3-deliver.md) | Start collection, share links, follow responses, and move to Results Review. |
+| 3 | [Build your report](workflow/step-4-build-report.md) | Review scores and evidence, write and save findings, and prepare a Plan of Action. |
+| 4 | [Share the results](workflow/step-5-provide-results.md) | Review next steps with the client, confirm report access, close the assessment, and share the report. |
 
-### Preparation Step 2 — Design an Assessment
+**Draft → In Progress → Results Review → Closed** describes an individual assessment’s status. Publishing a Library template prepares reusable content; moving an assigned assessment to In Progress starts collection. The older standalone Publish guide is retained at [Start response collection](workflow/step-2-publish.md).
 
-Create assessment templates in the Library with questions, categories, and scoring rules. Templates define the structure for all assessments of that type.
+## 3. Analyze
 
-[View Prep Step 2 — Design an Assessment](before-you-begin/design-assessment.md){ .md-button }
+| Card | Explore |
+| --- | --- |
+| [Explore your dashboard](../dashboard/index.md) | Compare results by assessment type, configure components, export data, and use pivot analysis. Directors can review program-wide activity and impact. |
+| [Explore the Client Portal](../client-portal/ae-notes.md) | Preview an account’s portal, curate its client Library, and check available reports. |
+| [Understand your ecosystem](../ecosystem/index.md) | Map locations, scores, and impact, then filter by geography, industry, and account characteristics. |
+| [Track and measure impact](../impact-tracker/index.md) | Manage the actions reviewed at first closure, add project links, record outcomes, and inspect their aggregated impact. |
 
-**Key Topics:** Library templates, question types, scoring zones
+## Getting started as a client
 
----
+Your guide focuses on your organization: review your account where available, find an assessment in the client Library, assess your organization, complete responses, review results, and follow through on actions. Dashboard, Account, and Actions availability depends on your organization’s configuration. See [Client Getting Started](../client-portal/getting-started.md).
 
-## The Assessment Workflow — 5 Steps
+## Find the right workspace
 
-Once your account and assessment template are ready, you'll work through these five steps for each assessment you create. These steps map directly to the **Assessment Workflow Guide** you'll see in the Assessment Details page.
+- **Accounts → Intake Forms** manages public onboarding forms.
+- **Assessments → Library** manages your reusable assessment templates.
+- **Assessments → Reports** manages reusable web report templates.
+- **Assessment details → Analysis / Build Report** holds findings and recommendations for one assessment. Use **Save Notes** to persist your notes.
+- **Settings** holds branding, email templates, users, and custom data.
 
-```mermaid
-graph LR
-    A["<b>Step 1</b><br/>Assign"] --> B["<b>Step 2</b><br/>Publish"]
-    B --> C["<b>Step 3</b><br/>Deliver"]
-    C --> D["<b>Step 4</b><br/>Build Report"]
-    D --> E["<b>Step 5</b><br/>Provide Results"]
-    
-    classDef stepBox fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000,rx:12px,ry:12px
-    class A,B,C,D,E stepBox
-    
-    linkStyle 0,1,2,3 stroke:#1976d2,stroke-width:3px,color:#1976d2
-```
-
----
-
-### Workflow Step 1 — Assign Assessment
-
-Create an assessment instance and assign it to an account. This is automatically done when you create a new assessment, so this step is typically already complete.
-
-[View Step 1 — Assign Assessment](workflow/step-1-assign.md){ .md-button }
-
-**Key Topics:** Creating assessments, account assignment
-
----
-
-### Workflow Step 2 — Publish Assessment
-
-Move the assessment from **Draft** to **In Progress** status. Make any final edits before publishing, then activate it to start collecting responses.
-
-[View Step 2 — Publish Assessment](workflow/step-2-publish.md){ .md-button }
-
-**Key Topics:** Assessment editing, publishing, status management
-
----
-
-### Workflow Step 3 — Deliver Assessment
-
-Share the assessment with respondents using direct links or anonymous survey links. Track response progress in real-time.
-
-[View Step 3 — Deliver Assessment](workflow/step-3-deliver.md){ .md-button }
-
-**Key Topics:** Sharing assessments, response tracking, anonymous links
-
----
-
-### Workflow Step 4 — Build Report & Recommendations
-
-Review assessment responses, create comprehensive reports, and generate recommendations for each category. Use AI suggestions to accelerate the process.
-
-[View Step 4 — Build Report & Recommendations](workflow/step-4-build-report.md){ .md-button }
-
-**Key Topics:** Response analysis, report builder, AI recommendations, category insights
-
----
-
-### Workflow Step 5 — Provide Results
-
-Close the assessment and share polished web reports and PDF reports with clients. Configure branding, templates, and access controls.
-
-[View Step 5 — Provide Results](workflow/step-5-provide-results.md){ .md-button }
-
-**Key Topics:** Report publishing, web reports, PDF reports, branding, sharing
-
----
-
-## What's Next?
-
-Once you've mastered the core workflow, explore these related features:
-
-- [**Dashboards**](../dashboard/index.md) — View assessment activity and trends across all accounts
-- [**Ecosystem View**](../ecosystem/index.md) — Compare performance across multiple accounts
-- [**Impact Tracking**](../impact-tracker/index.md) — Manage action items and track impact metrics
-- [**Settings**](../settings/index.md) — Configure intake forms, web reports, branding, and more
-- [**Library**](../library/index.md) — Build and manage assessment templates
+Use [FAQ](../faq.md) for common questions or contact [support@vesselscale.com](mailto:support@vesselscale.com).

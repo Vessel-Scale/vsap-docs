@@ -1,97 +1,36 @@
 ---
 tags:
-  - overview
-  - home
+  - index.md
 ---
 
-# Vessel Smart Assessment Platform (VSAP) - Help Center
+# Vessel Smart Assessment Platform Help Center
 
-Welcome to the Vessel Smart Assessment Platform (VSAP) documentation. VSAP is a comprehensive assessment and business intelligence platform for manufacturers, suppliers, and more, that powers smart assessments designed to help you and your customers transform results into intelligence to uncover gaps, guide growth, and scale impact efficiently.
+Turn assessments into useful client results and measurable outcomes. Start with the **Getting Started** landing page in the application, then use these guides for the task you are working on.
 
-## Getting Started
+[Getting Started](getting-started/index.md){ .md-button .md-button--primary }
+[Client Getting Started](client-portal/getting-started.md){ .md-button }
 
-New to VSAP? Start here! Learn the four essential steps to run assessments, analyze results, and share findings with clients.
+## Prepare → Deliver → Analyze
 
-**[→ Go to Getting Started Guide](getting-started/index.md){ .md-button .md-button--primary }**
+1. **Prepare** — [Add an account](getting-started/before-you-begin/add-account.md) and [adapt an assessment template](getting-started/before-you-begin/design-assessment.md) from the Shared Template Library.
+2. **Deliver** — [Assign](getting-started/workflow/step-1-assign.md), [deliver to respondents](getting-started/workflow/step-3-deliver.md), [build your report](getting-started/workflow/step-4-build-report.md), and [share the results](getting-started/workflow/step-5-provide-results.md).
+3. **Analyze** — Explore [dashboards](dashboard/index.md), the [Client Portal](client-portal/index.md), your [ecosystem](ecosystem/index.md), and [action outcomes](impact-tracker/index.md).
 
-The Getting Started guide covers these four steps:
+![Getting Started landing page](assets/screenshots/v275/getting-started.png)
 
-1. **Add an Account** — Create or invite clients to register
-2. **Design an Assessment** — Build assessment templates with custom questions
-3. **Deliver your Assessment** — Share and collect responses
-4. **Provide Results** — Analyze findings and publish branded reports
+## Help by workspace
 
-## Platform Overview
+| Workspace | Guides |
+| --- | --- |
+| Accounts | [Account list](accounts/index.md), [create](accounts/create.md), [edit](accounts/edit.md), [details and report access](accounts/details.md), [import/export](accounts/import-export.md), [intake forms](settings/intake-forms.md) |
+| Assessments | [Collections](assessments/index.md), [assign](assessments/create.md), [responses and analysis](assessments/details.md), [Report Builder](assessments/report-builder.md), [PDF output](assessments/pdf-reports.md) |
+| Assessments → Library | [Template list](library/list.md), [create](library/create.md), [edit and preview](library/edit.md), [question types](library/question-types.md), [scoring](library/scoring.md), [icons](library/editing-icons.md) |
+| Assessments → Reports | [Reusable web reports](settings/web-reports.md), [PDF settings](settings/pdf-reports.md) |
+| Client Portal | [Getting Started](client-portal/getting-started.md), [account and navigation](client-portal/index.md), [assessments](client-portal/assessments-table.md), [Library](client-portal/library.md), [benchmarking](client-portal/industry-benchmarking.md), [staff preview guide](client-portal/ae-notes.md) |
+| Dashboard | [Overview](dashboard/index.md), [components](dashboard/components.md), [configure](dashboard/configure.md), [Directors](dashboard/directors-dashboard.md), [exports](dashboard/download.md), [pivot tables](dashboard/pivot-table.md) |
+| Ecosystem | [Map](ecosystem/index.md), [filters](ecosystem/filters.md), [scores](ecosystem/scores.md), [accounts](ecosystem/accounts.md), [legislators](ecosystem/legislators.md) |
+| Action Tracker | [Manage work](impact-tracker/index.md), [comments](impact-tracker/collaboration.md), [impact metrics](impact-tracker/metrics.md) |
+| Industries | [Industry explorer](industries/index.md), [NAICS hierarchy](industries/hierarchy.md), [use across the platform](industries/platform-integration.md) |
+| Settings | [Overview](settings/index.md), [branding](settings/branding.md), [users](settings/users.md), [roles](settings/permissions.md), [email](settings/email-templates.md), [custom data](settings/custom-data/index.md), [profile](settings/user-profile.md) |
 
-The Vessel Smart Assessment Platform enables you to:
-
-- **Manage Your Accounts** — Organize and track all your business accounts in one central location
-- **Create Assessment Definitions** — Design custom assessments to evaluate specific business areas and capabilities
-- **Deliver Assessments** — Collect responses from your ecosystem partners and stakeholders
-- **Analyze Results** — Review detailed assessment reports with scores, benchmarks, and trends
-- **Provide Recommendations** — Generate actionable insights and improvement recommendations based on assessment results
-- **Manage Your Ecosystem** — View and organize your network of suppliers, partners, and stakeholders
-- **Review Aggregated Statistics** — See industry trends, performance benchmarks, and comparative analytics
-- **Configure Platform Settings** — Customize branding, email templates, intake forms, and more
-- **Share with Clients** — Give clients access to their own portal to view assessments, track progress, and explore industry benchmarks
-
-If you can't find the help you need here please contact us at [support@vesselscale.com](mailto:support@vesselscale.com)!
-
----
-
-## Quick Navigation
-
-### [Dashboard & Insights](dashboard/index.md)
-- [Dashboard Overview](dashboard/index.md)
-- [Directors Dashboard](dashboard/directors-dashboard.md)
-- [Pivot Table Analysis](dashboard/pivot-table.md)
-
-### [Impact Tracker](impact-tracker/index.md)
-- [Impact Tracker Overview](impact-tracker/index.md)
-- [Collaboration & Comments](impact-tracker/collaboration.md)
-- [Impact Metrics Guide](impact-tracker/metrics.md)
-
-### [Accounts](accounts/index.md)
-- [Account Management](accounts/index.md)
-- [Account Details](accounts/details.md)
-- [Create Account](accounts/create.md)
-
-### [Assessments](assessments/index.md)
-- [Assessment Overview](assessments/index.md)
-- [Assessment Details](assessments/details.md)
-- [Create Assessment](assessments/create.md)
-- [Web Reports](assessments/report-builder.md)
-
-### [Library](library/index.md)
-- [Library Overview](library/index.md)
-- [Assessment List](library/list.md)
-- [Create Assessment Definition](library/create.md)
-- [Edit Assessment Definition](library/edit.md)
-- [Question Types Reference](library/question-types.md)
-- [Scoring Guide](library/scoring.md)
-
-### [Ecosystem](ecosystem/index.md)
-- [Ecosystem Overview](ecosystem/index.md)
-- [Filters](ecosystem/filters.md)
-- [Scores View](ecosystem/scores.md)
-- [Account List & Details](ecosystem/accounts.md)
-- [Legislators](ecosystem/legislators.md)
-
-### [Industries](industries/index.md)
-- [Industries Overview](industries/index.md)
-- [NAICS Hierarchy](industries/hierarchy.md)
-- [Platform Integration](industries/platform-integration.md)
-
-### [Settings & Configuration](settings/index.md)
-- [Settings Overview](settings/index.md)
-- [Branding](settings/branding.md)
-- [Custom Data](settings/custom-data/index.md)
-- [Email Templates](settings/email-templates.md)
-- [Intake Forms](settings/intake-forms.md)
-- [Web Reports](settings/web-reports.md)
-
-### [Client Portal](client-portal/index.md)
-- [Overview](client-portal/index.md)
-- [Assessments Table](client-portal/assessments-table.md)
-- [Industry Benchmarking](client-portal/industry-benchmarking.md)
-
+Available tools and labels vary with your role, enabled features, and organization’s terminology. For common questions, visit [FAQ](faq.md). Contact [support@vesselscale.com](mailto:support@vesselscale.com) for help.

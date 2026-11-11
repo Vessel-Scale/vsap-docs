@@ -2,234 +2,40 @@
 route: /account/:id
 tags:
   - accounts
-  - clients
-  - contacts
-  - details
 ---
 
 # Account Details
 
-The Account Details page shows all information associated with a specific account. It is organized into five tabs: **Overview**, **Assessments**, **Reports**, **Contacts**, and **Assignments**.
+Open **Accounts**, find the organization, and open its details. Use **Edit Details** for its profile. Tabs bring together **Overview**, **Contacts**, **Assessments**, **Reports**, **Assignments**, and **Actions**.
 
-## What you can do here
+![Account overview and current tabs](../assets/screenshots/v275/account-details.png)
 
-- View contact information, industry classification, and location
-- See all assessments linked to this account
-- Review all assessment reports generated for this account
-- Manage team contacts and their portal access
-- Assign team members to roles for this account
-- Configure which Web Reports appear in the Client Portal
-- Edit the account or preview the Client Portal as the client sees it
+## Overview and contacts
+
+Overview shows the organization’s business name, address, location status, NAICS codes, website, and additional information. Keep its address and industry codes current so maps and comparisons use the right context. Contacts holds the people associated with the organization; account contacts and staff assignments serve different purposes.
+
+## Assessments
+
+Open **Assessments** to find work linked to this organization. Check names, dates, status, responses, and parent/child context, then open an assessment to manage collection or review results. Use **Assign Assessment** to create work for this account.
+
+![Assessments linked to an account](../assets/screenshots/v275/account-assessments.png)
+
+## Reports and client access
+
+Open **Reports** to manage the completed assessment reports available in the Client Portal. The list pairs each report template with its particular assessment. Use **Manage** and the available enable/disable controls to configure the intended report entries; check each assessment rather than assuming one choice enables every report for the organization.
+
+![Account Reports tab with assessment-specific report entries](../assets/screenshots/v275/account-reports.png)
+
+Administrators maintain reusable templates in **Assessments → Reports**. A template’s active status, assessment type, and client access determine whether the intended report is available. Preview the specific report to verify the account name, assessment dates, content, and branding before sharing it. See [web report settings](../settings/web-reports.md) and [PDF output](../assessments/pdf-reports.md).
+
+## Assignments and actions
+
+Use **Assignments** to maintain the staff responsible for the account. Eligible administrators and account executives can appear in assignment choices. Use **Actions** to follow the recommendations and Plan of Action items associated with its assessments; see [Action Tracker](../impact-tracker/index.md).
 
 ## View as Client
 
-The **View as Client** button opens a live preview of the [Client Portal](../client-portal/index.md) for this account — exactly as the client would see it.
+Choose **View as Client** from the account overview to enter this account’s portal. The preview banner identifies the account; **Return to Account** returns to staff tools. Check navigation, client-visible templates, and reports from this view.
 
-![View as Client button](../assets/screenshots/client-portal/cp-account-action-bar.png)
+Preview uses your staff permissions. Assessments a client has hidden with **Hide from account executives & admins** remain hidden from ordinary staff during preview. See [Client Portal staff guide](../client-portal/ae-notes.md).
 
-When you click **View as Client**, a **Preview Mode** banner appears at the top of the portal confirming that you are viewing on behalf of this account. You can return to the Account Details page at any time by clicking **Return to Account**.
-
-Use this to:
-
-- Verify the client can see the correct assessments
-- Confirm which Web Reports are available in the portal
-- Troubleshoot portal access issues before escalating to the client
-
----
-
-## Overview tab
-
-![Account Details — Overview](../assets/screenshots/account/account-details-overview.png)
-
-The **Overview** tab provides a comprehensive snapshot of the organization: company name, contact information, geographic location, NAICS industry codes, and operational details. This is your starting point for understanding the complete profile of an account and its current status in the system.
-
-![Account Details — Overview (scrolled)](../assets/screenshots/account/account-details-overview-scrolled.png)
-
-### Web Reports Configuration
-
-The Web Reports panel within the Overview tab controls which assessment report templates are made available to this account's client portal view.
-
-When you enable Web Report templates for an account, they become available for the organization's representatives to view in the **Client Portal**. This allows you to:
-
-- **Control Portal Visibility** — Choose which report templates clients can access
-- **Customize Per Account** — Different accounts can have different report templates available
-- **Manage Sensitivity** — Enable only reports appropriate for a specific client
-- **Streamline Navigation** — Clients only see the reports that are relevant to them
-
-#### How Web Reports configuration works
-
-1. **Reports are created in Settings** — Administrators create and manage Web Report templates in **Settings → Web Reports**
-2. **Templates are enabled per account** — On this page, select which available templates should be enabled for this specific account
-3. **Clients see enabled reports** — When clients log into the Client Portal, they see a **Reports** card showing only the enabled reports for their account
-4. **Only active templates shown** — Only Web Report templates marked as **Active** in Settings are available for account assignment
-
-When you check the box next to a report template, that report becomes visible to the account in the Client Portal. Unchecking removes it from the portal view. Changes take effect immediately — no additional save step required.
-
-For more information about creating and managing Web Report templates, see **[Web Reports](../settings/web-reports.md)** in Settings.
-
----
-
-## Assessments tab
-
-![Account Details — Assessments](../assets/screenshots/account/account-details-assessments.png)
-
-The **Assessments** tab displays all assessments associated with this account. For each assessment you can see:
-
-- Assessment name and collection
-- Start and close dates
-- Number of responses
-- Executive contact assigned to the assessment
-- Current status (e.g. In Progress, Results Review, Completed)
-
-This gives you a complete audit trail of the account's assessment activity and makes it easy to track progress across multiple assessments over time. Use the search bar and status filter to narrow down the list.
-
-![Account Details — Assessments (scrolled)](../assets/screenshots/account/account-details-assessments-scrolled.png)
-
----
-
-## Reports Tab
-
-The **Reports** tab provides a centralized view of all assessment reports generated for this account. 
-
-![Account Details — Reports](../assets/screenshots/account/account-details-reports.png)
-
-This tab shows:
-
-- **All assessment reports** linked to assessments for this account
-- **Report types** — Web reports, PDF reports, or analysis documents
-- **Generation dates** — When each report was created
-- **Quick actions** — View, download, or manage reports
-
-From this tab, you can:
-
-- **Review assessment reports** — View completed reports from any assessment for this account
-- **Manage PDF access** — Control which PDF report templates are available (configured in Overview tab)
-- **Manage Web access** — Control which Web Report templates are available (configured in Overview tab)
-- **Share reports** — Generate and share specific reports with clients or stakeholders
-
-![Account Details — Reports (scrolled)](../assets/screenshots/account/account-details-reports-scrolled.png)
-
-For more details on creating and managing reports, see:
-
-- **[Report Builder](../assessments/report-builder.md)** — How to analyze results and write assessment reports
-- **[PDF Reports](../settings/pdf-reports.md)** — Configure and manage PDF report templates
-- **[Web Reports](../settings/web-reports.md)** — Create and manage web-based report templates
-
----
-
-## Contacts Tab
-
-The **Contacts** tab allows you to manage team members and contacts associated with this account.
-
-![Account Details — Contacts](../assets/screenshots/account/account-details-contacts.png)
-
-This tab shows all contacts linked to the account, including:
-
-- Contact name and role
-- Email address and phone number
-- Portal access status (whether they can access the Client Portal)
-- Account assignment status
-
-You can:
-
-- **Add new contacts** — Invite team members to the account
-- **Update contact info** — Edit phone, email, and other details
-- **Manage portal access** — Control who can access the Client Portal
-- **Remove contacts** — Unassign contacts from the account
-
-![Account Details — Contacts (scrolled)](../assets/screenshots/account/account-details-contacts-scrolled.png)
-
----
-
-## Assignments Tab
-
-![Account Details — Assignments](../assets/screenshots/account/account-details-assignments.png)
-
-The **Assignments** tab controls team assignments for this account — designating who will receive update notifications and manage the client relationship.
-
-### Team Assignments
-
-The Team Assignments panel shows all configured role slots for this account. Each role slot can have one or more users assigned.
-
-#### Manager of Client Services
-
-!!! note "Role name is configurable"
-    The label **Manager of Client Services** (and other role titles shown here) can be customized for your organization on the **[Branding](../settings/branding.md)** settings page. The exact titles displayed will match whatever your organization has configured.
-
-The **Manager of Client Services** role designates the primary person responsible for the client relationship on this account. This person will:
-
-- Receive update and activity notifications for the account
-- Be visible to the client as their main point of contact
-- Appear on assessments associated with this account as the executive contact
-
-**To assign a Manager of Client Services:**
-
-1. Open the **Assignments** tab on the Account Details page
-2. Under **Team Assignments**, locate the **Manager of Client Services** (or your organization's equivalent role name) section
-3. Click **+ Add Person** to open the user selector
-4. Search for and select the user to assign
-5. The assignment saves immediately
-
-To remove a user, click the **×** on their assignment card.
-
-#### Other role slots
-
-Additional role slots (such as **Support**) may appear depending on how your organization has configured team roles in Branding settings. Each works the same way — click **+ Add Person** to assign a user.
-
-![Account Details — Assignments (scrolled)](../assets/screenshots/account/account-details-assignments-scrolled.png)
-
----
-
-## Geocoding
-
-The Geocoding section allows you to assign geographic coordinates to an account based on its address. This enables the platform to map accounts in the [Ecosystem](../ecosystem/index.md) view and support location-based filtering.
-
-!!! warning "Address accuracy is critical"
-    For geocoding to work correctly, the account's address must be complete and correctly formatted. Verify the street address, city, state/province, and postal code in [Edit Account](edit.md) before geocoding.
-
----
-
-## Help Videos
-
-Watch these tutorials to learn how to manage accounts:
-
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
-
-<div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/CJV1hJH3buQ?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Accounts | Details Overview Tab</strong></p>
-</div>
-
-<div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/C_Yzetqp48E?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Accounts | Actions Tab</strong></p>
-</div>
-
-<div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/i-3KG9HmdSw?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Accounts | Assessments Tab</strong></p>
-</div>
-
-<div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/QB8HkZTt4VA?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Accounts | Web Report Tab</strong></p>
-</div>
-
-<div>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/uiF0BoFv92o?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Accounts | Contacts Tab</strong></p>
-</div>
-
-</div>
-
----
-
-## Related
-
-- [Edit Account](edit.md) — Update account information
-- [Accounts](index.md) — Accounts overview
-- [Client Portal](../client-portal/index.md) — Preview what clients see in their portal
-- [Web Reports](../settings/web-reports.md) — Create and manage report templates
-- [Assessments](../assessments/index.md) — Assessment overview
-- [Branding](../settings/branding.md) — Customize role names and team labels
-
+[Accounts](index.md) · [Edit account](edit.md) · [Assessments](../assessments/details.md)

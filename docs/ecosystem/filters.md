@@ -1,50 +1,29 @@
 ---
 tags:
   - ecosystem
-  - map
-  - filter
-  - NAICS
-  - geography
-  - regions
 ---
 
-# Filters
+# Filter the Ecosystem Map
 
-The **Filters** panel on the left side of the Ecosystem Map lets you narrow which accounts appear on the map and in the account list.
+## Filter the map to answer a specific question
 
-## Overview
+Combine filters to focus the account list and map on the organizations you want to understand. For example, explore smaller manufacturers in a region, compare a particular industry’s assessment scores, or inspect impact among selected account characteristics. Use Clear to reset the filters.
 
-![Filters panel](../assets/screenshots/ecosystem/ecosystem-filters.png)
+- **Assessment and Score Category** — Choose an assessment type, then focus its Score view on the total score or a particular scoring category.
+- **Location** — Narrow by State, City, County, Region, or a Zipcode value or prefix.
+- **Company Size** — Select the small, medium, or large company-size ranges configured for your organization.
+- **NAICS industry** — Work through Sector, Subsector, Group, and Industry to focus on a broad sector or a specific industry.
+- **Source and Additional datasets** — Choose a data source, and use Additional to include available datasets beyond your own account records.
+- **Account characteristics** — Filter by Partner, OEM Manufacturer, Military Manufacturer, Woman Owned, Veteran Owned, Minority Owned, or Federal Contractor.
+- **Located accounts** — Use Located to restrict results to records with a mapped location. Turn it off to include records still needing location information in your account search and list.
+- **Account search** — Search the account list to find a specific organization within your current selection.
 
-| Filter group | Options |
-|---|---|
-| **Assessment** | Select an active assessment to enable the Scores view |
-| **Location** | State, City, County, Region |
-| **Company Size** | Small Enterprise (1–50), Medium Enterprise (51–250), Large Enterprise (251+) |
-| **Source** | Filter by data source or shared datasource |
-| **NAICS** | Sector, Subsector, Group, Industry (hierarchical — each level filters the next) |
+## Apply and interpret filters
 
-The **Located** / **Additional** toggles at the top control whether geocoded accounts, non-geocoded accounts, or both appear on the map.
+Select the assessment type and view before refining geography, industry, size, or account characteristics. Check the visible legend and counts after changing filters. **Located** filters help distinguish accounts that can appear geographically from those that still need address/geocoding information.
 
-Use the **Clear** button at the top of the filters panel to reset all filters at once.
+Impact has additional metric, status, priority, and aggregation controls. A filtered map represents the current selection, not every organization in the platform.
 
-## NAICS Industry Filter
+![Current Ecosystem filter controls](../assets/screenshots/v275/ecosystem-filters.png)
 
-The NAICS filter section provides four cascading Autocomplete fields — Sector, Subsector, Group, and Industry. Selecting a Sector narrows the Subsector options, and so on down the hierarchy.
-
-![NAICS sector filter applied](../assets/screenshots/ecosystem/ecosystem-filtered-sector.png)
-
-This matches the same NAICS structure described in [Industries](../industries/index.md).
-
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/fT7b-x43kRQ?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel EcoSystem | Map Filters</strong></p>
-</div>
-
-## Related
-
-- [Ecosystem Map](index.md) — overview
-- [Scores View](scores.md) — overlay assessment scores after selecting an Assessment filter
-- [Industries](../industries/index.md) — full NAICS hierarchy reference
+[Map overview](index.md) · [Account details](accounts.md) · [Scores](scores.md)

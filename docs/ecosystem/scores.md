@@ -1,63 +1,20 @@
 ---
 tags:
   - ecosystem
-  - map
-  - scores
-  - analytics
-  - assessments
-  - reporting
 ---
 
-# Scores View
+# Scores on the Map
 
-The Scores view overlays assessment results as color-coded markers on the Ecosystem Map, letting you instantly see how accounts across your region performed on any assessment.
+Select an assessment type in **Ecosystem**, then switch to **Score**. Choose **Total Score** or an individual **Score Category** to compare results geographically.
 
-## Enabling Scores View
+![Ecosystem score view and category selector](../assets/screenshots/v275/ecosystem-score.png)
 
-First, select an **Assessment** in the [Filters](filters.md) panel. Once an assessment is selected, a **Markers / Scores** toggle appears at the top of the map. Switch it to **Scores** to activate the color-coded view.
+## Read the selection
 
-![Scores view enabled](../assets/screenshots/ecosystem/ecosystem-scores-suppliers.png)
+Use the legend for the active score scale and bands. Switching categories can reveal strengths or gaps that an overall result hides. Select an account to investigate the assessment behind the displayed result.
 
-## Reading the Map
+Narrow the selection with geography, NAICS industry, size, and other account filters. Compare the same assessment type and category, and check status and available responses before interpreting differences. An absent result is not a zero score.
 
-The color scale runs from **red** (low score) through **yellow** to **green** (high score). The score range is shown in the legend on the map:
+To map recorded outcomes rather than assessment scores, switch to **Impact** and choose the metric and **Sum**, **Mean**, or **Max** aggregation.
 
-- **Red zones** indicate accounts with lower assessment scores
-- **Yellow zones** indicate accounts in the mid-range
-- **Green zones** indicate accounts with higher assessment scores
-- Accounts with **no score** for the selected assessment are hidden from the map
-
-## Score Categories
-
-When you select an assessment, the **Score Category** dropdown becomes available. This dropdown lets you switch between viewing different scoring metrics:
-
-- **Total Score** — The overall assessment score across all categories (default)
-- **Individual Category Scores** — Any scoring categories defined in the assessment
-
-Each organization defines their own assessment categories. For example, an assessment might have categories like:
-- Financial Stability
-- Operational Excellence
-- Risk Management
-- Compliance
-
-### Viewing Different Score Categories
-
-![Score Category dropdown](../assets/screenshots/ecosystem/ecosystem-score-category-dropdown.png)
-
-1. Click the **Score Category** dropdown in the filters panel
-2. Select any category to switch the map visualization
-3. The markers update instantly to show scores for that specific category
-
-### Example: Financial Stability Category
-
-![Financial Stability scores](../assets/screenshots/ecosystem/ecosystem-scores-financial-stability.png)
-
-Here the map is showing scores specifically for the **Financial Stability** category. Notice how the distribution of colors changes — accounts that score high on overall resilience might score differently on specific categories.
-
-## Related
-
-- [Ecosystem Map](index.md) — overview
-- [Filters](filters.md) — select an assessment and narrow down which accounts appear
-- [Account List & Details](accounts.md) — click an account marker to view its details
-- [Assessments](../assessments/index.md) — manage the assessments whose scores can be visualized here
-
+[Map overview](index.md) · [Filters](filters.md) · [Scoring reference](../library/scoring.md) · [Impact metrics](../impact-tracker/metrics.md)

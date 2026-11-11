@@ -2,109 +2,30 @@
 route: /dashboard
 tags:
   - dashboard
-  - analytics
-  - components
-  - charts
 ---
 
 # Dashboard Components
 
-The dashboard includes 11 built-in analytics components. Each component displays data for the currently selected assessment definition. You can control which components are shown and their order from [Configure Dashboard](configure.md).
+Choose components that answer your team’s questions for the selected assessment type or Directors view. Availability depends on the assessment data and your enabled features.
 
----
+![Assessment dashboard components](../assets/screenshots/v275/dashboard.png)
 
-## Assessments Summary
+## Choose charts and components for your questions
 
-![Assessments Summary](../assets/screenshots/dashboard/dashboard-assessment-summary.png)
+The dashboard combines visual charts with tables and summary components. Choose components suited to the selected assessment type and the data you want to explore.
 
-A donut chart showing the breakdown of all assessments by status: **Closed**, **In Progress**, **Draft**, and **Results Review**. The center displays the total count. The ring below shows total responses collected across all assessments.
+- **Donut charts** — See the assessment status mix and overall counts in Assessments Summary.
+- **Score gauges and progress bars** — Review overall resilience scores and highest- or lowest-scoring statements.
+- **Horizontal and vertical bar charts** — Compare category scores, average scores by NAICS industry, and numeric or rating responses.
+- **Stacked bar charts** — See business-size distribution within NAICS industry groups.
+- **Tables and rankings** — Explore top-scoring accounts, frequently offered solutions, in-progress assessments, question response details, and response breakdowns.
+- **Individual question components** — Highlight response distributions for selected questions, including binary, multiple-select, rating, and numeric question types.
+- **Directors impact chart views** — Switch impact metrics between vertical bar, horizontal bar, line, area, and donut views, and choose the metric and aggregation to explore.
 
----
+## Read scores and missing data
 
-## Total Resilience Score
+Score bands and labels follow the assessment’s thresholds and scoring configuration. Current AE score displays use threshold-based bars. Check the selected type, category, response totals, and score range before comparing accounts. A missing score is not a zero result.
 
-![Total Resilience Score](../assets/screenshots/dashboard/dashboard-resilience-score.png)
+The Directors view also includes assessment counts by Account Executive and program-wide activity. Use its impact component’s metric, status, priority, and aggregation controls to determine what is being compared.
 
-A progress bar showing the average score across all completed assessments relative to the maximum possible score. Displays the total point value and the number of assessments included in the average.
-
----
-
-## Most Frequently Offered Solutions
-
-![Most Frequently Offered Solutions](../assets/screenshots/dashboard/dashboard-solutions.png)
-
-A table listing the solutions most commonly offered across assessments. Shows how many times each solution has been offered and across how many assessments. Use the **Copy** button to copy the list to your clipboard.
-
----
-
-## Company Size Analysis
-
-![Company Size Analysis](../assets/screenshots/dashboard/dashboard-company-size.png)
-
-Displays the total number of companies associated with assessments, broken down by size category: **Small**, **Medium**, **Large**, and **Unknown**. The horizontal bar provides a proportional visual summary.
-
----
-
-## Assessment Scoring by Category
-
-![Assessment Scoring by Category](../assets/screenshots/dashboard/dashboard-scoring-by-category.png)
-
-A horizontal bar chart showing the average score for each assessment category. Bars are color-coded by performance tier (red/yellow/green) so you can quickly identify areas of strength and areas needing attention.
-
----
-
-## Average Score by NAICS Industry
-
-![Average Score by NAICS Industry](../assets/screenshots/dashboard/dashboard-naics-score.png)
-
-A vertical bar chart comparing average scores across NAICS industry groups. Use the dropdown to switch between **Industry**, **NAICS Group**, and **NAICS Subsector** groupings. Bars are color-coded by performance tier: **Needs Attention** (red), **Strengthening** (yellow), **High Performing** (green).
-
----
-
-## Top Scoring Accounts
-
-![Top Scoring Accounts](../assets/screenshots/dashboard/dashboard-top-accounts.png)
-
-A ranked table of accounts sorted by their average assessment score (highest first). Shows the account name, industry type, and score. Useful for identifying your highest-performing partners at a glance.
-
----
-
-## Assessments In Progress
-
-![Assessments In Progress](../assets/screenshots/dashboard/dashboard-in-progress.png)
-
-Tracks assessments that need follow-up. Two tabs:
-
-- **Zero Responses** — assessments that are "In Progress" but have not yet received any responses
-- **Blocked Children** — child assessments that are blocked from proceeding
-
----
-
-## Business Size Distribution by NAICS Industry
-
-![Business Size Distribution by NAICS Industry](../assets/screenshots/dashboard/dashboard-business-size-naics.png)
-
-A stacked bar chart showing the mix of **Large**, **Medium**, **Small**, and **Unknown** companies within each NAICS industry group. Use the dropdown to switch grouping levels. Useful for understanding the composition of your partner base by industry.
-
----
-
-## Highest Scoring Statements
-
-![Highest Scoring Statements](../assets/screenshots/dashboard/dashboard-highest-scoring.png)
-
-Shows the individual assessment questions with the highest average scores, displayed as gauge charts. Each card shows the question text, the category it belongs to, and the average score with a color-coded gauge (red/yellow/green). Click **See more** to view the full ranked list.
-
----
-
-## Lowest Scoring Statements
-
-![Lowest Scoring Statements](../assets/screenshots/dashboard/dashboard-lowest-scoring.png)
-
-Shows the individual assessment questions with the lowest average scores, displayed as gauge charts. Same format as Highest Scoring Statements. Use this to identify the areas where your partners most consistently need support.
-
----
-
-## Related
-
-- [Configure Dashboard](configure.md) — add, remove, or reorder components
-- [Dashboard Overview](index.md)
+[Configure components](configure.md) · [Scoring](../library/scoring.md) · [Export data](download.md)

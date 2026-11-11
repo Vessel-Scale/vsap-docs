@@ -1,60 +1,55 @@
 ---
 tags:
   - getting-started
-  - workflow
-  - assessments
-  - create
-  - assign
 ---
 
-# Workflow Step 1 — Assign Assessment
+# Assign an assessment
 
-Create an assessment instance by selecting an account and assessment template from your Library. When you create the assessment, it is automatically **assigned** to that account.
+Choose an account and template, then plan dates, recipients, and response options. Set a response target and reminders, and review the draft before starting collection.
 
----
+![Assign an assessment guide in Getting Started](../../assets/screenshots/v275/guide-assign-an-assessment.png)
 
-## Opening the Create Assessment Form
+Open **Getting Started** in the application and select this card to read its guide. Use the action button to continue to the relevant workspace. Available actions depend on your role and enabled features.
 
-Click **Assign Assessment** in the sidebar under **Create** menu, or navigate to **Assessments → Create Assessment**.
+## Choose the account and assessment type
 
-![Create Assessments form](../../assets/screenshots/getting-started/gs-create-assessment.png)
+Select the account being assessed and the assessment type from your Library. Give this assessment a clear title so your team can distinguish it from other assessments for the same organization, such as a different program or reporting period.
 
----
+You are creating an assessment for this account, using the reusable template’s structure. If the selected type includes child assessments, review their names too; the related assessments are created together as a group.
 
-## Form Fields
 
-| Field | Description |
-|---|---|
-| **Account Name** | Search and select the account being assessed |
-| **Assessment Type** | Choose the Library template to use for this assessment |
-| **Title / Name** | A descriptive name for this assessment instance |
-| **Start Date** | When the assessment opens for responses |
-| **End Date** | When the assessment closes |
-| **Direct Recipient** | Optional — a specific respondent's email address |
+## Set dates and a response target
 
-Click **Save** to create the assessment. You will be taken to the assessment detail page.
+Use the optional Start Date and End Date to plan the response window. Choose dates that give respondents enough time, and set an end date if you want to schedule reminders before collection closes. Setting dates does not start a draft assessment.
 
----
+Target Responses records how many responses you are aiming to collect. The form updates this count when you add or remove direct recipients, so review it after changing the recipient list and adjust it to match your collection plan.
 
-## What Happens After Assignment
 
-Once created, your assessment:
+## Add recipients and configure notifications
 
-✅ **Is assigned to the account** — The account name is now linked to this assessment  
-✅ **Enters Draft status** — Assessment is ready for final edits before publishing  
-✅ **Has a unique URL** — Ready to be shared once published  
-✅ **Shows in the Assessment list** — Appears under Assessments in your sidebar  
+Add Direct Recipients by selecting account contacts or entering their details. Direct recipients receive individual assessment links, allowing you to track who has responded. You can also manage recipients later from the assessment details.
 
----
+Enable Send Reminder Email when you want a reminder before the end date. Set Days Before Close Date to choose how far in advance it is sent; the default is 3 days. The reminder goes to the assessment creator and direct recipients who have not yet responded.
 
-## Next Step
+When a target response count is set, the assessment creator is automatically notified when that target is reached. This notification is separate from the optional reminder email.
 
-[Workflow Step 2 — Publish Assessment](step-2-publish.md){ .md-button .md-button--primary }
 
----
+## Choose whether to collect evidence
 
-## Related
+This option appears when the feature is enabled for your organization.
 
-- [Create Assessment Reference](../../assessments/create.md) — Detailed form fields and options
-- [Assessment Details](../../assessments/details.md) — View and manage your assessment
-- [Assessments Overview](../../assessments/index.md) — Assessment management guide
+Allow evidence uploads lets respondents attach supporting evidence to individual questions, giving your team more context when reviewing responses.
+
+This option starts with the selected assessment type’s default. You can turn it on or off for this assessment without changing the reusable template. Decide whether supporting evidence will be useful before inviting respondents.
+
+
+## Save and review before starting
+
+Review the account, template, names, dates, recipients, and settings, then save. The assessment is created in Draft status and its details page opens, with the Assessment Workflow Guide showing your next steps.
+
+Make any final changes, then follow the Start guidance in Deliver to respondents to move the assessment to In Progress before collecting responses. Your Library template remains available for future assessments.
+
+
+## Continue
+
+[Deliver to respondents](step-3-deliver.md) · [Assessment setup reference](../../assessments/create.md)

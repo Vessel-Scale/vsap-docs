@@ -9,11 +9,13 @@ tags:
 
 # NAICS Codes
 
+Open **Settings → Custom Data → NAICS Codes** to review classification records. The **Industries** explorer provides the browsing reference; this settings list controls the code choices available to your organization. Review account classifications after changes and include the relevant industry fields explicitly when exporting or pivoting account data.
+
 NAICS (North American Industry Classification System) codes categorize business industries. This section allows you to customize which industry codes are available in your ecosystem.
 
 ## Overview
 
-![NAICS Codes List](../../assets/screenshots/custom-data/naics-list.png)
+![NAICS Codes List](../../assets/screenshots/v275/naics.png)
 
 NAICS codes are six-digit classifications used to identify business types and industries. By managing which codes are active and visible in your system, you can tailor the platform to your specific ecosystem and industry focus.
 
@@ -26,8 +28,7 @@ When managing NAICS codes, you can use the following controls:
 | **Search Box** | Search by code number or description | Find specific industries quickly (e.g., "336111" or "automobile") |
 | **Active Status Toggle** | Show/hide inactive codes | Maintain a curated list while keeping historical data |
 | **MEP List Flag** | Identify codes associated with manufacturing sectors | Filter codes relevant to Manufacturing Extension Partnership (MEP) programs |
-| **Bulk Actions** | Select multiple codes at once | Activate/deactivate groups of related industries; set MEP flags for multiple codes |
-| **Sort Controls** | Sort by code, description, or status | Organize codes by any column |
+| **Activate All / Deactivate All / Activate MEP List** | Apply the named bulk activation action | Review the action and its scope before updating shared code availability |
 
 ## NAICS Code Fields
 
@@ -38,7 +39,6 @@ Each NAICS code record contains:
 - **Active Status**: Whether this code is available for selection in forms and assessments
 - **MEP List Flag**: Whether this code qualifies for MEP manufacturing programs
 
-![NAICS Code Edit Modal](../../assets/screenshots/custom-data/naics-edit-modal.png)
 
 ## Where NAICS Codes Are Used
 

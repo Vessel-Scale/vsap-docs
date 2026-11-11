@@ -2,40 +2,20 @@
 route: /dashboard
 tags:
   - dashboard
-  - configure
-  - components
-  - customize
 ---
 
 # Configure Dashboard
 
-The Configure Dashboard modal lets you control which analytics components appear on the dashboard and in what order. Configuration is saved per assessment definition.
+## Configure the components and layout
 
-## Opening the modal
+Choose a dashboard view, then select Configure to decide which components appear. Add available components, remove ones you do not need, and drag them into the order that works best for your team. In the AE view, you can also add individual question components to highlight particular questions.
 
-Click the **Configure** button (sliders icon) in the top-right toolbar of the dashboard.
+Save Configuration to apply the layout. AE dashboard configurations are saved for the selected assessment type, so different types can highlight different questions and measures. The Directors Dashboard has its own configuration for program-wide components.
 
-![Configure Dashboard modal](../assets/screenshots/dashboard/dashboard-configure.png)
+![Dashboard component configuration](../assets/screenshots/v275/dashboard-configure.png)
 
-## Active Components
+## Check the saved view
 
-The left panel lists all currently active components, numbered in their display order. Each row has a drag handle on the left and a remove button (red minus icon) on the right.
+Return to the dashboard and confirm that the intended components and order appear. Choose another assessment type when you need a different comparison; the AE configuration belongs to the selected type. Directors configuration is maintained separately.
 
-- **Drag to reorder** — grab the handle and drag a component to a new position
-- **Remove** — click the minus icon to remove a component from the dashboard; it moves to the Component Library
-- You can also drag a component from the library directly to a specific position in the active list
-
-## Component Library
-
-The right panel contains components available to add to the dashboard:
-
-- **Single Question Components** — add individual question charts. You can add multiple. Click **+ Add Question Component** or drag it to a position in the active list.
-
-## Saving
-
-Click **Save Configuration** to apply your changes. The dashboard will reload with the updated layout. Click **Cancel** to discard any changes.
-
-## Related
-
-- [Components](components.md) — descriptions of each available component
-- [Dashboard Overview](index.md)
+[Component reference](components.md) · [Dashboard](index.md)

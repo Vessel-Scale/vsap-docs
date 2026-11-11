@@ -9,6 +9,8 @@ tags:
 
 # Branding
 
+Branding also controls the assessment terminology and supported report-analysis labels used in Getting Started and the Client Portal. A renamed label can change what a guide or action list is called without changing its purpose. Reusable report layout and PDF output settings are managed separately in **Assessments → Reports**.
+
 Customize the visual identity, colors, logos, and terminology for your platform instance. These settings appear throughout the application and affect how your organization is represented to all users.
 
 ## Overview
@@ -24,7 +26,7 @@ Navigate to **Settings → Branding** to configure:
 
 Changes take effect immediately after saving (the page will reload automatically).
 
-![Branding Overview](../assets/screenshots/branding/branding.png)
+![Branding Overview](../assets/screenshots/v275/branding.png)
 
 ---
 
@@ -67,7 +69,6 @@ The text shown in the browser tab when users view the application. If not set, d
 
 ## Colors
 
-![Branding Colors](../assets/screenshots/branding/branding-colors.png)
 
 ### Primary Color
 
@@ -141,7 +142,6 @@ Control the color of navigation breadcrumbs and profile text in the header to en
 
 ## Login Page Customization
 
-![Branding Login Page](../assets/screenshots/branding/branding-login-page.png)
 
 ### Login Headline
 
@@ -159,7 +159,6 @@ Description or supporting text displayed below the headline. Provide context abo
 
 ## Terminology
 
-![Branding Terminology](../assets/screenshots/branding/branding-terminology.png)
 
 Customize business terms used throughout the application to match your organization's language.
 

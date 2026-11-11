@@ -10,6 +10,8 @@ tags:
 
 # Industries
 
+Open **Industries** from staff navigation. The client portal has its own Industries view, which offers industry context without exposing other organizations’ staff account summaries. Use [Client industry context](../client-portal/industry-benchmarking.md) for that workflow.
+
 The Industries page (NAICS Explorer) is a full reference for the North American Industry Classification System (NAICS) — the standard used to classify businesses by industry across the United States, Canada, and Mexico.
 
 ## What you can do here
@@ -21,7 +23,7 @@ The Industries page (NAICS Explorer) is a full reference for the North American 
 
 ## Overview
 
-![Industries Overview](../assets/screenshots/industries/industries.png)
+![Industries Overview](../assets/screenshots/v275/industries.png)
 
 The Industries explorer is organized as a four-column hierarchy — Sector, Subsector, Group, and Industry. Selecting any item in one column narrows the options in the next, letting you drill down from a broad economic category to a precise 6-digit code.
 

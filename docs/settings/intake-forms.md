@@ -11,6 +11,8 @@ tags:
 
 # Intake Forms
 
+Use **Getting Started → Add an account** to share an existing intake form, or manage configurations under **Accounts → Intake Forms**. Forms can collect account details only or create an assessment and redirect into it when configured. Select the assessment type after enabling **Create Assessment**, and review the public experience before sharing the link.
+
 Intake forms are publicly accessible forms that collect company and contact information from prospective clients. When a visitor submits an intake form, their data is saved to the platform as an Account and Contact — and optionally, an Assessment is automatically created for them.
 
 ## Overview
@@ -30,9 +32,9 @@ The same form can be shared as a URL link and accessed by anyone without logging
 
 ## Managing Intake Forms
 
-Navigate to **Settings → Intake Forms** to view all configurations.
+Navigate to **Accounts → Intake Forms** to view all configurations.
 
-![Intake Forms List](../assets/screenshots/intake-forms/intake-forms-list.png)
+![Intake Forms List](../assets/screenshots/v275/intake-forms.png)
 
 ### The List View
 
@@ -41,7 +43,7 @@ Each intake form appears as a card showing:
 - **Assessment icon and name** — the assessment definition linked to this form, or "No Assessment" if the form is data-collection only
 - **Form name** — the internal name you gave the configuration
 - **Description** — optional short description
-- **Active badge** — shown when this form is the default
+- **Default badge** — identifies a default configuration; review the separate availability indicators on the card
 - **Version** — increments automatically on every save
 - **Updated date** — when the configuration was last changed
 
@@ -57,7 +59,6 @@ Cards are sorted by most recently updated. Click any card to open the editor.
 
 ### Actions Menu
 
-![Intake Form Actions Menu](../assets/screenshots/intake-forms/intake-form-actions-menu.png)
 
 Click the three-dot (**⋮**) menu on any card to access:
 
@@ -72,7 +73,7 @@ Click the three-dot (**⋮**) menu on any card to access:
 
 ### Import Options
 
-Two buttons allow you to create a new form from an existing configuration:
+Use **Import** to open the available configuration import choices:
 
 - **Upload** — Select a `.json` file from disk; creates a new configuration named `"Pasted Intake Form"` (or `"Pasted Intake Form (2)"` etc. to avoid collisions)
 - **Paste** — Opens a dialog where you can paste JSON directly or read from the clipboard
@@ -89,7 +90,7 @@ Click **New Intake Form** (top right) to open the editor in create mode.
 
 The form editor is divided into several sections. Changes are only saved when you click **Save Changes**.
 
-![Intake Form Editor](../assets/screenshots/intake-forms/intake-form-editor.png)
+![Intake Form Editor](../assets/screenshots/v275/intake-editor.png)
 
 ### Basic Information
 
@@ -112,7 +113,6 @@ Click a preset button to auto-populate all settings at once. You can then custom
 
 ### Behavior Settings
 
-![Intake Form Behavior Settings](../assets/screenshots/intake-forms/intake-form-editor-behavior.png)
 
 | Setting | Description |
 |---------|-------------|
@@ -126,7 +126,7 @@ Click a preset button to auto-populate all settings at once. You can then custom
 
 Visible only when **Create Assessment** is enabled.
 
-**Parent Assessment** — Select the [assessment definition](../../library/index.md) to create. When you pick a parent that has child assessments, the children are automatically included and listed below with their own target response fields.
+**Parent Assessment** — Select the [assessment definition](../library/index.md) to create. When you pick a parent that has child assessments, the children are automatically included and listed below with their own target response fields.
 
 **Target Responses** — The number of submissions before the assessment is considered complete.
 
@@ -143,7 +143,6 @@ Visible only when **Create Assessment** is enabled.
 
 ### Page Configuration
 
-![Intake Form Pages Configuration](../assets/screenshots/intake-forms/intake-form-editor-pages.png)
 
 Select which pages appear in the intake form. **Company Selection** and **Contact Form** are always required and cannot be removed.
 

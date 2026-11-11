@@ -1,5 +1,5 @@
 ---
-route: /library/list
+route: /evaluation-assessment-list/library
 tags:
   - library
   - assessment-definitions
@@ -11,18 +11,20 @@ tags:
 
 # Assessment List
 
+Open **Assessments → Library**. Use **Browse** to find a Vessel starting template in the **Shared Template Library**, **Design Assessment** to start your own, or **Import** for supported YAML input. A **Client** badge/control identifies eligible published types made visible in the client Library; it does not expose every staff template to clients.
+
 Browse and manage all assessment definitions in the Library.
 
 ## Overview
 
-![Library List](../assets/screenshots/library/library-list.png)
+![Library List](../assets/screenshots/v275/library.png)
 
 Each card in the Library shows:
 
 - **Assessment icon and name**
 - **Status badge** — Draft, Published, or Deprecated
 - **Parent/Child badge** — whether this is a parent or child in a linked group
-- **Version** — increments on every save or copy
+- **Version** — identifies the template version
 - **Last updated date**
 
 Click any card to open the editor.
@@ -36,7 +38,7 @@ Use the toolbar above the cards to filter and sort:
 | **Search** | Filter by assessment name |
 | **Status filter** | Show All, Drafts Only, Published Only, Published + Drafts |
 | **Sort** | Updated Date (default), Name (A–Z), Custom Order |
-| **Group filter** | Filter by parent assessment group |
+| **Group filter** | Filter by template tags/groups |
 
 **Custom Order** enables drag-and-drop reordering of cards. Drag a card to reposition it and the order is saved automatically.
 
@@ -54,7 +56,7 @@ These actions appear on every card regardless of status:
 | **Copy to New Draft** | Creates a new independent draft copy of this assessment. The copy appears at the top of the list with an incremented version number. |
 | **Download Config** | Downloads the YAML configuration as a `.yaml` file to your computer. |
 | **Share Preview Link** | Copies a public preview URL (`/preview/{id}`) to your clipboard so you can share the assessment without requiring a login. |
-| **Edit** | Opens the full YAML editor for this assessment. Equivalent to clicking the card. |
+| **Edit** | Opens the unified editor for this assessment. Published editing is text-only; draft editing supports structural changes. |
 
 ### Draft assessments only
 

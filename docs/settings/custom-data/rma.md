@@ -9,11 +9,13 @@ tags:
 
 # Regional Manufacturer Associations (RMA)
 
+Open **Settings → Custom Data → Regional Manufacturer Associations**. Use the list’s search, **Add Association**, edit, and active-status controls to maintain association names. These records are separate from geographic [Regions](regions.md). Choose consistent associations in account profiles and intake forms.
+
 RMAs are regional organizations that support manufacturing businesses. This section lets you define which associations are relevant to your ecosystem.
 
 ## Overview
 
-![RMA List](../../assets/screenshots/custom-data/rma-list.png)
+![RMA List](../../assets/screenshots/v275/rma.png)
 
 Regional Manufacturer Associations connect businesses with local resources, training, and support. By managing RMAs in your system, you can help organizations identify and connect with relevant support networks in their region.
 
@@ -25,8 +27,6 @@ When managing RMAs, you can use the following controls:
 |---|---|---|
 | **Search Box** | Search by association name | Find specific RMAs quickly |
 | **Active Status Toggle** | Show/hide inactive associations | Maintain a curated list while preserving historical data |
-| **Sort Controls** | Sort by name or status | Organize associations alphabetically or by status |
-| **Bulk Actions** | Select multiple associations | Update active status for groups of RMAs |
 
 ## RMA Fields
 
@@ -35,7 +35,6 @@ Each RMA record contains:
 - **Name**: Organization name (e.g., "Northeast Manufacturing Association")
 - **Active Status**: Whether this RMA is available for selection in forms and accounts
 
-![RMA Edit Modal](../../assets/screenshots/custom-data/rma-edit-modal.png)
 
 ## Where RMAs Are Used
 

@@ -11,6 +11,8 @@ tags:
 
 # Platform Integration
 
+Keep classifications current through the account profile or **Accounts → Intake Forms**. In dashboard **Export** and **Analytics**, select the industry and additional account columns explicitly when you need them for an external report or pivot.
+
 Assigning a NAICS code to an Account unlocks industry-aware features throughout the platform. Because all four levels of the hierarchy are implied by a single 6-digit code, the platform can aggregate and filter data at any level — Sector, Subsector, Group, or full Industry — without any extra configuration.
 
 ## Where NAICS Data Is Used
@@ -40,6 +42,6 @@ Once set, the code propagates to all features in the table above without any add
 - [NAICS Hierarchy](hierarchy.md) — browse and understand the four levels
 - [Dashboard](../dashboard/index.md) — charts that use NAICS sector/subsector data
 - [Ecosystem Map → Filters](../ecosystem/filters.md) — filter by NAICS in the map
-- [Settings → Intake Forms](../settings/intake-forms.md) — configure the Industry Type page
+- [Accounts → Intake Forms](../settings/intake-forms.md) — configure the Industry Type page
 - [Settings → Custom Data](../settings/custom-data/index.md) — manage active NAICS codes
-- [Settings → Web Reports](../settings/web-reports.md) — use industry classification in report templates
+- [Assessments → Reports](../settings/web-reports.md) — use industry classification in report templates

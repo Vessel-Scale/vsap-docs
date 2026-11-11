@@ -8,7 +8,7 @@ tags:
 
 # Edit Account
 
-The Edit Account page allows administrators to update and maintain account information.
+Use **Account Details → Edit Details** to maintain the organization profile with the permissions available to you. Accurate addresses and NAICS codes support mapped locations, industry filters, dashboard comparisons, and report context.
 
 ## What you can do here
 
@@ -20,13 +20,13 @@ The Edit Account page allows administrators to update and maintain account infor
 
 ## Overview
 
-![Account Edit](../assets/screenshots/account/account-edit.png)
+![Account Edit](../assets/screenshots/v275/account-edit.png)
 
 The Edit Account interface provides a comprehensive form to update all aspects of an account's profile. This ensures your account data remains current and accurate as business information changes over time.
 
 ## Editing Account Information
 
-Access the Edit Account page by clicking the **Edit** button from the Account Details page. The form includes sections for:
+Access the Edit Account page by clicking the **Edit Details** button from the Account Details page. The form includes sections for:
 
 - **Basic Information** - Company name, description, and general account details
 - **Contact Information** - Primary contact name, email, phone, and address

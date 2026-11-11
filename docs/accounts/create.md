@@ -8,6 +8,8 @@ tags:
 
 # Create Account
 
+Choose **Add Account** from the Accounts list or the **Add an account** action in Getting Started. An account can represent an organization, an individual, or a general survey grouping; choose a consistent approach for your program. To collect information from the organization instead, share an [intake form](../settings/intake-forms.md).
+
 Use this form to add a new account to the platform.
 
 ## What you can do here
@@ -18,9 +20,8 @@ Use this form to add a new account to the platform.
 
 ## Overview
 
-![Create New Account form showing General Info and Contacts sections](../assets/screenshots/account/account-create.png)
+![Create New Account form showing General Info and Contacts sections](../assets/screenshots/v275/create-account.png)
 
-![Create New Account form — lower sections](../assets/screenshots/account/account-create-scrolled.png)
 
 The Create Account form uses the same fields and layout as the [Edit Account](edit.md) page. Sections include:
 
@@ -45,7 +46,7 @@ After filling in the required fields, click **Save** to create the account. Vali
 
 ## Related
 
-- [Getting Started: Step 1](../../getting-started/creating-your-account.md) — Quick-start guide to creating accounts
+- [Getting Started: Step 1](../getting-started/before-you-begin/add-account.md) — Quick-start guide to creating accounts
 - [Edit Account](edit.md) — Full field reference
 - [Account Details](details.md) — View account information
 - [Accounts](index.md) — Accounts overview

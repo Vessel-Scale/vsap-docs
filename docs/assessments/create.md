@@ -2,53 +2,30 @@
 route: /create-evaluation-assessment
 tags:
   - assessments
-  - create
 ---
 
-# Create Assessment
+# Assign an Assessment
 
-Use this form to start a new assessment for an account.
+Choose **Assign Assessment** from Getting Started or the account’s Assessments area. This creates an account-specific assessment from a published Library template.
 
-## What you can do here
+![Assign Assessment form](../assets/screenshots/v275/assign-assessment.png)
 
-- Select the account and assessment definition
-- Set the evaluation date and assignee
-- Begin filling in responses
+## Configure the draft
 
-## Top Section
+1. Select the **Account** and assessment type. Enter a title that distinguishes the program or reporting period. Review child names if the type creates a group.
+2. Set optional **Start Date** and **End Date**. Dates define the response window; they do not start a draft.
+3. Review **Target Responses** after adding or removing recipients; the count can change with the recipient list.
+4. Add **Direct Recipients** from account contacts or enter their details. Their personalized links support individual progress tracking.
+5. Optionally enable **Send Reminder Email** and choose **Days Before Close Date**. The default is 3 days; configure an end date for a scheduled reminder. The creator and direct recipients who have not responded receive the reminder. The creator’s target-reached notification is separate.
+6. Where available, review **Allow evidence uploads**. It starts with the assessment type’s default and can be changed for this assessment.
+7. Save, then review the assessment details in **Draft** status.
 
-When creating a new assessment, you'll start with the form header where you:
+## Start collecting responses
 
-- **Select Account**: Choose which account this assessment is for
-- **Select Assessment Definition**: Pick the assessment template from the Library
-- **Set Evaluation Date**: Specify when the assessment was performed
-- **Assign Respondent**: Choose who will complete or is completing the assessment
+Change the status to **In Progress** when ready, check that any configured response window is open, and share links. Follow [Deliver to respondents](../getting-started/workflow/step-3-deliver.md).
 
-You can also configure:
-- **Close Reminder Days** — Set how many days before the assessment closes to automatically send reminder emails to incomplete respondents
-- **Assessment Close Date** — Define when participant access will expire
+## Client-created assessments
 
-### Pre-filled from the Client Portal
+Clients can select a visible template from their Library and choose **Create This Assessment for My Account**. The account and type are prefilled. Clients can choose **Privacy → Hide from account executives & admins** for work they want to keep within their account team. This does not grant template-editing permissions.
 
-If you arrived here by clicking **Create This Assessment for My Account** in the Client Portal's [All Available Assessments](../client-portal/all-available-assessments.md) tab, the **Account** and **Assessment Definition** fields will already be filled in and locked — you don't need to change them. Fill in the remaining fields and submit.
-
-## Editor
-
-After setting the top section details, you'll use the assessment editor to fill in responses to questions organized by category. For complete details about working in the editor—adding responses, managing categories, and navigating questions—see [Edit Assessment](details.md#editing-an-assessment).
-
-The editor interface is the same whether you're filling in responses while creating a new assessment or editing responses later in Assessment Details.
-
-## Help Video
-
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/utqqZ1hAfQk?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Assessment | Publishing Assessment</strong></p>
-</div>
-
-## Related
-
-- [Getting Started: Step 3](../../getting-started/create-assessment.md) — Quick-start guide to creating assessments
-- [All Available Assessments](../client-portal/all-available-assessments.md) — how clients can self-start assessments from the portal
-- [Assessments](index.md)
-- [Library](../library/index.md)
-- [Edit Assessment](details.md#editing-an-assessment)
+[Assignment guide](../getting-started/workflow/step-1-assign.md) · [Assessment details](details.md) · [Client Library](../client-portal/library.md)

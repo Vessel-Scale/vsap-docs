@@ -19,18 +19,21 @@ Note: client-portal section now uses QA demo environment (demo.schema-qa.vessels
 import argparse
 import asyncio
 import json
+import os
 from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-BASE_URL = "https://demo.schema-qa.vesselscale.com"
-ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg0NzgxODA4LCJpYXQiOjE3ODQ3Mzg2MDgsImp0aSI6ImU0NGFjZmNkN2FlOTRkYzZiOWNjNjBkNDNlNmU2NTIyIiwidXNlcl9pZCI6ImVjYTIxNzZmLTJkZjQtNDc1NC1iNDNhLTZmMDRlMWJjODA5ZCIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW5AdmVzc2Vsc2NhbGUuY29tIiwidXNlcl9ncm91cHMiOlsiYWRtaW4iLCJhY2NvdW50X2V4ZWN1dGl2ZSJdfQ.tYY9qmvg3lRtDupx0HuGze5wKiv7uWzMXytOUsv8kIc"
+BASE_URL = os.environ.get("VSAP_BASE_URL", "https://demo.schema-qa.vesselscale.com")
+ACCESS_TOKEN = os.environ.get("VSAP_ACCESS_TOKEN", "").removeprefix("Bearer ")
+ACCESS_TOKEN = f"Bearer {ACCESS_TOKEN}" if ACCESS_TOKEN else ""
 
 # ── Client user credentials (QA demo environment) ───────────────────────────────────
-# JWT payload: user_id=26b5d45a, email=kevin+client@vesselscale.com, user_groups=["client"]
+# Supply a separate client credential only when capturing a real client session.
 CLIENT_BASE_URL = "https://demo.schema-qa.vesselscale.com"
 CLIENT_API_URL  = "https://demo.schema-api-qa.vesselscale.com/"
-CLIENT_ACCESS_TOKEN = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgxMzQ3MzIwLCJpYXQiOjE3ODEzMDQxMjAsImp0aSI6ImFlNGY0ZjM1OTNiMzRmOGZiZmVhYzhjMzFlNzYzYjI0IiwidXNlcl9pZCI6IjI2YjVkNDVhLTI1YzItNDg3Ny04YjFlLTNhMGJkZmQzMzU5MiIsImZ1bGxuYW1lIjoiS2V2aW4gVGV0eiIsImVtYWlsIjoia2V2aW4rY2xpZW50QHZlc3NlbHNjYWxlLmNvbSIsInVzZXJfZ3JvdXBzIjpbImNsaWVudCJdfQ.4KnF9tGn_ApBy8DmtzShDb2T_OLU3AzMk1T3hYvMg-A"
+CLIENT_ACCESS_TOKEN = os.environ.get("VSAP_CLIENT_ACCESS_TOKEN", "").removeprefix("Bearer ")
+CLIENT_ACCESS_TOKEN = f"Bearer {CLIENT_ACCESS_TOKEN}" if CLIENT_ACCESS_TOKEN else ""
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -2035,6 +2038,8 @@ ALL_SECTIONS = list(SECTIONS.keys())
 
 
 async def main(sections: list[str]):
+    if not ACCESS_TOKEN:
+        raise SystemExit("Set VSAP_ACCESS_TOKEN in the environment before capturing screenshots.")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     async with async_playwright() as p:

@@ -2,38 +2,27 @@
 route: /evaluation-assessment-list
 tags:
   - assessments
-  - overview
 ---
 
 # Assessments
 
-The Assessments section is the primary workspace for managing assessment instances across your accounts.
+Use **Assessments** to manage assessments assigned to accounts. Collection cards group assessments by type and show assessment and response counts. Search or filter the available collections, then choose **View Assessments** to inspect the work for a type.
 
-## What you can do here
+![Assessment collections and response counts](../assets/screenshots/v275/assessments.png)
 
-- Browse all assessments across accounts
-- Filter by assessment type, status, or date
-- Open an assessment collection for a specific definition
-- Create new assessments
+## Choose the right tool
 
-## Assessment Collections
+| Tool | Purpose |
+| --- | --- |
+| **Assessments** | Account-specific assessments, recipients, responses, status, analysis, and sharing. |
+| **Assessments → Library** | Reusable questions, categories, scoring, and template feedback. |
+| **Assessments → Reports** | Reusable report layouts and standard content, managed by administrators. |
+| **Account → Assessments** | Find assessments for one organization. |
 
-![Assessment Collections](../assets/screenshots/assessments/assessment-collections.png)
+## Run an assessment
 
-The Assessments view shows a categorized list of all assessment instances in your system. Assessments are typically grouped by assessment definition type, making it easy to find related assessments. This collection view allows you to see patterns in your assessment activity, compare assessments across similar types, and manage large numbers of assessments efficiently. You can filter, sort, and search within these collections to quickly locate specific assessments.
+Follow the in-product Getting Started guide: **Assign an assessment → Deliver to respondents → Build your report → Share the results**. Assessments move through **Draft → In Progress → Results Review → Closed**. Parent and child assessments can have distinct response counts and status; review the relevant member of the group before interpreting its results.
 
-## Help Video
+Client-private assessments remain hidden from ordinary admin and AE views. Account and response access also follow your permissions.
 
-<div>
-<iframe width="100%" height="280" src="https://www.youtube.com/embed/9v6_gbOfFsA?si=" style="border: none; border-radius: 8px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
-<p><strong>Vessel Assessment | Assigning and Prepping Assessments</strong></p>
-</div>
-
-## Related
-
-- [Assessment Details](details.md)
-- [Create Assessment](create.md)
-- [Question Types](../library/question-types.md)
-- [Scoring](../library/scoring.md)
-- [Report Builder](report-builder.md)
-- [Library](../library/index.md)
+[Assign an assessment](create.md) · [Assessment details](details.md) · [Getting Started](../getting-started/index.md) · [Library](../library/index.md)

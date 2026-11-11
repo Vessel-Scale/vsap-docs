@@ -7,6 +7,8 @@ tags:
 
 # NAICS Hierarchy
 
+Use the four-level explorer in **Industries** to drill into a classification, then review its description before applying it to an account. The account summaries described here belong to the staff view; client Industries omits other organizations’ staff summaries.
+
 NAICS codes are organized into four nested levels, from broad economic sectors down to specific industries. Every six-digit code assigned to an Account maps to all four levels simultaneously, so data can be aggregated at any level.
 
 ```
@@ -20,11 +22,13 @@ The Industries explorer displays all four levels as columns. Selecting a code in
 
 ---
 
+
+![Four-level NAICS explorer](../assets/screenshots/v275/industries.png)
+
 ## Sectors
 
 Sectors are the broadest classification — 20 major divisions of the economy identified by a **2-digit code** (e.g., `31`–`33` Manufacturing, `54` Professional Services).
 
-![Sector View](../assets/screenshots/industries/industries-sector.png)
 
 Clicking a Sector shows:
 
@@ -40,7 +44,6 @@ Clicking a Sector shows:
 
 Subsectors narrow the Sector into more focused industry areas using a **3-digit code** (e.g., `311` Food Manufacturing, `332` Fabricated Metal Product Manufacturing).
 
-![Subsector View](../assets/screenshots/industries/industries-subsector.png)
 
 Clicking a Subsector shows:
 
@@ -56,7 +59,6 @@ Clicking a Subsector shows:
 
 Groups are the third level, identified by a **4-digit code** (e.g., `3112` Grain & Oilseed Milling, `3321` Forging & Stamping). A Group typically represents a distinct production process or product category within a Subsector.
 
-![Group View](../assets/screenshots/industries/industries-group.png)
 
 Clicking a Group shows:
 
@@ -72,7 +74,6 @@ Clicking a Group shows:
 
 Industries are the most specific level — **6-digit codes** that identify a precise type of business activity (e.g., `311211` Flour Milling, `332111` Iron and Steel Forging).
 
-![Industry View](../assets/screenshots/industries/industries-industry.png)
 
 Clicking an Industry shows:
 

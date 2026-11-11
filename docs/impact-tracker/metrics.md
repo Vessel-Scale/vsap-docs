@@ -1,175 +1,47 @@
 ---
 tags:
   - impact-tracker
-  - metrics
-  - measurement
-  - outcomes
-  - roi
 ---
 
-# Impact Metrics Guide
+# Impact Metrics
 
-Impact metrics are the quantifiable and qualitative measures that track the real-world outcomes of action items. They demonstrate the value of your assessment program and guide future improvement efforts.
+Record outcomes on the relevant action item so they stay connected to the account, assessment, and improvement work.
 
-## What Are Impact Metrics?
+## Record the Core Impact Metrics
 
-Impact metrics measure how an action item affects your organization:
+Open an item’s impact details to record the business value associated with the work. Enter the metrics that apply, explain the basis for estimates in comments, and update the values as the client confirms results. Use consistent units and measurement periods so the figures are useful when combined.
 
-- **Quantifiable** — Dollar savings, time saved, units produced, quality improvements, etc.
-- **Qualitative** — Capability improvements, customer satisfaction, employee engagement, risk reduction, etc.
-- **Timeline** — How long it took to implement and see results
-- **Evidence** — Supporting documentation or data proving the impact
+- **Annual Cost Savings ($)** — The expected or confirmed annual reduction in costs associated with the action.
+- **Annual Revenue Opportunity ($)** — The annual revenue opportunity associated with the improvement or project.
+- **Jobs Created or Retained** — The number of jobs the work is expected to create or help retain.
+- **Productivity Improvement (%)** — The improvement in productivity expressed as a percentage.
+- **Expert Confidence (%)** — Your confidence in the impact estimate, recorded as a percentage.
 
-## Types of Impact Metrics
+## Add the metrics that explain the wider impact
 
-### Operational Metrics
-Measure internal business improvements:
-- **Cost Reduction** — Savings from efficiency improvements
-- **Time Savings** — Hours/days saved through process optimization
-- **Quality Improvement** — Defect rate reduction, output quality gains
-- **Productivity** — Units/output increase, revenue impact
-- **Capacity** — Additional throughput or capability enabled
+Expand Additional Impact Metrics when the core measures do not tell the whole story. These fields capture the investment, reach, operational improvements, and risk benefits behind an action.
 
-### Strategic Metrics
-Track contribution to business goals:
-- **Risk Mitigation** — Reduction in identified risks
-- **Compliance** — Achieved compliance standards or certifications
-- **Market Position** — Competitive advantage gained
-- **Customer Impact** — Customer satisfaction or retention improvements
-- **Growth** — New market access or business opportunities enabled
+- **Implementation** — Implementation Cost ($), Payback Period (months), and Time Until Benefits (days).
+- **Scope** — Employees Impacted and Customers Impacted.
+- **Operational** — Annual Hours Saved, Capacity Increase (%), Scrap Reduction (%), and Downtime Reduction in hours or percent.
+- **Quality & Risk** — Quality Improvement (%) and Risk Reduction ($).
 
-### Capability Metrics
-Measure organizational development:
-- **Skill Development** — Employee training completed
-- **Process Improvement** — Documented new or improved processes
-- **System Adoption** — New tools or systems successfully implemented
-- **Cultural Change** — Measurable improvements in team capability
+## Aggregate the impact for dashboard analysis
 
-## Recording Impact Metrics
+The item-level metrics roll up across accounts and assessments in the Directors Dashboard’s impact component. This connects individual improvement projects to a higher-level picture of the value your program is delivering.
 
-### Step 1: Navigate to the Action Item
+Choose the metric, status, priority, and aggregation you want to analyze. Use Sum for additive totals and Mean or Max for comparisons where appropriate, then explore bar, line, area, or donut views. Use the dashboard’s analytics and export tools to examine the underlying data and prepare program or leadership reporting.
 
-1. Open the Impact Tracker
-2. Find the action item you've worked on
-3. Click to open the action item details
+Keep the item records and measurement basis up to date: dashboard totals and comparisons depend on the metrics and filters you have chosen.
 
-### Step 2: Add Impact Metrics
+## See where the impact is happening
 
-In the **Impact Metrics** section:
+In Ecosystem, switch to Impact to put the same recorded action-tracker metrics on the map for accounts with mapped locations. Select a metric and Sum, Mean, or Max, then filter by status, priority, geography, industry, or account characteristics.
 
-1. Click **Add Metric**
-2. Choose the metric type or create a custom one
-3. Enter the metric value:
-   - For quantifiable metrics: enter the number and unit (e.g., "$50,000" or "120 hours")
-   - For qualitative metrics: enter a description (e.g., "Implemented new preventive maintenance schedule")
-4. Add supporting evidence:
-   - Attach documentation (spreadsheets, photos, reports)
-   - Include dates when metrics were achieved
-   - Add notes explaining the measurement
+Use the map to see where savings, revenue opportunities, jobs, time savings, and other outcomes are concentrated. Select an account to inspect its Impact items and the assessments behind them, connecting regional patterns back to the work with each client.
 
-### Step 3: Update Status
+## Keep figures interpretable
 
-Mark the action as:
-- **In Progress** — Work has started, metrics tracking ongoing
-- **Complete** — Work finished, final metrics recorded
-- **Won't Do** — Action was decided against
+Record the basis, timeframe, and whether values are estimated or confirmed in the item’s comments. Update values as the client confirms results. Use the named fields and units; a percentage is not an additive dollar total. Choose aggregation and filters to match the question you are answering.
 
-## Impact Aggregation
-
-### Individual Action Impact
-
-Each action item displays its collective impact:
-- Total quantifiable impact (often shown as cost savings or time saved)
-- Key qualitative outcomes
-- Completion timeline
-- Evidence level (documented, estimated, anecdotal)
-
-### Assessment-Level Impact
-
-When viewing an assessment:
-- See all impact metrics from actions created by that assessment
-- Track total value delivered by that assessment
-- ROI calculation (value created vs. cost to conduct assessment)
-
-### Ecosystem-Level Impact
-
-The [Directors Dashboard](../dashboard/directors-dashboard.md) aggregates impact across your entire ecosystem:
-- Total cost savings from all actions
-- Average time to completion
-- Most impactful assessment types
-- Trend analysis showing impact growth over time
-
-## Impact Visualization
-
-Impact data is visualized on the Directors Dashboard:
-
-- **Impact Metrics Card** — Total ecosystem impact
-- **Time Trends** — How impact has grown over quarters/years
-- **Impact by Assessment** — Which assessment types drive most value
-- **Impact by Industry** — Industry-specific impact data
-- **ROI Analysis** — Value created vs. assessment program costs
-
-## Best Practices for Metrics
-
-### Be Specific
-- ❌ "Improved efficiency"
-- ✓ "Reduced production cycle time from 8 days to 5 days (37.5% improvement)"
-
-### Use Real Data
-- Whenever possible, base metrics on actual measurements
-- When estimates are necessary, clearly label them as estimates
-- Attach supporting documentation (data exports, photos, reports)
-
-### Include Timeline
-- When was the impact realized?
-- How long did implementation take?
-- What's the ongoing benefit period?
-
-### Think Holistically
-- Consider multiple types of impact (operational, strategic, capability)
-- Look for secondary benefits (e.g., safety improvements from process changes)
-- Account for organizational ripple effects
-
-### Document Everything
-- Keep supporting documentation with the action item
-- Create an audit trail showing measurement and verification
-- Include names and dates of people verifying metrics
-
-## Common Impact Metrics by Industry
-
-### Manufacturing
-- Production rate improvement (units/hour)
-- Quality improvement (scrap/defect rate reduction)
-- Energy consumption reduction (kWh/units produced)
-- Safety improvement (incident rate reduction)
-- Cost savings from supply chain optimization
-
-### Service
-- Labor productivity (revenue per employee hour)
-- Customer satisfaction scores
-- Service delivery time reduction
-- Error rate reduction
-- Cost per transaction
-
-### Logistics & Distribution
-- Order fulfillment time
-- Shipping cost reduction
-- Warehouse throughput improvement
-- Inventory reduction
-- On-time delivery improvement
-
-## Exporting Impact Data
-
-Export all impact metrics for external reporting:
-
-1. Open the [Directors Dashboard](../dashboard/directors-dashboard.md)
-2. Click **Download** in the toolbar
-3. Choose **CSV** or **YAML** format
-4. Metrics are included in the export with all supporting data
-
-## Related
-
-- [Impact Tracker Overview](index.md)
-- [Collaboration & Comments](collaboration.md)
-- [Directors Dashboard](../dashboard/directors-dashboard.md)
-- [Assessment Details](../assessments/details.md)
+[Manage actions](index.md) · [Comments](collaboration.md) · [Directors Dashboard](../dashboard/directors-dashboard.md) · [Ecosystem impact](../ecosystem/index.md#impact)
