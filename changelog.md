@@ -4,6 +4,30 @@
 
 ---
 
+## v2.76
+
+### Core Features & Enhancements
+
+#### **AI-Assisted Conditional Assessments**
+- **Create, Edit & Test Rules**: Use the AI assistant to create or edit conditional rules and follow-up questions. Test question and section visibility in previews using sample employee counts, employee-size groups, and industry codes.
+
+#### **Vessel KPI Dashboards**
+- **Internal Analytics & Planning**: Authorized Vessel staff can view tenant and assessment trends, explore state coverage on a map, and enter plan-versus-performance figures for recurring revenue, states, tenants, and assessments.
+
+#### **User Profile Photos**
+- **Upload & Remove Photos**: Add or remove a contact photo in My Information or when managing a user's profile.
+
+### Bug Fixes
+
+- Fixed assessment previews showing questions or sections that should be hidden by conditional rules.
+- Fixed administrator Settings access being restricted alongside staff-only Vessel KPI navigation.
+
+### Notes
+
+- Vessel KPI dashboards are restricted to Vessel staff with superuser access.
+
+---
+
 ## v2.75
 
 ### Core Features & Enhancements
