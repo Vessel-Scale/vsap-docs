@@ -23,7 +23,7 @@ Use **Save Changes** and check the save status or confirmation before leaving. *
 - **Tags / Groups** organizes the template for browsing and filtering.
 - **Scoring Method** chooses averaging or summing. Configure category and overall feedback to suit that method.
 - **Allow evidence uploads by default**, where available, provides the starting setting for new assessments. It can be overridden per assigned assessment.
-- **Enable Conditional Logic** reveals optional conditional rules, follow-up authoring, and preview tools.
+- **Enable Conditional Logic** reveals optional rules, follow-up authoring, and preview tools. See the [Conditional Logic guide](conditional-logic.md) for supported rules, groups, setup, and testing.
 
 ## Landing and completion pages
 
@@ -37,7 +37,9 @@ Organize questions into categories, then use the navigation controls to select, 
 
 ![Category and question editing in the unified workspace](../assets/screenshots/v275/editor-category.png)
 
-Conditional authoring is optional. Enable it when needed, configure follow-up questions, required explanations, or section visibility rules, and test both triggering and non-triggering answers in Preview. Review the complete respondent path before publishing.
+Conditional authoring is optional. Enable it when needed, configure question or category visibility and conditional answer requirements, and test both matching and nonmatching answers in Preview. Review the complete respondent path before publishing. See the [Conditional Logic guide](conditional-logic.md).
+
+![Updated question rule editor with conditional visibility and requirement controls](../assets/screenshots/v275/conditional-logic-question-rules.png)
 
 ## Scoring and feedback
 

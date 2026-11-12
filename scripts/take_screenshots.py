@@ -5,15 +5,18 @@ Captures authenticated screenshots into organized subfolders.
 Usage:
   uv run python scripts/take_screenshots.py                        # all sections
   uv run python scripts/take_screenshots.py account                # one section
+  uv run python scripts/take_screenshots.py library-conditional-logic
   uv run python scripts/take_screenshots.py account library        # multiple sections
   uv run python scripts/take_screenshots.py custom-data            # custom data only
   uv run python scripts/take_screenshots.py client-portal          # client portal only
 
 Available sections:
   dashboard, directors-dashboard, impact-tracker, account, assessments, library, library-question-types, library-scoring, 
-  library-icons, library-editor-draft, library-editor-published, ecosystem, industries, settings, report-builder, custom-data, 
+  library-icons, library-editor-draft, library-editor-published, library-conditional-logic, ecosystem, industries, settings, report-builder, custom-data,
   email-templates, intake-forms, web-reports, branding, client-portal, assessment-workflow-guide, getting-started
 
+Set VSAP_BASE_URL and VSAP_ACCESS_TOKEN in the ignored vsap-docs/.env file.
+Copy .env.example to .env, then add a current token for the selected tenant.
 Note: client-portal section now uses QA demo environment (demo.schema-qa.vesselscale.com) with CLIENT_ACCESS_TOKEN.
 """
 import argparse
@@ -21,19 +24,41 @@ import asyncio
 import json
 import os
 from pathlib import Path
+from urllib.parse import unquote
 
 from playwright.async_api import async_playwright
 
+def load_local_env():
+    """Load simple KEY=VALUE entries from the ignored docs/.env file."""
+    env_path = Path(__file__).resolve().parents[1] / ".env"
+    if not env_path.exists():
+        return
+    for line in env_path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key, value = key.strip(), value.strip().strip("'\"")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+load_local_env()
 BASE_URL = os.environ.get("VSAP_BASE_URL", "https://demo.schema-qa.vesselscale.com")
-ACCESS_TOKEN = os.environ.get("VSAP_ACCESS_TOKEN", "").removeprefix("Bearer ")
-ACCESS_TOKEN = f"Bearer {ACCESS_TOKEN}" if ACCESS_TOKEN else ""
+
+
+def bearer_token(env_name):
+    raw = unquote(os.environ.get(env_name, "").strip()).removeprefix("Bearer ").strip()
+    return f"Bearer {raw}" if raw else ""
+
+
+ACCESS_TOKEN = bearer_token("VSAP_ACCESS_TOKEN")
 
 # ── Client user credentials (QA demo environment) ───────────────────────────────────
 # Supply a separate client credential only when capturing a real client session.
 CLIENT_BASE_URL = "https://demo.schema-qa.vesselscale.com"
 CLIENT_API_URL  = "https://demo.schema-api-qa.vesselscale.com/"
-CLIENT_ACCESS_TOKEN = os.environ.get("VSAP_CLIENT_ACCESS_TOKEN", "").removeprefix("Bearer ")
-CLIENT_ACCESS_TOKEN = f"Bearer {CLIENT_ACCESS_TOKEN}" if CLIENT_ACCESS_TOKEN else ""
+CLIENT_ACCESS_TOKEN = bearer_token("VSAP_CLIENT_ACCESS_TOKEN")
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs" / "assets" / "screenshots"
 
@@ -801,6 +826,7 @@ async def section_library(page):
     else:
         print("    (Preview button not found)")
 
+
     # ── Preview: first category ────────────────────────────────────────────
     print("[library] preview - category")
     if await try_click(page, "button[aria-label='Preview category questions']", timeout=5000):
@@ -820,6 +846,46 @@ async def section_library(page):
     else:
         print("    (Preview category questions button not found)")
 
+
+async def section_library_conditional_logic(page):
+    """Capture conditional rule controls using an unlocked QA draft.
+
+    The group screenshot adds an unsaved group only for the screenshot; the
+    runner closes the browser without saving the assessment.
+    """
+    print("\n[library-conditional-logic] opening QA draft editor")
+    await goto(
+        page,
+        "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+        wait_ms=4500,
+    )
+    await page.get_by_role("switch", name="Enable Conditional Logic").check()
+    await page.get_by_role("button", name="Leadership & Strategy", exact=False).first.click()
+    await page.get_by_text(
+        "To what extent is day-to-day work aligned with your organization's strategic priorities?",
+        exact=True,
+    ).click()
+    await page.wait_for_timeout(700)
+    visibility = page.get_by_role("combobox").nth(0)
+    await visibility.click()
+    await page.get_by_role(
+        "option", name="Show when conditions match", exact=True
+    ).click()
+    await page.wait_for_timeout(600)
+    await save(page, "v275", "conditional-logic-question-rules")
+
+    add_group = page.get_by_role("button", name="Add condition group")
+    if await add_group.count():
+        await add_group.click()
+        await page.wait_for_timeout(700)
+        await save(page, "v275", "conditional-logic-condition-groups")
+
+    # Show the in-editor preview with its sample-answer controls.
+    preview = page.get_by_role("button", name="Preview", exact=True).first
+    if await preview.count():
+        await preview.click()
+        await page.wait_for_timeout(1800)
+        await save(page, "v275", "conditional-logic-preview")
 
 async def section_ecosystem(page):
     print("\n[ecosystem] overview - map with filters panel open")
@@ -2020,6 +2086,7 @@ SECTIONS = {
     "library-media-library":        section_library_media_library,
     "library-editor-draft":         section_library_editor_draft,
     "library-editor-published":     section_library_editor_published,
+    "library-conditional-logic":    section_library_conditional_logic,
     "ecosystem":                    section_ecosystem,
     "industries":                   section_industries,
     "settings":                     section_settings,

@@ -1,6 +1,7 @@
 """Capture current demo UI without saving credentials or changing tenant data.
 
-Set VSAP_ACCESS_TOKEN (with or without Bearer), then run with the docs venv.
+Set VSAP_BASE_URL and VSAP_ACCESS_TOKEN in vsap-docs/.env (with or without Bearer),
+then run with the docs venv.
 Screenshots go to docs/assets/screenshots/v275; inspection text goes to /tmp.
 """
 import argparse

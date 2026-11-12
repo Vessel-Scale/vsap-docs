@@ -1,5 +1,8 @@
 # Build artifacts
 site/
+.env
+.env.*
+!.env.example
 
 # Python
 .venv/

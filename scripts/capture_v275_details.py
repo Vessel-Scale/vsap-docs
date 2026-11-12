@@ -65,6 +65,27 @@ async def main(selected=None):
             await click(page,'Click to change icon')
             await snap(page,'editor-icons')
             await page.close()
+        async def conditional_logic():
+            page=await visit('/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f')
+            await page.get_by_role('switch',name='Enable Conditional Logic').check()
+            await page.get_by_role('button',name=re.compile('Leadership & Strategy')).first.click()
+            await page.get_by_text("To what extent is day-to-day work aligned with your organization's strategic priorities?",exact=True).click()
+            await page.wait_for_timeout(700)
+            await page.get_by_role('combobox').nth(0).click()
+            await page.get_by_role('option',name='Show when conditions match',exact=True).click()
+            await page.wait_for_timeout(600)
+            await snap(page,'conditional-logic-question-rules')
+            add_group=page.get_by_role('button',name='Add condition group')
+            if await add_group.count():
+                await add_group.click()
+                await page.wait_for_timeout(700)
+                await snap(page,'conditional-logic-condition-groups')
+            preview=page.get_by_role('button',name='Preview',exact=True).first
+            if await preview.count():
+                await preview.click()
+                await page.wait_for_timeout(1800)
+                await snap(page,'conditional-logic-preview')
+            await page.close()
         async def reports():
             page=await visit('/evaluation-assessment-list/reports/create')
             await snap(page,'report-editor')
@@ -127,7 +148,7 @@ async def main(selected=None):
             page=await visit('/ecosystem-map?assessment=Supplier%20Business%20Health%20Assessment&view=scores')
             await snap(page,'ecosystem-score')
             await page.close()
-        for name,fn in [('editor',editor),('reports',reports),('dashboard',dashboard),('account',account),('assessment',assessment),('forms',forms),('simple',simple),('map',maps)]:
+        for name,fn in [('editor',editor),('conditional-logic',conditional_logic),('reports',reports),('dashboard',dashboard),('account',account),('assessment',assessment),('forms',forms),('simple',simple),('map',maps)]:
             if not selected or name in selected:
                 await task(name,fn)
         await browser.close()
@@ -135,5 +156,5 @@ async def main(selected=None):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('sections', nargs='*', choices=['editor','reports','dashboard','account','assessment','forms','simple','map'])
+    parser.add_argument('sections', nargs='*', choices=['editor','conditional-logic','reports','dashboard','account','assessment','forms','simple','map'])
     asyncio.run(main(parser.parse_args().sections))

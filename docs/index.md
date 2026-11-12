@@ -24,7 +24,7 @@ Turn assessments into useful client results and measurable outcomes. Start with 
 | --- | --- |
 | Accounts | [Account list](accounts/index.md), [create](accounts/create.md), [edit](accounts/edit.md), [details and report access](accounts/details.md), [import/export](accounts/import-export.md), [intake forms](settings/intake-forms.md) |
 | Assessments | [Collections](assessments/index.md), [assign](assessments/create.md), [responses and analysis](assessments/details.md), [Report Builder](assessments/report-builder.md), [PDF output](assessments/pdf-reports.md) |
-| Assessments → Library | [Template list](library/list.md), [create](library/create.md), [edit and preview](library/edit.md), [question types](library/question-types.md), [scoring](library/scoring.md), [icons](library/editing-icons.md) |
+| Assessments → Library | [Template list](library/list.md), [create](library/create.md), [edit and preview](library/edit.md), [conditional logic](library/conditional-logic.md), [question types](library/question-types.md), [scoring](library/scoring.md), [icons](library/editing-icons.md) |
 | Assessments → Reports | [Reusable web reports](settings/web-reports.md), [PDF settings](settings/pdf-reports.md) |
 | Client Portal | [Getting Started](client-portal/getting-started.md), [account and navigation](client-portal/index.md), [assessments](client-portal/assessments-table.md), [Library](client-portal/library.md), [benchmarking](client-portal/industry-benchmarking.md), [staff preview guide](client-portal/ae-notes.md) |
 | Dashboard | [Overview](dashboard/index.md), [components](dashboard/components.md), [configure](dashboard/configure.md), [Directors](dashboard/directors-dashboard.md), [exports](dashboard/download.md), [pivot tables](dashboard/pivot-table.md) |

@@ -103,6 +103,7 @@ nav:
     - Assessment List: library/list.md
     - Create Assessment: library/create.md
     - Edit Assessment: library/edit.md
+    - Conditional Logic: library/conditional-logic.md
     - Question Types: library/question-types.md
     - Scoring: library/scoring.md
     - Editing Icons: library/editing-icons.md

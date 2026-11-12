@@ -247,6 +247,46 @@
       "docs/client-portal/library.md"
     ]
   },
+  "conditional-logic-condition-groups": {
+    "file": "docs/assets/screenshots/v275/conditional-logic-condition-groups.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-12T22:38:30.552172+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/conditional-logic.md"
+    ]
+  },
+  "conditional-logic-preview": {
+    "file": "docs/assets/screenshots/v275/conditional-logic-preview.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-12T22:38:34.322004+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/conditional-logic.md"
+    ]
+  },
+  "conditional-logic-question-rules": {
+    "file": "docs/assets/screenshots/v275/conditional-logic-question-rules.png",
+    "source_origin": "https://demo.schema-qa.vesselscale.com",
+    "source_path": "/evaluation-assessment-list/library/edit/18d301ec-bb02-4880-b004-9ce3ff8d5c5f",
+    "captured_utc": "2026-11-12T22:38:27.535467+00:00",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "used_by": [
+      "docs/library/conditional-logic.md",
+      "docs/library/edit.md"
+    ]
+  },
   "create-account": {
     "file": "docs/assets/screenshots/v275/create-account.png",
     "source_origin": "https://demo.schema-qa.vesselscale.com",
