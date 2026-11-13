@@ -74,3 +74,33 @@ Use a relevant assessment for preview and confirm account identity, start and cl
 A full web report link identifies the assessment and report template: `/report/{assessmentUuid}/{reportUuid}/{reportSlug}`. The shorter `/report/{assessmentUuid}` route selects the available default/fallback report for that assessment. Share the specific report when recipients need a particular design.
 
 [Report Builder](../assessments/report-builder.md) · [PDF settings](pdf-reports.md) · [Account report access](../accounts/details.md#reports-and-client-access) · [Share the results](../getting-started/workflow/step-5-provide-results.md)
+
+## AI report authoring and focused revisions
+
+Open **More Actions → AI Creator** where enabled. Select the assessment type to provide category context. Ask for a structure, then build or revise one section at a time. The internal creator receives the current report content, IDs, settings, and selected section. Very large reports may exceed its context budget; select the relevant section and narrow the request rather than asking it to rewrite unseen content.
+
+Use **Prompt ideas** to open a searchable, scrollable list of starting prompts. Each option shows its complete instructions. Selecting one adds it to the editable message; it never sends automatically. Adapt it to your customer, approved branding, audience, and intended outcome.
+
+Examples:
+
+> Improve the selected section using branded cards. Keep its meaning, template variables, IDs, dynamic modules, and all other sections unchanged.
+
+> Only enable Show Evidence. Do not change response-distribution popups or any other setting.
+
+**Show Evidence** displays evidence attachments on question rows; **Enable Response Distribution Popup** controls response-distribution interactions. They are independent settings.
+
+### HTML editing modes
+
+Text slots offer **Preview**, **HTML Source**, and **Rich Text**, including each text column in a two-column block. New empty text starts in Rich Text. Existing or imported HTML opens in Preview so inspection does not rewrite custom markup. HTML Source exposes the exact code and provides **Copy HTML** for focused edits with an external agent. Entering Rich Text for existing HTML warns that editing may simplify complex styling. Use whole-block and report previews to check the final layout and dynamic variables.
+
+### External-agent workflow
+
+Copy the current AI instructions from the creator panel and supply the exported YAML, approved brand information, audience, and requested scope. External agents should return YAML; internal chat uses editor actions. Import external YAML through the supported import workflow. For a full replacement, include all sections that must remain. Preserve dynamic scores/charts, stable IDs, conditions, and template variables.
+
+Use inline-styled semantic HTML for panels, callouts, cards, and roadmaps. Prefer flexible widths, wrapping layouts, responsive images, and readable contrast. Avoid scripts, JavaScript-dependent interactions, and fixed-height text boxes. Never invent assessment results, benchmarks, or trends to fill a visual.
+
+### Referencing a public web page
+
+Give the internal creator an exact public page URL and explain what to reuse. It fetches individual pages; it does not crawl a site or authenticate to private content. Scraped images are added to the tenant’s media library. Repeated matching full image URLs reuse active library items, including images shared across pages or added manually by URL. Older uploads without source URLs and identical images at different URLs may not match. Failed image uploads are omitted, so check the resulting layout.
+
+Review the edited fields rather than relying solely on the AI’s description of what changed. Test narrow-screen and printable output, confirm dynamic sections still work, then save and reopen. YAML syntax validation alone does not prove successful import or correct rendering.
