@@ -4,6 +4,37 @@
 
 ---
 
+## v2.77
+
+### Core Features & Enhancements
+
+#### **Rich Assessment Content & Respondent Flow**
+- **Formatted Questions & Preview Controls**: Author formatted question text, category names, and descriptions, and choose a one-question-at-a-time experience. Preview required-answer checks or explore all questions, with company-profile samples shown only when rules need them.
+
+#### **Web Report Content Editing**
+- **Edit Existing Report Sections**: Switch between visual and HTML editing, ask AI to revise existing report content, and find starting prompts in a searchable prompt picker.
+
+#### **Vessel KPI Planning & Coverage**
+- **Plan, Performance & Response Tracking**: Enter and compare KPI plans and performance with response-count analytics, clearer state coverage maps, tenant details, and flexible state-only or dated count entries.
+
+### User Experience Improvements
+
+- **Assessment AI Feedback**: AI-requested assessment feedback changes now apply in the editor, with guidance for creating report-ready content.
+- **Media Reuse**: Reusing an image from the same source now shows a confirmation instead of creating another upload.
+- **Error Recovery**: Page and loading failures offer recovery screens so users can retry or return to a working page.
+
+### Bug Fixes
+
+- Fixed public-library copies keeping the wrong version number or adding unnecessary version suffixes to assessment names.
+- Fixed completion emails opening an incorrect assessment review link.
+- Fixed previews losing legacy answer choices and reports showing incorrect respondent counts.
+
+### Notes
+
+- Vessel KPI tools remain restricted to authorized Vessel staff.
+
+---
+
 ## v2.76
 
 ### Core Features & Enhancements
